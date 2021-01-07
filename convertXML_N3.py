@@ -4,6 +4,272 @@ from lxml import etree
 XML_FILE_MOVIES = "Files/movies.xml"
 XML_FILE_REVIEWS = "Files/reviews.xml"
 XML_FILE_CAST = "Files/casts.xml"
+XML_SERIES_CAST = "Files/scredits.xml"
+XML_FILE_SERIES = "Files/series.xml"
+XML_SERIES_REVIEW = "Files/sreviews.xml"
+person_id_found = []
+
+
+
+def create_series_review():
+    reviews_n3 = open("series_reviews.n3", "w")
+
+    #Initialize reviews_n3
+    reviews_n3.write('@prefix serie: <http://moviesProject.org/sub/serie/>.\n')
+    reviews_n3.write('@prefix crew: <http://moviesProject.org/sub/crew/>.\n')
+    reviews_n3.write('@prefix person: <http://moviesProject.org/sub/person/>.\n')
+    reviews_n3.write('@prefix review: <http://moviesProject.org/sub/review/>.\n')
+    reviews_n3.write('@prefix predicate: <http://moviesProject.org/pred/>.\n')
+
+    reviews_n3.write('\n')
+    el = etree.parse(XML_SERIES_REVIEW)
+    reviews = el.xpath("//review")
+
+    for serie in reviews:
+        reviews = [] # [[id, author, content]]
+        serie_id = ""
+        if not serie.find("id") is None and not serie.find("id").text is None:
+            serie_id = serie.find("id").text
+
+        if not serie.find("results") is None:
+            for review in serie.find("results"):
+                if not review.find("author") is None and not review.find("content") is None and not review.find("id") is None and not review.find("author").text is None and not review.find("content").text is None and not review.find("id").text is None:
+                    _id = review.find("id").text
+                    author = review.find("author").text
+                    content = review.find("content").text.replace('"',"'")
+                    review = []
+                    review.append(_id) 
+                    review.append(author)
+                    review.append(content.replace("\n",""))
+                    reviews.append(review)
+
+        for review in reviews:
+            reviews_n3.write("review:"+ review[0] + "\n")
+        #Predicate and object
+            reviews_n3.write('\tpredicate:made_by "' + review[1] + '";\n')
+            reviews_n3.write('\tpredicate:content_is "' + review[2] + '";\n')
+            reviews_n3.write('\tpredicate:is_from serie:' + serie_id + '.\n')
+    
+    reviews_n3.close()
+
+def create_series():
+    series_n3 = open("series.n3", "w")
+
+    #Initialize series_n3
+    series_n3.write('@prefix serie: <http://moviesProject.org/sub/serie/>.\n')
+    series_n3.write('@prefix crew: <http://moviesProject.org/sub/crew/>.\n')
+    series_n3.write('@prefix person: <http://moviesProject.org/sub/person/>.\n')
+    series_n3.write('@prefix review: <http://moviesProject.org/sub/review/>.\n')
+    series_n3.write('@prefix predicate: <http://moviesProject.org/pred/>.\n')
+    series_n3.write('\n')
+
+    # Languages
+    el = etree.parse(XML_FILE_SERIES)
+    series = el.xpath("//serie")
+    for serie in series:
+        # Initialize
+        _id = ""
+        is_adult = ""
+        genres = []
+        languages = []
+        overview = ""
+        popularity = ""
+        poster_path = ""
+        first_air_date = ""
+        last_air_date = ""
+        number_of_episodes = ""
+        number_of_seasons = ""
+        status = ""
+        vote_average = ""
+        title = ""
+        _str = ""
+        print("\n\n--------------- New serie ------------------")
+        if not serie.find("id") is None and not serie.find("id").text is None:
+            _id = serie.find("id").text
+            _str += _id + ";"
+        if not serie.find("adult") is None and not serie.find("adult").text is None:
+            is_adult = serie.find("adult").text
+            _str += is_adult + ";"
+        if not serie.find("overview") is None and not serie.find("overview").text is None:
+            overview = serie.find("overview").text.replace('"',"'")
+            _str += overview + ";"
+        if not serie.find("popularity") is None and not serie.find("popularity").text is None:
+            popularity = serie.find("popularity").text
+            _str += popularity + ";"
+        if not serie.find("poster_path") is None and not serie.find("poster_path").text is None:
+            poster_path = serie.find("poster_path").text
+            _str += poster_path + ";"
+        if not serie.find("first_air_date") is None and not serie.find("first_air_date").text is None:
+            first_air_date = serie.find("first_air_date").text
+            _str += first_air_date + ";"
+        if not serie.find("last_air_date") is None and not serie.find("last_air_date").text is None:
+            last_air_date = serie.find("last_air_date").text
+            _str += last_air_date + ";"
+        if not serie.find("number_of_episodes") is None and not serie.find("number_of_episodes").text is None:
+            number_of_episodes = serie.find("number_of_episodes").text
+            _str += number_of_episodes + ";"
+        if not serie.find("number_of_seasons") is None and not serie.find("number_of_seasons").text is None:
+            number_of_seasons = serie.find("number_of_seasons").text
+            _str += number_of_seasons + ";"
+        if not serie.find("status") is None and not serie.find("status").text is None:
+            status = serie.find("status").text
+            _str += status + ";"
+        if not serie.find("vote_average") is None and not serie.find("vote_average").text is None:
+            vote_average = serie.find("vote_average").text
+            _str += vote_average + ";"
+        if not serie.find("title") is None and not serie.find("title").text is None:
+            title = serie.find("title").text
+            _str += title + ";"
+        if not serie.find("genres") is None:
+            for genre in serie.find("genres"):
+                if not genre.find("name") is None and not genre.find("name").text is None:
+                    genres.append(genre.find("name").text)
+                    _str += genre.find("name").text + ";"
+        if not serie.find("spoken_languages") is None:
+            for language in serie.find("spoken_languages"):
+                if not language.find("name") is None and not language.find("name").text is None:
+                    languages.append(language.find("name").text)
+                    _str += language.find("name").text + ";"
+
+        #Subject
+        _title = title.replace(" ", "_").lower()
+        # series_n3.write("serie:"+ _title + "\n")
+        series_n3.write("serie:"+ _id + "\n")
+        #Predicate and object
+        series_n3.write('\tpredicate:id "' + _id + '";\n')
+        series_n3.write('\tpredicate:title "' + title + '";\n')
+        series_n3.write('\tpredicate:is_adult "' + is_adult + '";\n')
+        series_n3.write('\tpredicate:description "' + overview + '";\n')
+        series_n3.write('\tpredicate:popularity "' + popularity + '";\n')
+        series_n3.write('\tpredicate:has_score "' + vote_average + '";\n')
+        series_n3.write('\tpredicate:released "' + first_air_date + '";\n')
+        series_n3.write('\tpredicate:last_aired "' + last_air_date + '";\n')
+        series_n3.write('\tpredicate:episodes "' + number_of_episodes + '";\n')
+        series_n3.write('\tpredicate:seasons "' + number_of_seasons + '";\n')
+        series_n3.write('\tpredicate:poster "' + poster_path + '";\n')
+        for genre in genres:
+            series_n3.write('\tpredicate:genre "' + genre + '";\n')
+        for language in languages:
+            series_n3.write('\tpredicate:language "' + language + '";\n')
+
+        series_n3.write('\tpredicate:status "' + status + '".\n')
+    series_n3.close()
+
+
+def create_series_cast():
+    cast_n3 = open("cast_series.n3", "w")
+    
+    cast_n3.write('@prefix serie: <http://moviesProject.org/sub/serie/>.\n')
+    cast_n3.write('@prefix crew: <http://moviesProject.org/sub/crew/>.\n')
+    cast_n3.write('@prefix person: <http://moviesProject.org/sub/person/>.\n')
+    cast_n3.write('@prefix review: <http://moviesProject.org/sub/review/>.\n')
+    cast_n3.write('@prefix predicate: <http://moviesProject.org/pred/>.\n')
+    cast_n3.write('\n')
+
+    el = etree.parse(XML_SERIES_CAST)
+    casts = el.xpath("//cast")
+
+    crews = []  # [[person_name, job, character]]
+
+    for serie in casts:
+        serie_id = ""
+        if not serie.find("id") is None and not serie.find("id").text is None:
+            serie_id = serie.find("id").text
+        if not serie.find("cast") is None:
+            for cast in serie.find("cast"):
+                job = ""
+                _id = ""
+                is_adult = ""
+                gender = ""
+                name = ""
+                popularity = ""
+                char_name = ""
+
+                if not cast.find("id") is None and not cast.find("id").text is None:    
+                    # Crew
+                    _id = cast.find("id").text
+                    if not cast.find("character") is None and not cast.find("character").text is None:
+                        char_name = cast.find("character").text.replace('"',"'")
+                    if not cast.find("name") is None and not cast.find("name").text is None:
+                            name = cast.find("name").text.replace('"',"'")
+                    if not cast.find("known_for_department") is None and not cast.find("known_for_department").text is None:
+                            job = cast.find("known_for_department").text
+                    # Person, check if already exists
+                    if not cast.find("id").text in person_id_found:
+                        _id = cast.find("id").text
+                        person_id_found.append(_id)
+                        if not cast.find("gender") is None and not cast.find("gender").text is None:
+                            gender = cast.find("gender").text
+                        if not cast.find("adult") is None and not cast.find("adult").text is None:
+                            is_adult = cast.find("adult").text
+                        if not cast.find("popularity") is None and not cast.find("popularity").text is None:
+                            popularity = cast.find("popularity").text
+
+                        cast_n3.write("person:"+ _id + "\n")
+                        cast_n3.write('\tpredicate:id "' + _id + '";\n')
+                        cast_n3.write('\tpredicate:name "' + name + '";\n')
+                        cast_n3.write('\tpredicate:popularity "' + popularity + '";\n')
+                        cast_n3.write('\tpredicate:gender "' + gender + '";\n')
+                        cast_n3.write('\tpredicate:is_adult "' + is_adult + '".\n')
+                        
+                    crew = []
+                    crew.append(_id)
+                    crew.append(job)
+                    crew.append(char_name)
+                    crew.append(serie_id)
+                    crews.append(crew)
+
+            for crew in serie.find("crew"):
+                job = ""
+                _id = ""
+                is_adult = ""
+                gender = ""
+                name = ""
+                popularity = ""
+                char_name = ""
+
+                if not crew.find("id") is None and not crew.find("id").text is None:    
+                    # Crew
+                    _id = crew.find("id").text
+                    if not crew.find("known_for_department") is None and not crew.find("known_for_department").text is None:
+                            job = crew.find("known_for_department").text
+                    # Person, check if already exists
+                    if not _id in person_id_found:
+                        person_id_found.append(_id)
+                        if not crew.find("gender") is None and not crew.find("gender").text is None:
+                            gender = crew.find("gender").text
+                        if not crew.find("adult") is None and not crew.find("adult").text is None:
+                            is_adult = crew.find("adult").text
+                        if not crew.find("popularity") is None and not crew.find("popularity").text is None:
+                            popularity = crew.find("popularity").text
+                        if not crew.find("name") is None and not crew.find("name").text is None:
+                            name = crew.find("name").text.replace('"',"'")
+
+                        cast_n3.write("person:"+ _id + "\n")
+                        cast_n3.write('\tpredicate:id "' + _id + '";\n')
+                        cast_n3.write('\tpredicate:name "' + name + '";\n')
+                        cast_n3.write('\tpredicate:popularity "' + popularity + '";\n')
+                        cast_n3.write('\tpredicate:gender "' + gender + '";\n')
+                        cast_n3.write('\tpredicate:is_adult "' + is_adult + '".\n')
+                        
+                    _crew = []
+                    _crew.append(_id)
+                    _crew.append(job)
+                    _crew.append(None)
+                    _crew.append(serie_id)
+                    crews.append(_crew)
+    
+    for person in crews:
+        cast_n3.write("crew:"+ person[0] + "\n")
+        cast_n3.write('\tpredicate:job "' + person[1] + '";\n')
+        if not person[2] is None:
+            cast_n3.write('\tpredicate:interpret "' + person[2] + '";\n')
+        cast_n3.write('\tpredicate:person person:' + person[0] + ';\n')
+        cast_n3.write('\tpredicate:takes_part serie:' + person[3] + '.\n')
+
+    cast_n3.close()
+
+
 
 def create_cast():
     cast_n3 = open("cast.n3", "w")
@@ -17,8 +283,6 @@ def create_cast():
 
     el = etree.parse(XML_FILE_CAST)
     casts = el.xpath("//cast")
-
-    person_id_found = []
 
     crews = []  # [[person_name, job, character]]
 
@@ -261,6 +525,7 @@ def create_movies():
         #Predicate and object
         movies_n3.write('\tpredicate:id "' + _id + '";\n')
         movies_n3.write('\tpredicate:title "' + title + '";\n')
+        movies_n3.write('\tpredicate:is_adult "' + is_adult + '";\n')
         movies_n3.write('\tpredicate:description "' + overview + '";\n')
         movies_n3.write('\tpredicate:popularity "' + popularity + '";\n')
         movies_n3.write('\tpredicate:has_score "' + vote_average + '";\n')
@@ -278,6 +543,8 @@ def main():
     create_movies()
     create_review()
     create_cast()
-
+    create_series_cast()
+    create_series()
+    create_series_review()
 if __name__ == "__main__":
     main()

@@ -7,6 +7,7 @@
 movie:3
 	predicate:id "3";
 	predicate:title "Shadows in Paradise";
+	predicate:is_adult "False";
 	predicate:description "An episode in the life of Nikander, a garbage man, involving the death of a co-worker, an affair and much more.";
 	predicate:popularity "8.358";
 	predicate:has_score "7.3";
@@ -21,6 +22,7 @@ movie:3
 movie:5
 	predicate:id "5";
 	predicate:title "Four Rooms";
+	predicate:is_adult "False";
 	predicate:description "It's Ted the Bellhop's first night on the job...and the hotel's very unusual guests are about to place him in some outrageous predicaments. It seems that this evening's room service is serving up one unbelievable happening after another.";
 	predicate:popularity "18.41";
 	predicate:has_score "5.8";
@@ -33,6 +35,7 @@ movie:5
 movie:6
 	predicate:id "6";
 	predicate:title "Judgment Night";
+	predicate:is_adult "False";
 	predicate:description "While racing to a boxing match, Frank, Mike, John and Rey get more than they bargained for. A wrong turn lands them directly in the path of Fallon, a vicious, wise-cracking drug lord. After accidentally witnessing Fallon murder a disloyal henchman, the four become his unwilling prey in a savage game of cat & mouse as they are mercilessly stalked through the urban jungle in this taut suspense drama";
 	predicate:popularity "13.285";
 	predicate:has_score "6.5";
@@ -46,6 +49,7 @@ movie:6
 movie:8
 	predicate:id "8";
 	predicate:title "Life in Loops (A Megacities RMX)";
+	predicate:is_adult "False";
 	predicate:description "Timo Novotny labels his new project an experimental music documentary film, in a remix of the celebrated film Megacities (1997), a visually refined essay on the hidden faces of several world 'megacities' by leading Austrian documentarist Michael Glawogger. Novotny complements 30 % of material taken straight from the film (and re-edited) with 70 % as yet unseen footage in which he blends original shots unused by Glawogger with his own sequences (shot by Megacities cameraman Wolfgang Thaler) from Tokyo. Alongside the Japanese metropolis, Life in Loops takes us right into the atmosphere of Mexico City, New York, Moscow and Bombay. This electrifying combination of fascinating film images and an equally compelling soundtrack from Sofa Surfers sets us off on a stunning audiovisual adventure across the continents. The film also makes an original contribution to the discussion on new trends in documentary filmmaking. Written by KARLOVY VARY IFF 2006";
 	predicate:popularity "2.939";
 	predicate:has_score "7.5";
@@ -61,6 +65,7 @@ movie:8
 movie:9
 	predicate:id "9";
 	predicate:title "Sunday in August";
+	predicate:is_adult "False";
 	predicate:description "";
 	predicate:popularity "1.176";
 	predicate:has_score "6.9";
@@ -72,6 +77,7 @@ movie:9
 movie:11
 	predicate:id "11";
 	predicate:title "Star Wars";
+	predicate:is_adult "False";
 	predicate:description "Princess Leia is captured and held hostage by the evil Imperial forces in their effort to take over the galactic Empire. Venturesome Luke Skywalker and dashing captain Han Solo team together with the loveable robot duo R2-D2 and C-3PO to rescue the beautiful princess and restore peace and justice in the Empire.";
 	predicate:popularity "69.623";
 	predicate:has_score "8.2";
@@ -85,6 +91,7 @@ movie:11
 movie:12
 	predicate:id "12";
 	predicate:title "Finding Nemo";
+	predicate:is_adult "False";
 	predicate:description "Nemo, an adventurous young clownfish, is unexpectedly taken from his Great Barrier Reef home to a dentist's office aquarium. It's up to his worrisome father Marlin and a friendly but forgetful fish Dory to bring Nemo home -- meeting vegetarian sharks, surfer dude turtles, hypnotic jellyfish, hungry seagulls, and more along the way.";
 	predicate:popularity "38.023";
 	predicate:has_score "7.8";
@@ -97,6 +104,7 @@ movie:12
 movie:13
 	predicate:id "13";
 	predicate:title "Forrest Gump";
+	predicate:is_adult "False";
 	predicate:description "A man with a low IQ has accomplished great things in his life and been present during significant historic events—in each case, far exceeding what anyone imagined he could do. But despite all he has achieved, his one true love eludes him.";
 	predicate:popularity "41.451";
 	predicate:has_score "8.5";
@@ -110,6 +118,7 @@ movie:13
 movie:14
 	predicate:id "14";
 	predicate:title "American Beauty";
+	predicate:is_adult "False";
 	predicate:description "Lester Burnham, a depressed suburban father in a mid-life crisis, decides to turn his hectic life around after developing an infatuation with his daughter's attractive friend.";
 	predicate:popularity "30.036";
 	predicate:has_score "8.0";
@@ -121,6 +130,7 @@ movie:14
 movie:15
 	predicate:id "15";
 	predicate:title "Citizen Kane";
+	predicate:is_adult "False";
 	predicate:description "Newspaper magnate, Charles Foster Kane is taken from his mother as a boy and made the ward of a rich industrialist. As a result, every well-meaning, tyrannical or self-destructive move he makes for the rest of his life appears in some way to be a reaction to that deeply wounding event.";
 	predicate:popularity "22.006";
 	predicate:has_score "8.1";
@@ -133,6 +143,7 @@ movie:15
 movie:16
 	predicate:id "16";
 	predicate:title "Dancer in the Dark";
+	predicate:is_adult "False";
 	predicate:description "Selma, a Czech immigrant on the verge of blindness, struggles to make ends meet for herself and her son, who has inherited the same genetic disorder and will suffer the same fate without an expensive operation. When life gets too difficult, Selma learns to cope through her love of musicals, escaping life's troubles - even if just for a moment - by dreaming up little numbers to the rhythmic beats of her surroundings.";
 	predicate:popularity "11.403";
 	predicate:has_score "7.9";
@@ -145,6 +156,7 @@ movie:16
 movie:17
 	predicate:id "17";
 	predicate:title "The Dark";
+	predicate:is_adult "False";
 	predicate:description "Adèle and her daughter Sarah are traveling on the Welsh coastline to see her husband James when Sarah disappears. A different but similar looking girl appears who says she died in a past time. Adèle tries to discover what happened to her daughter as she is tormented by Celtic mythology from the past.";
 	predicate:popularity "8.925";
 	predicate:has_score "5.9";
@@ -159,6 +171,7 @@ movie:17
 movie:18
 	predicate:id "18";
 	predicate:title "The Fifth Element";
+	predicate:is_adult "False";
 	predicate:description "In 2257, a taxi driver is unintentionally given the task of saving a young girl who is part of the key that will ensure the survival of humanity.";
 	predicate:popularity "35.733";
 	predicate:has_score "7.5";
@@ -176,6 +189,7 @@ movie:18
 movie:19
 	predicate:id "19";
 	predicate:title "Metropolis";
+	predicate:is_adult "False";
 	predicate:description "In a futuristic city sharply divided between the working class and the city planners, the son of the city's mastermind falls in love with a working class prophet who predicts the coming of a savior to mediate their differences.";
 	predicate:popularity "16.121";
 	predicate:has_score "8.2";
@@ -188,6 +202,7 @@ movie:19
 movie:20
 	predicate:id "20";
 	predicate:title "My Life Without Me";
+	predicate:is_adult "False";
 	predicate:description "A fatally ill mother with only two months to live creates a list of things she wants to do before she dies without telling her family of her illness.";
 	predicate:popularity "15.517";
 	predicate:has_score "5.9";
@@ -200,6 +215,7 @@ movie:20
 movie:21
 	predicate:id "21";
 	predicate:title "The Endless Summer";
+	predicate:is_adult "False";
 	predicate:description "Bruce Brown's The Endless Summer is one of the first and most influential surf movies of all time. The film documents American surfers Mike Hynson and Robert August as they travel the world during California’s winter (which, back in 1965 was off-season for surfing) in search of the perfect wave and ultimately, an endless summer.";
 	predicate:popularity "4.786";
 	predicate:has_score "7.5";
@@ -211,6 +227,7 @@ movie:21
 movie:22
 	predicate:id "22";
 	predicate:title "Pirates of the Caribbean: The Curse of the Black Pearl";
+	predicate:is_adult "False";
 	predicate:description "Jack Sparrow, a freewheeling 18th-century pirate, quarrels with a rival pirate bent on pillaging Port Royal. When the governor's daughter is kidnapped, Sparrow decides to help the girl's love save her.";
 	predicate:popularity "58.722";
 	predicate:has_score "7.7";
@@ -224,6 +241,7 @@ movie:22
 movie:24
 	predicate:id "24";
 	predicate:title "Kill Bill: Vol. 1";
+	predicate:is_adult "False";
 	predicate:description "An assassin is shot by her ruthless employer, Bill, and other members of their assassination circle – but she lives to plot her vengeance.";
 	predicate:popularity "31.134";
 	predicate:has_score "8.0";
@@ -238,6 +256,7 @@ movie:24
 movie:25
 	predicate:id "25";
 	predicate:title "Jarhead";
+	predicate:is_adult "False";
 	predicate:description "Jarhead is a film about a US Marine Anthony Swofford’s experience in the Gulf War. After putting up with an arduous boot camp, Swofford and his unit are sent to the Persian Gulf where they are eager to fight, but are forced to stay back from the action. Swofford struggles with the possibility of his girlfriend cheating on him, and as his mental state deteriorates, his desire to kill increases.";
 	predicate:popularity "15.401";
 	predicate:has_score "6.6";
@@ -253,6 +272,7 @@ movie:25
 movie:26
 	predicate:id "26";
 	predicate:title "Walk on Water";
+	predicate:is_adult "False";
 	predicate:description "Eyal, an Israeli Mossad agent, is given the mission to track down and kill the very old Alfred Himmelman, an ex-Nazi officer, who might still be alive. Pretending to be a tourist guide, he befriends his grandson Axel, in Israel to visit his sister Pia. The two men set out on a tour of the country during which, Axel challenges Eyal's values.";
 	predicate:popularity "4.383";
 	predicate:has_score "7.0";
@@ -269,6 +289,7 @@ movie:26
 movie:27
 	predicate:id "27";
 	predicate:title "9 Songs";
+	predicate:is_adult "False";
 	predicate:description "Matt, a young glaciologist, soars across the vast, silent, icebound immensities of the South Pole as he recalls his love affair with Lisa. They meet at a mobbed rock concert in a vast music hall - London's Brixton Academy. They are in bed at night's end. Together, over a period of several months, they pursue a mutual sexual passion whose inevitable stages unfold in counterpoint to nine live-concert songs.";
 	predicate:popularity "22.153";
 	predicate:has_score "5.0";
@@ -282,6 +303,7 @@ movie:27
 movie:28
 	predicate:id "28";
 	predicate:title "Apocalypse Now";
+	predicate:is_adult "False";
 	predicate:description "At the height of the Vietnam war, Captain Benjamin Willard is sent on a dangerous mission that, officially, 'does not exist, nor will it ever exist.' His goal is to locate - and eliminate - a mysterious Green Beret Colonel named Walter Kurtz, who has been leading his personal army on illegal guerrilla missions into enemy territory.";
 	predicate:popularity "27.718";
 	predicate:has_score "8.3";
@@ -296,6 +318,7 @@ movie:28
 movie:30
 	predicate:id "30";
 	predicate:title "Magnetic Rose";
+	predicate:is_adult "False";
 	predicate:description "Koji Morimato’s animated science fiction short story about how the border between reality and illusion on a space station becomes blurry.";
 	predicate:popularity "7.558";
 	predicate:has_score "4.4";
@@ -308,6 +331,7 @@ movie:30
 movie:31
 	predicate:id "31";
 	predicate:title "Stink Bomb";
+	predicate:is_adult "False";
 	predicate:description "Tensai Okamura’s animated action packed short story with lots of humorous elements in which a person transforms into a weapon of mass destruction without themselves being aware.";
 	predicate:popularity "2.203";
 	predicate:has_score "6.2";
@@ -321,6 +345,7 @@ movie:31
 movie:32
 	predicate:id "32";
 	predicate:title "Cannon Fodder";
+	predicate:is_adult "False";
 	predicate:description "Otomo Katsuhiro’s short anime story";
 	predicate:popularity "4.318";
 	predicate:has_score "6.5";
@@ -333,6 +358,7 @@ movie:32
 movie:33
 	predicate:id "33";
 	predicate:title "Unforgiven";
+	predicate:is_adult "False";
 	predicate:description "William Munny is a retired, once-ruthless killer turned gentle widower and hog farmer. To help support his two motherless children, he accepts one last bounty-hunter mission to find the men who brutalized a prostitute. Joined by his former partner and a cocky greenhorn, he takes on a corrupt sheriff.";
 	predicate:popularity "22.106";
 	predicate:has_score "7.9";
@@ -344,6 +370,7 @@ movie:33
 movie:35
 	predicate:id "35";
 	predicate:title "The Simpsons Movie";
+	predicate:is_adult "False";
 	predicate:description "After Homer accidentally pollutes the town's water supply, Springfield is encased in a gigantic dome by the EPA and the Simpsons are declared fugitives.";
 	predicate:popularity "73.12";
 	predicate:has_score "7.0";
@@ -357,6 +384,7 @@ movie:35
 movie:38
 	predicate:id "38";
 	predicate:title "Eternal Sunshine of the Spotless Mind";
+	predicate:is_adult "False";
 	predicate:description "Joel Barish, heartbroken that his girlfriend underwent a procedure to erase him from her memory, decides to do the same. However, as he watches his memories of her fade away, he realises that he still loves her, and may be too late to correct his mistake.";
 	predicate:popularity "34.103";
 	predicate:has_score "8.1";
@@ -370,6 +398,7 @@ movie:38
 movie:55
 	predicate:id "55";
 	predicate:title "Amores Perros";
+	predicate:is_adult "False";
 	predicate:description "A fatalistic car crash in Mexico City sets off a chain of events in the lives of three persons: a young man aching to run off with his sister-in-law, a supermodel, and a homeless man. Their lives are catapulted into unforeseen circumstances instigated by the seemingly inconsequential destiny of a dog.";
 	predicate:popularity "19.21";
 	predicate:has_score "7.6";
@@ -382,6 +411,7 @@ movie:55
 movie:58
 	predicate:id "58";
 	predicate:title "Pirates of the Caribbean: Dead Man's Chest";
+	predicate:is_adult "False";
 	predicate:description "Captain Jack Sparrow works his way out of a blood debt with the ghostly Davey Jones to avoid eternal damnation.";
 	predicate:popularity "62.658";
 	predicate:has_score "7.3";
@@ -398,6 +428,7 @@ movie:58
 movie:59
 	predicate:id "59";
 	predicate:title "A History of Violence";
+	predicate:is_adult "False";
 	predicate:description "An average family is thrust into the spotlight after the father commits a seemingly self-defense murder at his diner.";
 	predicate:popularity "14.112";
 	predicate:has_score "7.2";
@@ -411,6 +442,7 @@ movie:59
 movie:62
 	predicate:id "62";
 	predicate:title "2001: A Space Odyssey";
+	predicate:is_adult "False";
 	predicate:description "Humanity finds a mysterious object buried beneath the lunar surface and sets off to find its origins with the help of HAL 9000, the world's most advanced super computer.";
 	predicate:popularity "38.709";
 	predicate:has_score "8.1";
@@ -425,6 +457,7 @@ movie:62
 movie:63
 	predicate:id "63";
 	predicate:title "Twelve Monkeys";
+	predicate:is_adult "False";
 	predicate:description "In the year 2035, convict James Cole reluctantly volunteers to be sent back in time to discover the origin of a deadly virus that wiped out nearly all of the earth's population and forced the survivors into underground communities. But when Cole is mistakenly sent to 1990 instead of 1996, he's arrested and locked up in a mental hospital. There he meets psychiatrist Dr. Kathryn Railly, and patient Jeffrey Goines, the son of a famous virus expert, who may hold the key to the mysterious rogue group, the Army of the 12 Monkeys, thought to be responsible for unleashing the killer disease.";
 	predicate:popularity "24.532";
 	predicate:has_score "7.6";
@@ -439,6 +472,7 @@ movie:63
 movie:64
 	predicate:id "64";
 	predicate:title "Talk to Her";
+	predicate:is_adult "False";
 	predicate:description "Two men share an odd friendship while they care for two women who are both in deep comas.";
 	predicate:popularity "9.375";
 	predicate:has_score "7.6";
@@ -451,6 +485,7 @@ movie:64
 movie:65
 	predicate:id "65";
 	predicate:title "8 Mile";
+	predicate:is_adult "False";
 	predicate:description "The setting is Detroit in 1995. The city is divided by 8 Mile, a road that splits the town in half along racial lines. A young white rapper, Jimmy 'B-Rabbit' Smith Jr. summons strength within himself to cross over these arbitrary boundaries to fulfill his dream of success in hip hop. With his pal Future and the three one third in place, all he has to do is not choke.";
 	predicate:popularity "34.157";
 	predicate:has_score "7.1";
@@ -463,6 +498,7 @@ movie:65
 movie:66
 	predicate:id "66";
 	predicate:title "Absolute Power";
+	predicate:is_adult "False";
 	predicate:description "A master thief coincidentally is robbing a house where a murder—in which the President of The United States is involved—occurs in front of his eyes. He is forced to run, while holding evidence that could convict the President.";
 	predicate:popularity "13.447";
 	predicate:has_score "6.6";
@@ -477,6 +513,7 @@ movie:66
 movie:67
 	predicate:id "67";
 	predicate:title "Paradise Now";
+	predicate:is_adult "False";
 	predicate:description "Two childhood friends are recruited for a suicide bombing in Tel Aviv.";
 	predicate:popularity "10.425";
 	predicate:has_score "7.0";
@@ -491,6 +528,7 @@ movie:67
 movie:68
 	predicate:id "68";
 	predicate:title "Brazil";
+	predicate:is_adult "False";
 	predicate:description "Low-level bureaucrat Sam Lowry escapes the monotony of his day-to-day life through a recurring daydream of himself as a virtuous hero saving a beautiful damsel. Investigating a case that led to the wrongful arrest and eventual death of an innocent man instead of wanted terrorist Harry Tuttle, he meets the woman from his daydream, and in trying to help her gets caught in a web of mistaken identities, mindless bureaucracy and lies.";
 	predicate:popularity "14.389";
 	predicate:has_score "7.7";
@@ -503,6 +541,7 @@ movie:68
 movie:69
 	predicate:id "69";
 	predicate:title "Walk the Line";
+	predicate:is_adult "False";
 	predicate:description "A chronicle of country music legend Johnny Cash's life, from his early days on an Arkansas cotton farm to his rise to fame with Sun Records in Memphis, where he recorded alongside Elvis Presley, Jerry Lee Lewis and Carl Perkins.";
 	predicate:popularity "18.188";
 	predicate:has_score "7.5";
@@ -517,6 +556,7 @@ movie:69
 movie:70
 	predicate:id "70";
 	predicate:title "Million Dollar Baby";
+	predicate:is_adult "False";
 	predicate:description "Despondent over a painful estrangement from his daughter, trainer Frankie Dunn isn't prepared for boxer Maggie Fitzgerald to enter his life. But Maggie's determined to go pro and to convince Dunn and his cohort to help her.";
 	predicate:popularity "22.184";
 	predicate:has_score "7.9";
@@ -529,6 +569,7 @@ movie:70
 movie:71
 	predicate:id "71";
 	predicate:title "Billy Elliot";
+	predicate:is_adult "False";
 	predicate:description "Set against the background of the 1984 Miners' Strike, 11-year-old Billy Elliot stumbles out of the boxing ring and onto the ballet floor. He faces many trials and triumphs as he strives to conquer his family's set ways, inner conflict, and standing on his toes.";
 	predicate:popularity "12.292";
 	predicate:has_score "7.6";
@@ -542,6 +583,7 @@ movie:71
 movie:73
 	predicate:id "73";
 	predicate:title "American History X";
+	predicate:is_adult "False";
 	predicate:description "Derek Vineyard is paroled after serving 3 years in prison for killing two African-American men. Through his brother, Danny Vineyard's narration, we learn that before going to prison, Derek was a skinhead and the leader of a violent white supremacist gang that committed acts of racial crime throughout L.A. and his actions greatly influenced Danny. Reformed and fresh out of prison, Derek severs contact with the gang and becomes determined to keep Danny from going down the same violent path as he did.";
 	predicate:popularity "23.397";
 	predicate:has_score "8.4";
@@ -553,6 +595,7 @@ movie:73
 movie:74
 	predicate:id "74";
 	predicate:title "War of the Worlds";
+	predicate:is_adult "False";
 	predicate:description "Ray Ferrier is a divorced dockworker and less-than-perfect father. Soon after his ex-wife and her new husband drop off his teenage son and young daughter for a rare weekend visit, a strange and powerful lightning storm touches down.";
 	predicate:popularity "28.199";
 	predicate:has_score "6.4";
@@ -566,6 +609,7 @@ movie:74
 movie:75
 	predicate:id "75";
 	predicate:title "Mars Attacks!";
+	predicate:is_adult "False";
 	predicate:description "'We come in peace' is not what those green men from Mars mean when they invade our planet, armed with irresistible weapons and a cruel sense of humor.  This star studded cast must play victim to the alien’s fun and games in this comedy homage to science fiction films of the '50s and '60s.";
 	predicate:popularity "22.095";
 	predicate:has_score "6.3";
@@ -580,6 +624,7 @@ movie:75
 movie:76
 	predicate:id "76";
 	predicate:title "Before Sunrise";
+	predicate:is_adult "False";
 	predicate:description "On his way to Vienna, American Jesse meets Céline, a student returning to Paris. After long conversations forge a surprising connection between them, Jesse convinces Celine to get off the train with him in Vienna. Since his flight to the U.S. departs the next morning and he has no money for lodging, they wander the city together, taking in the experiences of Vienna and each other.";
 	predicate:popularity "17.031";
 	predicate:has_score "7.9";
@@ -594,6 +639,7 @@ movie:76
 movie:77
 	predicate:id "77";
 	predicate:title "Memento";
+	predicate:is_adult "False";
 	predicate:description "Leonard Shelby is tracking down the man who raped and murdered his wife. The difficulty of locating his wife's killer, however, is compounded by the fact that he suffers from a rare, untreatable form of short-term memory loss. Although he can recall details of life before his accident, Leonard cannot remember what happened fifteen minutes ago, where he's going, or why.";
 	predicate:popularity "24.391";
 	predicate:has_score "8.2";
@@ -606,6 +652,7 @@ movie:77
 movie:78
 	predicate:id "78";
 	predicate:title "Blade Runner";
+	predicate:is_adult "False";
 	predicate:description "In the smog-choked dystopian Los Angeles of 2019, blade runner Rick Deckard is called out of retirement to terminate a quartet of replicants who have escaped to Earth seeking their creator for a way to extend their short life spans.";
 	predicate:popularity "34.063";
 	predicate:has_score "7.9";
@@ -623,6 +670,7 @@ movie:78
 movie:79
 	predicate:id "79";
 	predicate:title "Hero";
+	predicate:is_adult "False";
 	predicate:description "One man defeated three assassins who sought to murder the most powerful warlord in pre-unified China.";
 	predicate:popularity "21.795";
 	predicate:has_score "7.5";
@@ -637,6 +685,7 @@ movie:79
 movie:80
 	predicate:id "80";
 	predicate:title "Before Sunset";
+	predicate:is_adult "False";
 	predicate:description "Nine years later, Jesse travels across Europe giving readings from a book he wrote about the night he spent in Vienna with Celine. After his reading in Paris, Celine finds him, and they spend part of the day together before Jesse has to again leave for a flight. They are both in relationships now, and Jesse has a son, but as their strong feelings for each other start to return, both confess a longing for more.";
 	predicate:popularity "12.392";
 	predicate:has_score "7.8";
@@ -650,6 +699,7 @@ movie:80
 movie:81
 	predicate:id "81";
 	predicate:title "Nausicaä of the Valley of the Wind";
+	predicate:is_adult "False";
 	predicate:description "After a global war, the seaside kingdom known as the Valley of the Wind remains one of the last strongholds on Earth untouched by a poisonous jungle and the powerful insects that guard it. Led by the courageous Princess Nausicaä, the people of the Valley engage in an epic struggle to restore the bond between humanity and Earth.";
 	predicate:popularity "25.744";
 	predicate:has_score "7.9";
@@ -663,6 +713,7 @@ movie:81
 movie:82
 	predicate:id "82";
 	predicate:title "Miami Vice";
+	predicate:is_adult "False";
 	predicate:description "A case involving drug lords and murder in South Florida takes a personal turn for undercover detectives Sonny Crockett and Ricardo Tubbs. Unorthodox Crockett gets involved romantically with the Chinese-Cuban wife of a trafficker of arms and drugs, while Tubbs deals with an assault on those he loves.";
 	predicate:popularity "17.729";
 	predicate:has_score "5.9";
@@ -677,6 +728,7 @@ movie:82
 movie:83
 	predicate:id "83";
 	predicate:title "Open Water";
+	predicate:is_adult "False";
 	predicate:description "Two divers are left out at sea without a boat. There’s nothing but water for miles, unless they look at what’s underneath them...";
 	predicate:popularity "17.493";
 	predicate:has_score "5.4";
@@ -690,6 +742,7 @@ movie:83
 movie:85
 	predicate:id "85";
 	predicate:title "Raiders of the Lost Ark";
+	predicate:is_adult "False";
 	predicate:description "When Dr. Indiana Jones – the tweed-suited professor who just happens to be a celebrated archaeologist – is hired by the government to locate the legendary Ark of the Covenant, he finds himself up against the entire Nazi regime.";
 	predicate:popularity "30.255";
 	predicate:has_score "7.9";
@@ -706,6 +759,7 @@ movie:85
 movie:86
 	predicate:id "86";
 	predicate:title "The Elementary Particles";
+	predicate:is_adult "False";
 	predicate:description "Based on Michel Houellebecq's controversial novel, Atomised (aka The Elementary Particles) focuses on Michael and Bruno, two very different half-brothers and their disturbed sexuality.  After a chaotic childhood with a hippie mother only caring for her affairs, Michael, a molecular biologist, is more interested in genes than women, while Bruno is obsessed with his sexual desires, but mostly finds his satisfaction with prostitutes.  But Bruno's life changes when he gets to know the experienced Christiane.  In the meantime, Michael meets Annabelle, the love of his youth, again.";
 	predicate:popularity "8.088";
 	predicate:has_score "6.3";
@@ -719,6 +773,7 @@ movie:86
 movie:87
 	predicate:id "87";
 	predicate:title "Indiana Jones and the Temple of Doom";
+	predicate:is_adult "False";
 	predicate:description "After arriving in India, Indiana Jones is asked by a desperate village to find a mystical stone. He agrees – and stumbles upon a secret cult plotting a terrible plan in the catacombs of an ancient palace.";
 	predicate:popularity "26.322";
 	predicate:has_score "7.3";
@@ -732,6 +787,7 @@ movie:87
 movie:88
 	predicate:id "88";
 	predicate:title "Dirty Dancing";
+	predicate:is_adult "False";
 	predicate:description "Expecting the usual tedium that accompanies a summer in the Catskills with her family, 17-year-old Frances 'Baby' Houseman is surprised to find herself stepping into the shoes of a professional hoofer—and unexpectedly falling in love.";
 	predicate:popularity "24.075";
 	predicate:has_score "7.4";
@@ -745,6 +801,7 @@ movie:88
 movie:89
 	predicate:id "89";
 	predicate:title "Indiana Jones and the Last Crusade";
+	predicate:is_adult "False";
 	predicate:description "When Dr. Henry Jones Sr. suddenly goes missing while pursuing the Holy Grail, eminent archaeologist Indiana must team up with Marcus Brody, Sallah and Elsa Schneider to follow in his father's footsteps and stop the Nazis from recovering the power of eternal life.";
 	predicate:popularity "31.391";
 	predicate:has_score "7.8";
@@ -759,6 +816,7 @@ movie:89
 movie:90
 	predicate:id "90";
 	predicate:title "Beverly Hills Cop";
+	predicate:is_adult "False";
 	predicate:description "Tough-talking Detroit cop Axel Foley heads to the rarified world of Beverly Hills in his beat-up Chevy Nova to investigate a friend's murder, but soon realizes he's stumbled onto something much more complicated. Bungling rookie detective, Billy Rosewood joins the fish-out-of-water Axel and shows him the West Los Angeles ropes.";
 	predicate:popularity "17.953";
 	predicate:has_score "7.2";
@@ -772,6 +830,7 @@ movie:90
 movie:91
 	predicate:id "91";
 	predicate:title "Land Without Bread";
+	predicate:is_adult "False";
 	predicate:description "An exploration —manipulated and staged— of life in Las Hurdes, in the province of Cáceres, in Extremadura, Spain, as it was in 1932. Insalubrity, misery and lack of opportunities provoke the emigration of young people and the solitude of those who remain in the desolation of one of the poorest and least developed Spanish regions at that time. (Silent short, voiced in 1937 and 1996.)";
 	predicate:popularity "5.595";
 	predicate:has_score "7.1";
@@ -783,6 +842,7 @@ movie:91
 movie:92
 	predicate:id "92";
 	predicate:title "Megacities";
+	predicate:is_adult "False";
 	predicate:description "Megacities is a documentary about the slums of five different metropolitan cities.";
 	predicate:popularity "3.011";
 	predicate:has_score "7.6";
@@ -797,6 +857,7 @@ movie:92
 movie:93
 	predicate:id "93";
 	predicate:title "Anatomy of a Murder";
+	predicate:is_adult "False";
 	predicate:description "Semi-retired Michigan lawyer Paul Biegler takes the case of Army Lt. Manion, who murdered a local innkeeper after his wife claimed that he raped her. Over the course of an extensive trial, Biegler parries with District Attorney Lodwick and out-of-town prosecutor Claude Dancer to set his client free, but his case rests on the victim's mysterious business partner, who's hiding a dark secret.";
 	predicate:popularity "13.304";
 	predicate:has_score "7.9";
@@ -812,6 +873,7 @@ movie:93
 movie:94
 	predicate:id "94";
 	predicate:title "Kunstgriff";
+	predicate:is_adult "False";
 	predicate:description "Kunstgriff is a brilliantly filmed black and white short film. Andre F. Nebe gives proof of his storytelling abilities in this 6 minute film.";
 	predicate:popularity "0.84";
 	predicate:has_score "10.0";
@@ -823,6 +885,7 @@ movie:94
 movie:95
 	predicate:id "95";
 	predicate:title "Armageddon";
+	predicate:is_adult "False";
 	predicate:description "When an asteroid threatens to collide with Earth, NASA honcho Dan Truman determines the only way to stop it is to drill into its surface and detonate a nuclear bomb. This leads him to renowned driller Harry Stamper, who agrees to helm the dangerous space mission provided he can bring along his own hotshot crew. Among them is the cocksure A.J. who Harry thinks isn't good enough for his daughter, until the mission proves otherwise.";
 	predicate:popularity "34.13";
 	predicate:has_score "6.8";
@@ -838,6 +901,7 @@ movie:95
 movie:96
 	predicate:id "96";
 	predicate:title "Beverly Hills Cop II";
+	predicate:is_adult "False";
 	predicate:description "Axel heads for the land of sunshine and palm trees to find out who shot police Captain Andrew Bogomil. Thanks to a couple of old friends, Axel's investigation uncovers a series of robberies masterminded by a heartless weapons kingpin—and the chase is on.";
 	predicate:popularity "16.978";
 	predicate:has_score "6.4";
@@ -851,6 +915,7 @@ movie:96
 movie:97
 	predicate:id "97";
 	predicate:title "Tron";
+	predicate:is_adult "False";
 	predicate:description "As Kevin Flynn searches for proof that he invented a hit video game, he is 'digitalized' by a laser and finds himself inside 'The Grid', where programs suffer under the tyrannical rule of the Master Control Program (MCP). With the help of a security program called 'TRON', Flynn seeks to free The Grid from the MCP.";
 	predicate:popularity "17.297";
 	predicate:has_score "6.6";
@@ -864,6 +929,7 @@ movie:97
 movie:98
 	predicate:id "98";
 	predicate:title "Gladiator";
+	predicate:is_adult "False";
 	predicate:description "In the year 180, the death of emperor Marcus Aurelius throws the Roman Empire into chaos.  Maximus is one of the Roman army's most capable and trusted generals and a key advisor to the emperor.  As Marcus' devious son Commodus ascends to the throne, Maximus is set to be executed.  He escapes, but is captured by slave traders.  Renamed Spaniard and forced to become a gladiator, Maximus must battle to the death with other men for the amusement of paying audiences.";
 	predicate:popularity "37.064";
 	predicate:has_score "8.2";
@@ -877,6 +943,7 @@ movie:98
 movie:99
 	predicate:id "99";
 	predicate:title "All About My Mother";
+	predicate:is_adult "False";
 	predicate:description "A single mother in Madrid sees her only son die on his birthday as he runs to seek an actress' autograph. Beside herself with grief, she returns to Barcelona to tell the boy's father about the death of the son he never knew he had.";
 	predicate:popularity "13.335";
 	predicate:has_score "7.7";
@@ -889,6 +956,7 @@ movie:99
 movie:100
 	predicate:id "100";
 	predicate:title "Lock, Stock and Two Smoking Barrels";
+	predicate:is_adult "False";
 	predicate:description "A card shark and his unwillingly-enlisted friends need to make a lot of cash quick after losing a sketchy poker match. To do this they decide to pull a heist on a small-time gang who happen to be operating out of the flat next door.";
 	predicate:popularity "7.396";
 	predicate:has_score "8.2";
@@ -901,6 +969,7 @@ movie:100
 movie:101
 	predicate:id "101";
 	predicate:title "Léon: The Professional";
+	predicate:is_adult "False";
 	predicate:description "Léon, the top hit man in New York, has earned a rep as an effective 'cleaner'. But when his next-door neighbors are wiped out by a loose-cannon DEA agent, he becomes the unwilling custodian of 12-year-old Mathilda. Before long, Mathilda's thoughts turn to revenge, and she considers following in Léon's footsteps.";
 	predicate:popularity "36.671";
 	predicate:has_score "8.3";
@@ -916,6 +985,7 @@ movie:101
 movie:102
 	predicate:id "102";
 	predicate:title "Open Hearts";
+	predicate:is_adult "False";
 	predicate:description "Cecilie and Joachim are about to get married when a freak car accident leaves Joachim disabled, throwing their lives into a spin. The driver of the other car, Marie, and her family don’t get off lightly, either. Her husband Niels works in the hospital where he meets Cecilie and falls madly in love with her.";
 	predicate:popularity "6.633";
 	predicate:has_score "7.2";
@@ -928,6 +998,7 @@ movie:102
 movie:103
 	predicate:id "103";
 	predicate:title "Taxi Driver";
+	predicate:is_adult "False";
 	predicate:description "A mentally unstable Vietnam War veteran works as a night-time taxi driver in New York City where the perceived decadence and sleaze feed his urge for violent action, attempting to save a preadolescent prostitute in the process.";
 	predicate:popularity "26.573";
 	predicate:has_score "8.2";
@@ -941,6 +1012,7 @@ movie:103
 movie:104
 	predicate:id "104";
 	predicate:title "Run Lola Run";
+	predicate:is_adult "False";
 	predicate:description "Lola receives a phone call from her boyfriend Manni. He lost 100,000 DM in a subway train that belongs to a very bad guy. She has 20 minutes to raise this amount and meet Manni. Otherwise, he will rob a store to get the money. Three different alternatives may happen depending on some minor event along Lola's run.";
 	predicate:popularity "12.058";
 	predicate:has_score "7.3";
@@ -956,6 +1028,7 @@ movie:104
 movie:105
 	predicate:id "105";
 	predicate:title "Back to the Future";
+	predicate:is_adult "False";
 	predicate:description "Eighties teenager Marty McFly is accidentally sent back in time to 1955, inadvertently disrupting his parents' first meeting and attracting his mother's romantic interest. Marty must repair the damage to history by rekindling his parents' romance and - with the help of his eccentric inventor friend Doc Brown - return to 1985.";
 	predicate:popularity "43.664";
 	predicate:has_score "8.3";
@@ -970,6 +1043,7 @@ movie:105
 movie:106
 	predicate:id "106";
 	predicate:title "Predator";
+	predicate:is_adult "False";
 	predicate:description "Dutch and his group of commandos are hired by the CIA to rescue downed airmen from guerillas in a Central American jungle. The mission goes well but as they return they find that something is hunting them. Nearly invisible, it blends in with the forest, taking trophies from the bodies of its victims as it goes along. Occasionally seeing through its eyes, the audience sees it is an intelligent alien hunter, hunting them for sport, killing them off one at a time.";
 	predicate:popularity "34.368";
 	predicate:has_score "7.4";
@@ -985,6 +1059,7 @@ movie:106
 movie:107
 	predicate:id "107";
 	predicate:title "Snatch";
+	predicate:is_adult "False";
 	predicate:description "Illegal boxing promoter Turkish convinces gangster Brick Top to offer bets on bare-knuckle boxer Mickey at his bookie business. When Mickey does not throw his first fight as agreed, an infuriated Brick Top demands another match. Meanwhile, gangster Frankie Four Fingers comes to place a bet for a friend with Brick Top's bookies, as multiple criminals converge on a stolen diamond that Frankie has come to London to sell.";
 	predicate:popularity "19.085";
 	predicate:has_score "7.8";
@@ -998,6 +1073,7 @@ movie:107
 movie:108
 	predicate:id "108";
 	predicate:title "Three Colors: Blue";
+	predicate:is_adult "False";
 	predicate:description "Julie is haunted by her grief after living through a tragic auto wreck that claimed the life of her composer husband and young daughter. Her initial reaction is to withdraw from her relationships, lock herself in her apartment and suppress her pain. But avoiding human interactions on the bustling streets of Paris proves impossible, and she eventually meets up with Olivier, an old friend who harbors a secret love for her, and who could draw her back to reality.";
 	predicate:popularity "12.544";
 	predicate:has_score "7.7";
@@ -1010,6 +1086,7 @@ movie:108
 movie:109
 	predicate:id "109";
 	predicate:title "Three Colors: White";
+	predicate:is_adult "False";
 	predicate:description "Polish immigrant Karol Karol finds himself out of a marriage, a job and a country when his French wife, Dominique, divorces him after six months due to his impotence. Forced to leave France after losing the business they jointly owned, Karol enlists fellow Polish expatriate Mikolah to smuggle him back to their homeland.";
 	predicate:popularity "10.636";
 	predicate:has_score "7.5";
@@ -1025,6 +1102,7 @@ movie:109
 movie:110
 	predicate:id "110";
 	predicate:title "Three Colors: Red";
+	predicate:is_adult "False";
 	predicate:description "Part-time model Valentine meets a retired judge who lives in her neighborhood after she runs over his dog. At first the judge gifts Valentine with the dog, but her possessive boyfriend won't allow her to keep it. When she returns with the dog to the judge's house, she discovers him listening in on his neighbors' phone conversations. At first Valentine is outraged, but her debates with the judge over his behavior soon leads them to form a strange bond.";
 	predicate:popularity "10.772";
 	predicate:has_score "8.0";
@@ -1038,6 +1116,7 @@ movie:110
 movie:111
 	predicate:id "111";
 	predicate:title "Scarface";
+	predicate:is_adult "False";
 	predicate:description "After getting a green card in exchange for assassinating a Cuban government official, Tony Montana stakes a claim on the drug trade in Miami. Viciously murdering anyone who stands in his way, Tony eventually becomes the biggest drug lord in the state, controlling nearly all the cocaine that comes through Miami. But increased pressure from the police, wars with Colombian drug cartels and his own drug-fueled paranoia serve to fuel the flames of his eventual downfall.";
 	predicate:popularity "37.107";
 	predicate:has_score "8.2";
@@ -1053,6 +1132,7 @@ movie:111
 movie:112
 	predicate:id "112";
 	predicate:title "Italian for Beginners";
+	predicate:is_adult "False";
 	predicate:description "A group of strangers find friendship, family and love within an Italian beginners’ course.";
 	predicate:popularity "4.932";
 	predicate:has_score "6.5";
@@ -1067,6 +1147,7 @@ movie:112
 movie:113
 	predicate:id "113";
 	predicate:title "Spring, Summer, Fall, Winter... and Spring";
+	predicate:is_adult "False";
 	predicate:description "An isolated lake, where an old monk lives in a small floating temple. The monk has a young boy living with him, learning to become a monk. We watch as seasons and years pass by.";
 	predicate:popularity "10.809";
 	predicate:has_score "7.8";
@@ -1078,6 +1159,7 @@ movie:113
 movie:114
 	predicate:id "114";
 	predicate:title "Pretty Woman";
+	predicate:is_adult "False";
 	predicate:description "When a millionaire wheeler-dealer enters a business contract with a Hollywood hooker Vivian Ward, he loses his heart in the bargain.";
 	predicate:popularity "32.07";
 	predicate:has_score "7.4";
@@ -1090,6 +1172,7 @@ movie:114
 movie:115
 	predicate:id "115";
 	predicate:title "The Big Lebowski";
+	predicate:is_adult "False";
 	predicate:description "Jeffrey 'The Dude' Lebowski, a Los Angeles slacker who only wants to bowl and drink White Russians, is mistaken for another Jeffrey Lebowski, a wheelchair-bound millionaire, and finds himself dragged into a strange series of events involving nihilists, adult film producers, ferrets, errant toes, and large sums of money.";
 	predicate:popularity "23.963";
 	predicate:has_score "7.9";
@@ -1105,6 +1188,7 @@ movie:115
 movie:116
 	predicate:id "116";
 	predicate:title "Match Point";
+	predicate:is_adult "False";
 	predicate:description "Match Point is Woody Allen’s satire of the British High Society and the ambition of a young tennis instructor to enter into it. Yet when he must decide between two women - one assuring him his place in high society, and the other that would take him far from it - palms start to sweat and a dark psychological match in his head begins.";
 	predicate:popularity "16.328";
 	predicate:has_score "7.4";
@@ -1119,6 +1203,7 @@ movie:116
 movie:117
 	predicate:id "117";
 	predicate:title "The Untouchables";
+	predicate:is_adult "False";
 	predicate:description "Young Treasury Agent Elliot Ness arrives in Chicago and is determined to take down Al Capone, but it's not going to be easy because Capone has the police in his pocket. Ness meets Jimmy Malone, a veteran patrolman and probably the most honorable one on the force. He asks Malone to help him get Capone, but Malone warns him that if he goes after Capone, he is going to war.";
 	predicate:popularity "23.855";
 	predicate:has_score "7.8";
@@ -1133,6 +1218,7 @@ movie:117
 movie:118
 	predicate:id "118";
 	predicate:title "Charlie and the Chocolate Factory";
+	predicate:is_adult "False";
 	predicate:description "A young boy wins a tour through the most magnificent chocolate factory in the world, led by the world's most unusual candy maker.";
 	predicate:popularity "46.552";
 	predicate:has_score "7.0";
@@ -1147,6 +1233,7 @@ movie:118
 movie:120
 	predicate:id "120";
 	predicate:title "The Lord of the Rings: The Fellowship of the Ring";
+	predicate:is_adult "False";
 	predicate:description "Young hobbit Frodo Baggins, after inheriting a mysterious ring from his uncle Bilbo, must leave his home in order to keep it from falling into the hands of its evil creator. Along the way, a fellowship is formed to protect the ringbearer and make sure that the ring arrives at its final destination: Mt. Doom, the only place where it can be destroyed.";
 	predicate:popularity "55.77";
 	predicate:has_score "8.3";
@@ -1160,6 +1247,7 @@ movie:120
 movie:121
 	predicate:id "121";
 	predicate:title "The Lord of the Rings: The Two Towers";
+	predicate:is_adult "False";
 	predicate:description "Frodo and Sam are trekking to Mordor to destroy the One Ring of Power while Gimli, Legolas and Aragorn search for the orc-captured Merry and Pippin. All along, nefarious wizard Saruman awaits the Fellowship members at the Orthanc Tower in Isengard.";
 	predicate:popularity "50.319";
 	predicate:has_score "8.3";
@@ -1173,6 +1261,7 @@ movie:121
 movie:122
 	predicate:id "122";
 	predicate:title "The Lord of the Rings: The Return of the King";
+	predicate:is_adult "False";
 	predicate:description "Aragorn is revealed as the heir to the ancient kings as he, Gandalf and the other members of the broken fellowship struggle to save Gondor from Sauron's forces. Meanwhile, Frodo and Sam take the ring closer to the heart of Mordor, the dark lord's realm.";
 	predicate:popularity "50.383";
 	predicate:has_score "8.5";
@@ -1186,6 +1275,7 @@ movie:122
 movie:123
 	predicate:id "123";
 	predicate:title "The Lord of the Rings";
+	predicate:is_adult "False";
 	predicate:description "The Fellowship of the Ring embark on a journey to destroy the One Ring and end Sauron's reign over Middle-earth.";
 	predicate:popularity "17.47";
 	predicate:has_score "6.5";
@@ -1199,6 +1289,7 @@ movie:123
 movie:124
 	predicate:id "124";
 	predicate:title "No End";
+	predicate:is_adult "False";
 	predicate:description "1982, Poland. A translator loses her husband and becomes a victim of her own sorrow. She looks to sex, to her son, to law, and to hypnotism when she has nothing else in this time of martial law when Solidarity was banned.";
 	predicate:popularity "4.448";
 	predicate:has_score "7.8";
@@ -1211,6 +1302,7 @@ movie:124
 movie:125
 	predicate:id "125";
 	predicate:title "Railway Station";
+	predicate:is_adult "False";
 	predicate:description "Railway Station is a documentary about a Warsaw railway station Dworzec that was controversial and against the government at the time. The footage that exposed the monitoring of sales was seized by police";
 	predicate:popularity "1.962";
 	predicate:has_score "6.0";
@@ -1222,6 +1314,7 @@ movie:125
 movie:126
 	predicate:id "126";
 	predicate:title "Short Working Day";
+	predicate:is_adult "False";
 	predicate:description "Kieślowski’s study of a political strike, controversially told from the viewpoint of a Communist functionary trying to keep order.";
 	predicate:popularity "3.033";
 	predicate:has_score "7.3";
@@ -1234,6 +1327,7 @@ movie:126
 movie:127
 	predicate:id "127";
 	predicate:title "Blind Chance";
+	predicate:is_adult "False";
 	predicate:description "Witek runs after a train. Three variations follow on how such a seemingly banal incident could influence the rest of Witek's life.";
 	predicate:popularity "9.112";
 	predicate:has_score "7.8";
@@ -1245,6 +1339,7 @@ movie:127
 movie:128
 	predicate:id "128";
 	predicate:title "Princess Mononoke";
+	predicate:is_adult "False";
 	predicate:description "Ashitaka, a prince of the disappearing Emishi people, is cursed by a demonized boar god and must journey to the west to find a cure. Along the way, he encounters San, a young human woman fighting to protect the forest, and Lady Eboshi, who is trying to destroy it. Ashitaka must find a way to bring balance to this conflict.";
 	predicate:popularity "34.314";
 	predicate:has_score "8.4";
@@ -1258,6 +1353,7 @@ movie:128
 movie:129
 	predicate:id "129";
 	predicate:title "Spirited Away";
+	predicate:is_adult "False";
 	predicate:description "A young girl, Chihiro, becomes trapped in a strange new world of spirits. When her parents undergo a mysterious transformation, she must call upon the courage she never knew she had to free her family.";
 	predicate:popularity "56.693";
 	predicate:has_score "8.5";
@@ -1271,6 +1367,7 @@ movie:129
 movie:132
 	predicate:id "132";
 	predicate:title "Gimme Shelter";
+	predicate:is_adult "False";
 	predicate:description "The landmark documentary about the tragically ill-fated Rolling Stones free concert at Altamont Speedway on December 6, 1969. Only four months earlier, Woodstock defined the Love Generation; now it lay in ruins on a desolate racetrack six miles outside of San Francisco.";
 	predicate:popularity "8.469";
 	predicate:has_score "7.6";
@@ -1283,6 +1380,7 @@ movie:132
 movie:133
 	predicate:id "133";
 	predicate:title "Primary";
+	predicate:is_adult "False";
 	predicate:description "Primary is a documentary film about the primary elections between John F. Kennedy and Hubert Humphrey in 1960. Primary is the first documentary to use light equipment in order to follow their subjects in a more intimate filmmaking style. This unconventional way of filming created a new look for documentary films where the camera’s lens was right in the middle of what ever drama was occuring.";
 	predicate:popularity "2.112";
 	predicate:has_score "6.6";
@@ -1294,6 +1392,7 @@ movie:133
 movie:134
 	predicate:id "134";
 	predicate:title "O Brother, Where Art Thou?";
+	predicate:is_adult "False";
 	predicate:description "In the deep south during the 1930s, three escaped convicts search for hidden treasure while a relentless lawman pursues them. On their journey they come across many comical characters and incredible situations. Based upon Homer's 'Odyssey'.";
 	predicate:popularity "16.26";
 	predicate:has_score "7.3";
@@ -1307,6 +1406,7 @@ movie:134
 movie:135
 	predicate:id "135";
 	predicate:title "Dont Look Back";
+	predicate:is_adult "False";
 	predicate:description "In this wildly entertaining vision of one of the twentieth century’s greatest artists, Bob Dylan is surrounded by teen fans, gets into heated philosophical jousts with journalists, and kicks back with fellow musicians Joan Baez, Donovan, and Alan Price.";
 	predicate:popularity "7.996";
 	predicate:has_score "7.6";
@@ -1319,6 +1419,7 @@ movie:135
 movie:136
 	predicate:id "136";
 	predicate:title "Freaks";
+	predicate:is_adult "False";
 	predicate:description "A circus' beautiful trapeze artist agrees to marry the leader of side-show performers, but his deformed friends discover she is only marrying him for his inheritance.";
 	predicate:popularity "10.299";
 	predicate:has_score "7.8";
@@ -1333,6 +1434,7 @@ movie:136
 movie:137
 	predicate:id "137";
 	predicate:title "Groundhog Day";
+	predicate:is_adult "False";
 	predicate:description "A narcissistic T.V. weatherman, along with his attractive-but-distant producer and mawkish cameraman, is sent to report on Groundhog Day in the small town of Punxsutawney, where he finds himself repeating the same day over and over.";
 	predicate:popularity "19.691";
 	predicate:has_score "7.6";
@@ -1349,6 +1451,7 @@ movie:137
 movie:138
 	predicate:id "138";
 	predicate:title "Dracula";
+	predicate:is_adult "False";
 	predicate:description "A powerful and ruthless vampire named Count Dracula arrives in London to prey on young, socialite women. Standing in the vampire's way, is a group of concerned men and the enigmatic Dr. Abraham Van Helsing.";
 	predicate:popularity "11.927";
 	predicate:has_score "7.1";
@@ -1363,6 +1466,7 @@ movie:138
 movie:139
 	predicate:id "139";
 	predicate:title "Mifune";
+	predicate:is_adult "False";
 	predicate:description "Kresten, newly wed, is on the threshold of a great career success in his father-in-law´s company. But when the death of his own father takes him back to his poverty-stricken childhood home, far out in the country, his career plans fall apart. For one thing he has to deal with his loveable, backward brother, who is now all alone; for another, he meets a stunning woman who comes to the farm as a housekeeper, in disguise of her real profession as a call-girl.";
 	predicate:popularity "4.507";
 	predicate:has_score "6.9";
@@ -1376,6 +1480,7 @@ movie:139
 movie:140
 	predicate:id "140";
 	predicate:title "Bad Education";
+	predicate:is_adult "False";
 	predicate:description "Two children, Ignacio and Enrique, know love, the movies and fear in a religious school at the beginning of the 1960s. Father Manolo, director of the school and its professor of literature, is witness to and part of these discoveries. The three are followed through the next few decades, their reunion marking life and death.";
 	predicate:popularity "10.745";
 	predicate:has_score "7.4";
@@ -1391,6 +1496,7 @@ movie:140
 movie:141
 	predicate:id "141";
 	predicate:title "Donnie Darko";
+	predicate:is_adult "False";
 	predicate:description "After narrowly escaping a bizarre accident, a troubled teenager is plagued by visions of a large bunny rabbit that manipulates him to commit a series of crimes.";
 	predicate:popularity "16.8";
 	predicate:has_score "7.8";
@@ -1404,6 +1510,7 @@ movie:141
 movie:142
 	predicate:id "142";
 	predicate:title "Brokeback Mountain";
+	predicate:is_adult "False";
 	predicate:description "Two modern-day cowboys meet on a shepherding job in the summer of '63, the two share a raw and powerful summer together that turns into a lifelong relationship conflict";
 	predicate:popularity "25.301";
 	predicate:has_score "7.8";
@@ -1416,6 +1523,7 @@ movie:142
 movie:143
 	predicate:id "143";
 	predicate:title "All Quiet on the Western Front";
+	predicate:is_adult "False";
 	predicate:description "A young soldier faces profound disillusionment in the soul-destroying horror of World War I. Together with several other young German soldiers, he experiences the horrors of war, such evil of which he had not conceived of when signing up to fight. They eventually become sad, tormented, and confused of their purpose.";
 	predicate:popularity "12.746";
 	predicate:has_score "7.8";
@@ -1431,6 +1539,7 @@ movie:143
 movie:144
 	predicate:id "144";
 	predicate:title "Wings of Desire";
+	predicate:is_adult "False";
 	predicate:description "Two angels, Damiel and Cassiel, glide through the streets of Berlin, observing the bustling population, providing invisible rays of hope to the distressed but never interacting with them. When Damiel falls in love with lonely trapeze artist Marion, the angel longs to experience life in the physical world, and finds -- with some words of wisdom from actor Peter Falk -- that it might be possible for him to take human form.";
 	predicate:popularity "10.433";
 	predicate:has_score "7.8";
@@ -1446,6 +1555,7 @@ movie:144
 movie:145
 	predicate:id "145";
 	predicate:title "Breaking the Waves";
+	predicate:is_adult "False";
 	predicate:description "In a small and conservative Scottish village, a woman's paralytic husband convinces her to have extramarital intercourse so she can tell him about it and give him a reason for living.";
 	predicate:popularity "8.221";
 	predicate:has_score "7.5";
@@ -1458,6 +1568,7 @@ movie:145
 movie:146
 	predicate:id "146";
 	predicate:title "Crouching Tiger, Hidden Dragon";
+	predicate:is_adult "False";
 	predicate:description "Two warriors in pursuit of a stolen sword and a notorious fugitive are led to an impetuous, physically-skilled, teenage nobleman's daughter, who is at a crossroads in her life.";
 	predicate:popularity "18.522";
 	predicate:has_score "7.3";
@@ -1472,6 +1583,7 @@ movie:146
 movie:147
 	predicate:id "147";
 	predicate:title "The 400 Blows";
+	predicate:is_adult "False";
 	predicate:description "For young Parisian boy Antoine Doinel, life is one difficult situation after another. Surrounded by inconsiderate adults, including his neglectful parents, Antoine spends his days with his best friend, Rene, trying to plan for a better life. When one of their schemes goes awry, Antoine ends up in trouble with the law, leading to even more conflicts with unsympathetic authority figures.";
 	predicate:popularity "12.72";
 	predicate:has_score "8.1";
@@ -1484,6 +1596,7 @@ movie:147
 movie:148
 	predicate:id "148";
 	predicate:title "The Secret Life of Words";
+	predicate:is_adult "False";
 	predicate:description "A touching story of a deaf girl who is sent to an oil rig to take care of a man who has been blinded in a terrible accident. The girl has a special ability to communicate with the men on board and especially with her patient as they share intimate moments together that will change their lives forever.";
 	predicate:popularity "7.761";
 	predicate:has_score "7.1";
@@ -1498,6 +1611,7 @@ movie:148
 movie:149
 	predicate:id "149";
 	predicate:title "Akira";
+	predicate:is_adult "False";
 	predicate:description "A secret military project endangers Neo-Tokyo when it turns a biker gang member into a rampaging psychic psychopath that only two teenagers and a group of psychics can stop.";
 	predicate:popularity "25.668";
 	predicate:has_score "7.9";
@@ -1511,6 +1625,7 @@ movie:149
 movie:150
 	predicate:id "150";
 	predicate:title "48 Hrs.";
+	predicate:is_adult "False";
 	predicate:description "A hard-nosed cop reluctantly teams up with a wise-cracking criminal temporarily paroled to him, in order to track down a killer.";
 	predicate:popularity "14.101";
 	predicate:has_score "6.6";
@@ -1526,6 +1641,7 @@ movie:150
 movie:152
 	predicate:id "152";
 	predicate:title "Star Trek: The Motion Picture";
+	predicate:is_adult "False";
 	predicate:description "When a destructive space entity is spotted approaching Earth, Admiral Kirk resumes command of the Starship Enterprise in order to intercept, examine, and hopefully stop it.";
 	predicate:popularity "20.298";
 	predicate:has_score "6.4";
@@ -1539,6 +1655,7 @@ movie:152
 movie:153
 	predicate:id "153";
 	predicate:title "Lost in Translation";
+	predicate:is_adult "False";
 	predicate:description "Two lost souls visiting Tokyo -- the young, neglected wife of a photographer and a washed-up movie star shooting a TV commercial -- find an odd solace and pensive freedom to be real in each other's company, away from their lives in America.";
 	predicate:popularity "23.24";
 	predicate:has_score "7.4";
@@ -1553,6 +1670,7 @@ movie:153
 movie:154
 	predicate:id "154";
 	predicate:title "Star Trek II: The Wrath of Khan";
+	predicate:is_adult "False";
 	predicate:description "Admiral James T. Kirk is feeling old; the prospect of accompanying his old ship the Enterprise on a two week cadet cruise is not making him feel any younger. But the training cruise becomes a life or death struggle when Khan escapes from years of exile and captures the power of creation itself.";
 	predicate:popularity "11.671";
 	predicate:has_score "7.4";
@@ -1567,6 +1685,7 @@ movie:154
 movie:155
 	predicate:id "155";
 	predicate:title "The Dark Knight";
+	predicate:is_adult "False";
 	predicate:description "Batman raises the stakes in his war on crime. With the help of Lt. Jim Gordon and District Attorney Harvey Dent, Batman sets out to dismantle the remaining criminal organizations that plague the streets. The partnership proves to be effective, but they soon find themselves prey to a reign of chaos unleashed by a rising criminal mastermind known to the terrified citizens of Gotham as the Joker.";
 	predicate:popularity "57.696";
 	predicate:has_score "8.5";
@@ -1582,6 +1701,7 @@ movie:155
 movie:156
 	predicate:id "156";
 	predicate:title "Wilbur Wants to Kill Himself";
+	predicate:is_adult "False";
 	predicate:description "The strange comedy film of two close brothers; one, Wilbur, who wants to kill himself, and the other, Harbour, who tries to prevent this. When their father dies leaving them his bookstore they meet a woman who makes their lives a bit better yet with a bit more trouble as well.";
 	predicate:popularity "4.225";
 	predicate:has_score "6.5";
@@ -1595,6 +1715,7 @@ movie:156
 movie:157
 	predicate:id "157";
 	predicate:title "Star Trek III: The Search for Spock";
+	predicate:is_adult "False";
 	predicate:description "Admiral Kirk and his bridge crew risk their careers stealing the decommissioned Enterprise to return to the restricted Genesis planet to recover Spock's body.";
 	predicate:popularity "11.535";
 	predicate:has_score "6.6";
@@ -1610,6 +1731,7 @@ movie:157
 movie:158
 	predicate:id "158";
 	predicate:title "Knockin' on Heaven's Door";
+	predicate:is_adult "False";
 	predicate:description "Two young men, Martin and Rudi, both suffering from terminal cancer, get to know each other in a hospital room. They drown their desperation in tequila and decide to take one last trip to the sea. Drunk and still in pajamas they steal the first fancy car they find, a 60's Mercedes convertible. The car happens to belong to a bunch of gangsters, which immediately start to chase it, since it contains more than the pistol Martin finds in the glove box.";
 	predicate:popularity "7.806";
 	predicate:has_score "7.7";
@@ -1622,6 +1744,7 @@ movie:158
 movie:159
 	predicate:id "159";
 	predicate:title "Maybe... Maybe Not";
+	predicate:is_adult "False";
 	predicate:description "Der Bewegte Mann is a German comedy about a heterosexual man, Axel, who is thrown out of his girlfriends home for cheating and ends up moving in with a gay man. Axel learns the advantages of living with gay men even though they are attracted to him and when his girlfriend wants him back he must make a tough decision.";
 	predicate:popularity "4.507";
 	predicate:has_score "6.2";
@@ -1634,6 +1757,7 @@ movie:159
 movie:160
 	predicate:id "160";
 	predicate:title "The Arrival of a Train at La Ciotat";
+	predicate:is_adult "False";
 	predicate:description "A group of people are standing along the platform of a railway station in La Ciotat, waiting for a train. One is seen coming, at some distance, and eventually stops at the platform. Doors of the railway-cars open and attendants help passengers off and on.  Popular legend has it that, when this film was shown, the first-night audience fled the café in terror, fearing being run over by the 'approaching' train. This legend has since been identified as promotional embellishment, though there is evidence to suggest that people were astounded at the capabilities of the Lumières' cinématographe.";
 	predicate:popularity "6.317";
 	predicate:has_score "7.0";
@@ -1645,6 +1769,7 @@ movie:160
 movie:161
 	predicate:id "161";
 	predicate:title "Ocean's Eleven";
+	predicate:is_adult "False";
 	predicate:description "Less than 24 hours into his parole, charismatic thief Danny Ocean is already rolling out his next plan: In one night, Danny's hand-picked crew of specialists will attempt to steal more than $150 million from three Las Vegas casinos. But to score the cash, Danny risks his chances of reconciling with ex-wife, Tess.";
 	predicate:popularity "26.993";
 	predicate:has_score "7.4";
@@ -1658,6 +1783,7 @@ movie:161
 movie:162
 	predicate:id "162";
 	predicate:title "Edward Scissorhands";
+	predicate:is_adult "False";
 	predicate:description "A small suburban town receives a visit from a castaway unfinished science experiment named Edward.";
 	predicate:popularity "31.483";
 	predicate:has_score "7.7";
@@ -1671,6 +1797,7 @@ movie:162
 movie:163
 	predicate:id "163";
 	predicate:title "Ocean's Twelve";
+	predicate:is_adult "False";
 	predicate:description "Danny Ocean reunites with his old flame and the rest of his merry band of thieves in carrying out three huge heists in Rome, Paris and Amsterdam – but a Europol agent is hot on their heels.";
 	predicate:popularity "31.096";
 	predicate:has_score "6.5";
@@ -1687,6 +1814,7 @@ movie:163
 movie:164
 	predicate:id "164";
 	predicate:title "Breakfast at Tiffany's";
+	predicate:is_adult "False";
 	predicate:description "Fortune hunter Holly Golightly finds herself captivated by aspiring writer Paul Varjak, who's moved into her building on a wealthy woman's dime. As romance blooms between Paul and Holly, Doc Golightly shows up on the scene, revealing Holly's past.";
 	predicate:popularity "13.262";
 	predicate:has_score "7.7";
@@ -1701,6 +1829,7 @@ movie:164
 movie:165
 	predicate:id "165";
 	predicate:title "Back to the Future Part II";
+	predicate:is_adult "False";
 	predicate:description "Marty and Doc are at it again in this wacky sequel to the 1985 blockbuster as the time-traveling duo head to 2015 to nip some McFly family woes in the bud. But things go awry thanks to bully Biff Tannen and a pesky sports almanac. In a last-ditch attempt to set things straight, Marty finds himself bound for 1955 and face to face with his teenage parents -- again.";
 	predicate:popularity "28.841";
 	predicate:has_score "7.7";
@@ -1715,6 +1844,7 @@ movie:165
 movie:166
 	predicate:id "166";
 	predicate:title "The Party";
+	predicate:is_adult "False";
 	predicate:description "A thirteen-year-old French girl deals with moving to a new city and school in Paris, while at the same time her parents are getting a divorce.";
 	predicate:popularity "8.564";
 	predicate:has_score "6.6";
@@ -1729,6 +1859,7 @@ movie:166
 movie:167
 	predicate:id "167";
 	predicate:title "K-PAX";
+	predicate:is_adult "False";
 	predicate:description "Prot is a patient at a mental hospital who claims to be from a far away planet. His psychiatrist tries to help him, only to begin to doubt his own explanations.";
 	predicate:popularity "15.974";
 	predicate:has_score "7.2";
@@ -1741,6 +1872,7 @@ movie:167
 movie:168
 	predicate:id "168";
 	predicate:title "Star Trek IV: The Voyage Home";
+	predicate:is_adult "False";
 	predicate:description "Fugitives of the Federation for their daring rescue of Spock from the doomed Genesis Planet, Admiral Kirk (William Shatner) and his crew begin their journey home to face justice for their actions. But as they near Earth, they find it at the mercy of a mysterious alien presence whose signals are slowly destroying the planet. In a desperate attempt to answer the call of the probe, Kirk and his crew race back to the late twentieth century. However they soon find the world they once knew to be more alien than anything they've encountered in the far reaches of the galaxy!";
 	predicate:popularity "14.339";
 	predicate:has_score "7.2";
@@ -1754,6 +1886,7 @@ movie:168
 movie:169
 	predicate:id "169";
 	predicate:title "Predator 2";
+	predicate:is_adult "False";
 	predicate:description "Ten years after a band of mercenaries first battled a vicious alien, the invisible creature from another world has returned to Earth—and this time, it’s drawn to the gang-ruled and ravaged city of Los Angeles. When it starts murdering drug dealers, detective-lieutenant Mike Harrigan and his police force set out to capture the creature, ignoring warnings from a mysterious government agent to stay away.";
 	predicate:popularity "29.71";
 	predicate:has_score "6.1";
@@ -1767,6 +1900,7 @@ movie:169
 movie:170
 	predicate:id "170";
 	predicate:title "28 Days Later";
+	predicate:is_adult "False";
 	predicate:description "Twenty-eight days after a killer virus was accidentally unleashed from a British research facility, a small group of London survivors are caught in a desperate struggle to protect themselves from the infected. Carried by animals and humans, the virus turns those it infects into homicidal maniacs -- and it's absolutely impossible to contain.";
 	predicate:popularity "30.884";
 	predicate:has_score "7.2";
@@ -1781,6 +1915,7 @@ movie:170
 movie:171
 	predicate:id "171";
 	predicate:title "The Party 2";
+	predicate:is_adult "False";
 	predicate:description "A young French teenage girl after moving to a new city falls in love with a boy and is thinking of having sex with him because her girlfriends have already done it.";
 	predicate:popularity "7.065";
 	predicate:has_score "6.4";
@@ -1794,6 +1929,7 @@ movie:171
 movie:172
 	predicate:id "172";
 	predicate:title "Star Trek V: The Final Frontier";
+	predicate:is_adult "False";
 	predicate:description "Capt. Kirk and his crew must deal with Mr. Spock's half brother who kidnaps three diplomats and hijacks the Enterprise in his obsessive search for God.";
 	predicate:popularity "13.224";
 	predicate:has_score "5.7";
@@ -1808,6 +1944,7 @@ movie:172
 movie:173
 	predicate:id "173";
 	predicate:title "20,000 Leagues Under the Sea";
+	predicate:is_adult "False";
 	predicate:description "A ship sent to investigate a wave of mysterious sinkings encounters the advanced submarine, the Nautilus, commanded by Captain Nemo.";
 	predicate:popularity "12.807";
 	predicate:has_score "7.1";
@@ -1823,6 +1960,7 @@ movie:173
 movie:174
 	predicate:id "174";
 	predicate:title "Star Trek VI: The Undiscovered Country";
+	predicate:is_adult "False";
 	predicate:description "On the eve of retirement, Kirk and McCoy are charged with assassinating the Klingon High Chancellor and imprisoned. The Enterprise crew must help them escape to thwart a conspiracy aimed at sabotaging the last best hope for peace.";
 	predicate:popularity "8.788";
 	predicate:has_score "7.0";
@@ -1837,6 +1975,7 @@ movie:174
 movie:175
 	predicate:id "175";
 	predicate:title "The Big Blue";
+	predicate:is_adult "False";
 	predicate:description "Two men answer the call of the ocean in this romantic fantasy-adventure.  Jacques and Enzo are a pair of friends who have been close since childhood, and who share a passion for the dangerous sport of free diving. Professional diver Jacques opted to follow in the footsteps of his father, who died at sea when Jacques was a boy; to the bewilderment of scientists, Jacques harbors a remarkable ability to adjust his heart rate and breathing pattern in the water, so that his vital signs more closely resemble that of dolphins than men (he even considers a school of dolphins as his extended family).  As Enzo persuades a reluctant Jacques to compete against him in a free diving contest -- determining who can dive deeper and longer without scuba gear -- Jacques meets Johana, a beautiful insurance investigator from America, and he finds that he must choose between his love for her and his love of the sea.";
 	predicate:popularity "12.42";
 	predicate:has_score "7.5";
@@ -1852,6 +1991,7 @@ movie:175
 movie:176
 	predicate:id "176";
 	predicate:title "Saw";
+	predicate:is_adult "False";
 	predicate:description "Obsessed with teaching his victims the value of life, a deranged, sadistic serial killer abducts the morally wayward. Once captured, they must face impossible choices in a horrific game of survival. The victims must fight to win their lives back, or die trying...";
 	predicate:popularity "47.521";
 	predicate:has_score "7.4";
@@ -1865,6 +2005,7 @@ movie:176
 movie:177
 	predicate:id "177";
 	predicate:title "The Fisher King";
+	predicate:is_adult "False";
 	predicate:description "Two troubled men face their terrible destinies and events of their past as they join together on a mission to find the Holy Grail and thus to save themselves.";
 	predicate:popularity "10.122";
 	predicate:has_score "7.3";
@@ -1877,6 +2018,7 @@ movie:177
 movie:178
 	predicate:id "178";
 	predicate:title "Blown Away";
+	predicate:is_adult "False";
 	predicate:description "Blown Away tells the story of Jimmy Dove who works for the Boston bomb squad. Shortly after Dove leaves the force his partner is killed by a bomb that Dove thinks might have been made by someone he knows.";
 	predicate:popularity "13.457";
 	predicate:has_score "6.1";
@@ -1888,6 +2030,7 @@ movie:178
 movie:179
 	predicate:id "179";
 	predicate:title "The Interpreter";
+	predicate:is_adult "False";
 	predicate:description "After Silvia Broome, an interpreter at United Nations headquarters, overhears plans of an assassination, an American Secret Service agent is sent to investigate.";
 	predicate:popularity "12.233";
 	predicate:has_score "6.3";
@@ -1902,6 +2045,7 @@ movie:179
 movie:180
 	predicate:id "180";
 	predicate:title "Minority Report";
+	predicate:is_adult "False";
 	predicate:description "John Anderton is a top 'Precrime' cop in the late-21st century, when technology can predict crimes before they're committed. But Anderton becomes the quarry when another investigator targets him for a murder charge.";
 	predicate:popularity "22.684";
 	predicate:has_score "7.3";
@@ -1917,6 +2061,7 @@ movie:180
 movie:182
 	predicate:id "182";
 	predicate:title "The Good German";
+	predicate:is_adult "False";
 	predicate:description "An American journalist arrives in Berlin just after the end of World War Two. He becomes involved in a murder mystery surrounding a dead GI who washes up at a lakeside mansion during the Potsdam negotiations between the Allied powers. Soon his investigation connects with his search for his married pre-war German lover.";
 	predicate:popularity "10.325";
 	predicate:has_score "6.0";
@@ -1933,6 +2078,7 @@ movie:182
 movie:183
 	predicate:id "183";
 	predicate:title "The Wizard";
+	predicate:is_adult "False";
 	predicate:description "Corey refuses to let his emotionally disturbed younger brother Jimmy be institutionalized, and the two run away together. They soon join forces with a resourceful girl, who notices that Jimmy has a special talent: he is a 'wizard' at video games and can achieve the high score on absolutely everything he plays. Evading their parents and a sinister bounty hunter, the trio head for a climactic showdown at the national video game championships in California.";
 	predicate:popularity "9.797";
 	predicate:has_score "6.1";
@@ -1948,6 +2094,7 @@ movie:183
 movie:184
 	predicate:id "184";
 	predicate:title "Jackie Brown";
+	predicate:is_adult "False";
 	predicate:description "Jackie Brown is a flight attendant who gets caught in the middle of smuggling cash into the country for her gunrunner boss. When the cops try to use Jackie to get to her boss, she hatches a plan — with help from a bail bondsman — to keep the money for herself.";
 	predicate:popularity "16.304";
 	predicate:has_score "7.3";
@@ -1961,6 +2108,7 @@ movie:184
 movie:185
 	predicate:id "185";
 	predicate:title "A Clockwork Orange";
+	predicate:is_adult "False";
 	predicate:description "In a near-future Britain, young Alexander DeLarge and his pals get their kicks beating and raping anyone they please. When not destroying the lives of others, Alex swoons to the music of Beethoven. The state, eager to crack down on juvenile crime, gives an incarcerated Alex the option to undergo an invasive procedure that'll rob him of all personal agency. In a time when conscience is a commodity, can Alex change his tune?";
 	predicate:popularity "25.895";
 	predicate:has_score "8.2";
@@ -1973,6 +2121,7 @@ movie:185
 movie:186
 	predicate:id "186";
 	predicate:title "Lucky Number Slevin";
+	predicate:is_adult "False";
 	predicate:description "Slevin is mistakenly put in the middle of a personal war between the city’s biggest criminal bosses. Under constant watch, Slevin must try not to get killed by an infamous assassin and come up with an idea of how to get out of his current dilemma. A film with many twists and turns.";
 	predicate:popularity "16.905";
 	predicate:has_score "7.5";
@@ -1987,6 +2136,7 @@ movie:186
 movie:187
 	predicate:id "187";
 	predicate:title "Sin City";
+	predicate:is_adult "False";
 	predicate:description "Welcome to Sin City. This town beckons to the tough, the corrupt, the brokenhearted. Some call it dark… Hard-boiled. Then there are those who call it home — Crooked cops, sexy dames, desperate vigilantes. Some are seeking revenge, others lust after redemption, and then there are those hoping for a little of both. A universe of unlikely and reluctant heroes still trying to do the right thing in a city that refuses to care.";
 	predicate:popularity "19.839";
 	predicate:has_score "7.4";
@@ -2000,6 +2150,7 @@ movie:187
 movie:189
 	predicate:id "189";
 	predicate:title "Sin City: A Dame to Kill For";
+	predicate:is_adult "False";
 	predicate:description "Some of Sin City's most hard-boiled citizens cross paths with a few of its more reviled inhabitants.";
 	predicate:popularity "28.696";
 	predicate:has_score "6.3";
@@ -2013,6 +2164,7 @@ movie:189
 movie:190
 	predicate:id "190";
 	predicate:title "Das Dorf der Freundschaft";
+	predicate:is_adult "False";
 	predicate:description "A German Documentary about the “village of friendship” that was created by American Veteran George Mizo to help the Vietnamese kids suffering from the Vietnam War.";
 	predicate:popularity "1.176";
 	predicate:has_score "10.0";
@@ -2024,6 +2176,7 @@ movie:190
 movie:191
 	predicate:id "191";
 	predicate:title "The State I Am In";
+	predicate:is_adult "False";
 	predicate:description "With 1970s Germany in the background, this film depicts the story of a family from the “R.A.F. Terrorist” group and their search for a normal life and their inner self.";
 	predicate:popularity "1.974";
 	predicate:has_score "7.2";
@@ -2036,6 +2189,7 @@ movie:191
 movie:192
 	predicate:id "192";
 	predicate:title "The Name of the Rose";
+	predicate:is_adult "False";
 	predicate:description "14th-century Franciscan monk William of Baskerville and his young novice arrive at a conference to find that several monks have been murdered under mysterious circumstances. To solve the crimes, William must rise up against the Church's authority and fight the shadowy conspiracy of monastery monks using only his intelligence – which is considerable.";
 	predicate:popularity "20.652";
 	predicate:has_score "7.4";
@@ -2050,6 +2204,7 @@ movie:192
 movie:193
 	predicate:id "193";
 	predicate:title "Star Trek: Generations";
+	predicate:is_adult "False";
 	predicate:description "Captain Jean-Luc Picard and the crew of the Enterprise-D find themselves at odds with the renegade scientist Soran who is destroying entire star systems. Only one man can help Picard stop Soran's scheme...and he's been dead for seventy-eight years.";
 	predicate:popularity "10.779";
 	predicate:has_score "6.5";
@@ -2064,6 +2219,7 @@ movie:193
 movie:194
 	predicate:id "194";
 	predicate:title "Amélie";
+	predicate:is_adult "False";
 	predicate:description "At a tiny Parisian café, the adorable yet painfully shy Amélie (Audrey Tautou) accidentally discovers a gift for helping others. Soon Amelie is spending her days as a matchmaker, guardian angel, and all-around do-gooder. But when she bumps into a handsome stranger, will she find the courage to become the star of her very own love story?";
 	predicate:popularity "25.356";
 	predicate:has_score "7.9";
@@ -2077,6 +2233,7 @@ movie:194
 movie:195
 	predicate:id "195";
 	predicate:title "Trouble in Paradise";
+	predicate:is_adult "False";
 	predicate:description "Thief Gaston Monescu and pickpocket Lily are partners in crime and love. Working for perfume company executive Mariette Colet, the two crooks decide to combine their criminal talents to rob their employer. Under the alias of Monsieur Laval, Gaston uses his position as Mariette's personal secretary to become closer to her. However, he takes things too far when he actually falls in love with Mariette, and has to choose between her and Lily.";
 	predicate:popularity "8.478";
 	predicate:has_score "7.6";
@@ -2090,6 +2247,7 @@ movie:195
 movie:196
 	predicate:id "196";
 	predicate:title "Back to the Future Part III";
+	predicate:is_adult "False";
 	predicate:description "The final installment of the Back to the Future trilogy finds Marty digging the trusty DeLorean out of a mineshaft and looking for Doc in the Wild West of 1885. But when their time machine breaks down, the travelers are stranded in a land of spurs. More problems arise when Doc falls for pretty schoolteacher Clara Clayton, and Marty tangles with Buford Tannen.";
 	predicate:popularity "24.091";
 	predicate:has_score "7.4";
@@ -2103,6 +2261,7 @@ movie:196
 movie:197
 	predicate:id "197";
 	predicate:title "Braveheart";
+	predicate:is_adult "False";
 	predicate:description "Enraged at the slaughter of Murron, his new bride and childhood love, Scottish warrior William Wallace slays a platoon of the local English lord's soldiers. This leads the village to revolt and, eventually, the entire country to rise up against English rule.";
 	predicate:popularity "32.853";
 	predicate:has_score "7.9";
@@ -2119,6 +2278,7 @@ movie:197
 movie:198
 	predicate:id "198";
 	predicate:title "To Be or Not to Be";
+	predicate:is_adult "False";
 	predicate:description "During the Nazi occupation of Poland, an acting troupe becomes embroiled in a Polish soldier's efforts to track down a German spy.";
 	predicate:popularity "7.949";
 	predicate:has_score "7.9";
@@ -2132,6 +2292,7 @@ movie:198
 movie:199
 	predicate:id "199";
 	predicate:title "Star Trek: First Contact";
+	predicate:is_adult "False";
 	predicate:description "The Borg, a relentless race of cyborgs, are on a direct course for Earth. Violating orders to stay away from the battle, Captain Picard and the crew of the newly-commissioned USS Enterprise E pursue the Borg back in time to prevent the invaders from changing Federation history and assimilating the galaxy.";
 	predicate:popularity "15.85";
 	predicate:has_score "7.2";
@@ -2146,6 +2307,7 @@ movie:199
 movie:200
 	predicate:id "200";
 	predicate:title "Star Trek: Insurrection";
+	predicate:is_adult "False";
 	predicate:description "When an alien race and factions within Starfleet attempt to take over a planet that has 'regenerative' properties, it falls upon Captain Picard and the crew of the Enterprise to defend the planet's people as well as the very ideals upon which the Federation itself was founded.";
 	predicate:popularity "14.472";
 	predicate:has_score "6.4";
@@ -2160,6 +2322,7 @@ movie:200
 movie:201
 	predicate:id "201";
 	predicate:title "Star Trek: Nemesis";
+	predicate:is_adult "False";
 	predicate:description "En route to the honeymoon of William Riker to Deanna Troi on her home planet of Betazed, Captain Jean-Luc Picard and the crew of the U.S.S. Enterprise receives word from Starfleet that a coup has resulted in the installation of a new Romulan political leader, Shinzon, who claims to seek peace with the human-backed United Federation of Planets. Once in enemy territory, the captain and his crew make a startling discovery: Shinzon is human, a slave from the Romulan sister planet of Remus, and has a secret, shocking relationship to Picard himself.";
 	predicate:popularity "18.257";
 	predicate:has_score "6.2";
@@ -2174,6 +2337,7 @@ movie:201
 movie:203
 	predicate:id "203";
 	predicate:title "Mean Streets";
+	predicate:is_adult "False";
 	predicate:description "A small-time hood must choose from among love, friendship and the chance to rise within the mob.";
 	predicate:popularity "12.616";
 	predicate:has_score "7.2";
@@ -2187,6 +2351,7 @@ movie:203
 movie:204
 	predicate:id "204";
 	predicate:title "The Wages of Fear";
+	predicate:is_adult "False";
 	predicate:description "In the South American jungle, supplies of nitroglycerine are needed at a remote oil field. The oil company pays four men to deliver the supplies in two trucks. A tense rivalry develops between the two sets of drivers on the rough remote roads where the slightest jolt can result in death.";
 	predicate:popularity "10.753";
 	predicate:has_score "8.1";
@@ -2204,6 +2369,7 @@ movie:204
 movie:205
 	predicate:id "205";
 	predicate:title "Hotel Rwanda";
+	predicate:is_adult "False";
 	predicate:description "Inspired by true events, this film takes place in Rwanda in the 1990s when more than a million Tutsis were killed in a genocide that went mostly unnoticed by the rest of the world. Hotel owner Paul Rusesabagina houses over a thousand refuges in his hotel in attempt to save their lives.";
 	predicate:popularity "14.019";
 	predicate:has_score "7.7";
@@ -2218,6 +2384,7 @@ movie:205
 movie:206
 	predicate:id "206";
 	predicate:title "Paradise Found";
+	predicate:is_adult "False";
 	predicate:description "Paradise Found is a biography about the painter Paul Gauguin. Focusing on his personal conflict between citizen life and his family life and the art scene in Frane. In an incredible imagery montage Gauguin manages to make a successful living in the South Pacific, while being in opposition to France.";
 	predicate:popularity "3.677";
 	predicate:has_score "6.5";
@@ -2229,6 +2396,7 @@ movie:206
 movie:207
 	predicate:id "207";
 	predicate:title "Dead Poets Society";
+	predicate:is_adult "False";
 	predicate:description "At an elite, old-fashioned boarding school in New England, a passionate English teacher inspires his students to rebel against convention and seize the potential of every day, courting the disdain of the stern headmaster.";
 	predicate:popularity "23.027";
 	predicate:has_score "8.3";
@@ -2240,6 +2408,7 @@ movie:207
 movie:211
 	predicate:id "211";
 	predicate:title "Berlin is in Germany";
+	predicate:is_adult "False";
 	predicate:description "When Martin, a former GDR citizen, is released from jail, he lately becomes confronted with the consequences of the German re-unification.";
 	predicate:popularity "2.352";
 	predicate:has_score "6.2";
@@ -2252,6 +2421,7 @@ movie:211
 movie:212
 	predicate:id "212";
 	predicate:title "Arsenic and Old Lace";
+	predicate:is_adult "False";
 	predicate:description "Mortimer Brewster, a newspaper drama critic, playwright and author known for his diatribes against marriage, suddenly falls in love and gets married;  but when he makes a quick trip home to tell his two maiden aunts, he finds out his aunts' hobby - killing lonely old men and burying them in the cellar!";
 	predicate:popularity "9.184";
 	predicate:has_score "7.5";
@@ -2264,6 +2434,7 @@ movie:212
 movie:213
 	predicate:id "213";
 	predicate:title "North by Northwest";
+	predicate:is_adult "False";
 	predicate:description "Advertising man Roger Thornhill is mistaken for a spy, triggering a deadly cross-country chase.";
 	predicate:popularity "12.85";
 	predicate:has_score "8.0";
@@ -2276,6 +2447,7 @@ movie:213
 movie:214
 	predicate:id "214";
 	predicate:title "Saw III";
+	predicate:is_adult "False";
 	predicate:description "Jigsaw has disappeared. Along with his new apprentice Amanda, the puppet-master behind the cruel, intricate games that have terrified a community and baffled police has once again eluded capture and vanished. While city detective scramble to locate him, Doctor Lynn Denlon and Jeff Reinhart are unaware that they are about to become the latest pawns on his vicious chessboard.";
 	predicate:popularity "30.056";
 	predicate:has_score "6.4";
@@ -2289,6 +2461,7 @@ movie:214
 movie:215
 	predicate:id "215";
 	predicate:title "Saw II";
+	predicate:is_adult "False";
 	predicate:description "When a new murder victim is discovered with all the signs of Jigsaw's hand, Detective Eric Matthews begins a full investigation and apprehends Jigsaw with little effort. But for Jigsaw, getting caught is just another part of his plan. Eight more of his victims are already fighting for their lives and now it's time for Matthews to join the game.";
 	predicate:popularity "32.42";
 	predicate:has_score "6.6";
@@ -2300,6 +2473,7 @@ movie:215
 movie:216
 	predicate:id "216";
 	predicate:title "Ali: Fear Eats the Soul";
+	predicate:is_adult "False";
 	predicate:description "Emmi Kurowski, a cleaning lady, is lonely in her old age. Her husband died years ago, and her grown children offer little companionship. One night she goes to a bar frequented by Arab immigrants and strikes up a friendship with middle-aged mechanic Ali. Their relationship soon develops into something more, and Emmi's family and neighbors criticize their spontaneous marriage. Soon Emmi and Ali are forced to confront their own insecurities about their future.";
 	predicate:popularity "9.454";
 	predicate:has_score "7.8";
@@ -2313,6 +2487,7 @@ movie:216
 movie:217
 	predicate:id "217";
 	predicate:title "Indiana Jones and the Kingdom of the Crystal Skull";
+	predicate:is_adult "False";
 	predicate:description "Set during the Cold War, the Soviets – led by sword-wielding Irina Spalko – are in search of a crystal skull which has supernatural powers related to a mystical Lost City of Gold. After being captured and then escaping from them, Indy is coerced to head to Peru at the behest of a young man whose friend – and Indy's colleague – Professor Oxley has been captured for his knowledge of the skull's whereabouts.";
 	predicate:popularity "25.793";
 	predicate:has_score "5.9";
@@ -2327,6 +2502,7 @@ movie:217
 movie:218
 	predicate:id "218";
 	predicate:title "The Terminator";
+	predicate:is_adult "False";
 	predicate:description "In the post-apocalyptic future, reigning tyrannical supercomputers teleport a cyborg assassin known as the 'Terminator' back to 1984 to kill Sarah Connor, whose unborn son is destined to lead insurgents against 21st century mechanical hegemony. Meanwhile, the human-resistance movement dispatches a lone warrior to safeguard Sarah. Can he stop the virtually indestructible killing machine?";
 	predicate:popularity "40.543";
 	predicate:has_score "7.6";
@@ -2340,6 +2516,7 @@ movie:218
 movie:219
 	predicate:id "219";
 	predicate:title "Volver";
+	predicate:is_adult "False";
 	predicate:description "Raimunda lives and works in Madrid with her husband Paco and their daughter Paula. Raimunda's sister Sole lives nearby. The two sisters miss their mother Irene who died several years ago in a house fire along with their father. When a former neighbor from their hometown reports that she has seen the ghost of Irene, the daughters do not believe her. After a murder and a family tragedy, however, Irene's spirit materializes around her daughters to comfort them.";
 	predicate:popularity "10.971";
 	predicate:has_score "7.5";
@@ -2353,6 +2530,7 @@ movie:219
 movie:220
 	predicate:id "220";
 	predicate:title "East of Eden";
+	predicate:is_adult "False";
 	predicate:description "In the Salinas Valley in and around World War I, Cal Trask feels he must compete against overwhelming odds with his brother for the love of their father. Cal is frustrated at every turn, from his reaction to the war, how to get ahead in business and in life, and how to relate to his estranged mother.";
 	predicate:popularity "9.04";
 	predicate:has_score "7.7";
@@ -2365,6 +2543,7 @@ movie:220
 movie:221
 	predicate:id "221";
 	predicate:title "Rebel Without a Cause";
+	predicate:is_adult "False";
 	predicate:description "After moving to a new town, troublemaking teen Jim Stark is supposed to have a clean slate, although being the new kid in town brings its own problems. While searching for some stability, Stark forms a bond with a disturbed classmate, Plato, and falls for local girl Judy. However, Judy is the girlfriend of neighborhood tough, Buzz. When Buzz violently confronts Jim and challenges him to a drag race, the new kid's real troubles begin.";
 	predicate:popularity "9.801";
 	predicate:has_score "7.6";
@@ -2376,6 +2555,7 @@ movie:221
 movie:222
 	predicate:id "222";
 	predicate:title "Berlin: Symphony of a Great City";
+	predicate:is_adult "False";
 	predicate:description "A train speeds through the country on its way to Berlin, then gradually slows down as it pulls into the station. It is very early in the morning, about 5:00 AM, and the great city is mostly quiet. But before long there are some signs of activity, and a few early risers are to be seen on the streets. Soon the new day is well underway. It's just a typical day in Berlin, but a day full of life and energy.";
 	predicate:popularity "3.508";
 	predicate:has_score "7.8";
@@ -2389,6 +2569,7 @@ movie:222
 movie:223
 	predicate:id "223";
 	predicate:title "Rebecca";
+	predicate:is_adult "False";
 	predicate:description "Story of a young woman who marries a fascinating widower only to find out that she must live in the shadow of his former wife, Rebecca, who died mysteriously several years earlier. The young wife must come to grips with the terrible secret of her handsome, cold husband, Max De Winter. She must also deal with the jealous, obsessed Mrs. Danvers, the housekeeper, who will not accept her as the mistress of the house.";
 	predicate:popularity "15.856";
 	predicate:has_score "8.0";
@@ -2403,6 +2584,7 @@ movie:223
 movie:224
 	predicate:id "224";
 	predicate:title "Man of Marble";
+	predicate:is_adult "False";
 	predicate:description "Man of Marble is a Polish film about a student making a film about a bricklayer who was once idolized. She interviews people who knew him and finds old footage that lead to an unfolding mystery that causes her producer to cancel the project.";
 	predicate:popularity "4.972";
 	predicate:has_score "6.9";
@@ -2415,6 +2597,7 @@ movie:224
 movie:225
 	predicate:id "225";
 	predicate:title "Man of Iron";
+	predicate:is_adult "False";
 	predicate:description "In Warsaw in 1980, the Communist Party sends Winkel, a weak, alcoholic TV hack, to Gdansk to dig up dirt on the shipyard strikers, particularly on Maciek Tomczyk, an articulate worker whose father was killed in the December 1970 protests. Posing as sympathetic, Winkel interviews the people surrounding Tomczyk, including his detained wife, Agnieszka.";
 	predicate:popularity "3.788";
 	predicate:has_score "6.9";
@@ -2428,6 +2611,7 @@ movie:225
 movie:226
 	predicate:id "226";
 	predicate:title "Boys Don't Cry";
+	predicate:is_adult "False";
 	predicate:description "Female born, Teena Brandon adopts his male identity of Brandon Teena and attempts to find himself and love in Nebraska.";
 	predicate:popularity "11.931";
 	predicate:has_score "7.5";
@@ -2440,6 +2624,7 @@ movie:226
 movie:227
 	predicate:id "227";
 	predicate:title "The Outsiders";
+	predicate:is_adult "False";
 	predicate:description "When two poor greasers, Johnny, and Ponyboy are assaulted by a vicious gang, the socs, and Johnny kills one of the attackers, tension begins to mount between the two rival gangs, setting off a turbulent chain of events.";
 	predicate:popularity "14.82";
 	predicate:has_score "7.3";
@@ -2452,6 +2637,7 @@ movie:227
 movie:228
 	predicate:id "228";
 	predicate:title "The Blue Angel";
+	predicate:is_adult "False";
 	predicate:description "Prim professor Immanuel Rath finds some of his students ogling racy photos of cabaret performer Lola Lola and visits a local club, The Blue Angel, in an attempt to catch them there. Seeing Lola perform, the teacher is filled with lust, eventually resigning his position at the school to marry the young woman. However, his marriage to a coquette -- whose job is to entice men -- proves to be more difficult than Rath imagined.";
 	predicate:popularity "8.284";
 	predicate:has_score "7.4";
@@ -2463,6 +2649,7 @@ movie:228
 movie:229
 	predicate:id "229";
 	predicate:title "The Bride of Frankenstein";
+	predicate:is_adult "False";
 	predicate:description "Bride of Frankenstein begins where James Whale's Frankenstein from 1931 ended. Dr. Frankenstein has not been killed as previously portrayed and now he wants to get away from the mad experiments. Yet when his wife is kidnapped by his creation, Frankenstein agrees to help him create a new monster, this time a woman.";
 	predicate:popularity "11.813";
 	predicate:has_score "7.5";
@@ -2474,6 +2661,7 @@ movie:229
 movie:231
 	predicate:id "231";
 	predicate:title "Syriana";
+	predicate:is_adult "False";
 	predicate:description "The Middle Eastern oil industry is the backdrop of this tense drama, which weaves together numerous story lines. Bennett Holiday is an American lawyer in charge of facilitating a dubious merger of oil companies, while Bryan Woodman, a Switzerland-based energy analyst, experiences both personal tragedy and opportunity during a visit with Arabian royalty. Meanwhile, veteran CIA agent Bob Barnes uncovers an assassination plot with unsettling origins.";
 	predicate:popularity "13.846";
 	predicate:has_score "6.4";
@@ -2491,6 +2679,7 @@ movie:231
 movie:232
 	predicate:id "232";
 	predicate:title "Rumble Fish";
+	predicate:is_adult "False";
 	predicate:description "Rusty James, an absent-minded street thug struggles to live up to his legendary older brother's reputation, and longs for the days when gang warfare was going on.";
 	predicate:popularity "9.731";
 	predicate:has_score "7.1";
@@ -2504,6 +2693,7 @@ movie:232
 movie:233
 	predicate:id "233";
 	predicate:title "The Wanderers";
+	predicate:is_adult "False";
 	predicate:description "The streets of the Bronx are owned by '60s youth gangs where the joy and pain of adolescence is lived. Philip Kaufman tells his take on the novel by Richard Price about the history of the Italian-American gang ‘The Wanderers.’";
 	predicate:popularity "9.135";
 	predicate:has_score "7.3";
@@ -2515,6 +2705,7 @@ movie:233
 movie:234
 	predicate:id "234";
 	predicate:title "The Cabinet of Dr. Caligari";
+	predicate:is_adult "False";
 	predicate:description "Francis, a young man, recalls in his memory the horrible experiences he and his fiancée Jane recently went through. Francis and his friend Alan visit The Cabinet of Dr. Caligari, an exhibit where the mysterious doctor shows the somnambulist Cesare, and awakens him for some moments from his death-like sleep.";
 	predicate:popularity "14.607";
 	predicate:has_score "7.9";
@@ -2529,6 +2720,7 @@ movie:234
 movie:235
 	predicate:id "235";
 	predicate:title "Stand by Me";
+	predicate:is_adult "False";
 	predicate:description "After the death of a stranger, a writer recounts a childhood journey with his friends to find the body of a missing boy.";
 	predicate:popularity "17.158";
 	predicate:has_score "7.9";
@@ -2541,6 +2733,7 @@ movie:235
 movie:236
 	predicate:id "236";
 	predicate:title "Muriel's Wedding";
+	predicate:is_adult "False";
 	predicate:description "A young social outcast in Australia steals money from her parents to finance a vacation where she hopes to find happiness, and perhaps love.";
 	predicate:popularity "7.158";
 	predicate:has_score "7.1";
@@ -2555,6 +2748,7 @@ movie:236
 movie:237
 	predicate:id "237";
 	predicate:title "Young Adam";
+	predicate:is_adult "False";
 	predicate:description "A young drifter working on a river barge disrupts his employers' lives while hiding the fact that he knows more about a dead woman found in the river than he admits.";
 	predicate:popularity "7.227";
 	predicate:has_score "5.9";
@@ -2569,6 +2763,7 @@ movie:237
 movie:238
 	predicate:id "238";
 	predicate:title "The Godfather";
+	predicate:is_adult "False";
 	predicate:description "Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.";
 	predicate:popularity "41.438";
 	predicate:has_score "8.7";
@@ -2583,6 +2778,7 @@ movie:238
 movie:239
 	predicate:id "239";
 	predicate:title "Some Like It Hot";
+	predicate:is_adult "False";
 	predicate:description "Two musicians witness a mob hit and struggle to find a way out of the city before they are found by the gangsters. Their only opportunity is to join an all-girl band as they leave on a tour. To make their getaway they must first disguise themselves as women, then keep their identities secret and deal with the problems this brings - such as an attractive bandmate and a very determined suitor.";
 	predicate:popularity "15.115";
 	predicate:has_score "8.2";
@@ -2596,6 +2792,7 @@ movie:239
 movie:240
 	predicate:id "240";
 	predicate:title "The Godfather: Part II";
+	predicate:is_adult "False";
 	predicate:description "In the continuing saga of the Corleone crime family, a young Vito Corleone grows up in Sicily and in 1910s New York. In the 1950s, Michael Corleone attempts to expand the family business into Las Vegas, Hollywood and Cuba.";
 	predicate:popularity "31.942";
 	predicate:has_score "8.6";
@@ -2611,6 +2808,7 @@ movie:240
 movie:241
 	predicate:id "241";
 	predicate:title "Natural Born Killers";
+	predicate:is_adult "False";
 	predicate:description "Two victims of traumatized childhoods become lovers and psychopathic serial murderers irresponsibly glorified by the mass media.";
 	predicate:popularity "14.993";
 	predicate:has_score "7.1";
@@ -2625,6 +2823,7 @@ movie:241
 movie:242
 	predicate:id "242";
 	predicate:title "The Godfather: Part III";
+	predicate:is_adult "False";
 	predicate:description "In the midst of trying to legitimize his business dealings in 1979 New York and Italy, aging mafia don, Michael Corleone seeks forgiveness for his sins while taking a young protege under his wing.";
 	predicate:popularity "25.291";
 	predicate:has_score "7.4";
@@ -2641,6 +2840,7 @@ movie:242
 movie:243
 	predicate:id "243";
 	predicate:title "High Fidelity";
+	predicate:is_adult "False";
 	predicate:description "When record store owner Rob Gordon gets dumped by his girlfriend, Laura, because he hasn't changed since they met, he revisits his top five breakups of all time in an attempt to figure out what went wrong. As Rob seeks out his former lovers to find out why they left, he keeps up his efforts to win Laura back.";
 	predicate:popularity "14.502";
 	predicate:has_score "7.2";
@@ -2656,6 +2856,7 @@ movie:243
 movie:244
 	predicate:id "244";
 	predicate:title "King Kong";
+	predicate:is_adult "False";
 	predicate:description "A film crew discovers the 'eighth wonder of the world,' a giant prehistoric ape, and brings him back to New York, where he wreaks havoc.";
 	predicate:popularity "11.932";
 	predicate:has_score "7.6";
@@ -2669,6 +2870,7 @@ movie:244
 movie:245
 	predicate:id "245";
 	predicate:title "About a Boy";
+	predicate:is_adult "False";
 	predicate:description "Will Freeman is a hip Londoner who one day realizes that his friends are all involved with the responsibilities of married life, which leaves him alone in the cold. Passing himself off as a single father, he starts to meet a string of single mums, confident in his ability to leave them behind when they start to ask for a commitment. But Will's hope of continued bachelorhood is interrupted when he meets 12-year old Marcus, in many ways his complete opposite.";
 	predicate:popularity "11.627";
 	predicate:has_score "6.7";
@@ -2682,6 +2884,7 @@ movie:245
 movie:246
 	predicate:id "246";
 	predicate:title "Zatoichi";
+	predicate:is_adult "False";
 	predicate:description "Zatoichi is a 19th century blind nomad who makes his living as a gambler and masseur. However, behind this humble facade, he is a master swordsman gifted with a lightning-fast draw and breathtaking precision. While wandering, Zatoichi discovers a remote mountain village at the mercy of Ginzo, a ruthless gang-leader. Ginzo disposes of anyone who gets in his way, especially after hiring the mighty samurai ronin, Hattori, as a bodyguard. After a raucous night of gambling in town, Zatoichi encounters a pair of geishas--as dangerous as they are beautiful--who've come to avenge their parents' murder. As the paths of these and other colorful characters intertwine, Ginzo's henchmen are soon after Zatoichi. With his legendary cane sword at his side, the stage is set for a riveting showdown.";
 	predicate:popularity "15.835";
 	predicate:has_score "7.3";
@@ -2695,6 +2898,7 @@ movie:246
 movie:247
 	predicate:id "247";
 	predicate:title "The Killing";
+	predicate:is_adult "False";
 	predicate:description "Career criminal Johnny Clay recruits a sharpshooter, a crooked police officer, a bartender and a betting teller named George, among others, for one last job before he goes straight and gets married. But when George tells his restless wife about the scheme to steal millions from the racetrack where he works, she hatches a plot of her own.";
 	predicate:popularity "11.142";
 	predicate:has_score "7.7";
@@ -2708,6 +2912,7 @@ movie:247
 movie:248
 	predicate:id "248";
 	predicate:title "Pocketful of Miracles";
+	predicate:is_adult "False";
 	predicate:description "Damon Runyon's fairytale, sweet and funny, is told by director Frank Capra. Boozy, brassy Apple Annie, a beggar with a basket of apples, is as much as part of downtown New York as old Broadway itself. Bootlegger Dave the Dude is a sucker for her apples --- he thinks they bring him luck. But Dave and girlfriend Queenie Martin need a lot more than luck when it turns out that Annie is in a jam and only they can help: Annie's daughter Louise, who has lived all her life in a Spanish convent, is coming to America with a Count and his son. The count's son wants to marry Louise, who thinks her mother is part of New York society. It's up to Dave and Queenie and their Runyonesque cronies to turn Annie into a lady and convince the Count and his son that they are hobnobbing with New York's elite.";
 	predicate:popularity "6.122";
 	predicate:has_score "7.3";
@@ -2721,6 +2926,7 @@ movie:248
 movie:249
 	predicate:id "249";
 	predicate:title "The War of the Roses";
+	predicate:is_adult "False";
 	predicate:description "The Roses, Barbara and Oliver, live happily as a married couple. Then she starts to wonder what life would be like without Oliver, and likes what she sees. Both want to stay in the house, and so they begin a campaign to force each other to leave. In the middle of the fighting is D'Amato, the divorce lawyer. He gets to see how far both will go to get rid of the other, and boy do they go far.";
 	predicate:popularity "10.754";
 	predicate:has_score "6.9";
@@ -2733,6 +2939,7 @@ movie:249
 movie:250
 	predicate:id "250";
 	predicate:title "In China They Eat Dogs";
+	predicate:is_adult "False";
 	predicate:description "An intent fast paced Danish dark comedy film about two separately motivated brothers who with their slightly psychopathic tendencies end up in a touchy situation. One brother gets in serious trouble after a bank robbery and begs the other brother for help.";
 	predicate:popularity "6.035";
 	predicate:has_score "7.4";
@@ -2748,6 +2955,7 @@ movie:250
 movie:251
 	predicate:id "251";
 	predicate:title "Ghost";
+	predicate:is_adult "False";
 	predicate:description "Sam Wheat is a banker, Molly Jensen is an artist, and the two are madly in love. However, when Sam is murdered by his friend and corrupt business partner Carl Bruner over a shady business deal, he is left to roam the earth as a powerless spirit. When he learns of Carl's betrayal, Sam must seek the help of psychic Oda Mae Brown to set things right and protect Molly from Carl and his goons.";
 	predicate:popularity "19.961";
 	predicate:has_score "7.2";
@@ -2763,6 +2971,7 @@ movie:251
 movie:252
 	predicate:id "252";
 	predicate:title "Willy Wonka & the Chocolate Factory";
+	predicate:is_adult "False";
 	predicate:description "Eccentric candy man Willy Wonka prompts a worldwide frenzy when he announces that golden tickets hidden inside five of his delicious candy bars will admit their lucky holders into his top-secret confectionary. But does Wonka have an agenda hidden amid a world of Oompa Loompas and chocolate rivers?";
 	predicate:popularity "22.121";
 	predicate:has_score "7.5";
@@ -2779,6 +2988,7 @@ movie:252
 movie:253
 	predicate:id "253";
 	predicate:title "Live and Let Die";
+	predicate:is_adult "False";
 	predicate:description "James Bond must investigate a mysterious murder case of a British agent in New Orleans. Soon he finds himself up against a gangster boss named Mr. Big.";
 	predicate:popularity "18.525";
 	predicate:has_score "6.5";
@@ -2793,6 +3003,7 @@ movie:253
 movie:254
 	predicate:id "254";
 	predicate:title "King Kong";
+	predicate:is_adult "False";
 	predicate:description "In 1933 New York, an overly ambitious movie producer coerces his cast and hired ship crew to travel to mysterious Skull Island, where they encounter Kong, a giant ape who is immediately smitten with the leading lady.";
 	predicate:popularity "37.443";
 	predicate:has_score "6.8";
@@ -2806,6 +3017,7 @@ movie:254
 movie:255
 	predicate:id "255";
 	predicate:title "Stolen Kisses";
+	predicate:is_adult "False";
 	predicate:description "The third in a series of films featuring François Truffaut's alter-ego, Antoine Doinel, the story resumes with Antoine being discharged from military service. His sweetheart Christine's father lands Antoine a job as a security guard, which he promptly loses. Stumbling into a position assisting a private detective, Antoine falls for his employers' seductive wife, Fabienne, and finds that he must choose between the older woman and Christine.";
 	predicate:popularity "10.6";
 	predicate:has_score "7.4";
@@ -2819,6 +3031,7 @@ movie:255
 movie:256
 	predicate:id "256";
 	predicate:title "Antoine and Colette";
+	predicate:is_adult "False";
 	predicate:description "Now aged 17, Antoine Doinel works in a factory which makes records. At a music concert, he meets a girl his own age, Colette, and falls in love with her. Later, Antoine goes to extraordinary lengths to please his new girlfriend and her parents, but Colette still only regards him as a casual friend. First segment of “Love at Twenty” (1962).";
 	predicate:popularity "7.345";
 	predicate:has_score "7.4";
@@ -2832,6 +3045,7 @@ movie:256
 movie:257
 	predicate:id "257";
 	predicate:title "Oliver Twist";
+	predicate:is_adult "False";
 	predicate:description "Oliver Twist the modern filmed version of Charles Dickens bestseller, a Roman Polanski adaptation. The classic Dickens tale, where an orphan meets a pickpocket on the streets of London. From there, he joins a household of boys who are trained to steal for their master.";
 	predicate:popularity "10.373";
 	predicate:has_score "6.7";
@@ -2845,6 +3059,7 @@ movie:257
 movie:258
 	predicate:id "258";
 	predicate:title "Bed and Board";
+	predicate:is_adult "False";
 	predicate:description "Parisian everyman Antoine Doinel has married his sweetheart Christine Darbon, and the newlyweds have set up a cozy domestic life of selling flowers and giving violin lessons while Antoine fitfully works on his long-gestating novel. As Christine becomes pregnant with the couple's first child, Antoine finds himself enraptured with a young Japanese beauty. The complications change the course of their relationship forever.";
 	predicate:popularity "8.666";
 	predicate:has_score "7.3";
@@ -2858,6 +3073,7 @@ movie:258
 movie:259
 	predicate:id "259";
 	predicate:title "Love on the Run";
+	predicate:is_adult "False";
 	predicate:description "Beginning with 'The 400 Blows,' director Francois Truffaut made a series of films about the impetuous Antoine Doinel, in which this is the last. Antoine is now 30, working as a proofreader and getting divorced from his his wife. It being the first 'no-fault' divorce in France, a media circus erupts, dredging up Antoine's past. Indecisive about his new love with a store clerk, he impulsively takes off with an old flame.";
 	predicate:popularity "7.32";
 	predicate:has_score "7.0";
@@ -2871,6 +3087,7 @@ movie:259
 movie:260
 	predicate:id "260";
 	predicate:title "The 39 Steps";
+	predicate:is_adult "False";
 	predicate:description "Richard Hannay stumbles upon a conspiracy that thrusts him into a hectic chase across the Scottish moors—a chase in which he is both the pursuer and the pursued—as well as into an unexpected romance with the cool Pamela.";
 	predicate:popularity "10.745";
 	predicate:has_score "7.4";
@@ -2883,6 +3100,7 @@ movie:260
 movie:261
 	predicate:id "261";
 	predicate:title "Cat on a Hot Tin Roof";
+	predicate:is_adult "False";
 	predicate:description "An alcoholic ex-football player drinks his days away, having failed to come to terms with his sexuality and his real feelings for his football buddy who died after an ambiguous accident. His wife is crucified by her desperation to make him desire her: but he resists the affections of his wife. His reunion with his father—who is dying of cancer—jogs a host of memories and revelations for both father and son.";
 	predicate:popularity "10.335";
 	predicate:has_score "7.8";
@@ -2895,6 +3113,7 @@ movie:261
 movie:262
 	predicate:id "262";
 	predicate:title "The King of Comedy";
+	predicate:is_adult "False";
 	predicate:description "Aspiring comic Rupert Pupkin attempts to achieve success in show business by stalking his idol, a late night talk-show host who craves his own privacy.";
 	predicate:popularity "12.395";
 	predicate:has_score "7.8";
@@ -2907,6 +3126,7 @@ movie:262
 movie:265
 	predicate:id "265";
 	predicate:title "Lili Marleen";
+	predicate:is_adult "False";
 	predicate:description "The story of a German singer named Willie who while working in Switzerland falls in love with a Jewish composer named Robert whose family is helping people to flee from the Nazis. Robert's family is skeptical of Willie, thinking she could be a Nazi as she becomes famous for singing the song 'Lili Marleen.'";
 	predicate:popularity "2.744";
 	predicate:has_score "6.0";
@@ -2921,6 +3141,7 @@ movie:265
 movie:266
 	predicate:id "266";
 	predicate:title "Contempt";
+	predicate:is_adult "False";
 	predicate:description "A philistine in the art film business, Jeremy Prokosch is a producer unhappy with the work of his director. Prokosch has hired Fritz Lang (as himself) to direct an adaptation of 'The Odyssey,' but when it seems that the legendary filmmaker is making a picture destined to bomb at the box office, he brings in a screenwriter to energize the script. The professional intersects with the personal when a rift develops between the writer and his wife.";
 	predicate:popularity "11.715";
 	predicate:has_score "7.3";
@@ -2935,6 +3156,7 @@ movie:266
 movie:267
 	predicate:id "267";
 	predicate:title "Live Flesh";
+	predicate:is_adult "False";
 	predicate:description "A scorned ex-convict forces himself into the lives of the couple who put him behind bars.";
 	predicate:popularity "8.703";
 	predicate:has_score "7.0";
@@ -2948,6 +3170,7 @@ movie:267
 movie:268
 	predicate:id "268";
 	predicate:title "Batman";
+	predicate:is_adult "False";
 	predicate:description "Having witnessed his parents' brutal murder as a child, millionaire philanthropist Bruce Wayne fights crime in Gotham City disguised as Batman, a costumed hero who strikes fear into the hearts of villains. But when a deformed madman who calls himself 'The Joker' seizes control of Gotham's criminal underworld, Batman must face his most ruthless nemesis ever while protecting both his identity and his love interest, reporter Vicki Vale.";
 	predicate:popularity "37.717";
 	predicate:has_score "7.2";
@@ -2961,6 +3184,7 @@ movie:268
 movie:269
 	predicate:id "269";
 	predicate:title "Breathless";
+	predicate:is_adult "False";
 	predicate:description "A young car thief kills a policeman and tries to persuade a girl to hide in Italy with him.";
 	predicate:popularity "15.614";
 	predicate:has_score "7.7";
@@ -2974,6 +3198,7 @@ movie:269
 movie:270
 	predicate:id "270";
 	predicate:title "Wir sagen Du! Schatz.";
+	predicate:is_adult "False";
 	predicate:description "Oliver doesn’t have a family so he steals one.";
 	predicate:popularity "0.784";
 	predicate:has_score "5.3";
@@ -2987,6 +3212,7 @@ movie:270
 movie:271
 	predicate:id "271";
 	predicate:title "Ronia, The Robber's Daughter";
+	predicate:is_adult "False";
 	predicate:description "Ronya lives happily in her father's castle until she comes across a new playmate, Birk, in the nearby dark forest. The two explore the wilderness, braving dangerous Witchbirds and Rump-Gnomes. But when their families find out Birk and Ronja have been playing together, they forbid them to see each other again. Indeed, their fathers are competing robber chieftains and bitter enemies. Now the two spunky children must try to tear down the barriers that have kept their families apart for so long.";
 	predicate:popularity "9.341";
 	predicate:has_score "6.9";
@@ -3001,6 +3227,7 @@ movie:271
 movie:272
 	predicate:id "272";
 	predicate:title "Batman Begins";
+	predicate:is_adult "False";
 	predicate:description "Driven by tragedy, billionaire Bruce Wayne dedicates his life to uncovering and defeating the corruption that plagues his home, Gotham City.  Unable to work within the system, he instead creates a new identity, a symbol of fear for the criminal underworld - The Batman.";
 	predicate:popularity "46.589";
 	predicate:has_score "7.7";
@@ -3016,6 +3243,7 @@ movie:272
 movie:273
 	predicate:id "273";
 	predicate:title "The White Sound";
+	predicate:is_adult "False";
 	predicate:description "Lukas, a young schizophrenic man, has to deal with a new town, a new relationship, and the paranoia in his head.";
 	predicate:popularity "3.676";
 	predicate:has_score "7.1";
@@ -3027,6 +3255,7 @@ movie:273
 movie:274
 	predicate:id "274";
 	predicate:title "The Silence of the Lambs";
+	predicate:is_adult "False";
 	predicate:description "Clarice Starling is a top student at the FBI's training academy. Jack Crawford wants Clarice to interview Dr. Hannibal Lecter, a brilliant psychiatrist who is also a violent psychopath, serving life behind bars for various acts of murder and cannibalism. Crawford believes that Lecter may have insight into a case and that Starling, as an attractive young woman, may be just the bait to draw him out.";
 	predicate:popularity "7.859";
 	predicate:has_score "8.3";
@@ -3041,6 +3270,7 @@ movie:274
 movie:275
 	predicate:id "275";
 	predicate:title "Fargo";
+	predicate:is_adult "False";
 	predicate:description "Jerry, a small-town Minnesota car salesman is bursting at the seams with debt... but he's got a plan. He's going to hire two thugs to kidnap his wife in a scheme to collect a hefty ransom from his wealthy father-in-law. It's going to be a snap and nobody's going to get hurt... until people start dying. Enter Police Chief Marge, a coffee-drinking, parka-wearing - and extremely pregnant - investigator who'll stop at nothing to get her man. And if you think her small-time investigative skills will give the crooks a run for their ransom... you betcha!";
 	predicate:popularity "20.556";
 	predicate:has_score "7.9";
@@ -3054,6 +3284,7 @@ movie:275
 movie:276
 	predicate:id "276";
 	predicate:title "The Edukators";
+	predicate:is_adult "False";
 	predicate:description "Three activists cobble together a kidnapping plot after they encounter a businessman in his home.";
 	predicate:popularity "6.271";
 	predicate:has_score "7.2";
@@ -3066,6 +3297,7 @@ movie:276
 movie:277
 	predicate:id "277";
 	predicate:title "Underworld";
+	predicate:is_adult "False";
 	predicate:description "Vampires and werewolves have waged a nocturnal war against each other for centuries. But all bets are off when a female vampire warrior named Selene, who's famous for her strength and werewolf-hunting prowess, becomes smitten with a peace-loving male werewolf, Michael, who wants to end the war.";
 	predicate:popularity "33.072";
 	predicate:has_score "6.8";
@@ -3079,6 +3311,7 @@ movie:277
 movie:278
 	predicate:id "278";
 	predicate:title "The Shawshank Redemption";
+	predicate:is_adult "False";
 	predicate:description "Framed in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden. During his long stretch in prison, Dufresne comes to be admired by the other inmates -- including an older prisoner named Red -- for his integrity and unquenchable sense of hope.";
 	predicate:popularity "46.486";
 	predicate:has_score "8.7";
@@ -3091,6 +3324,7 @@ movie:278
 movie:279
 	predicate:id "279";
 	predicate:title "Amadeus";
+	predicate:is_adult "False";
 	predicate:description "The incredible story of genius musician Wolfgang Amadeus Mozart, told in flashback by his peer and secret rival, Antonio Salieri—now confined to an insane asylum.";
 	predicate:popularity "16.972";
 	predicate:has_score "8.0";
@@ -3107,6 +3341,7 @@ movie:279
 movie:280
 	predicate:id "280";
 	predicate:title "Terminator 2: Judgment Day";
+	predicate:is_adult "False";
 	predicate:description "Nearly 10 years have passed since Sarah Connor was targeted for termination by a cyborg from the future. Now her son, John, the future leader of the resistance, is the target for a newer, more deadly terminator. Once again, the resistance has managed to send a protector back to attempt to save John and his mother Sarah.";
 	predicate:popularity "51.302";
 	predicate:has_score "8.0";
@@ -3121,6 +3356,7 @@ movie:280
 movie:281
 	predicate:id "281";
 	predicate:title "Strange Days";
+	predicate:is_adult "False";
 	predicate:description "Set in the year 1999 during the last days of the old millennium, the movie tells the story of Lenny Nero, an ex-cop who now deals with data-discs containing recorded memories and emotions. One day he receives a disc which contains the memories of a murderer killing a prostitute. Lenny investigates and is pulled deeper and deeper in a whirl of blackmail, murder and rape. Will he survive and solve the case?";
 	predicate:popularity "13.602";
 	predicate:has_score "7.0";
@@ -3135,6 +3371,7 @@ movie:281
 movie:284
 	predicate:id "284";
 	predicate:title "The Apartment";
+	predicate:is_adult "False";
 	predicate:description "Bud Baxter is a minor clerk in a huge New York insurance company, until he discovers a quick way to climb the corporate ladder. He lends out his apartment to the executives as a place to take their mistresses. Although he often has to deal with the aftermath of their visits, one night he's left with a major problem to solve.";
 	predicate:popularity "13.781";
 	predicate:has_score "8.2";
@@ -3148,6 +3385,7 @@ movie:284
 movie:285
 	predicate:id "285";
 	predicate:title "Pirates of the Caribbean: At World's End";
+	predicate:is_adult "False";
 	predicate:description "Captain Barbossa, long believed to be dead, has come back to life and is headed to the edge of the Earth with Will Turner and Elizabeth Swann. But nothing is quite as it seems.";
 	predicate:popularity "57.794";
 	predicate:has_score "7.2";
@@ -3161,6 +3399,7 @@ movie:285
 movie:286
 	predicate:id "286";
 	predicate:title "Germany: A Summer's Fairytale";
+	predicate:is_adult "False";
 	predicate:description "A documentary of the German national soccer team’s 2006 World Cup experience that changed the face of modern Germany.";
 	predicate:popularity "2.34";
 	predicate:has_score "6.9";
@@ -3172,6 +3411,7 @@ movie:286
 movie:287
 	predicate:id "287";
 	predicate:title "Bull Durham";
+	predicate:is_adult "False";
 	predicate:description "Veteran catcher Crash Davis is brought to the minor league Durham Bulls to help their up and coming pitching prospect, 'Nuke' Laloosh. Their relationship gets off to a rocky start and is further complicated when baseball groupie Annie Savoy sets her sights on the two men.";
 	predicate:popularity "12.406";
 	predicate:has_score "6.7";
@@ -3184,6 +3424,7 @@ movie:287
 movie:288
 	predicate:id "288";
 	predicate:title "High Noon";
+	predicate:is_adult "False";
 	predicate:description "Will Kane, the sheriff of a small town in New Mexico, learns a notorious outlaw he put in jail has been freed, and will be arriving on the noon train. Knowing the outlaw and his gang are coming to kill him, Kane is determined to stand his ground, so he gathers a posse from among the local townspeople.";
 	predicate:popularity "12.582";
 	predicate:has_score "7.7";
@@ -3197,6 +3438,7 @@ movie:288
 movie:289
 	predicate:id "289";
 	predicate:title "Casablanca";
+	predicate:is_adult "False";
 	predicate:description "In Casablanca, Morocco in December 1941, a cynical American expatriate meets a former lover, with unforeseen complications.";
 	predicate:popularity "17.689";
 	predicate:has_score "8.2";
@@ -3212,6 +3454,7 @@ movie:289
 movie:290
 	predicate:id "290";
 	predicate:title "Barton Fink";
+	predicate:is_adult "False";
 	predicate:description "A renowned New York playwright is enticed to California to write for the movies and discovers the hellish truth of Hollywood.";
 	predicate:popularity "12.26";
 	predicate:has_score "7.5";
@@ -3224,6 +3467,7 @@ movie:290
 movie:291
 	predicate:id "291";
 	predicate:title "Riding Giants";
+	predicate:is_adult "False";
 	predicate:description "Riding Giants is story about big wave surfers who have become heroes and legends in their sport. Directed by the skateboard guru Stacy Peralta.";
 	predicate:popularity "5.235";
 	predicate:has_score "7.8";
@@ -3235,6 +3479,7 @@ movie:291
 movie:292
 	predicate:id "292";
 	predicate:title "Dave Chappelle's Block Party";
+	predicate:is_adult "False";
 	predicate:description "The American comedian/actor delivers a story about the alternative Hip Hop scene. A small town Ohio man’s moves to Brooklyn, New York, to throw an unprecedented block party.";
 	predicate:popularity "8.15";
 	predicate:has_score "6.8";
@@ -3249,6 +3494,7 @@ movie:292
 movie:293
 	predicate:id "293";
 	predicate:title "A River Runs Through It";
+	predicate:is_adult "False";
 	predicate:description "A River Runs Through is a cinematographically stunning true story of Norman Maclean. The story follows Norman and his brother Paul through the experiences of life and growing up, and how their love of fly fishing keeps them together despite varying life circumstances in the untamed west of Montana in the 1920's.";
 	predicate:popularity "14.306";
 	predicate:has_score "7.1";
@@ -3260,6 +3506,7 @@ movie:293
 movie:294
 	predicate:id "294";
 	predicate:title "Desert Hearts";
+	predicate:is_adult "False";
 	predicate:description "The story of straight-edge literature professor Vivian who travels to Reno to get away from a relationship breakup when she falls in love with an attractive and unconventional girl named Cay.";
 	predicate:popularity "8.724";
 	predicate:has_score "7.2";
@@ -3272,6 +3519,7 @@ movie:294
 movie:296
 	predicate:id "296";
 	predicate:title "Terminator 3: Rise of the Machines";
+	predicate:is_adult "False";
 	predicate:description "It's been 10 years since John Connor saved Earth from Judgment Day, and he's now living under the radar, steering clear of using anything Skynet can trace. That is, until he encounters T-X, a robotic assassin ordered to finish what T-1000 started. Good thing Connor's former nemesis, the Terminator, is back to aid the now-adult Connor … just like he promised.";
 	predicate:popularity "28.805";
 	predicate:has_score "6.1";
@@ -3285,6 +3533,7 @@ movie:296
 movie:297
 	predicate:id "297";
 	predicate:title "Meet Joe Black";
+	predicate:is_adult "False";
 	predicate:description "When the grim reaper comes to collect the soul of megamogul Bill Parrish, he arrives with a proposition: Host him for a 'vacation' among the living in trade for a few more days of existence. Parrish agrees, and using the pseudonym Joe Black, Death begins taking part in Parrish's daily agenda and falls in love with the man's daughter. Yet when Black's holiday is over, so is Parrish's life.";
 	predicate:popularity "20.354";
 	predicate:has_score "7.2";
@@ -3299,6 +3548,7 @@ movie:297
 movie:298
 	predicate:id "298";
 	predicate:title "Ocean's Thirteen";
+	predicate:is_adult "False";
 	predicate:description "Danny Ocean's team of criminals are back and composing a plan more personal than ever. When ruthless casino owner Willy Bank doublecrosses Reuben Tishkoff, causing a heart attack, Danny Ocean vows that he and his team will do anything to bring down Willy Bank along with everything he's got. Even if it means asking for help from an enemy.";
 	predicate:popularity "21.667";
 	predicate:has_score "6.7";
@@ -3313,6 +3563,7 @@ movie:298
 movie:299
 	predicate:id "299";
 	predicate:title "Ocean's Eleven";
+	predicate:is_adult "False";
 	predicate:description "Ocean's 11 is the 'Rat-Pack' comedy about robber Danny Ocean and his gang's attempt to rob the five biggest casinos in Las Vegas.";
 	predicate:popularity "12.994";
 	predicate:has_score "6.6";
@@ -3327,6 +3578,7 @@ movie:299
 movie:2
 	predicate:id "2";
 	predicate:title "Ariel";
+	predicate:is_adult "False";
 	predicate:description "Taisto Kasurinen is a Finnish coal miner whose father has just committed suicide and who is framed for a crime he did not commit. In jail, he starts to dream about leaving the country and starting a new life. He escapes from prison but things don't go as planned...";
 	predicate:popularity "9.808";
 	predicate:has_score "6.8";
