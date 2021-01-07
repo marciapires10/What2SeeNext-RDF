@@ -31,14 +31,14 @@
                         <div class="carousel-content" role="listbox">
                             <div class="carousel-item active">
                                 <div class="row">
-                                    {% for title, rating, poster, id in top_movies %}
+                                    {% for id, title, poster, score in top_movies %}
                                         {% if forloop.counter0 <= 2 %}
                                     <div class="col-md-4">
                                         <div class="card mb-2" id="full-card">
                                             <img class="card-img-top" src={{ poster }}>
                                             <div class="card-body">
                                                 <h4 style="font-size: 1rem;" class="card-title">{{ title }}</h4>
-                                                <p class="card-text" style="font-size: 1.5rem;"><b>{{ rating }}   <i class="fas fa-star" style="color: #c69500"></i></b></p>
+                                                <p class="card-text" style="font-size: 1.5rem;"><b>{{ score }}   <i class="fas fa-star" style="color: #c69500"></i></b></p>
                                             </div>
                                             <form method="post">
                                                 {% csrf_token %}
@@ -53,7 +53,7 @@
                             </div>
                             <div class="carousel-item">
                                 <div class="row">
-                                    {% for title, rating, poster, id in top_movies %}
+                                    {% for id, title, poster, score in top_movies %}
                                         {% if forloop.counter0 > 2 %}
                                             {% if forloop.counter0 <= 5 %}
                                     <div class="col-md-4">
@@ -61,7 +61,7 @@
                                             <img class="card-img-top" src={{ poster }}>
                                             <div class="card-body">
                                                 <h4 style="font-size: 1rem;" class="card-title">{{ title }}</h4>
-                                                <p class="card-text" style="font-size: 1.5rem;"><b>{{ rating }}   <i class="fas fa-star" style="color: #c69500"></i></b></p>
+                                                <p class="card-text" style="font-size: 1.5rem;"><b>{{ score }}   <i class="fas fa-star" style="color: #c69500"></i></b></p>
                                             </div>
                                             <form method="post">
                                                 {% csrf_token %}
@@ -77,7 +77,7 @@
                             </div>
                                 <div class="carousel-item">
                                     <div class="row">
-                                        {% for title, rating, poster, id in top_movies %}
+                                        {% for id, title, poster, score in top_movies %}
                                             {% if forloop.counter0 > 5 %}
                                                 {% if forloop.counter0 <= 8 %}
                                         <div class="col-md-4">
@@ -85,7 +85,7 @@
                                                 <img class="card-img-top" src={{ poster }}>
                                                 <div class="card-body">
                                                     <h4 style="font-size: 1rem;" class="card-title">{{ title }}</h4>
-                                                    <p class="card-text" style="font-size: 1.5rem;"><b>{{ rating }}   <i class="fas fa-star" style="color: #c69500"></i></b></p>
+                                                    <p class="card-text" style="font-size: 1.5rem;"><b>{{ score }}   <i class="fas fa-star" style="color: #c69500"></i></b></p>
                                                 </div>
                                                 <form method="post">
                                                     {% csrf_token %}
@@ -101,7 +101,7 @@
                                 </div>
                                 <div class="carousel-item">
                                     <div class="row">
-                                        {% for title, rating, poster, id in top_movies %}
+                                        {% for id, title, poster, score in top_movies %}
                                             {% if forloop.counter0 > 8 %}
                                                 {% if forloop.counter0 <= 10 %}
                                         <div class="col-md-4">
@@ -109,7 +109,7 @@
                                                 <img class="card-img-top" src={{ poster }}>
                                                 <div class="card-body">
                                                     <h4 style="font-size: 1rem;" class="card-title">{{ title }}</h4>
-                                                    <p class="card-text" style="font-size: 1.5rem;"><b>{{ rating }}   <i class="fas fa-star" style="color: #c69500"></i></b></p>
+                                                    <p class="card-text" style="font-size: 1.5rem;"><b>{{ score }}   <i class="fas fa-star" style="color: #c69500"></i></b></p>
                                                 </div>
                                                 <form method="post">
                                                     {% csrf_token %}

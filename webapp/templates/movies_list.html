@@ -43,15 +43,15 @@
                     {% csrf_token %}
                         <table style="align-self: center;">
                             <tr class="space">
-                                 {% for m in movies %}
+                                 {% for id, title, poster in movies_all %}
                                      {% if forloop.counter0|divisibleby:5 == 0 %}
                                          <td>
                                             <div class="col-md-2 clearfix d-none d-md-block">
                                                 <div class="card mb-2" id="full-card-all">
-                                                    <img src="{% static 'assets/img/hp.jpg' %}" alt="" title="" id="card-img-all">
-                                                     <div class="overlay" alt="" title=""></div>
+                                                    <img src="{{ poster }}" alt="" title="" id="card-img-all">
+                                                     <div class="overlay" alt="{{ title }}" title="{{ title }}"></div>
                                                     <button type="submit" name="info-m" class="btn btn-primary" id="more-movie-all"
-                                                            style="margin-top: 150px; margin-top: -50px;" value="id">
+                                                            style="margin-top: 150px; margin-top: -50px;" value="{{ id }}">
                                                         See more
                                                     </button>
                                                 </div>
@@ -62,10 +62,10 @@
                                              <td>
                                                 <div class="col-md-2 clearfix d-none d-md-block">
                                                  <div class="card mb-2" id="full-card-all">
-                                                    <img src="{% static 'assets/img/hp.jpg' %}" alt="" title="" id="card-img-all">
-                                                     <div class="overlay" alt="" title=""></div>
+                                                    <img src="{{ poster }}" alt="" title="" id="card-img-all">
+                                                     <div class="overlay" alt="{{ title }}" title="{{ title }}"></div>
                                                     <button type="submit" name="info-m" class="btn btn-primary" id="more-movie-all"
-                                                            style="margin-top: 150px; margin-top: -50px;" value="id">
+                                                            style="margin-top: 150px; margin-top: -50px;" value="{{ id }}">
                                                         See more
                                                     </button>
                                                 </div>
