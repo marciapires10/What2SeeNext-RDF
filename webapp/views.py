@@ -19,7 +19,7 @@ def index(request):
             PREFIX pred:<http://moviesProject.org/pred/>
             SELECT ?movie ?id ?poster ?title ?has_score
             WHERE {
-            ?movie pred:poster ?id .
+            ?movie pred:id ?id .
             ?movie pred:poster ?poster .
             ?movie pred:title ?title .
             ?movie pred:has_score ?has_score .
