@@ -136,7 +136,7 @@ def create_series():
         # series_n3.write("serie:"+ _title + "\n")
         series_n3.write("serie:"+ _id + "\n")
         #Predicate and object
-        series_n3.write('\tpredicate:id "' + _id + '";\n')
+        series_n3.write('\tpredicate:id_s "' + _id + '";\n')
         series_n3.write('\tpredicate:title "' + title + '";\n')
         series_n3.write('\tpredicate:is_adult "' + is_adult + '";\n')
         series_n3.write('\tpredicate:description "' + overview + '";\n')
@@ -523,7 +523,7 @@ def create_movies():
         # movies_n3.write("movie:"+ _title + "\n")
         movies_n3.write("movie:"+ _id + "\n")
         #Predicate and object
-        movies_n3.write('\tpredicate:id "' + _id + '";\n')
+        movies_n3.write('\tpredicate:id_m "' + _id + '";\n')
         movies_n3.write('\tpredicate:title "' + title + '";\n')
         movies_n3.write('\tpredicate:is_adult "' + is_adult + '";\n')
         movies_n3.write('\tpredicate:description "' + overview + '";\n')
