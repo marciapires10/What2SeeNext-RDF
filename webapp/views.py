@@ -65,7 +65,31 @@ def index(request):
 
     return render(request, 'index.html', tparams)
 
+def get_movies_genres():
+    #movies genres
+    query = """
+        PREFIX pred:<http://moviesProject.org/pred/>
+        SELECT DISTINCT ?genre_m
+        WHERE {
+            ?movie pred:genre ?genre_m .
+        }
+        ORDER BY ASC(?genre_m)
+        """
+
+    payload_query = {"query": query}
+    res = accessor.sparql_select(body=payload_query,
+                                 repo_name=repo_name)
+
+    res = json.loads(res)
+    movies_genres = []
+    for e in res['results']['bindings']:
+        for v in e.values():
+            movies_genres.append(v['value'])
+
+    return movies_genres
+
 def movies(request):
+
     #select all movies
     query = """
         PREFIX mov:<http://moviesProject.org/sub/mov/>
@@ -92,10 +116,11 @@ def movies(request):
 
     print(movies_all)
 
-
+    mgenres = get_movies_genres()
 
     tparams = {
         'movies_all': movies_all,
+        'movie_genres': mgenres,
     }
 
     return render(request, 'movies_list.html', tparams)
