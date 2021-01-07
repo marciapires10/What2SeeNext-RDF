@@ -12,12 +12,12 @@ movie:3
 	predicate:has_score "7.3";
 	predicate:released "1986-10-17";
 	predicate:poster "/nj01hspawPof0mJmlgfjuLyJuRN.jpg";
-	predicate:runtime "1986-10-17";
 	predicate:genre "Drama";
 	predicate:genre "Comedy";
 	predicate:language "English";
 	predicate:language "suomi";
 	predicate:language "svenska";
+	predicate:runtime "72".
 movie:5
 	predicate:id "5";
 	predicate:title "Four Rooms";
@@ -26,10 +26,10 @@ movie:5
 	predicate:has_score "5.8";
 	predicate:released "1995-12-09";
 	predicate:poster "/uZSmxBLIuZ8gpadjAWNdA5aQDAc.jpg";
-	predicate:runtime "1995-12-09";
 	predicate:genre "Crime";
 	predicate:genre "Comedy";
 	predicate:language "English";
+	predicate:runtime "98".
 movie:6
 	predicate:id "6";
 	predicate:title "Judgment Night";
@@ -38,11 +38,11 @@ movie:6
 	predicate:has_score "6.5";
 	predicate:released "1993-10-15";
 	predicate:poster "/rYFAvSPlQUCebayLcxyK79yvtvV.jpg";
-	predicate:runtime "1993-10-15";
 	predicate:genre "Action";
 	predicate:genre "Thriller";
 	predicate:genre "Crime";
 	predicate:language "English";
+	predicate:runtime "110".
 movie:8
 	predicate:id "8";
 	predicate:title "Life in Loops (A Megacities RMX)";
@@ -51,13 +51,13 @@ movie:8
 	predicate:has_score "7.5";
 	predicate:released "2006-01-01";
 	predicate:poster "";
-	predicate:runtime "2006-01-01";
 	predicate:genre "Documentary";
 	predicate:language "English";
 	predicate:language "हिन्दी";
 	predicate:language "日本語";
 	predicate:language "Pусский";
 	predicate:language "Español";
+	predicate:runtime "80".
 movie:9
 	predicate:id "9";
 	predicate:title "Sunday in August";
@@ -66,9 +66,9 @@ movie:9
 	predicate:has_score "6.9";
 	predicate:released "2004-09-02";
 	predicate:poster "";
-	predicate:runtime "2004-09-02";
 	predicate:genre "Drama";
 	predicate:language "Deutsch";
+	predicate:runtime "15".
 movie:11
 	predicate:id "11";
 	predicate:title "Star Wars";
@@ -77,11 +77,11 @@ movie:11
 	predicate:has_score "8.2";
 	predicate:released "1977-05-25";
 	predicate:poster "/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg";
-	predicate:runtime "1977-05-25";
 	predicate:genre "Adventure";
 	predicate:genre "Action";
 	predicate:genre "Science Fiction";
 	predicate:language "English";
+	predicate:runtime "121".
 movie:12
 	predicate:id "12";
 	predicate:title "Finding Nemo";
@@ -90,10 +90,10 @@ movie:12
 	predicate:has_score "7.8";
 	predicate:released "2003-05-30";
 	predicate:poster "/8h0CG12Oft1GqthLmsctg8iuQQj.jpg";
-	predicate:runtime "2003-05-30";
 	predicate:genre "Animation";
 	predicate:genre "Family";
 	predicate:language "English";
+	predicate:runtime "100".
 movie:13
 	predicate:id "13";
 	predicate:title "Forrest Gump";
@@ -102,11 +102,11 @@ movie:13
 	predicate:has_score "8.5";
 	predicate:released "1994-07-06";
 	predicate:poster "/clolk7rB5lAjs41SD0Vt6IXYLMm.jpg";
-	predicate:runtime "1994-07-06";
 	predicate:genre "Comedy";
 	predicate:genre "Drama";
 	predicate:genre "Romance";
 	predicate:language "English";
+	predicate:runtime "142".
 movie:14
 	predicate:id "14";
 	predicate:title "American Beauty";
@@ -115,9 +115,9 @@ movie:14
 	predicate:has_score "8.0";
 	predicate:released "1999-09-15";
 	predicate:poster "/wby9315QzVKdW9BonAefg8jGTTb.jpg";
-	predicate:runtime "1999-09-15";
 	predicate:genre "Drama";
 	predicate:language "English";
+	predicate:runtime "122".
 movie:15
 	predicate:id "15";
 	predicate:title "Citizen Kane";
@@ -126,10 +126,10 @@ movie:15
 	predicate:has_score "8.1";
 	predicate:released "1941-04-17";
 	predicate:poster "/630cKYN0et63iZAUJJpowSL3vBU.jpg";
-	predicate:runtime "1941-04-17";
 	predicate:genre "Mystery";
 	predicate:genre "Drama";
 	predicate:language "English";
+	predicate:runtime "119".
 movie:16
 	predicate:id "16";
 	predicate:title "Dancer in the Dark";
@@ -138,10 +138,10 @@ movie:16
 	predicate:has_score "7.9";
 	predicate:released "2000-05-17";
 	predicate:poster "/9rsivF4sWfmBzrNr4LPu6TNJhXX.jpg";
-	predicate:runtime "2000-05-17";
 	predicate:genre "Drama";
 	predicate:genre "Crime";
 	predicate:language "English";
+	predicate:runtime "141".
 movie:17
 	predicate:id "17";
 	predicate:title "The Dark";
@@ -150,12 +150,12 @@ movie:17
 	predicate:has_score "5.9";
 	predicate:released "2005-09-28";
 	predicate:poster "/5DwAoId6cc23wxH3adFzlnYfWAe.jpg";
-	predicate:runtime "2005-09-28";
 	predicate:genre "Horror";
 	predicate:genre "Thriller";
 	predicate:genre "Mystery";
 	predicate:language "Cymraeg";
 	predicate:language "English";
+	predicate:runtime "87".
 movie:18
 	predicate:id "18";
 	predicate:title "The Fifth Element";
@@ -164,7 +164,6 @@ movie:18
 	predicate:has_score "7.5";
 	predicate:released "1997-05-02";
 	predicate:poster "/fPtlCO1yQtnoLHOwKtWz7db6RGU.jpg";
-	predicate:runtime "1997-05-02";
 	predicate:genre "Adventure";
 	predicate:genre "Fantasy";
 	predicate:genre "Action";
@@ -173,6 +172,7 @@ movie:18
 	predicate:language "English";
 	predicate:language "svenska";
 	predicate:language "Deutsch";
+	predicate:runtime "126".
 movie:19
 	predicate:id "19";
 	predicate:title "Metropolis";
@@ -181,10 +181,10 @@ movie:19
 	predicate:has_score "8.2";
 	predicate:released "1927-03-06";
 	predicate:poster "/hUK9rewffKGqtXynH5SW3v9hzcu.jpg";
-	predicate:runtime "1927-03-06";
 	predicate:genre "Drama";
 	predicate:genre "Science Fiction";
 	predicate:language "No Language";
+	predicate:runtime "149".
 movie:20
 	predicate:id "20";
 	predicate:title "My Life Without Me";
@@ -193,10 +193,10 @@ movie:20
 	predicate:has_score "5.9";
 	predicate:released "2003-03-07";
 	predicate:poster "/9Fa7tCEKIha1llGH7E41mxSpaF6.jpg";
-	predicate:runtime "2003-03-07";
 	predicate:genre "Drama";
 	predicate:genre "Romance";
 	predicate:language "English";
+	predicate:runtime "106".
 movie:21
 	predicate:id "21";
 	predicate:title "The Endless Summer";
@@ -205,9 +205,9 @@ movie:21
 	predicate:has_score "7.5";
 	predicate:released "1966-06-15";
 	predicate:poster "/5W5uaqQ7NZTwoDMKO4AtdcahHex.jpg";
-	predicate:runtime "1966-06-15";
 	predicate:genre "Documentary";
 	predicate:language "English";
+	predicate:runtime "91".
 movie:22
 	predicate:id "22";
 	predicate:title "Pirates of the Caribbean: The Curse of the Black Pearl";
@@ -216,11 +216,11 @@ movie:22
 	predicate:has_score "7.7";
 	predicate:released "2003-07-09";
 	predicate:poster "/z8onk7LV9Mmw6zKz4hT6pzzvmvl.jpg";
-	predicate:runtime "2003-07-09";
 	predicate:genre "Adventure";
 	predicate:genre "Fantasy";
 	predicate:genre "Action";
 	predicate:language "English";
+	predicate:runtime "143".
 movie:24
 	predicate:id "24";
 	predicate:title "Kill Bill: Vol. 1";
@@ -229,12 +229,12 @@ movie:24
 	predicate:has_score "8.0";
 	predicate:released "2003-10-10";
 	predicate:poster "/v7TaX8kXMXs5yFFGR41guUDNcnB.jpg";
-	predicate:runtime "2003-10-10";
 	predicate:genre "Action";
 	predicate:genre "Crime";
 	predicate:language "English";
 	predicate:language "日本語";
 	predicate:language "Français";
+	predicate:runtime "111".
 movie:25
 	predicate:id "25";
 	predicate:title "Jarhead";
@@ -243,13 +243,13 @@ movie:25
 	predicate:has_score "6.6";
 	predicate:released "2005-11-04";
 	predicate:poster "/4rCzaZy5Qkvxh5xaVpHriXSLTgC.jpg";
-	predicate:runtime "2005-11-04";
 	predicate:genre "Drama";
 	predicate:genre "War";
 	predicate:language "English";
 	predicate:language "Español";
 	predicate:language "العربية";
 	predicate:language "Latin";
+	predicate:runtime "123".
 movie:26
 	predicate:id "26";
 	predicate:title "Walk on Water";
@@ -258,7 +258,6 @@ movie:26
 	predicate:has_score "7.0";
 	predicate:released "2004-02-05";
 	predicate:poster "/iJG6gNeEHlgrIvYkfyaB3IR6NKo.jpg";
-	predicate:runtime "2004-02-05";
 	predicate:genre "Drama";
 	predicate:language "Deutsch";
 	predicate:language "العربية";
@@ -266,6 +265,7 @@ movie:26
 	predicate:language "English";
 	predicate:language "Italiano";
 	predicate:language "Türkçe";
+	predicate:runtime "103".
 movie:27
 	predicate:id "27";
 	predicate:title "9 Songs";
@@ -274,11 +274,11 @@ movie:27
 	predicate:has_score "5.0";
 	predicate:released "2004-05-16";
 	predicate:poster "/91O7z0vo7MiNWd5xD2BoivwbQsb.jpg";
-	predicate:runtime "2004-05-16";
 	predicate:genre "Drama";
 	predicate:genre "Music";
 	predicate:genre "Romance";
 	predicate:language "English";
+	predicate:runtime "66".
 movie:28
 	predicate:id "28";
 	predicate:title "Apocalypse Now";
@@ -287,12 +287,12 @@ movie:28
 	predicate:has_score "8.3";
 	predicate:released "1979-08-15";
 	predicate:poster "/gQB8Y5RCMkv2zwzFHbUJX3kAhvA.jpg";
-	predicate:runtime "1979-08-15";
 	predicate:genre "Drama";
 	predicate:genre "War";
 	predicate:language "English";
 	predicate:language "Français";
 	predicate:language "Tiếng Việt";
+	predicate:runtime "147".
 movie:30
 	predicate:id "30";
 	predicate:title "Magnetic Rose";
@@ -301,10 +301,10 @@ movie:30
 	predicate:has_score "4.4";
 	predicate:released "1995-12-23";
 	predicate:poster "/l9DUhyZx9lm0oxNi6NsyvANeL8t.jpg";
-	predicate:runtime "1995-12-23";
 	predicate:genre "Animation";
 	predicate:genre "Science Fiction";
 	predicate:language "日本語";
+	predicate:runtime "44".
 movie:31
 	predicate:id "31";
 	predicate:title "Stink Bomb";
@@ -313,11 +313,11 @@ movie:31
 	predicate:has_score "6.2";
 	predicate:released "1995-12-23";
 	predicate:poster "/sNljvfDqJyMp0GUlzDaEeKnoUdK.jpg";
-	predicate:runtime "1995-12-23";
 	predicate:genre "Action";
 	predicate:genre "Animation";
 	predicate:genre "Comedy";
 	predicate:language "日本語";
+	predicate:runtime "40".
 movie:32
 	predicate:id "32";
 	predicate:title "Cannon Fodder";
@@ -326,10 +326,10 @@ movie:32
 	predicate:has_score "6.5";
 	predicate:released "1995-12-23";
 	predicate:poster "/vrhfgVQbA1DTRMwERxfoDYuMCAW.jpg";
-	predicate:runtime "1995-12-23";
 	predicate:genre "Animation";
 	predicate:genre "History";
 	predicate:language "日本語";
+	predicate:runtime "21".
 movie:33
 	predicate:id "33";
 	predicate:title "Unforgiven";
@@ -338,9 +338,9 @@ movie:33
 	predicate:has_score "7.9";
 	predicate:released "1992-08-07";
 	predicate:poster "/yKyLJmRAtyXEEYKOvPhKHXIcPq9.jpg";
-	predicate:runtime "1992-08-07";
 	predicate:genre "Western";
 	predicate:language "English";
+	predicate:runtime "131".
 movie:35
 	predicate:id "35";
 	predicate:title "The Simpsons Movie";
@@ -349,11 +349,11 @@ movie:35
 	predicate:has_score "7.0";
 	predicate:released "2007-07-26";
 	predicate:poster "/s3b8TZWwmkYc2KoJ5zk77qB6PzY.jpg";
-	predicate:runtime "2007-07-26";
 	predicate:genre "Animation";
 	predicate:genre "Comedy";
 	predicate:genre "Family";
 	predicate:language "English";
+	predicate:runtime "87".
 movie:38
 	predicate:id "38";
 	predicate:title "Eternal Sunshine of the Spotless Mind";
@@ -362,11 +362,11 @@ movie:38
 	predicate:has_score "8.1";
 	predicate:released "2004-03-19";
 	predicate:poster "/5MwkWH9tYHv3mV9OdYTMR5qreIz.jpg";
-	predicate:runtime "2004-03-19";
 	predicate:genre "Science Fiction";
 	predicate:genre "Drama";
 	predicate:genre "Romance";
 	predicate:language "English";
+	predicate:runtime "108".
 movie:55
 	predicate:id "55";
 	predicate:title "Amores Perros";
@@ -375,10 +375,10 @@ movie:55
 	predicate:has_score "7.6";
 	predicate:released "2000-06-16";
 	predicate:poster "/uoObXx53SjSLLtAavMSIe02zizs.jpg";
-	predicate:runtime "2000-06-16";
 	predicate:genre "Drama";
 	predicate:genre "Thriller";
 	predicate:language "Español";
+	predicate:runtime "154".
 movie:58
 	predicate:id "58";
 	predicate:title "Pirates of the Caribbean: Dead Man's Chest";
@@ -387,7 +387,6 @@ movie:58
 	predicate:has_score "7.3";
 	predicate:released "2006-07-06";
 	predicate:poster "/AdRQGfT05z6L9gIpUpkh4McMmpm.jpg";
-	predicate:runtime "2006-07-06";
 	predicate:genre "Adventure";
 	predicate:genre "Fantasy";
 	predicate:genre "Action";
@@ -395,6 +394,7 @@ movie:58
 	predicate:language "Türkçe";
 	predicate:language "ελληνικά";
 	predicate:language "普通话";
+	predicate:runtime "151".
 movie:59
 	predicate:id "59";
 	predicate:title "A History of Violence";
@@ -403,11 +403,11 @@ movie:59
 	predicate:has_score "7.2";
 	predicate:released "2005-09-23";
 	predicate:poster "/rrc6GiAKHDrUjp8OmdVng9hRWBn.jpg";
-	predicate:runtime "2005-09-23";
 	predicate:genre "Drama";
 	predicate:genre "Thriller";
 	predicate:genre "Crime";
 	predicate:language "English";
+	predicate:runtime "96".
 movie:62
 	predicate:id "62";
 	predicate:title "2001: A Space Odyssey";
@@ -416,12 +416,12 @@ movie:62
 	predicate:has_score "8.1";
 	predicate:released "1968-04-09";
 	predicate:poster "/zmmYdPa8Lxx999Af9vnVP4XQ1V6.jpg";
-	predicate:runtime "1968-04-09";
 	predicate:genre "Science Fiction";
 	predicate:genre "Mystery";
 	predicate:genre "Adventure";
 	predicate:language "English";
 	predicate:language "Pусский";
+	predicate:runtime "149".
 movie:63
 	predicate:id "63";
 	predicate:title "Twelve Monkeys";
@@ -430,12 +430,12 @@ movie:63
 	predicate:has_score "7.6";
 	predicate:released "1995-12-29";
 	predicate:poster "/kKoG0hXBmBbkDnJYhhHisdin73W.jpg";
-	predicate:runtime "1995-12-29";
 	predicate:genre "Science Fiction";
 	predicate:genre "Thriller";
 	predicate:genre "Mystery";
 	predicate:language "English";
 	predicate:language "Français";
+	predicate:runtime "129".
 movie:64
 	predicate:id "64";
 	predicate:title "Talk to Her";
@@ -444,10 +444,10 @@ movie:64
 	predicate:has_score "7.6";
 	predicate:released "2002-03-14";
 	predicate:poster "/ePERgbqEI1sYTzSVIHDYD9MJ1IS.jpg";
-	predicate:runtime "2002-03-14";
 	predicate:genre "Drama";
 	predicate:genre "Romance";
 	predicate:language "Español";
+	predicate:runtime "112".
 movie:65
 	predicate:id "65";
 	predicate:title "8 Mile";
@@ -456,10 +456,10 @@ movie:65
 	predicate:has_score "7.1";
 	predicate:released "2002-11-08";
 	predicate:poster "/7BmQj8qE1FLuLTf7Xjf9sdIHzoa.jpg";
-	predicate:runtime "2002-11-08";
 	predicate:genre "Drama";
 	predicate:genre "Music";
 	predicate:language "English";
+	predicate:runtime "110".
 movie:66
 	predicate:id "66";
 	predicate:title "Absolute Power";
@@ -468,12 +468,12 @@ movie:66
 	predicate:has_score "6.6";
 	predicate:released "1997-02-14";
 	predicate:poster "/xX9gmwtnTi0Y8WcTF7Jsg9Hdp6W.jpg";
-	predicate:runtime "1997-02-14";
 	predicate:genre "Crime";
 	predicate:genre "Drama";
 	predicate:genre "Action";
 	predicate:language "Español";
 	predicate:language "English";
+	predicate:runtime "121".
 movie:67
 	predicate:id "67";
 	predicate:title "Paradise Now";
@@ -482,12 +482,12 @@ movie:67
 	predicate:has_score "7.0";
 	predicate:released "2005-02-14";
 	predicate:poster "/qWZkYa8VdcDZk8uzRB2PfhpM9IL.jpg";
-	predicate:runtime "2005-02-14";
 	predicate:genre "Thriller";
 	predicate:genre "Crime";
 	predicate:genre "Drama";
 	predicate:language "العربية";
 	predicate:language "English";
+	predicate:runtime "90".
 movie:68
 	predicate:id "68";
 	predicate:title "Brazil";
@@ -496,10 +496,10 @@ movie:68
 	predicate:has_score "7.7";
 	predicate:released "1985-02-20";
 	predicate:poster "/d0PibPzCK4fVikjoD1PqHovbvkt.jpg";
-	predicate:runtime "1985-02-20";
 	predicate:genre "Comedy";
 	predicate:genre "Science Fiction";
 	predicate:language "English";
+	predicate:runtime "132".
 movie:69
 	predicate:id "69";
 	predicate:title "Walk the Line";
@@ -508,12 +508,12 @@ movie:69
 	predicate:has_score "7.5";
 	predicate:released "2005-09-13";
 	predicate:poster "/zMkD6FVikyPNnigoupO7vD5ti9p.jpg";
-	predicate:runtime "2005-09-13";
 	predicate:genre "Drama";
 	predicate:genre "Music";
 	predicate:genre "Romance";
 	predicate:language "English";
 	predicate:language "Pусский";
+	predicate:runtime "136".
 movie:70
 	predicate:id "70";
 	predicate:title "Million Dollar Baby";
@@ -522,10 +522,10 @@ movie:70
 	predicate:has_score "7.9";
 	predicate:released "2004-12-15";
 	predicate:poster "/corahhcHlrDUx6WJPLuRZvMeS0H.jpg";
-	predicate:runtime "2004-12-15";
 	predicate:genre "Drama";
 	predicate:language "Gaeilge";
 	predicate:language "English";
+	predicate:runtime "132".
 movie:71
 	predicate:id "71";
 	predicate:title "Billy Elliot";
@@ -534,11 +534,11 @@ movie:71
 	predicate:has_score "7.6";
 	predicate:released "2000-05-18";
 	predicate:poster "/nOr5diUZxphmAD3li9aiILyI28F.jpg";
-	predicate:runtime "2000-05-18";
 	predicate:genre "Drama";
 	predicate:genre "Comedy";
 	predicate:genre "Music";
 	predicate:language "English";
+	predicate:runtime "110".
 movie:73
 	predicate:id "73";
 	predicate:title "American History X";
@@ -547,9 +547,9 @@ movie:73
 	predicate:has_score "8.4";
 	predicate:released "1998-10-30";
 	predicate:poster "/c2gsmSQ2Cqv8zosqKOCwRS0GFBS.jpg";
-	predicate:runtime "1998-10-30";
 	predicate:genre "Drama";
 	predicate:language "English";
+	predicate:runtime "119".
 movie:74
 	predicate:id "74";
 	predicate:title "War of the Worlds";
@@ -558,11 +558,11 @@ movie:74
 	predicate:has_score "6.4";
 	predicate:released "2005-06-28";
 	predicate:poster "/6Biy7R9LfumYshur3YKhpj56MpB.jpg";
-	predicate:runtime "2005-06-28";
 	predicate:genre "Adventure";
 	predicate:genre "Thriller";
 	predicate:genre "Science Fiction";
 	predicate:language "English";
+	predicate:runtime "116".
 movie:75
 	predicate:id "75";
 	predicate:title "Mars Attacks!";
@@ -571,12 +571,12 @@ movie:75
 	predicate:has_score "6.3";
 	predicate:released "1996-12-12";
 	predicate:poster "/hll4O5vSAfnZDb6JbnP06GPtz7b.jpg";
-	predicate:runtime "1996-12-12";
 	predicate:genre "Comedy";
 	predicate:genre "Fantasy";
 	predicate:genre "Science Fiction";
 	predicate:language "English";
 	predicate:language "Français";
+	predicate:runtime "106".
 movie:76
 	predicate:id "76";
 	predicate:title "Before Sunrise";
@@ -585,12 +585,12 @@ movie:76
 	predicate:has_score "7.9";
 	predicate:released "1995-01-27";
 	predicate:poster "/6KWnXYoV1htDT3TGYdFWucfTt6t.jpg";
-	predicate:runtime "1995-01-27";
 	predicate:genre "Drama";
 	predicate:genre "Romance";
 	predicate:language "English";
 	predicate:language "Deutsch";
 	predicate:language "Français";
+	predicate:runtime "101".
 movie:77
 	predicate:id "77";
 	predicate:title "Memento";
@@ -599,10 +599,10 @@ movie:77
 	predicate:has_score "8.2";
 	predicate:released "2000-10-11";
 	predicate:poster "/uprP8rtOgMYJQ2h3ldDFvGsaBgH.jpg";
-	predicate:runtime "2000-10-11";
 	predicate:genre "Mystery";
 	predicate:genre "Thriller";
 	predicate:language "English";
+	predicate:runtime "113".
 movie:78
 	predicate:id "78";
 	predicate:title "Blade Runner";
@@ -611,7 +611,6 @@ movie:78
 	predicate:has_score "7.9";
 	predicate:released "1982-06-25";
 	predicate:poster "/vfzE3pjE5G7G7kcZWrA3fnbZo7V.jpg";
-	predicate:runtime "1982-06-25";
 	predicate:genre "Science Fiction";
 	predicate:genre "Drama";
 	predicate:genre "Thriller";
@@ -620,6 +619,7 @@ movie:78
 	predicate:language "广州话 / 廣州話";
 	predicate:language "日本語";
 	predicate:language "Magyar";
+	predicate:runtime "117".
 movie:79
 	predicate:id "79";
 	predicate:title "Hero";
@@ -628,12 +628,12 @@ movie:79
 	predicate:has_score "7.5";
 	predicate:released "2002-07-22";
 	predicate:poster "/vxgZto2Cz7ILHAlmRXt50I2brB2.jpg";
-	predicate:runtime "2002-07-22";
 	predicate:genre "Drama";
 	predicate:genre "Adventure";
 	predicate:genre "Action";
 	predicate:genre "History";
 	predicate:language "普通话";
+	predicate:runtime "99".
 movie:80
 	predicate:id "80";
 	predicate:title "Before Sunset";
@@ -642,11 +642,11 @@ movie:80
 	predicate:has_score "7.8";
 	predicate:released "2004-02-10";
 	predicate:poster "/gycdE1ARByGQcK4fYR2mgpU6OO.jpg";
-	predicate:runtime "2004-02-10";
 	predicate:genre "Drama";
 	predicate:genre "Romance";
 	predicate:language "English";
 	predicate:language "Français";
+	predicate:runtime "80".
 movie:81
 	predicate:id "81";
 	predicate:title "Nausicaä of the Valley of the Wind";
@@ -655,11 +655,11 @@ movie:81
 	predicate:has_score "7.9";
 	predicate:released "1984-03-11";
 	predicate:poster "/sIpcATxMrKHRRUJAGI5UIUT7XMG.jpg";
-	predicate:runtime "1984-03-11";
 	predicate:genre "Adventure";
 	predicate:genre "Animation";
 	predicate:genre "Fantasy";
 	predicate:language "日本語";
+	predicate:runtime "117".
 movie:82
 	predicate:id "82";
 	predicate:title "Miami Vice";
@@ -668,12 +668,12 @@ movie:82
 	predicate:has_score "5.9";
 	predicate:released "2006-07-27";
 	predicate:poster "/iJPSls4taB09EUKtLj6FjFSprb3.jpg";
-	predicate:runtime "2006-07-27";
 	predicate:genre "Action";
 	predicate:genre "Crime";
 	predicate:genre "Thriller";
 	predicate:language "English";
 	predicate:language "Español";
+	predicate:runtime "132".
 movie:83
 	predicate:id "83";
 	predicate:title "Open Water";
@@ -682,11 +682,11 @@ movie:83
 	predicate:has_score "5.4";
 	predicate:released "2003-12-29";
 	predicate:poster "/2Xa6eVCtiOjfqciifo4s9AD8Ef2.jpg";
-	predicate:runtime "2003-12-29";
 	predicate:genre "Drama";
 	predicate:genre "Thriller";
 	predicate:genre "Horror";
 	predicate:language "English";
+	predicate:runtime "79".
 movie:85
 	predicate:id "85";
 	predicate:title "Raiders of the Lost Ark";
@@ -695,7 +695,6 @@ movie:85
 	predicate:has_score "7.9";
 	predicate:released "1981-06-12";
 	predicate:poster "/o4swLnuKP7Fw88xyhZgwkg5xySw.jpg";
-	predicate:runtime "1981-06-12";
 	predicate:genre "Adventure";
 	predicate:genre "Action";
 	predicate:language "English";
@@ -703,6 +702,7 @@ movie:85
 	predicate:language "Deutsch";
 	predicate:language "עִבְרִית";
 	predicate:language "العربية";
+	predicate:runtime "115".
 movie:86
 	predicate:id "86";
 	predicate:title "The Elementary Particles";
@@ -711,11 +711,11 @@ movie:86
 	predicate:has_score "6.3";
 	predicate:released "2006-02-10";
 	predicate:poster "/cQKQejSMFphrBpVcNwHiaJdIfmn.jpg";
-	predicate:runtime "2006-02-10";
 	predicate:genre "Drama";
 	predicate:genre "Romance";
 	predicate:language "English";
 	predicate:language "Deutsch";
+	predicate:runtime "105".
 movie:87
 	predicate:id "87";
 	predicate:title "Indiana Jones and the Temple of Doom";
@@ -724,11 +724,11 @@ movie:87
 	predicate:has_score "7.3";
 	predicate:released "1984-05-23";
 	predicate:poster "/5xXpJmvXJuWGQ7KmgWTibNa5utX.jpg";
-	predicate:runtime "1984-05-23";
 	predicate:genre "Adventure";
 	predicate:genre "Action";
 	predicate:language "English";
 	predicate:language "සිංහල";
+	predicate:runtime "118".
 movie:88
 	predicate:id "88";
 	predicate:title "Dirty Dancing";
@@ -737,11 +737,11 @@ movie:88
 	predicate:has_score "7.4";
 	predicate:released "1987-08-21";
 	predicate:poster "/dvEggyDTTIBDvrUNjTEa9depT0f.jpg";
-	predicate:runtime "1987-08-21";
 	predicate:genre "Drama";
 	predicate:genre "Music";
 	predicate:genre "Romance";
 	predicate:language "English";
+	predicate:runtime "100".
 movie:89
 	predicate:id "89";
 	predicate:title "Indiana Jones and the Last Crusade";
@@ -750,12 +750,12 @@ movie:89
 	predicate:has_score "7.8";
 	predicate:released "1989-05-24";
 	predicate:poster "/sizg1AU8f8JDZX4QIgE4pjUMBvx.jpg";
-	predicate:runtime "1989-05-24";
 	predicate:genre "Adventure";
 	predicate:genre "Action";
 	predicate:language "Deutsch";
 	predicate:language "ελληνικά";
 	predicate:language "English";
+	predicate:runtime "127".
 movie:90
 	predicate:id "90";
 	predicate:title "Beverly Hills Cop";
@@ -764,11 +764,11 @@ movie:90
 	predicate:has_score "7.2";
 	predicate:released "1984-11-30";
 	predicate:poster "/2O0KSDef3gRuoOswd9HCv0HSfXL.jpg";
-	predicate:runtime "1984-11-30";
 	predicate:genre "Action";
 	predicate:genre "Comedy";
 	predicate:genre "Crime";
 	predicate:language "English";
+	predicate:runtime "105".
 movie:91
 	predicate:id "91";
 	predicate:title "Land Without Bread";
@@ -777,9 +777,9 @@ movie:91
 	predicate:has_score "7.1";
 	predicate:released "1933-12-01";
 	predicate:poster "/6MvYJWxQ414PFv1nqX6FSinEbXO.jpg";
-	predicate:runtime "1933-12-01";
 	predicate:genre "Documentary";
 	predicate:language "No Language";
+	predicate:runtime "29".
 movie:92
 	predicate:id "92";
 	predicate:title "Megacities";
@@ -788,12 +788,12 @@ movie:92
 	predicate:has_score "7.6";
 	predicate:released "1998-08-12";
 	predicate:poster "/qO48XLCG58cICOgAR57ao0PrJ6A.jpg";
-	predicate:runtime "1998-08-12";
 	predicate:genre "Documentary";
 	predicate:language "Pусский";
 	predicate:language "Español";
 	predicate:language "हिन्दी";
 	predicate:language "English";
+	predicate:runtime "94".
 movie:93
 	predicate:id "93";
 	predicate:title "Anatomy of a Murder";
@@ -802,13 +802,13 @@ movie:93
 	predicate:has_score "7.9";
 	predicate:released "1959-07-01";
 	predicate:poster "/lMWWs7IskGldLfwwnVxHhffsVLw.jpg";
-	predicate:runtime "1959-07-01";
 	predicate:genre "Crime";
 	predicate:genre "Drama";
 	predicate:genre "Mystery";
 	predicate:genre "Thriller";
 	predicate:language "English";
 	predicate:language "Italiano";
+	predicate:runtime "161".
 movie:94
 	predicate:id "94";
 	predicate:title "Kunstgriff";
@@ -817,9 +817,9 @@ movie:94
 	predicate:has_score "10.0";
 	predicate:released "2002-01-01";
 	predicate:poster "";
-	predicate:runtime "2002-01-01";
 	predicate:genre "Comedy";
 	predicate:language "Deutsch";
+	predicate:runtime "6".
 movie:95
 	predicate:id "95";
 	predicate:title "Armageddon";
@@ -828,13 +828,13 @@ movie:95
 	predicate:has_score "6.8";
 	predicate:released "1998-07-01";
 	predicate:poster "/eTM3qtGhDU8cvjpoa6KEt5E2auU.jpg";
-	predicate:runtime "1998-07-01";
 	predicate:genre "Action";
 	predicate:genre "Thriller";
 	predicate:genre "Science Fiction";
 	predicate:genre "Adventure";
 	predicate:language "English";
 	predicate:language "Pусский";
+	predicate:runtime "151".
 movie:96
 	predicate:id "96";
 	predicate:title "Beverly Hills Cop II";
@@ -843,11 +843,11 @@ movie:96
 	predicate:has_score "6.4";
 	predicate:released "1987-05-18";
 	predicate:poster "/yPXAvRwhstvr8gSmAb8sfJTCORS.jpg";
-	predicate:runtime "1987-05-18";
 	predicate:genre "Action";
 	predicate:genre "Comedy";
 	predicate:genre "Crime";
 	predicate:language "English";
+	predicate:runtime "103".
 movie:97
 	predicate:id "97";
 	predicate:title "Tron";
@@ -856,11 +856,11 @@ movie:97
 	predicate:has_score "6.6";
 	predicate:released "1982-07-09";
 	predicate:poster "/hBCSuYpMXXIrP36J6dCjrYJuzxD.jpg";
-	predicate:runtime "1982-07-09";
 	predicate:genre "Science Fiction";
 	predicate:genre "Action";
 	predicate:genre "Adventure";
 	predicate:language "English";
+	predicate:runtime "96".
 movie:98
 	predicate:id "98";
 	predicate:title "Gladiator";
@@ -869,11 +869,11 @@ movie:98
 	predicate:has_score "8.2";
 	predicate:released "2000-05-01";
 	predicate:poster "/ofDw0himYNpehWA69OkPWOzXOYK.jpg";
-	predicate:runtime "2000-05-01";
 	predicate:genre "Action";
 	predicate:genre "Drama";
 	predicate:genre "Adventure";
 	predicate:language "English";
+	predicate:runtime "155".
 movie:99
 	predicate:id "99";
 	predicate:title "All About My Mother";
@@ -882,10 +882,10 @@ movie:99
 	predicate:has_score "7.7";
 	predicate:released "1999-04-19";
 	predicate:poster "/hjQhzhkGYXPNM96k0mOgob6HMmn.jpg";
-	predicate:runtime "1999-04-19";
 	predicate:genre "Comedy";
 	predicate:genre "Drama";
 	predicate:language "Español";
+	predicate:runtime "101".
 movie:100
 	predicate:id "100";
 	predicate:title "Lock, Stock and Two Smoking Barrels";
@@ -894,10 +894,10 @@ movie:100
 	predicate:has_score "8.2";
 	predicate:released "1998-03-05";
 	predicate:poster "/8kSerJrhrJWKLk1LViesGcnrUPE.jpg";
-	predicate:runtime "1998-03-05";
 	predicate:genre "Comedy";
 	predicate:genre "Crime";
 	predicate:language "English";
+	predicate:runtime "105".
 movie:101
 	predicate:id "101";
 	predicate:title "Léon: The Professional";
@@ -906,13 +906,13 @@ movie:101
 	predicate:has_score "8.3";
 	predicate:released "1994-09-14";
 	predicate:poster "/91bUbxcOvTinqrPLrnGHlWYVy9J.jpg";
-	predicate:runtime "1994-09-14";
 	predicate:genre "Crime";
 	predicate:genre "Drama";
 	predicate:genre "Action";
 	predicate:language "English";
 	predicate:language "Français";
 	predicate:language "Italiano";
+	predicate:runtime "111".
 movie:102
 	predicate:id "102";
 	predicate:title "Open Hearts";
@@ -921,10 +921,10 @@ movie:102
 	predicate:has_score "7.2";
 	predicate:released "2002-09-06";
 	predicate:poster "/hOrV2fCw2kmSiS4ZMGFPfXqr3lt.jpg";
-	predicate:runtime "2002-09-06";
 	predicate:genre "Drama";
 	predicate:genre "Romance";
 	predicate:language "Dansk";
+	predicate:runtime "113".
 movie:103
 	predicate:id "103";
 	predicate:title "Taxi Driver";
@@ -933,11 +933,11 @@ movie:103
 	predicate:has_score "8.2";
 	predicate:released "1976-02-09";
 	predicate:poster "/ekstpH614fwDX8DUln1a2Opz0N8.jpg";
-	predicate:runtime "1976-02-09";
 	predicate:genre "Crime";
 	predicate:genre "Drama";
 	predicate:language "English";
 	predicate:language "Español";
+	predicate:runtime "114".
 movie:104
 	predicate:id "104";
 	predicate:title "Run Lola Run";
@@ -946,13 +946,13 @@ movie:104
 	predicate:has_score "7.3";
 	predicate:released "1998-08-20";
 	predicate:poster "/v0giIi4bTILVhNhJajet3WWY3FA.jpg";
-	predicate:runtime "1998-08-20";
 	predicate:genre "Action";
 	predicate:genre "Drama";
 	predicate:genre "Thriller";
 	predicate:language "Deutsch";
 	predicate:language "English";
 	predicate:language "日本語";
+	predicate:runtime "81".
 movie:105
 	predicate:id "105";
 	predicate:title "Back to the Future";
@@ -961,12 +961,12 @@ movie:105
 	predicate:has_score "8.3";
 	predicate:released "1985-07-03";
 	predicate:poster "/xlBivetfrtF84Yx0zISShnNtHYe.jpg";
-	predicate:runtime "1985-07-03";
 	predicate:genre "Adventure";
 	predicate:genre "Comedy";
 	predicate:genre "Science Fiction";
 	predicate:genre "Family";
 	predicate:language "English";
+	predicate:runtime "116".
 movie:106
 	predicate:id "106";
 	predicate:title "Predator";
@@ -975,13 +975,13 @@ movie:106
 	predicate:has_score "7.4";
 	predicate:released "1987-06-12";
 	predicate:poster "/biznhvfedHPp9GKjlVFXH6OZtyU.jpg";
-	predicate:runtime "1987-06-12";
 	predicate:genre "Science Fiction";
 	predicate:genre "Action";
 	predicate:genre "Adventure";
 	predicate:genre "Thriller";
 	predicate:language "English";
 	predicate:language "Español";
+	predicate:runtime "107".
 movie:107
 	predicate:id "107";
 	predicate:title "Snatch";
@@ -990,11 +990,11 @@ movie:107
 	predicate:has_score "7.8";
 	predicate:released "2000-09-01";
 	predicate:poster "/56mOJth6DJ6JhgoE2jtpilVqJO.jpg";
-	predicate:runtime "2000-09-01";
 	predicate:genre "Crime";
 	predicate:genre "Comedy";
 	predicate:language "English";
 	predicate:language "Pусский";
+	predicate:runtime "103".
 movie:108
 	predicate:id "108";
 	predicate:title "Three Colors: Blue";
@@ -1003,10 +1003,10 @@ movie:108
 	predicate:has_score "7.7";
 	predicate:released "1993-09-08";
 	predicate:poster "/ayKRZejiarjY4R3UE1JKlSYcyHk.jpg";
-	predicate:runtime "1993-09-08";
 	predicate:genre "Drama";
 	predicate:language "Français";
 	predicate:language "Polski";
+	predicate:runtime "98".
 movie:109
 	predicate:id "109";
 	predicate:title "Three Colors: White";
@@ -1015,13 +1015,13 @@ movie:109
 	predicate:has_score "7.5";
 	predicate:released "1994-01-26";
 	predicate:poster "/4jDSCLCWxHutCAZRve8Kkso2UfA.jpg";
-	predicate:runtime "1994-01-26";
 	predicate:genre "Comedy";
 	predicate:genre "Drama";
 	predicate:genre "Mystery";
 	predicate:language "Français";
 	predicate:language "Magyar";
 	predicate:language "Polski";
+	predicate:runtime "92".
 movie:110
 	predicate:id "110";
 	predicate:title "Three Colors: Red";
@@ -1030,11 +1030,11 @@ movie:110
 	predicate:has_score "8.0";
 	predicate:released "1994-05-27";
 	predicate:poster "/5YIzZaQlwYJY5ZEqHRs9dG9DduB.jpg";
-	predicate:runtime "1994-05-27";
 	predicate:genre "Drama";
 	predicate:genre "Mystery";
 	predicate:genre "Romance";
 	predicate:language "Français";
+	predicate:runtime "100".
 movie:111
 	predicate:id "111";
 	predicate:title "Scarface";
@@ -1043,13 +1043,13 @@ movie:111
 	predicate:has_score "8.2";
 	predicate:released "1983-12-08";
 	predicate:poster "/nGY6NnlDsWaRKAycWUgXanqLxia.jpg";
-	predicate:runtime "1983-12-08";
 	predicate:genre "Action";
 	predicate:genre "Crime";
 	predicate:genre "Drama";
 	predicate:genre "Thriller";
 	predicate:language "English";
 	predicate:language "Español";
+	predicate:runtime "170".
 movie:112
 	predicate:id "112";
 	predicate:title "Italian for Beginners";
@@ -1058,12 +1058,12 @@ movie:112
 	predicate:has_score "6.5";
 	predicate:released "2000-12-07";
 	predicate:poster "/ekAjY1PfDlO9bpzLiYamLweIa8M.jpg";
-	predicate:runtime "2000-12-07";
 	predicate:genre "Comedy";
 	predicate:genre "Drama";
 	predicate:genre "Romance";
 	predicate:language "Dansk";
 	predicate:language "Italiano";
+	predicate:runtime "95".
 movie:113
 	predicate:id "113";
 	predicate:title "Spring, Summer, Fall, Winter... and Spring";
@@ -1072,9 +1072,9 @@ movie:113
 	predicate:has_score "7.8";
 	predicate:released "2003-09-19";
 	predicate:poster "/6SQQ5REuAz7k0FMQ9mSCT40T2LN.jpg";
-	predicate:runtime "2003-09-19";
 	predicate:genre "Drama";
 	predicate:language "한국어/조선말";
+	predicate:runtime "103".
 movie:114
 	predicate:id "114";
 	predicate:title "Pretty Woman";
@@ -1083,10 +1083,10 @@ movie:114
 	predicate:has_score "7.4";
 	predicate:released "1990-03-23";
 	predicate:poster "/hMVMMy1yDUvdufpTl8J8KKNYaZX.jpg";
-	predicate:runtime "1990-03-23";
 	predicate:genre "Romance";
 	predicate:genre "Comedy";
 	predicate:language "English";
+	predicate:runtime "119".
 movie:115
 	predicate:id "115";
 	predicate:title "The Big Lebowski";
@@ -1095,13 +1095,13 @@ movie:115
 	predicate:has_score "7.9";
 	predicate:released "1998-03-06";
 	predicate:poster "/d4J7GotCjvDJBAYayZBTc5nLbbP.jpg";
-	predicate:runtime "1998-03-06";
 	predicate:genre "Comedy";
 	predicate:genre "Crime";
 	predicate:language "English";
 	predicate:language "עִבְרִית";
 	predicate:language "Español";
 	predicate:language "Deutsch";
+	predicate:runtime "117".
 movie:116
 	predicate:id "116";
 	predicate:title "Match Point";
@@ -1110,12 +1110,12 @@ movie:116
 	predicate:has_score "7.4";
 	predicate:released "2005-10-26";
 	predicate:poster "/pxb7glzXxJ2Ij54RgL6w1ISfBiP.jpg";
-	predicate:runtime "2005-10-26";
 	predicate:genre "Drama";
 	predicate:genre "Thriller";
 	predicate:genre "Crime";
 	predicate:genre "Romance";
 	predicate:language "English";
+	predicate:runtime "124".
 movie:117
 	predicate:id "117";
 	predicate:title "The Untouchables";
@@ -1124,12 +1124,12 @@ movie:117
 	predicate:has_score "7.8";
 	predicate:released "1987-06-03";
 	predicate:poster "/iK4twY48a1nVCez0qXE5w4JFvXw.jpg";
-	predicate:runtime "1987-06-03";
 	predicate:genre "Crime";
 	predicate:genre "Drama";
 	predicate:genre "History";
 	predicate:genre "Thriller";
 	predicate:language "English";
+	predicate:runtime "119".
 movie:118
 	predicate:id "118";
 	predicate:title "Charlie and the Chocolate Factory";
@@ -1138,12 +1138,12 @@ movie:118
 	predicate:has_score "7.0";
 	predicate:released "2005-07-13";
 	predicate:poster "/wfGfxtBkhBzQfOZw4S8IQZgrH0a.jpg";
-	predicate:runtime "2005-07-13";
 	predicate:genre "Adventure";
 	predicate:genre "Comedy";
 	predicate:genre "Family";
 	predicate:genre "Fantasy";
 	predicate:language "English";
+	predicate:runtime "115".
 movie:120
 	predicate:id "120";
 	predicate:title "The Lord of the Rings: The Fellowship of the Ring";
@@ -1152,11 +1152,11 @@ movie:120
 	predicate:has_score "8.3";
 	predicate:released "2001-12-18";
 	predicate:poster "/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg";
-	predicate:runtime "2001-12-18";
 	predicate:genre "Adventure";
 	predicate:genre "Fantasy";
 	predicate:genre "Action";
 	predicate:language "English";
+	predicate:runtime "178".
 movie:121
 	predicate:id "121";
 	predicate:title "The Lord of the Rings: The Two Towers";
@@ -1165,11 +1165,11 @@ movie:121
 	predicate:has_score "8.3";
 	predicate:released "2002-12-18";
 	predicate:poster "/5VTN0pR8gcqV3EPUHHfMGnJYN9L.jpg";
-	predicate:runtime "2002-12-18";
 	predicate:genre "Adventure";
 	predicate:genre "Fantasy";
 	predicate:genre "Action";
 	predicate:language "English";
+	predicate:runtime "179".
 movie:122
 	predicate:id "122";
 	predicate:title "The Lord of the Rings: The Return of the King";
@@ -1178,11 +1178,11 @@ movie:122
 	predicate:has_score "8.5";
 	predicate:released "2003-12-01";
 	predicate:poster "/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg";
-	predicate:runtime "2003-12-01";
 	predicate:genre "Adventure";
 	predicate:genre "Fantasy";
 	predicate:genre "Action";
 	predicate:language "English";
+	predicate:runtime "201".
 movie:123
 	predicate:id "123";
 	predicate:title "The Lord of the Rings";
@@ -1191,11 +1191,11 @@ movie:123
 	predicate:has_score "6.5";
 	predicate:released "1978-11-15";
 	predicate:poster "/4O3s0IGZJirPBecqEnP9qsjlTQw.jpg";
-	predicate:runtime "1978-11-15";
 	predicate:genre "Adventure";
 	predicate:genre "Animation";
 	predicate:genre "Fantasy";
 	predicate:language "English";
+	predicate:runtime "132".
 movie:124
 	predicate:id "124";
 	predicate:title "No End";
@@ -1204,10 +1204,10 @@ movie:124
 	predicate:has_score "7.8";
 	predicate:released "1985-06-17";
 	predicate:poster "/3pdF1guvIxNgmhDkmXJHCCk0PkC.jpg";
-	predicate:runtime "1985-06-17";
 	predicate:genre "Drama";
 	predicate:language "English";
 	predicate:language "Polski";
+	predicate:runtime "108".
 movie:125
 	predicate:id "125";
 	predicate:title "Railway Station";
@@ -1216,9 +1216,9 @@ movie:125
 	predicate:has_score "6.0";
 	predicate:released "1980-01-01";
 	predicate:poster "/c4xG9QoCx2zXc8iP3jQVLYDHiMi.jpg";
-	predicate:runtime "1980-01-01";
 	predicate:genre "Documentary";
 	predicate:language "Polski";
+	predicate:runtime "13".
 movie:126
 	predicate:id "126";
 	predicate:title "Short Working Day";
@@ -1227,10 +1227,10 @@ movie:126
 	predicate:has_score "7.3";
 	predicate:released "1981-06-27";
 	predicate:poster "/rJwiDSoKI3ryiLTZZ6BPUl2CrwG.jpg";
-	predicate:runtime "1981-06-27";
 	predicate:genre "Drama";
 	predicate:genre "TV Movie";
 	predicate:language "Polski";
+	predicate:runtime "73".
 movie:127
 	predicate:id "127";
 	predicate:title "Blind Chance";
@@ -1239,9 +1239,9 @@ movie:127
 	predicate:has_score "7.8";
 	predicate:released "1987-01-10";
 	predicate:poster "/gx84VmJllqvXF3JEqcEdsxBEcbF.jpg";
-	predicate:runtime "1987-01-10";
 	predicate:genre "Drama";
 	predicate:language "Polski";
+	predicate:runtime "123".
 movie:128
 	predicate:id "128";
 	predicate:title "Princess Mononoke";
@@ -1250,11 +1250,11 @@ movie:128
 	predicate:has_score "8.4";
 	predicate:released "1997-07-12";
 	predicate:poster "/pdtzEreKvKAlqa2YEBaGwiA45V8.jpg";
-	predicate:runtime "1997-07-12";
 	predicate:genre "Adventure";
 	predicate:genre "Fantasy";
 	predicate:genre "Animation";
 	predicate:language "日本語";
+	predicate:runtime "134".
 movie:129
 	predicate:id "129";
 	predicate:title "Spirited Away";
@@ -1263,11 +1263,11 @@ movie:129
 	predicate:has_score "8.5";
 	predicate:released "2001-07-20";
 	predicate:poster "/2TeJfUZMGolfDdW6DKhfIWqvq8y.jpg";
-	predicate:runtime "2001-07-20";
 	predicate:genre "Animation";
 	predicate:genre "Family";
 	predicate:genre "Fantasy";
 	predicate:language "日本語";
+	predicate:runtime "125".
 movie:132
 	predicate:id "132";
 	predicate:title "Gimme Shelter";
@@ -1276,10 +1276,10 @@ movie:132
 	predicate:has_score "7.6";
 	predicate:released "1970-12-06";
 	predicate:poster "/9cQ6TLG89Yv2EMKuxgLRvgLq5nK.jpg";
-	predicate:runtime "1970-12-06";
 	predicate:genre "Documentary";
 	predicate:genre "Music";
 	predicate:language "English";
+	predicate:runtime "90".
 movie:133
 	predicate:id "133";
 	predicate:title "Primary";
@@ -1288,9 +1288,9 @@ movie:133
 	predicate:has_score "6.6";
 	predicate:released "1960-01-01";
 	predicate:poster "/gVloWsthHRlw719vzRWRpBqDM20.jpg";
-	predicate:runtime "1960-01-01";
 	predicate:genre "Documentary";
 	predicate:language "English";
+	predicate:runtime "60".
 movie:134
 	predicate:id "134";
 	predicate:title "O Brother, Where Art Thou?";
@@ -1299,11 +1299,11 @@ movie:134
 	predicate:has_score "7.3";
 	predicate:released "2000-08-30";
 	predicate:poster "/2YztYilviFCYcEtDAnrOstUWGie.jpg";
-	predicate:runtime "2000-08-30";
 	predicate:genre "Adventure";
 	predicate:genre "Comedy";
 	predicate:genre "Crime";
 	predicate:language "English";
+	predicate:runtime "106".
 movie:135
 	predicate:id "135";
 	predicate:title "Dont Look Back";
@@ -1312,10 +1312,10 @@ movie:135
 	predicate:has_score "7.6";
 	predicate:released "1967-05-17";
 	predicate:poster "/lAIrIooYqlzz48sDKuseWXjX8MS.jpg";
-	predicate:runtime "1967-05-17";
 	predicate:genre "Documentary";
 	predicate:genre "Music";
 	predicate:language "English";
+	predicate:runtime "96".
 movie:136
 	predicate:id "136";
 	predicate:title "Freaks";
@@ -1324,12 +1324,12 @@ movie:136
 	predicate:has_score "7.8";
 	predicate:released "1932-02-12";
 	predicate:poster "/j2dwljljOrLTcnwfKeUBBeNB8t7.jpg";
-	predicate:runtime "1932-02-12";
 	predicate:genre "Drama";
 	predicate:genre "Horror";
 	predicate:language "English";
 	predicate:language "Français";
 	predicate:language "Deutsch";
+	predicate:runtime "62".
 movie:137
 	predicate:id "137";
 	predicate:title "Groundhog Day";
@@ -1338,7 +1338,6 @@ movie:137
 	predicate:has_score "7.6";
 	predicate:released "1993-02-11";
 	predicate:poster "/gCgt1WARPZaXnq523ySQEUKinCs.jpg";
-	predicate:runtime "1993-02-11";
 	predicate:genre "Romance";
 	predicate:genre "Fantasy";
 	predicate:genre "Drama";
@@ -1346,6 +1345,7 @@ movie:137
 	predicate:language "English";
 	predicate:language "Français";
 	predicate:language "Italiano";
+	predicate:runtime "101".
 movie:138
 	predicate:id "138";
 	predicate:title "Dracula";
@@ -1354,12 +1354,12 @@ movie:138
 	predicate:has_score "7.1";
 	predicate:released "1931-02-12";
 	predicate:poster "/aq3lliuEZEgNCTLZokDt4ofCNvP.jpg";
-	predicate:runtime "1931-02-12";
 	predicate:genre "Drama";
 	predicate:genre "Fantasy";
 	predicate:genre "Horror";
 	predicate:language "Magyar";
 	predicate:language "English";
+	predicate:runtime "72".
 movie:139
 	predicate:id "139";
 	predicate:title "Mifune";
@@ -1368,11 +1368,11 @@ movie:139
 	predicate:has_score "6.9";
 	predicate:released "1999-03-12";
 	predicate:poster "/962ZZDr4FV3L46ZnurqIaZveL60.jpg";
-	predicate:runtime "1999-03-12";
 	predicate:genre "Drama";
 	predicate:genre "Comedy";
 	predicate:genre "Romance";
 	predicate:language "Dansk";
+	predicate:runtime "98".
 movie:140
 	predicate:id "140";
 	predicate:title "Bad Education";
@@ -1381,13 +1381,13 @@ movie:140
 	predicate:has_score "7.4";
 	predicate:released "2004-03-19";
 	predicate:poster "/iJ3iuV9H5Ls5umC0Dxc5sAllvmU.jpg";
-	predicate:runtime "2004-03-19";
 	predicate:genre "Crime";
 	predicate:genre "Drama";
 	predicate:genre "Romance";
 	predicate:genre "Thriller";
 	predicate:genre "Mystery";
 	predicate:language "Español";
+	predicate:runtime "106".
 movie:141
 	predicate:id "141";
 	predicate:title "Donnie Darko";
@@ -1396,11 +1396,11 @@ movie:141
 	predicate:has_score "7.8";
 	predicate:released "2001-10-26";
 	predicate:poster "/fhQoQfejY1hUcwyuLgpBrYs6uFt.jpg";
-	predicate:runtime "2001-10-26";
 	predicate:genre "Fantasy";
 	predicate:genre "Drama";
 	predicate:genre "Mystery";
 	predicate:language "English";
+	predicate:runtime "114".
 movie:142
 	predicate:id "142";
 	predicate:title "Brokeback Mountain";
@@ -1409,10 +1409,10 @@ movie:142
 	predicate:has_score "7.8";
 	predicate:released "2005-09-10";
 	predicate:poster "/1A2EU80gL5KXXjjcUZZt8UI4Zot.jpg";
-	predicate:runtime "2005-09-10";
 	predicate:genre "Drama";
 	predicate:genre "Romance";
 	predicate:language "English";
+	predicate:runtime "134".
 movie:143
 	predicate:id "143";
 	predicate:title "All Quiet on the Western Front";
@@ -1421,13 +1421,13 @@ movie:143
 	predicate:has_score "7.8";
 	predicate:released "1930-04-29";
 	predicate:poster "/yAU6jklJLUjZot3WyvyJrxVdLKb.jpg";
-	predicate:runtime "1930-04-29";
 	predicate:genre "Drama";
 	predicate:genre "War";
 	predicate:language "Français";
 	predicate:language "English";
 	predicate:language "Latin";
 	predicate:language "Deutsch";
+	predicate:runtime "133".
 movie:144
 	predicate:id "144";
 	predicate:title "Wings of Desire";
@@ -1436,13 +1436,13 @@ movie:144
 	predicate:has_score "7.8";
 	predicate:released "1987-05-17";
 	predicate:poster "/iZQs2vUeCzvS1KfZJ6uYNCGJBBV.jpg";
-	predicate:runtime "1987-05-17";
 	predicate:genre "Drama";
 	predicate:genre "Fantasy";
 	predicate:genre "Romance";
 	predicate:language "Deutsch";
 	predicate:language "Français";
 	predicate:language "English";
+	predicate:runtime "128".
 movie:145
 	predicate:id "145";
 	predicate:title "Breaking the Waves";
@@ -1451,10 +1451,10 @@ movie:145
 	predicate:has_score "7.5";
 	predicate:released "1996-05-13";
 	predicate:poster "/dQWMcdHXUOSHtr7ypOCa5T79JMS.jpg";
-	predicate:runtime "1996-05-13";
 	predicate:genre "Drama";
 	predicate:genre "Romance";
 	predicate:language "English";
+	predicate:runtime "159".
 movie:146
 	predicate:id "146";
 	predicate:title "Crouching Tiger, Hidden Dragon";
@@ -1463,12 +1463,12 @@ movie:146
 	predicate:has_score "7.3";
 	predicate:released "2000-07-06";
 	predicate:poster "/tKqJ6yWtOnTbiA2uzac2gejDqpI.jpg";
-	predicate:runtime "2000-07-06";
 	predicate:genre "Adventure";
 	predicate:genre "Drama";
 	predicate:genre "Action";
 	predicate:genre "Romance";
 	predicate:language "普通话";
+	predicate:runtime "120".
 movie:147
 	predicate:id "147";
 	predicate:title "The 400 Blows";
@@ -1477,10 +1477,10 @@ movie:147
 	predicate:has_score "8.1";
 	predicate:released "1959-06-03";
 	predicate:poster "/12PuU23kkDLvTd0nb8hMlE3oShB.jpg";
-	predicate:runtime "1959-06-03";
 	predicate:genre "Drama";
 	predicate:language "English";
 	predicate:language "Français";
+	predicate:runtime "99".
 movie:148
 	predicate:id "148";
 	predicate:title "The Secret Life of Words";
@@ -1489,12 +1489,12 @@ movie:148
 	predicate:has_score "7.1";
 	predicate:released "2005-12-15";
 	predicate:poster "/5V7i63rodY56cGWmPATxumzj4xv.jpg";
-	predicate:runtime "2005-12-15";
 	predicate:genre "Drama";
 	predicate:genre "Romance";
 	predicate:language "Français";
 	predicate:language "English";
 	predicate:language "Español";
+	predicate:runtime "112".
 movie:149
 	predicate:id "149";
 	predicate:title "Akira";
@@ -1503,11 +1503,11 @@ movie:149
 	predicate:has_score "7.9";
 	predicate:released "1988-07-16";
 	predicate:poster "/5KlRFKKSbyCiyYpZSS3A6G5bW0K.jpg";
-	predicate:runtime "1988-07-16";
 	predicate:genre "Animation";
 	predicate:genre "Science Fiction";
 	predicate:genre "Action";
 	predicate:language "日本語";
+	predicate:runtime "124".
 movie:150
 	predicate:id "150";
 	predicate:title "48 Hrs.";
@@ -1516,13 +1516,13 @@ movie:150
 	predicate:has_score "6.6";
 	predicate:released "1982-12-07";
 	predicate:poster "/2QL19nliH4xLxQC55CwRalpnkuA.jpg";
-	predicate:runtime "1982-12-07";
 	predicate:genre "Thriller";
 	predicate:genre "Action";
 	predicate:genre "Comedy";
 	predicate:genre "Crime";
 	predicate:genre "Drama";
 	predicate:language "English";
+	predicate:runtime "96".
 movie:152
 	predicate:id "152";
 	predicate:title "Star Trek: The Motion Picture";
@@ -1531,11 +1531,11 @@ movie:152
 	predicate:has_score "6.4";
 	predicate:released "1979-12-07";
 	predicate:poster "/ffo56udrkF28ICTv3Xx1S9X6Dw4.jpg";
-	predicate:runtime "1979-12-07";
 	predicate:genre "Science Fiction";
 	predicate:genre "Adventure";
 	predicate:genre "Mystery";
 	predicate:language "English";
+	predicate:runtime "132".
 movie:153
 	predicate:id "153";
 	predicate:title "Lost in Translation";
@@ -1544,12 +1544,12 @@ movie:153
 	predicate:has_score "7.4";
 	predicate:released "2003-09-18";
 	predicate:poster "/wkSzJs7oMf8MIr9CQVICsvRfwA7.jpg";
-	predicate:runtime "2003-09-18";
 	predicate:genre "Drama";
 	predicate:genre "Romance";
 	predicate:genre "Comedy";
 	predicate:language "日本語";
 	predicate:language "English";
+	predicate:runtime "102".
 movie:154
 	predicate:id "154";
 	predicate:title "Star Trek II: The Wrath of Khan";
@@ -1558,12 +1558,12 @@ movie:154
 	predicate:has_score "7.4";
 	predicate:released "1982-06-04";
 	predicate:poster "/uPyLsKl8Z0LOoxeaFXsY5MxhR5s.jpg";
-	predicate:runtime "1982-06-04";
 	predicate:genre "Action";
 	predicate:genre "Adventure";
 	predicate:genre "Science Fiction";
 	predicate:genre "Thriller";
 	predicate:language "English";
+	predicate:runtime "113".
 movie:155
 	predicate:id "155";
 	predicate:title "The Dark Knight";
@@ -1572,13 +1572,13 @@ movie:155
 	predicate:has_score "8.5";
 	predicate:released "2008-07-16";
 	predicate:poster "/qJ2tW6WMUDux911r6m7haRef0WH.jpg";
-	predicate:runtime "2008-07-16";
 	predicate:genre "Drama";
 	predicate:genre "Action";
 	predicate:genre "Crime";
 	predicate:genre "Thriller";
 	predicate:language "English";
 	predicate:language "普通话";
+	predicate:runtime "152".
 movie:156
 	predicate:id "156";
 	predicate:title "Wilbur Wants to Kill Himself";
@@ -1587,11 +1587,11 @@ movie:156
 	predicate:has_score "6.5";
 	predicate:released "2002-11-08";
 	predicate:poster "/f2nq2ZLqKPRaWb4HeOwxULKkSNk.jpg";
-	predicate:runtime "2002-11-08";
 	predicate:genre "Comedy";
 	predicate:genre "Drama";
 	predicate:genre "Romance";
 	predicate:language "English";
+	predicate:runtime "111".
 movie:157
 	predicate:id "157";
 	predicate:title "Star Trek III: The Search for Spock";
@@ -1600,13 +1600,13 @@ movie:157
 	predicate:has_score "6.6";
 	predicate:released "1984-06-01";
 	predicate:poster "/yqEj0oPfKBMCz7YcCARHDgH7VFm.jpg";
-	predicate:runtime "1984-06-01";
 	predicate:genre "Science Fiction";
 	predicate:genre "Action";
 	predicate:genre "Adventure";
 	predicate:genre "Thriller";
 	predicate:language "English";
 	predicate:language "Pусский";
+	predicate:runtime "105".
 movie:158
 	predicate:id "158";
 	predicate:title "Knockin' on Heaven's Door";
@@ -1615,10 +1615,10 @@ movie:158
 	predicate:has_score "7.7";
 	predicate:released "1997-02-20";
 	predicate:poster "/9Qnh5khKtaRq01dniIOCHniRfkZ.jpg";
-	predicate:runtime "1997-02-20";
 	predicate:genre "Comedy";
 	predicate:genre "Crime";
 	predicate:language "Deutsch";
+	predicate:runtime "87".
 movie:159
 	predicate:id "159";
 	predicate:title "Maybe... Maybe Not";
@@ -1627,10 +1627,10 @@ movie:159
 	predicate:has_score "6.2";
 	predicate:released "1994-10-05";
 	predicate:poster "/eZrZG5BTSkupdrpQgUkO91S3F0g.jpg";
-	predicate:runtime "1994-10-05";
 	predicate:genre "Comedy";
 	predicate:genre "Drama";
 	predicate:language "Deutsch";
+	predicate:runtime "90".
 movie:160
 	predicate:id "160";
 	predicate:title "The Arrival of a Train at La Ciotat";
@@ -1639,9 +1639,9 @@ movie:160
 	predicate:has_score "7.0";
 	predicate:released "1896-01-25";
 	predicate:poster "/y3A15HpugKsPjVyxKa9POLTEX6B.jpg";
-	predicate:runtime "1896-01-25";
 	predicate:genre "Documentary";
 	predicate:language "No Language";
+	predicate:runtime "1".
 movie:161
 	predicate:id "161";
 	predicate:title "Ocean's Eleven";
@@ -1650,11 +1650,11 @@ movie:161
 	predicate:has_score "7.4";
 	predicate:released "2001-12-07";
 	predicate:poster "/v5D7K4EHuQHFSjveq8LGxdSfrGS.jpg";
-	predicate:runtime "2001-12-07";
 	predicate:genre "Thriller";
 	predicate:genre "Crime";
 	predicate:language "Italiano";
 	predicate:language "English";
+	predicate:runtime "116".
 movie:162
 	predicate:id "162";
 	predicate:title "Edward Scissorhands";
@@ -1663,11 +1663,11 @@ movie:162
 	predicate:has_score "7.7";
 	predicate:released "1990-12-05";
 	predicate:poster "/1RFIbuW9Z3eN9Oxw2KaQG5DfLmD.jpg";
-	predicate:runtime "1990-12-05";
 	predicate:genre "Fantasy";
 	predicate:genre "Drama";
 	predicate:genre "Romance";
 	predicate:language "English";
+	predicate:runtime "105".
 movie:163
 	predicate:id "163";
 	predicate:title "Ocean's Twelve";
@@ -1676,7 +1676,6 @@ movie:163
 	predicate:has_score "6.5";
 	predicate:released "2004-12-09";
 	predicate:poster "/4y8WH1lIpXp0qxUWkYmObhuMRIU.jpg";
-	predicate:runtime "2004-12-09";
 	predicate:genre "Thriller";
 	predicate:genre "Crime";
 	predicate:language "Français";
@@ -1684,6 +1683,7 @@ movie:163
 	predicate:language "Nederlands";
 	predicate:language "普通话";
 	predicate:language "English";
+	predicate:runtime "125".
 movie:164
 	predicate:id "164";
 	predicate:title "Breakfast at Tiffany's";
@@ -1692,12 +1692,12 @@ movie:164
 	predicate:has_score "7.7";
 	predicate:released "1961-10-06";
 	predicate:poster "/aQFwKTNzp02rk0GFRAjTdmbZBNh.jpg";
-	predicate:runtime "1961-10-06";
 	predicate:genre "Comedy";
 	predicate:genre "Drama";
 	predicate:genre "Romance";
 	predicate:language "English";
 	predicate:language "Português";
+	predicate:runtime "115".
 movie:165
 	predicate:id "165";
 	predicate:title "Back to the Future Part II";
@@ -1706,12 +1706,12 @@ movie:165
 	predicate:has_score "7.7";
 	predicate:released "1989-11-22";
 	predicate:poster "/hQq8xZe5uLjFzSBt4LanNP7SQjl.jpg";
-	predicate:runtime "1989-11-22";
 	predicate:genre "Adventure";
 	predicate:genre "Comedy";
 	predicate:genre "Family";
 	predicate:genre "Science Fiction";
 	predicate:language "English";
+	predicate:runtime "108".
 movie:166
 	predicate:id "166";
 	predicate:title "The Party";
@@ -1720,12 +1720,12 @@ movie:166
 	predicate:has_score "6.6";
 	predicate:released "1980-12-17";
 	predicate:poster "/qxIbrx8xQuRAoceifhKhAldi5k9.jpg";
-	predicate:runtime "1980-12-17";
 	predicate:genre "Drama";
 	predicate:genre "Romance";
 	predicate:genre "Comedy";
 	predicate:genre "Family";
 	predicate:language "Français";
+	predicate:runtime "110".
 movie:167
 	predicate:id "167";
 	predicate:title "K-PAX";
@@ -1734,10 +1734,10 @@ movie:167
 	predicate:has_score "7.2";
 	predicate:released "2001-10-22";
 	predicate:poster "/c8M0ylYFRpQJaxGwPwm3DKK2ltC.jpg";
-	predicate:runtime "2001-10-22";
 	predicate:genre "Drama";
 	predicate:genre "Science Fiction";
 	predicate:language "English";
+	predicate:runtime "120".
 movie:168
 	predicate:id "168";
 	predicate:title "Star Trek IV: The Voyage Home";
@@ -1746,11 +1746,11 @@ movie:168
 	predicate:has_score "7.2";
 	predicate:released "1986-11-26";
 	predicate:poster "/xY5TzGXJOB3L9rhZ1MbbPyVlW5J.jpg";
-	predicate:runtime "1986-11-26";
 	predicate:genre "Science Fiction";
 	predicate:genre "Adventure";
 	predicate:language "English";
 	predicate:language "suomi";
+	predicate:runtime "119".
 movie:169
 	predicate:id "169";
 	predicate:title "Predator 2";
@@ -1759,11 +1759,11 @@ movie:169
 	predicate:has_score "6.1";
 	predicate:released "1990-11-20";
 	predicate:poster "/7OAAsKvYwEq23ppBSq8NfJ0iUuo.jpg";
-	predicate:runtime "1990-11-20";
 	predicate:genre "Science Fiction";
 	predicate:genre "Action";
 	predicate:genre "Thriller";
 	predicate:language "English";
+	predicate:runtime "108".
 movie:170
 	predicate:id "170";
 	predicate:title "28 Days Later";
@@ -1772,12 +1772,12 @@ movie:170
 	predicate:has_score "7.2";
 	predicate:released "2002-10-31";
 	predicate:poster "/w4SL5hv0qOanrN7GjwNgtjF1RtD.jpg";
-	predicate:runtime "2002-10-31";
 	predicate:genre "Horror";
 	predicate:genre "Thriller";
 	predicate:genre "Science Fiction";
 	predicate:language "Español";
 	predicate:language "English";
+	predicate:runtime "113".
 movie:171
 	predicate:id "171";
 	predicate:title "The Party 2";
@@ -1786,11 +1786,11 @@ movie:171
 	predicate:has_score "6.4";
 	predicate:released "1982-12-08";
 	predicate:poster "/x2oI5CA7lzGwY9NzZCCmZXzFBz7.jpg";
-	predicate:runtime "1982-12-08";
 	predicate:genre "Comedy";
 	predicate:genre "Romance";
 	predicate:genre "Drama";
 	predicate:language "Français";
+	predicate:runtime "109".
 movie:172
 	predicate:id "172";
 	predicate:title "Star Trek V: The Final Frontier";
@@ -1799,12 +1799,12 @@ movie:172
 	predicate:has_score "5.7";
 	predicate:released "1989-06-09";
 	predicate:poster "/uiXr41VLYsuug3CZbFrKLSNahuZ.jpg";
-	predicate:runtime "1989-06-09";
 	predicate:genre "Science Fiction";
 	predicate:genre "Action";
 	predicate:genre "Adventure";
 	predicate:genre "Thriller";
 	predicate:language "English";
+	predicate:runtime "107".
 movie:173
 	predicate:id "173";
 	predicate:title "20,000 Leagues Under the Sea";
@@ -1813,13 +1813,13 @@ movie:173
 	predicate:has_score "7.1";
 	predicate:released "1954-12-23";
 	predicate:poster "/heAEH85fdxEgV98LizHbQCL95iZ.jpg";
-	predicate:runtime "1954-12-23";
 	predicate:genre "Adventure";
 	predicate:genre "Drama";
 	predicate:genre "Family";
 	predicate:genre "Fantasy";
 	predicate:genre "Science Fiction";
 	predicate:language "English";
+	predicate:runtime "127".
 movie:174
 	predicate:id "174";
 	predicate:title "Star Trek VI: The Undiscovered Country";
@@ -1828,12 +1828,12 @@ movie:174
 	predicate:has_score "7.0";
 	predicate:released "1991-12-06";
 	predicate:poster "/tvTOJD7Gz668GLy2nNdLRQvpPsv.jpg";
-	predicate:runtime "1991-12-06";
 	predicate:genre "Science Fiction";
 	predicate:genre "Action";
 	predicate:genre "Adventure";
 	predicate:genre "Thriller";
 	predicate:language "English";
+	predicate:runtime "113".
 movie:175
 	predicate:id "175";
 	predicate:title "The Big Blue";
@@ -1842,13 +1842,13 @@ movie:175
 	predicate:has_score "7.5";
 	predicate:released "1988-05-10";
 	predicate:poster "/rzWPuZdbFdlXVSWxNRzkxRLI5Zc.jpg";
-	predicate:runtime "1988-05-10";
 	predicate:genre "Adventure";
 	predicate:genre "Drama";
 	predicate:genre "Romance";
 	predicate:language "English";
 	predicate:language "Italiano";
 	predicate:language "Français";
+	predicate:runtime "168".
 movie:176
 	predicate:id "176";
 	predicate:title "Saw";
@@ -1857,11 +1857,11 @@ movie:176
 	predicate:has_score "7.4";
 	predicate:released "2004-10-01";
 	predicate:poster "/pparEGTCxcTiImyVFoKD0LX11N8.jpg";
-	predicate:runtime "2004-10-01";
 	predicate:genre "Horror";
 	predicate:genre "Mystery";
 	predicate:genre "Crime";
 	predicate:language "English";
+	predicate:runtime "103".
 movie:177
 	predicate:id "177";
 	predicate:title "The Fisher King";
@@ -1870,10 +1870,10 @@ movie:177
 	predicate:has_score "7.3";
 	predicate:released "1991-09-20";
 	predicate:poster "/5mb1IV53luUNTRyF3TSC77X1KZs.jpg";
-	predicate:runtime "1991-09-20";
 	predicate:genre "Comedy";
 	predicate:genre "Drama";
 	predicate:language "English";
+	predicate:runtime "138".
 movie:178
 	predicate:id "178";
 	predicate:title "Blown Away";
@@ -1882,9 +1882,9 @@ movie:178
 	predicate:has_score "6.1";
 	predicate:released "1994-07-01";
 	predicate:poster "/lszv2OiImvhzcTtfxDaNiHhTK7J.jpg";
-	predicate:runtime "1994-07-01";
 	predicate:genre "Thriller";
 	predicate:language "English";
+	predicate:runtime "121".
 movie:179
 	predicate:id "179";
 	predicate:title "The Interpreter";
@@ -1893,12 +1893,12 @@ movie:179
 	predicate:has_score "6.3";
 	predicate:released "2005-04-08";
 	predicate:poster "/6Z5zcXO8yz0CObeqpfrDSnvBJYT.jpg";
-	predicate:runtime "2005-04-08";
 	predicate:genre "Crime";
 	predicate:genre "Thriller";
 	predicate:language "Français";
 	predicate:language "English";
 	predicate:language "Português";
+	predicate:runtime "128".
 movie:180
 	predicate:id "180";
 	predicate:title "Minority Report";
@@ -1907,13 +1907,13 @@ movie:180
 	predicate:has_score "7.3";
 	predicate:released "2002-06-20";
 	predicate:poster "/qtgFcnwh9dAFLocsDk2ySDVS8UF.jpg";
-	predicate:runtime "2002-06-20";
 	predicate:genre "Action";
 	predicate:genre "Thriller";
 	predicate:genre "Science Fiction";
 	predicate:genre "Mystery";
 	predicate:language "English";
 	predicate:language "svenska";
+	predicate:runtime "145".
 movie:182
 	predicate:id "182";
 	predicate:title "The Good German";
@@ -1922,7 +1922,6 @@ movie:182
 	predicate:has_score "6.0";
 	predicate:released "2006-12-08";
 	predicate:poster "/3LjHC2CWDkzoiPehf3GViujws0.jpg";
-	predicate:runtime "2006-12-08";
 	predicate:genre "Drama";
 	predicate:genre "Thriller";
 	predicate:genre "Mystery";
@@ -1930,6 +1929,7 @@ movie:182
 	predicate:language "Deutsch";
 	predicate:language "普通话";
 	predicate:language "Pусский";
+	predicate:runtime "108".
 movie:183
 	predicate:id "183";
 	predicate:title "The Wizard";
@@ -1938,13 +1938,13 @@ movie:183
 	predicate:has_score "6.1";
 	predicate:released "1989-12-15";
 	predicate:poster "/zBq0r4Kjr83bFQZHRUfKlxFLR6J.jpg";
-	predicate:runtime "1989-12-15";
 	predicate:genre "Adventure";
 	predicate:genre "Comedy";
 	predicate:genre "Drama";
 	predicate:genre "Family";
 	predicate:language "English";
 	predicate:language "Italiano";
+	predicate:runtime "100".
 movie:184
 	predicate:id "184";
 	predicate:title "Jackie Brown";
@@ -1953,11 +1953,11 @@ movie:184
 	predicate:has_score "7.3";
 	predicate:released "1997-04-10";
 	predicate:poster "/ewbLUXvm4riZL0aepy90o0vMesn.jpg";
-	predicate:runtime "1997-04-10";
 	predicate:genre "Crime";
 	predicate:genre "Thriller";
 	predicate:genre "Drama";
 	predicate:language "English";
+	predicate:runtime "154".
 movie:185
 	predicate:id "185";
 	predicate:title "A Clockwork Orange";
@@ -1966,10 +1966,10 @@ movie:185
 	predicate:has_score "8.2";
 	predicate:released "1971-12-19";
 	predicate:poster "/4sHeTAp65WrSSuc05nRBKddhBxO.jpg";
-	predicate:runtime "1971-12-19";
 	predicate:genre "Science Fiction";
 	predicate:genre "Drama";
 	predicate:language "English";
+	predicate:runtime "137".
 movie:186
 	predicate:id "186";
 	predicate:title "Lucky Number Slevin";
@@ -1978,12 +1978,12 @@ movie:186
 	predicate:has_score "7.5";
 	predicate:released "2006-02-24";
 	predicate:poster "/x21s3p5wPww534nYj1cWakTcqz4.jpg";
-	predicate:runtime "2006-02-24";
 	predicate:genre "Drama";
 	predicate:genre "Thriller";
 	predicate:genre "Crime";
 	predicate:genre "Mystery";
 	predicate:language "English";
+	predicate:runtime "110".
 movie:187
 	predicate:id "187";
 	predicate:title "Sin City";
@@ -1992,11 +1992,11 @@ movie:187
 	predicate:has_score "7.4";
 	predicate:released "2005-04-01";
 	predicate:poster "/lLLO6FOidztrSMh5rF5wTuEqTBG.jpg";
-	predicate:runtime "2005-04-01";
 	predicate:genre "Action";
 	predicate:genre "Thriller";
 	predicate:genre "Crime";
 	predicate:language "English";
+	predicate:runtime "124".
 movie:189
 	predicate:id "189";
 	predicate:title "Sin City: A Dame to Kill For";
@@ -2005,11 +2005,11 @@ movie:189
 	predicate:has_score "6.3";
 	predicate:released "2014-08-20";
 	predicate:poster "/50kALxDX4mmzIRljbNbPY0u4cie.jpg";
-	predicate:runtime "2014-08-20";
 	predicate:genre "Crime";
 	predicate:genre "Action";
 	predicate:genre "Thriller";
 	predicate:language "English";
+	predicate:runtime "102".
 movie:190
 	predicate:id "190";
 	predicate:title "Das Dorf der Freundschaft";
@@ -2018,9 +2018,9 @@ movie:190
 	predicate:has_score "10.0";
 	predicate:released "2001-08-25";
 	predicate:poster "";
-	predicate:runtime "2001-08-25";
 	predicate:genre "Documentary";
 	predicate:language "Deutsch";
+	predicate:runtime "52".
 movie:191
 	predicate:id "191";
 	predicate:title "The State I Am In";
@@ -2029,10 +2029,10 @@ movie:191
 	predicate:has_score "7.2";
 	predicate:released "2000-09-01";
 	predicate:poster "/lz5Nqvh4n64s3SgGuIpJ1TqUXnH.jpg";
-	predicate:runtime "2000-09-01";
 	predicate:genre "Drama";
 	predicate:language "Deutsch";
 	predicate:language "Português";
+	predicate:runtime "106".
 movie:192
 	predicate:id "192";
 	predicate:title "The Name of the Rose";
@@ -2041,12 +2041,12 @@ movie:192
 	predicate:has_score "7.4";
 	predicate:released "1986-09-24";
 	predicate:poster "/m3UxNeRFXK5RrAY61flyMVtOxiJ.jpg";
-	predicate:runtime "1986-09-24";
 	predicate:genre "Drama";
 	predicate:genre "Thriller";
 	predicate:genre "Mystery";
 	predicate:language "English";
 	predicate:language "Latin";
+	predicate:runtime "130".
 movie:193
 	predicate:id "193";
 	predicate:title "Star Trek: Generations";
@@ -2055,12 +2055,12 @@ movie:193
 	predicate:has_score "6.5";
 	predicate:released "1994-11-18";
 	predicate:poster "/rHsCYDGHFUarGh5k987b0EFU6kC.jpg";
-	predicate:runtime "1994-11-18";
 	predicate:genre "Science Fiction";
 	predicate:genre "Action";
 	predicate:genre "Adventure";
 	predicate:genre "Thriller";
 	predicate:language "English";
+	predicate:runtime "118".
 movie:194
 	predicate:id "194";
 	predicate:title "Amélie";
@@ -2069,11 +2069,11 @@ movie:194
 	predicate:has_score "7.9";
 	predicate:released "2001-04-25";
 	predicate:poster "/slVnvaH6fpF22154vnjQJdXCVZd.jpg";
-	predicate:runtime "2001-04-25";
 	predicate:genre "Comedy";
 	predicate:genre "Romance";
 	predicate:language "Français";
 	predicate:language "Pусский";
+	predicate:runtime "122".
 movie:195
 	predicate:id "195";
 	predicate:title "Trouble in Paradise";
@@ -2082,11 +2082,11 @@ movie:195
 	predicate:has_score "7.6";
 	predicate:released "1932-10-30";
 	predicate:poster "/FBxuoLRD3Biyul14unT5m3PYNS.jpg";
-	predicate:runtime "1932-10-30";
 	predicate:genre "Comedy";
 	predicate:genre "Romance";
 	predicate:genre "Crime";
 	predicate:language "English";
+	predicate:runtime "83".
 movie:196
 	predicate:id "196";
 	predicate:title "Back to the Future Part III";
@@ -2095,11 +2095,11 @@ movie:196
 	predicate:has_score "7.4";
 	predicate:released "1990-05-25";
 	predicate:poster "/cZO1zLEFACR06FwpXN9urvmoulR.jpg";
-	predicate:runtime "1990-05-25";
 	predicate:genre "Adventure";
 	predicate:genre "Comedy";
 	predicate:genre "Science Fiction";
 	predicate:language "English";
+	predicate:runtime "119".
 movie:197
 	predicate:id "197";
 	predicate:title "Braveheart";
@@ -2108,7 +2108,6 @@ movie:197
 	predicate:has_score "7.9";
 	predicate:released "1995-05-24";
 	predicate:poster "/or1gBugydmjToAEq7OZY0owwFk.jpg";
-	predicate:runtime "1995-05-24";
 	predicate:genre "Action";
 	predicate:genre "Drama";
 	predicate:genre "History";
@@ -2116,6 +2115,7 @@ movie:197
 	predicate:language "English";
 	predicate:language "Français";
 	predicate:language "Latin";
+	predicate:runtime "178".
 movie:198
 	predicate:id "198";
 	predicate:title "To Be or Not to Be";
@@ -2124,11 +2124,11 @@ movie:198
 	predicate:has_score "7.9";
 	predicate:released "1942-03-05";
 	predicate:poster "/dDQRpEoyjHT4fzw9cNklIvZuXYg.jpg";
-	predicate:runtime "1942-03-05";
 	predicate:genre "Comedy";
 	predicate:genre "War";
 	predicate:language "Deutsch";
 	predicate:language "English";
+	predicate:runtime "99".
 movie:199
 	predicate:id "199";
 	predicate:title "Star Trek: First Contact";
@@ -2137,12 +2137,12 @@ movie:199
 	predicate:has_score "7.2";
 	predicate:released "1996-11-22";
 	predicate:poster "/vrC1lkTktFQ4AqBfqf4PXoDDLcw.jpg";
-	predicate:runtime "1996-11-22";
 	predicate:genre "Science Fiction";
 	predicate:genre "Action";
 	predicate:genre "Adventure";
 	predicate:genre "Thriller";
 	predicate:language "English";
+	predicate:runtime "111".
 movie:200
 	predicate:id "200";
 	predicate:title "Star Trek: Insurrection";
@@ -2151,12 +2151,12 @@ movie:200
 	predicate:has_score "6.4";
 	predicate:released "1998-12-11";
 	predicate:poster "/9pbc44kltJhArUNyrdQcantMEvH.jpg";
-	predicate:runtime "1998-12-11";
 	predicate:genre "Science Fiction";
 	predicate:genre "Action";
 	predicate:genre "Adventure";
 	predicate:genre "Thriller";
 	predicate:language "English";
+	predicate:runtime "103".
 movie:201
 	predicate:id "201";
 	predicate:title "Star Trek: Nemesis";
@@ -2165,12 +2165,12 @@ movie:201
 	predicate:has_score "6.2";
 	predicate:released "2002-12-13";
 	predicate:poster "/cldAwhvBmOv9jrd3bXWuqRHoXyq.jpg";
-	predicate:runtime "2002-12-13";
 	predicate:genre "Science Fiction";
 	predicate:genre "Action";
 	predicate:genre "Adventure";
 	predicate:genre "Thriller";
 	predicate:language "English";
+	predicate:runtime "117".
 movie:203
 	predicate:id "203";
 	predicate:title "Mean Streets";
@@ -2179,11 +2179,11 @@ movie:203
 	predicate:has_score "7.2";
 	predicate:released "1973-10-02";
 	predicate:poster "/9msfwOeGc9uL1iRRTBdEf15XonC.jpg";
-	predicate:runtime "1973-10-02";
 	predicate:genre "Drama";
 	predicate:genre "Crime";
 	predicate:language "English";
 	predicate:language "Italiano";
+	predicate:runtime "110".
 movie:204
 	predicate:id "204";
 	predicate:title "The Wages of Fear";
@@ -2192,7 +2192,6 @@ movie:204
 	predicate:has_score "8.1";
 	predicate:released "1953-04-22";
 	predicate:poster "/dZyZSosIlWcpQkV0f7pXcrV2TQV.jpg";
-	predicate:runtime "1953-04-22";
 	predicate:genre "Drama";
 	predicate:genre "Thriller";
 	predicate:genre "Adventure";
@@ -2201,6 +2200,7 @@ movie:204
 	predicate:language "Español";
 	predicate:language "Italiano";
 	predicate:language "Deutsch";
+	predicate:runtime "153".
 movie:205
 	predicate:id "205";
 	predicate:title "Hotel Rwanda";
@@ -2209,12 +2209,12 @@ movie:205
 	predicate:has_score "7.7";
 	predicate:released "2004-03-04";
 	predicate:poster "/p3pHw85UMZPegfMZBA6dZ06yarm.jpg";
-	predicate:runtime "2004-03-04";
 	predicate:genre "Drama";
 	predicate:genre "History";
 	predicate:genre "War";
 	predicate:language "English";
 	predicate:language "Français";
+	predicate:runtime "122".
 movie:206
 	predicate:id "206";
 	predicate:title "Paradise Found";
@@ -2223,9 +2223,9 @@ movie:206
 	predicate:has_score "6.5";
 	predicate:released "2003-01-01";
 	predicate:poster "/i5tYnEeCAPODbEbbwYmNd8Y9seA.jpg";
-	predicate:runtime "2003-01-01";
 	predicate:genre "Drama";
 	predicate:language "English";
+	predicate:runtime "89".
 movie:207
 	predicate:id "207";
 	predicate:title "Dead Poets Society";
@@ -2234,9 +2234,9 @@ movie:207
 	predicate:has_score "8.3";
 	predicate:released "1989-06-02";
 	predicate:poster "/ai40gM7SUaGA6fthvsd87o8IQq4.jpg";
-	predicate:runtime "1989-06-02";
 	predicate:genre "Drama";
 	predicate:language "English";
+	predicate:runtime "128".
 movie:211
 	predicate:id "211";
 	predicate:title "Berlin is in Germany";
@@ -2245,10 +2245,10 @@ movie:211
 	predicate:has_score "6.2";
 	predicate:released "2001-11-01";
 	predicate:poster "/vsejIOb5nxF0vJf5RtU6O5u1Dg2.jpg";
-	predicate:runtime "2001-11-01";
 	predicate:genre "Comedy";
 	predicate:genre "Drama";
 	predicate:language "Deutsch";
+	predicate:runtime "97".
 movie:212
 	predicate:id "212";
 	predicate:title "Arsenic and Old Lace";
@@ -2257,10 +2257,10 @@ movie:212
 	predicate:has_score "7.5";
 	predicate:released "1944-09-01";
 	predicate:poster "/xG1GEEQGgExKl0WT5sRo1Arst5D.jpg";
-	predicate:runtime "1944-09-01";
 	predicate:genre "Comedy";
 	predicate:genre "Crime";
 	predicate:language "English";
+	predicate:runtime "118".
 movie:213
 	predicate:id "213";
 	predicate:title "North by Northwest";
@@ -2269,10 +2269,10 @@ movie:213
 	predicate:has_score "8.0";
 	predicate:released "1959-07-08";
 	predicate:poster "/9pf8CuIT64cFvsyocWOjbKGcXmt.jpg";
-	predicate:runtime "1959-07-08";
 	predicate:genre "Mystery";
 	predicate:genre "Thriller";
 	predicate:language "English";
+	predicate:runtime "136".
 movie:214
 	predicate:id "214";
 	predicate:title "Saw III";
@@ -2281,11 +2281,11 @@ movie:214
 	predicate:has_score "6.4";
 	predicate:released "2006-10-27";
 	predicate:poster "/dfl7ti4ataetiyoOg3SI0FA9KeP.jpg";
-	predicate:runtime "2006-10-27";
 	predicate:genre "Horror";
 	predicate:genre "Thriller";
 	predicate:genre "Crime";
 	predicate:language "English";
+	predicate:runtime "114".
 movie:215
 	predicate:id "215";
 	predicate:title "Saw II";
@@ -2294,9 +2294,9 @@ movie:215
 	predicate:has_score "6.6";
 	predicate:released "2005-10-28";
 	predicate:poster "/gTnaTysN8HsvVQqTRUh8m35mmUA.jpg";
-	predicate:runtime "2005-10-28";
 	predicate:genre "Horror";
 	predicate:language "English";
+	predicate:runtime "89".
 movie:216
 	predicate:id "216";
 	predicate:title "Ali: Fear Eats the Soul";
@@ -2305,11 +2305,11 @@ movie:216
 	predicate:has_score "7.8";
 	predicate:released "1974-06-05";
 	predicate:poster "/raYnFIAXuxl3GwVPg1GkODi9dVq.jpg";
-	predicate:runtime "1974-06-05";
 	predicate:genre "Romance";
 	predicate:genre "Drama";
 	predicate:language "العربية";
 	predicate:language "Deutsch";
+	predicate:runtime "93".
 movie:217
 	predicate:id "217";
 	predicate:title "Indiana Jones and the Kingdom of the Crystal Skull";
@@ -2318,12 +2318,12 @@ movie:217
 	predicate:has_score "5.9";
 	predicate:released "2008-05-21";
 	predicate:poster "/dkM0XxfYa6g6MFoFtjjXFY48jHE.jpg";
-	predicate:runtime "2008-05-21";
 	predicate:genre "Adventure";
 	predicate:genre "Action";
 	predicate:language "English";
 	predicate:language "Deutsch";
 	predicate:language "Pусский";
+	predicate:runtime "122".
 movie:218
 	predicate:id "218";
 	predicate:title "The Terminator";
@@ -2332,11 +2332,11 @@ movie:218
 	predicate:has_score "7.6";
 	predicate:released "1984-10-26";
 	predicate:poster "/qvktm0BHcnmDpul4Hz01GIazWPr.jpg";
-	predicate:runtime "1984-10-26";
 	predicate:genre "Action";
 	predicate:genre "Thriller";
 	predicate:genre "Science Fiction";
 	predicate:language "English";
+	predicate:runtime "108".
 movie:219
 	predicate:id "219";
 	predicate:title "Volver";
@@ -2345,11 +2345,11 @@ movie:219
 	predicate:has_score "7.5";
 	predicate:released "2006-03-16";
 	predicate:poster "/ljRPzuI1xybiFUGU1uCRdx68h0K.jpg";
-	predicate:runtime "2006-03-16";
 	predicate:genre "Comedy";
 	predicate:genre "Drama";
 	predicate:genre "Romance";
 	predicate:language "Español";
+	predicate:runtime "121".
 movie:220
 	predicate:id "220";
 	predicate:title "East of Eden";
@@ -2358,10 +2358,10 @@ movie:220
 	predicate:has_score "7.7";
 	predicate:released "1955-03-09";
 	predicate:poster "/4MXfPlVS5aY6FJlJ5Y0qXsPnNcy.jpg";
-	predicate:runtime "1955-03-09";
 	predicate:genre "Drama";
 	predicate:genre "Romance";
 	predicate:language "English";
+	predicate:runtime "115".
 movie:221
 	predicate:id "221";
 	predicate:title "Rebel Without a Cause";
@@ -2370,9 +2370,9 @@ movie:221
 	predicate:has_score "7.6";
 	predicate:released "1955-10-29";
 	predicate:poster "/qNmYLRadv106IhG6T2wSFH3Bc7W.jpg";
-	predicate:runtime "1955-10-29";
 	predicate:genre "Drama";
 	predicate:language "English";
+	predicate:runtime "111".
 movie:222
 	predicate:id "222";
 	predicate:title "Berlin: Symphony of a Great City";
@@ -2381,11 +2381,11 @@ movie:222
 	predicate:has_score "7.8";
 	predicate:released "1927-09-23";
 	predicate:poster "/2IuYWewY6VloddUj5e5kVFuPX7m.jpg";
-	predicate:runtime "1927-09-23";
 	predicate:genre "Documentary";
 	predicate:genre "History";
 	predicate:language "Deutsch";
 	predicate:language "No Language";
+	predicate:runtime "69".
 movie:223
 	predicate:id "223";
 	predicate:title "Rebecca";
@@ -2394,12 +2394,12 @@ movie:223
 	predicate:has_score "8.0";
 	predicate:released "1940-03-23";
 	predicate:poster "/3Gla0nxHboX3nxQzaU4SoqOtTjh.jpg";
-	predicate:runtime "1940-03-23";
 	predicate:genre "Drama";
 	predicate:genre "Mystery";
 	predicate:genre "Thriller";
 	predicate:language "English";
 	predicate:language "Français";
+	predicate:runtime "130".
 movie:224
 	predicate:id "224";
 	predicate:title "Man of Marble";
@@ -2408,10 +2408,10 @@ movie:224
 	predicate:has_score "6.9";
 	predicate:released "1977-02-25";
 	predicate:poster "/v0Mf7ZoPiStDIsZzxdcnCDuIGnf.jpg";
-	predicate:runtime "1977-02-25";
 	predicate:genre "Drama";
 	predicate:genre "History";
 	predicate:language "Polski";
+	predicate:runtime "165".
 movie:225
 	predicate:id "225";
 	predicate:title "Man of Iron";
@@ -2420,11 +2420,11 @@ movie:225
 	predicate:has_score "6.9";
 	predicate:released "1981-07-27";
 	predicate:poster "/22wNUqKyz2m6wzAt31f26H8Y433.jpg";
-	predicate:runtime "1981-07-27";
 	predicate:genre "Drama";
 	predicate:genre "History";
 	predicate:language "Magyar";
 	predicate:language "Polski";
+	predicate:runtime "147".
 movie:226
 	predicate:id "226";
 	predicate:title "Boys Don't Cry";
@@ -2433,10 +2433,10 @@ movie:226
 	predicate:has_score "7.5";
 	predicate:released "1999-09-02";
 	predicate:poster "/mnnGtVKxDyLCsqfHC0WfXCJRJvR.jpg";
-	predicate:runtime "1999-09-02";
 	predicate:genre "Crime";
 	predicate:genre "Drama";
 	predicate:language "English";
+	predicate:runtime "118".
 movie:227
 	predicate:id "227";
 	predicate:title "The Outsiders";
@@ -2445,10 +2445,10 @@ movie:227
 	predicate:has_score "7.3";
 	predicate:released "1983-03-25";
 	predicate:poster "/t0dy2Q1j9hlQ8kkt0TzGImYNt2C.jpg";
-	predicate:runtime "1983-03-25";
 	predicate:genre "Crime";
 	predicate:genre "Drama";
 	predicate:language "English";
+	predicate:runtime "114".
 movie:228
 	predicate:id "228";
 	predicate:title "The Blue Angel";
@@ -2457,9 +2457,9 @@ movie:228
 	predicate:has_score "7.4";
 	predicate:released "1930-04-01";
 	predicate:poster "/9giSPs43kYB76eLBEq9eMdcdK2G.jpg";
-	predicate:runtime "1930-04-01";
 	predicate:genre "Drama";
 	predicate:language "Deutsch";
+	predicate:runtime "108".
 movie:229
 	predicate:id "229";
 	predicate:title "The Bride of Frankenstein";
@@ -2468,9 +2468,9 @@ movie:229
 	predicate:has_score "7.5";
 	predicate:released "1935-04-20";
 	predicate:poster "/5241zUwe7rC17MNc2QpCBKKdp1N.jpg";
-	predicate:runtime "1935-04-20";
 	predicate:genre "Horror";
 	predicate:language "English";
+	predicate:runtime "75".
 movie:231
 	predicate:id "231";
 	predicate:title "Syriana";
@@ -2479,7 +2479,6 @@ movie:231
 	predicate:has_score "6.4";
 	predicate:released "2005-11-23";
 	predicate:poster "/mO3hWUTOxmLJxihvDU0YFkb0Mb5.jpg";
-	predicate:runtime "2005-11-23";
 	predicate:genre "Drama";
 	predicate:genre "Thriller";
 	predicate:language "العربية";
@@ -2488,6 +2487,7 @@ movie:231
 	predicate:language "اردو";
 	predicate:language "Français";
 	predicate:language "普通话";
+	predicate:runtime "128".
 movie:232
 	predicate:id "232";
 	predicate:title "Rumble Fish";
@@ -2496,11 +2496,11 @@ movie:232
 	predicate:has_score "7.1";
 	predicate:released "1983-10-20";
 	predicate:poster "/t2myZnRyYNCL3S4Q3TzSfwABFIR.jpg";
-	predicate:runtime "1983-10-20";
 	predicate:genre "Action";
 	predicate:genre "Crime";
 	predicate:genre "Drama";
 	predicate:language "English";
+	predicate:runtime "94".
 movie:233
 	predicate:id "233";
 	predicate:title "The Wanderers";
@@ -2509,9 +2509,9 @@ movie:233
 	predicate:has_score "7.3";
 	predicate:released "1979-07-13";
 	predicate:poster "/oedFtX9hZZWpD7L5wkD0WxSteY2.jpg";
-	predicate:runtime "1979-07-13";
 	predicate:genre "Drama";
 	predicate:language "English";
+	predicate:runtime "117".
 movie:234
 	predicate:id "234";
 	predicate:title "The Cabinet of Dr. Caligari";
@@ -2520,12 +2520,12 @@ movie:234
 	predicate:has_score "7.9";
 	predicate:released "1920-02-27";
 	predicate:poster "/myK9DeIsXWGKgUTZyGXg2IfFk0W.jpg";
-	predicate:runtime "1920-02-27";
 	predicate:genre "Drama";
 	predicate:genre "Horror";
 	predicate:genre "Thriller";
 	predicate:genre "Crime";
 	predicate:language "No Language";
+	predicate:runtime "77".
 movie:235
 	predicate:id "235";
 	predicate:title "Stand by Me";
@@ -2534,10 +2534,10 @@ movie:235
 	predicate:has_score "7.9";
 	predicate:released "1986-08-08";
 	predicate:poster "/vz0w9BSehcqjDcJOjRaCk7fgJe7.jpg";
-	predicate:runtime "1986-08-08";
 	predicate:genre "Crime";
 	predicate:genre "Drama";
 	predicate:language "English";
+	predicate:runtime "89".
 movie:236
 	predicate:id "236";
 	predicate:title "Muriel's Wedding";
@@ -2546,12 +2546,12 @@ movie:236
 	predicate:has_score "7.1";
 	predicate:released "1994-08-22";
 	predicate:poster "/zJyTr8Fo412a2OIfJGXTRAm4IwX.jpg";
-	predicate:runtime "1994-08-22";
 	predicate:genre "Drama";
 	predicate:genre "Comedy";
 	predicate:genre "Romance";
 	predicate:language "English";
 	predicate:language "日本語";
+	predicate:runtime "106".
 movie:237
 	predicate:id "237";
 	predicate:title "Young Adam";
@@ -2560,12 +2560,12 @@ movie:237
 	predicate:has_score "5.9";
 	predicate:released "2003-09-26";
 	predicate:poster "/rU5GJ5r4tQbSx9C2ENKbPkD6nr9.jpg";
-	predicate:runtime "2003-09-26";
 	predicate:genre "Drama";
 	predicate:genre "Thriller";
 	predicate:genre "Crime";
 	predicate:genre "Romance";
 	predicate:language "English";
+	predicate:runtime "93".
 movie:238
 	predicate:id "238";
 	predicate:title "The Godfather";
@@ -2574,12 +2574,12 @@ movie:238
 	predicate:has_score "8.7";
 	predicate:released "1972-03-14";
 	predicate:poster "/3bhkrj58Vtu7enYsRolD1fZdja1.jpg";
-	predicate:runtime "1972-03-14";
 	predicate:genre "Drama";
 	predicate:genre "Crime";
 	predicate:language "English";
 	predicate:language "Italiano";
 	predicate:language "Latin";
+	predicate:runtime "175".
 movie:239
 	predicate:id "239";
 	predicate:title "Some Like It Hot";
@@ -2588,11 +2588,11 @@ movie:239
 	predicate:has_score "8.2";
 	predicate:released "1959-03-19";
 	predicate:poster "/hVIKyTK13AvOGv7ICmJjK44DTzp.jpg";
-	predicate:runtime "1959-03-19";
 	predicate:genre "Comedy";
 	predicate:genre "Music";
 	predicate:genre "Romance";
 	predicate:language "English";
+	predicate:runtime "122".
 movie:240
 	predicate:id "240";
 	predicate:title "The Godfather: Part II";
@@ -2601,13 +2601,13 @@ movie:240
 	predicate:has_score "8.6";
 	predicate:released "1974-12-20";
 	predicate:poster "/hek3koDUyRQk7FIhPXsa6mT2Zc3.jpg";
-	predicate:runtime "1974-12-20";
 	predicate:genre "Drama";
 	predicate:genre "Crime";
 	predicate:language "English";
 	predicate:language "Italiano";
 	predicate:language "Latin";
 	predicate:language "Español";
+	predicate:runtime "202".
 movie:241
 	predicate:id "241";
 	predicate:title "Natural Born Killers";
@@ -2616,12 +2616,12 @@ movie:241
 	predicate:has_score "7.1";
 	predicate:released "1994-08-25";
 	predicate:poster "/fEKZwT91gxvkAoyPgpNXo8W5fu0.jpg";
-	predicate:runtime "1994-08-25";
 	predicate:genre "Crime";
 	predicate:genre "Thriller";
 	predicate:genre "Drama";
 	predicate:language "English";
 	predicate:language "日本語";
+	predicate:runtime "119".
 movie:242
 	predicate:id "242";
 	predicate:title "The Godfather: Part III";
@@ -2630,7 +2630,6 @@ movie:242
 	predicate:has_score "7.4";
 	predicate:released "1990-12-25";
 	predicate:poster "/1hdm3Axw9LjITbApvAXBbqO58zE.jpg";
-	predicate:runtime "1990-12-25";
 	predicate:genre "Crime";
 	predicate:genre "Drama";
 	predicate:genre "Thriller";
@@ -2638,6 +2637,7 @@ movie:242
 	predicate:language "Italiano";
 	predicate:language "Deutsch";
 	predicate:language "Latin";
+	predicate:runtime "170".
 movie:243
 	predicate:id "243";
 	predicate:title "High Fidelity";
@@ -2646,13 +2646,13 @@ movie:243
 	predicate:has_score "7.2";
 	predicate:released "2000-03-17";
 	predicate:poster "/e2LZGB62GMhv3Fo8tDZjY87I81a.jpg";
-	predicate:runtime "2000-03-17";
 	predicate:genre "Comedy";
 	predicate:genre "Drama";
 	predicate:genre "Romance";
 	predicate:genre "Music";
 	predicate:language "Dansk";
 	predicate:language "English";
+	predicate:runtime "113".
 movie:244
 	predicate:id "244";
 	predicate:title "King Kong";
@@ -2661,11 +2661,11 @@ movie:244
 	predicate:has_score "7.6";
 	predicate:released "1933-03-15";
 	predicate:poster "/lHlnxKL5GbgRibyRFI7n1Ey850i.jpg";
-	predicate:runtime "1933-03-15";
 	predicate:genre "Adventure";
 	predicate:genre "Drama";
 	predicate:genre "Horror";
 	predicate:language "English";
+	predicate:runtime "104".
 movie:245
 	predicate:id "245";
 	predicate:title "About a Boy";
@@ -2674,11 +2674,11 @@ movie:245
 	predicate:has_score "6.7";
 	predicate:released "2002-04-26";
 	predicate:poster "/sJsxDIHMqr962JgpEPHTRPXDs5c.jpg";
-	predicate:runtime "2002-04-26";
 	predicate:genre "Drama";
 	predicate:genre "Comedy";
 	predicate:genre "Romance";
 	predicate:language "English";
+	predicate:runtime "101".
 movie:246
 	predicate:id "246";
 	predicate:title "Zatoichi";
@@ -2687,11 +2687,11 @@ movie:246
 	predicate:has_score "7.3";
 	predicate:released "2003-09-06";
 	predicate:poster "/iCIycswWbX1EDS6PYYBcR9ohrC.jpg";
-	predicate:runtime "2003-09-06";
 	predicate:genre "Adventure";
 	predicate:genre "Drama";
 	predicate:genre "Action";
 	predicate:language "日本語";
+	predicate:runtime "111".
 movie:247
 	predicate:id "247";
 	predicate:title "The Killing";
@@ -2700,11 +2700,11 @@ movie:247
 	predicate:has_score "7.7";
 	predicate:released "1956-06-06";
 	predicate:poster "/m3twOKPQCrQwVLRbWlc3AQ40pG5.jpg";
-	predicate:runtime "1956-06-06";
 	predicate:genre "Crime";
 	predicate:genre "Drama";
 	predicate:genre "Thriller";
 	predicate:language "English";
+	predicate:runtime "85".
 movie:248
 	predicate:id "248";
 	predicate:title "Pocketful of Miracles";
@@ -2713,11 +2713,11 @@ movie:248
 	predicate:has_score "7.3";
 	predicate:released "1961-12-18";
 	predicate:poster "/xjXwcGJjT5tE22wazQUYH32HwU8.jpg";
-	predicate:runtime "1961-12-18";
 	predicate:genre "Comedy";
 	predicate:genre "Drama";
 	predicate:language "English";
 	predicate:language "Español";
+	predicate:runtime "136".
 movie:249
 	predicate:id "249";
 	predicate:title "The War of the Roses";
@@ -2726,10 +2726,10 @@ movie:249
 	predicate:has_score "6.9";
 	predicate:released "1989-12-08";
 	predicate:poster "/9VWwYsuXhRImUtrJGvN6bYJB2He.jpg";
-	predicate:runtime "1989-12-08";
 	predicate:genre "Comedy";
 	predicate:genre "Drama";
 	predicate:language "English";
+	predicate:runtime "116".
 movie:250
 	predicate:id "250";
 	predicate:title "In China They Eat Dogs";
@@ -2738,13 +2738,13 @@ movie:250
 	predicate:has_score "7.4";
 	predicate:released "1999-09-10";
 	predicate:poster "/zuKjvs3IUvdNbMwqcfdHCGeyKt1.jpg";
-	predicate:runtime "1999-09-10";
 	predicate:genre "Action";
 	predicate:genre "Comedy";
 	predicate:genre "Crime";
 	predicate:language "Dansk";
 	predicate:language "Deutsch";
 	predicate:language "English";
+	predicate:runtime "91".
 movie:251
 	predicate:id "251";
 	predicate:title "Ghost";
@@ -2753,13 +2753,13 @@ movie:251
 	predicate:has_score "7.2";
 	predicate:released "1990-07-12";
 	predicate:poster "/w9RaPHov8oM5cnzeE27isnFMsvS.jpg";
-	predicate:runtime "1990-07-12";
 	predicate:genre "Fantasy";
 	predicate:genre "Drama";
 	predicate:genre "Thriller";
 	predicate:genre "Mystery";
 	predicate:genre "Romance";
 	predicate:language "English";
+	predicate:runtime "127".
 movie:252
 	predicate:id "252";
 	predicate:title "Willy Wonka & the Chocolate Factory";
@@ -2768,7 +2768,6 @@ movie:252
 	predicate:has_score "7.5";
 	predicate:released "1971-06-29";
 	predicate:poster "/vmpsZkrs4Uvkp9r1atL8B3frA63.jpg";
-	predicate:runtime "1971-06-29";
 	predicate:genre "Family";
 	predicate:genre "Fantasy";
 	predicate:genre "Comedy";
@@ -2776,6 +2775,7 @@ movie:252
 	predicate:language "English";
 	predicate:language "Italiano";
 	predicate:language "Deutsch";
+	predicate:runtime "100".
 movie:253
 	predicate:id "253";
 	predicate:title "Live and Let Die";
@@ -2784,12 +2784,12 @@ movie:253
 	predicate:has_score "6.5";
 	predicate:released "1973-07-05";
 	predicate:poster "/5PYhSHb8bK7Vnrh3bBEms1N9nM6.jpg";
-	predicate:runtime "1973-07-05";
 	predicate:genre "Adventure";
 	predicate:genre "Action";
 	predicate:genre "Thriller";
 	predicate:language "English";
 	predicate:language "Magyar";
+	predicate:runtime "121".
 movie:254
 	predicate:id "254";
 	predicate:title "King Kong";
@@ -2798,11 +2798,11 @@ movie:254
 	predicate:has_score "6.8";
 	predicate:released "2005-12-12";
 	predicate:poster "/6a2HY6UmD7XiDD3NokgaBAXEsD2.jpg";
-	predicate:runtime "2005-12-12";
 	predicate:genre "Adventure";
 	predicate:genre "Drama";
 	predicate:genre "Action";
 	predicate:language "English";
+	predicate:runtime "187".
 movie:255
 	predicate:id "255";
 	predicate:title "Stolen Kisses";
@@ -2811,11 +2811,11 @@ movie:255
 	predicate:has_score "7.4";
 	predicate:released "1968-09-04";
 	predicate:poster "/5qHh1Vp2TOOX5IaTVt4wyT8OTnR.jpg";
-	predicate:runtime "1968-09-04";
 	predicate:genre "Comedy";
 	predicate:genre "Drama";
 	predicate:genre "Romance";
 	predicate:language "Français";
+	predicate:runtime "90".
 movie:256
 	predicate:id "256";
 	predicate:title "Antoine and Colette";
@@ -2824,11 +2824,11 @@ movie:256
 	predicate:has_score "7.4";
 	predicate:released "1962-06-22";
 	predicate:poster "/nfP8J7pv75KOAliIM3RG7h6Zos5.jpg";
-	predicate:runtime "1962-06-22";
 	predicate:genre "Comedy";
 	predicate:genre "Drama";
 	predicate:genre "Romance";
 	predicate:language "Français";
+	predicate:runtime "32".
 movie:257
 	predicate:id "257";
 	predicate:title "Oliver Twist";
@@ -2837,11 +2837,11 @@ movie:257
 	predicate:has_score "6.7";
 	predicate:released "2005-09-23";
 	predicate:poster "/zhPdYZ3x2uanhM1SyBj4CuL6hSa.jpg";
-	predicate:runtime "2005-09-23";
 	predicate:genre "Crime";
 	predicate:genre "Drama";
 	predicate:genre "Family";
 	predicate:language "English";
+	predicate:runtime "130".
 movie:258
 	predicate:id "258";
 	predicate:title "Bed and Board";
@@ -2850,11 +2850,11 @@ movie:258
 	predicate:has_score "7.3";
 	predicate:released "1970-09-09";
 	predicate:poster "/eUJH9NDtbOYUsSjiloS7hqpKoXy.jpg";
-	predicate:runtime "1970-09-09";
 	predicate:genre "Comedy";
 	predicate:genre "Drama";
 	predicate:genre "Romance";
 	predicate:language "Français";
+	predicate:runtime "97".
 movie:259
 	predicate:id "259";
 	predicate:title "Love on the Run";
@@ -2863,11 +2863,11 @@ movie:259
 	predicate:has_score "7.0";
 	predicate:released "1979-01-24";
 	predicate:poster "/hEtuFlpeb5ZU5fa5klkKA5Q3G36.jpg";
-	predicate:runtime "1979-01-24";
 	predicate:genre "Comedy";
 	predicate:genre "Drama";
 	predicate:genre "Romance";
 	predicate:language "Français";
+	predicate:runtime "93".
 movie:260
 	predicate:id "260";
 	predicate:title "The 39 Steps";
@@ -2876,10 +2876,10 @@ movie:260
 	predicate:has_score "7.4";
 	predicate:released "1935-06-06";
 	predicate:poster "/paI9Tmqm2cZG6xy4Tnjw3Ydjuw5.jpg";
-	predicate:runtime "1935-06-06";
 	predicate:genre "Mystery";
 	predicate:genre "Thriller";
 	predicate:language "English";
+	predicate:runtime "86".
 movie:261
 	predicate:id "261";
 	predicate:title "Cat on a Hot Tin Roof";
@@ -2888,10 +2888,10 @@ movie:261
 	predicate:has_score "7.8";
 	predicate:released "1958-09-20";
 	predicate:poster "/vWf1AR8rC6WjGKELlmLv2VAUZJB.jpg";
-	predicate:runtime "1958-09-20";
 	predicate:genre "Drama";
 	predicate:genre "Romance";
 	predicate:language "English";
+	predicate:runtime "108".
 movie:262
 	predicate:id "262";
 	predicate:title "The King of Comedy";
@@ -2900,10 +2900,10 @@ movie:262
 	predicate:has_score "7.8";
 	predicate:released "1982-12-18";
 	predicate:poster "/m24EbHxT9NGYEkOlu29YcLOgjgK.jpg";
-	predicate:runtime "1982-12-18";
 	predicate:genre "Comedy";
 	predicate:genre "Drama";
 	predicate:language "English";
+	predicate:runtime "109".
 movie:265
 	predicate:id "265";
 	predicate:title "Lili Marleen";
@@ -2912,12 +2912,12 @@ movie:265
 	predicate:has_score "6.0";
 	predicate:released "1981-01-14";
 	predicate:poster "/6vNbjlB4KbUWDtV4MDkgSwxmP5i.jpg";
-	predicate:runtime "1981-01-14";
 	predicate:genre "War";
 	predicate:genre "Drama";
 	predicate:genre "Romance";
 	predicate:language "Deutsch";
 	predicate:language "English";
+	predicate:runtime "120".
 movie:266
 	predicate:id "266";
 	predicate:title "Contempt";
@@ -2926,12 +2926,12 @@ movie:266
 	predicate:has_score "7.3";
 	predicate:released "1963-10-29";
 	predicate:poster "/aQUDdxuWQvXMGzZw0VmvGYrPtk9.jpg";
-	predicate:runtime "1963-10-29";
 	predicate:genre "Drama";
 	predicate:language "English";
 	predicate:language "Français";
 	predicate:language "Deutsch";
 	predicate:language "Italiano";
+	predicate:runtime "103".
 movie:267
 	predicate:id "267";
 	predicate:title "Live Flesh";
@@ -2940,11 +2940,11 @@ movie:267
 	predicate:has_score "7.0";
 	predicate:released "1997-10-28";
 	predicate:poster "/mIX5voK6M2vJ4BLTEMVMD7du9vM.jpg";
-	predicate:runtime "1997-10-28";
 	predicate:genre "Drama";
 	predicate:genre "Romance";
 	predicate:genre "Thriller";
 	predicate:language "Español";
+	predicate:runtime "103".
 movie:268
 	predicate:id "268";
 	predicate:title "Batman";
@@ -2953,11 +2953,11 @@ movie:268
 	predicate:has_score "7.2";
 	predicate:released "1989-06-23";
 	predicate:poster "/lH3dsbxA4wLalWKNYpVldX8zfPP.jpg";
-	predicate:runtime "1989-06-23";
 	predicate:genre "Fantasy";
 	predicate:genre "Action";
 	predicate:language "English";
 	predicate:language "Français";
+	predicate:runtime "126".
 movie:269
 	predicate:id "269";
 	predicate:title "Breathless";
@@ -2966,11 +2966,11 @@ movie:269
 	predicate:has_score "7.7";
 	predicate:released "1960-03-16";
 	predicate:poster "/9Wx0Wdn2EOqeCZU4SP6tlS3LOml.jpg";
-	predicate:runtime "1960-03-16";
 	predicate:genre "Drama";
 	predicate:genre "Crime";
 	predicate:language "Français";
 	predicate:language "English";
+	predicate:runtime "90".
 movie:270
 	predicate:id "270";
 	predicate:title "Wir sagen Du! Schatz.";
@@ -2979,11 +2979,11 @@ movie:270
 	predicate:has_score "5.3";
 	predicate:released "2007-11-01";
 	predicate:poster "/aGLWQtURfyQ467FMb8I9UWuMJjP.jpg";
-	predicate:runtime "2007-11-01";
 	predicate:genre "Comedy";
 	predicate:genre "Drama";
 	predicate:genre "Fantasy";
 	predicate:language "Deutsch";
+	predicate:runtime "98".
 movie:271
 	predicate:id "271";
 	predicate:title "Ronia, The Robber's Daughter";
@@ -2992,12 +2992,12 @@ movie:271
 	predicate:has_score "6.9";
 	predicate:released "1984-12-14";
 	predicate:poster "/gatMa1qfwpJqiawPjJxodUvdB0.jpg";
-	predicate:runtime "1984-12-14";
 	predicate:genre "Adventure";
 	predicate:genre "Drama";
 	predicate:genre "Fantasy";
 	predicate:genre "Family";
 	predicate:language "svenska";
+	predicate:runtime "126".
 movie:272
 	predicate:id "272";
 	predicate:title "Batman Begins";
@@ -3006,13 +3006,13 @@ movie:272
 	predicate:has_score "7.7";
 	predicate:released "2005-06-10";
 	predicate:poster "/1P3ZyEq02wcTMd3iE4ebtLvncvH.jpg";
-	predicate:runtime "2005-06-10";
 	predicate:genre "Action";
 	predicate:genre "Crime";
 	predicate:genre "Drama";
 	predicate:language "English";
 	predicate:language "اردو";
 	predicate:language "普通话";
+	predicate:runtime "140".
 movie:273
 	predicate:id "273";
 	predicate:title "The White Sound";
@@ -3021,9 +3021,9 @@ movie:273
 	predicate:has_score "7.1";
 	predicate:released "2001-12-31";
 	predicate:poster "/kYJLb69aANQhf6EvewCnKRpiJ5O.jpg";
-	predicate:runtime "2001-12-31";
 	predicate:genre "Drama";
 	predicate:language "Deutsch";
+	predicate:runtime "107".
 movie:274
 	predicate:id "274";
 	predicate:title "The Silence of the Lambs";
@@ -3032,12 +3032,12 @@ movie:274
 	predicate:has_score "8.3";
 	predicate:released "1991-02-01";
 	predicate:poster "/rplLJ2hPcOQmkFhTqUte0MkEaO2.jpg";
-	predicate:runtime "1991-02-01";
 	predicate:genre "Crime";
 	predicate:genre "Drama";
 	predicate:genre "Thriller";
 	predicate:genre "Horror";
 	predicate:language "English";
+	predicate:runtime "119".
 movie:275
 	predicate:id "275";
 	predicate:title "Fargo";
@@ -3046,11 +3046,11 @@ movie:275
 	predicate:has_score "7.9";
 	predicate:released "1996-03-08";
 	predicate:poster "/rt7cpEr1uP6RTZykBFhBTcRaKvG.jpg";
-	predicate:runtime "1996-03-08";
 	predicate:genre "Crime";
 	predicate:genre "Drama";
 	predicate:genre "Thriller";
 	predicate:language "English";
+	predicate:runtime "98".
 movie:276
 	predicate:id "276";
 	predicate:title "The Edukators";
@@ -3059,10 +3059,10 @@ movie:276
 	predicate:has_score "7.2";
 	predicate:released "2004-10-25";
 	predicate:poster "/3Z0R46cuFWB6gxZwEBf8ekVxgZ0.jpg";
-	predicate:runtime "2004-10-25";
 	predicate:genre "Drama";
 	predicate:genre "Comedy";
 	predicate:language "Deutsch";
+	predicate:runtime "127".
 movie:277
 	predicate:id "277";
 	predicate:title "Underworld";
@@ -3071,11 +3071,11 @@ movie:277
 	predicate:has_score "6.8";
 	predicate:released "2003-09-19";
 	predicate:poster "/zsnQ41UZ3jo1wEeemF0eA9cAIU0.jpg";
-	predicate:runtime "2003-09-19";
 	predicate:genre "Fantasy";
 	predicate:genre "Action";
 	predicate:genre "Thriller";
 	predicate:language "English";
+	predicate:runtime "121".
 movie:278
 	predicate:id "278";
 	predicate:title "The Shawshank Redemption";
@@ -3084,10 +3084,10 @@ movie:278
 	predicate:has_score "8.7";
 	predicate:released "1994-09-23";
 	predicate:poster "/5KCVkau1HEl7ZzfPsKAPM0sMiKc.jpg";
-	predicate:runtime "1994-09-23";
 	predicate:genre "Drama";
 	predicate:genre "Crime";
 	predicate:language "English";
+	predicate:runtime "142".
 movie:279
 	predicate:id "279";
 	predicate:title "Amadeus";
@@ -3096,7 +3096,6 @@ movie:279
 	predicate:has_score "8.0";
 	predicate:released "1984-09-06";
 	predicate:poster "/ryLzgil9aNj6JRi2dmLapuMX5pt.jpg";
-	predicate:runtime "1984-09-06";
 	predicate:genre "Drama";
 	predicate:genre "History";
 	predicate:genre "Music";
@@ -3104,6 +3103,7 @@ movie:279
 	predicate:language "Latin";
 	predicate:language "English";
 	predicate:language "Italiano";
+	predicate:runtime "160".
 movie:280
 	predicate:id "280";
 	predicate:title "Terminator 2: Judgment Day";
@@ -3112,12 +3112,12 @@ movie:280
 	predicate:has_score "8.0";
 	predicate:released "1991-07-03";
 	predicate:poster "/5M0j0B18abtBI5gi2RhfjjurTqb.jpg";
-	predicate:runtime "1991-07-03";
 	predicate:genre "Action";
 	predicate:genre "Thriller";
 	predicate:genre "Science Fiction";
 	predicate:language "English";
 	predicate:language "Español";
+	predicate:runtime "137".
 movie:281
 	predicate:id "281";
 	predicate:title "Strange Days";
@@ -3126,12 +3126,12 @@ movie:281
 	predicate:has_score "7.0";
 	predicate:released "1995-10-13";
 	predicate:poster "/rY5BrDRcYAKE0BYmmT66YG6Uy5Q.jpg";
-	predicate:runtime "1995-10-13";
 	predicate:genre "Crime";
 	predicate:genre "Drama";
 	predicate:genre "Science Fiction";
 	predicate:genre "Thriller";
 	predicate:language "English";
+	predicate:runtime "145".
 movie:284
 	predicate:id "284";
 	predicate:title "The Apartment";
@@ -3140,11 +3140,11 @@ movie:284
 	predicate:has_score "8.2";
 	predicate:released "1960-06-21";
 	predicate:poster "/hhSRt1KKfRT0yEhEtRW3qp31JFU.jpg";
-	predicate:runtime "1960-06-21";
 	predicate:genre "Comedy";
 	predicate:genre "Drama";
 	predicate:genre "Romance";
 	predicate:language "English";
+	predicate:runtime "125".
 movie:285
 	predicate:id "285";
 	predicate:title "Pirates of the Caribbean: At World's End";
@@ -3153,11 +3153,11 @@ movie:285
 	predicate:has_score "7.2";
 	predicate:released "2007-05-19";
 	predicate:poster "/jGWpG4YhpQwVmjyHEGkxEkeRf0S.jpg";
-	predicate:runtime "2007-05-19";
 	predicate:genre "Adventure";
 	predicate:genre "Fantasy";
 	predicate:genre "Action";
 	predicate:language "English";
+	predicate:runtime "169".
 movie:286
 	predicate:id "286";
 	predicate:title "Germany: A Summer's Fairytale";
@@ -3166,9 +3166,9 @@ movie:286
 	predicate:has_score "6.9";
 	predicate:released "2006-10-03";
 	predicate:poster "/pQ7p8zGxy0OTy6RwDA0Y2mlqmdu.jpg";
-	predicate:runtime "2006-10-03";
 	predicate:genre "Documentary";
 	predicate:language "Deutsch";
+	predicate:runtime "110".
 movie:287
 	predicate:id "287";
 	predicate:title "Bull Durham";
@@ -3177,10 +3177,10 @@ movie:287
 	predicate:has_score "6.7";
 	predicate:released "1988-06-15";
 	predicate:poster "/saXDJpfamItMj8XHImf4YkW4f2.jpg";
-	predicate:runtime "1988-06-15";
 	predicate:genre "Comedy";
 	predicate:genre "Romance";
 	predicate:language "English";
+	predicate:runtime "108".
 movie:288
 	predicate:id "288";
 	predicate:title "High Noon";
@@ -3189,11 +3189,11 @@ movie:288
 	predicate:has_score "7.7";
 	predicate:released "1952-06-09";
 	predicate:poster "/qETSMQ4IXBSAS409Z9OL0ppXWTW.jpg";
-	predicate:runtime "1952-06-09";
 	predicate:genre "Western";
 	predicate:genre "Thriller";
 	predicate:genre "Drama";
 	predicate:language "English";
+	predicate:runtime "85".
 movie:289
 	predicate:id "289";
 	predicate:title "Casablanca";
@@ -3202,13 +3202,13 @@ movie:289
 	predicate:has_score "8.2";
 	predicate:released "1942-11-26";
 	predicate:poster "/m9tut4CqlBUWwnWQIu90pZB7Hn0.jpg";
-	predicate:runtime "1942-11-26";
 	predicate:genre "Drama";
 	predicate:genre "Romance";
 	predicate:language "Deutsch";
 	predicate:language "Français";
 	predicate:language "Italiano";
 	predicate:language "English";
+	predicate:runtime "102".
 movie:290
 	predicate:id "290";
 	predicate:title "Barton Fink";
@@ -3217,10 +3217,10 @@ movie:290
 	predicate:has_score "7.5";
 	predicate:released "1991-08-01";
 	predicate:poster "/846d8FclibtOIoUW7PxpT0nCG4C.jpg";
-	predicate:runtime "1991-08-01";
 	predicate:genre "Comedy";
 	predicate:genre "Drama";
 	predicate:language "English";
+	predicate:runtime "116".
 movie:291
 	predicate:id "291";
 	predicate:title "Riding Giants";
@@ -3229,9 +3229,9 @@ movie:291
 	predicate:has_score "7.8";
 	predicate:released "2004-07-09";
 	predicate:poster "/oMFc4auT6djRY0aCedKQDnrVvGj.jpg";
-	predicate:runtime "2004-07-09";
 	predicate:genre "Documentary";
 	predicate:language "English";
+	predicate:runtime "105".
 movie:292
 	predicate:id "292";
 	predicate:title "Dave Chappelle's Block Party";
@@ -3240,12 +3240,12 @@ movie:292
 	predicate:has_score "6.8";
 	predicate:released "2005-09-12";
 	predicate:poster "/lGS9iKGGRjM049ZGK4J8TvQeBHg.jpg";
-	predicate:runtime "2005-09-12";
 	predicate:genre "Comedy";
 	predicate:genre "Documentary";
 	predicate:genre "Music";
 	predicate:language "Deutsch";
 	predicate:language "English";
+	predicate:runtime "100".
 movie:293
 	predicate:id "293";
 	predicate:title "A River Runs Through It";
@@ -3254,9 +3254,9 @@ movie:293
 	predicate:has_score "7.1";
 	predicate:released "1992-10-09";
 	predicate:poster "/aVP45oS2cBL4WtZ1kB7r8uarruB.jpg";
-	predicate:runtime "1992-10-09";
 	predicate:genre "Drama";
 	predicate:language "English";
+	predicate:runtime "123".
 movie:294
 	predicate:id "294";
 	predicate:title "Desert Hearts";
@@ -3265,10 +3265,10 @@ movie:294
 	predicate:has_score "7.2";
 	predicate:released "1985-10-01";
 	predicate:poster "/g1m7TY897sHiK7oMBd2xDyxMUXy.jpg";
-	predicate:runtime "1985-10-01";
 	predicate:genre "Drama";
 	predicate:genre "Romance";
 	predicate:language "English";
+	predicate:runtime "91".
 movie:296
 	predicate:id "296";
 	predicate:title "Terminator 3: Rise of the Machines";
@@ -3277,11 +3277,11 @@ movie:296
 	predicate:has_score "6.1";
 	predicate:released "2003-07-02";
 	predicate:poster "/vvevzdYIrk2636maNW4qeWmlPFG.jpg";
-	predicate:runtime "2003-07-02";
 	predicate:genre "Action";
 	predicate:genre "Thriller";
 	predicate:genre "Science Fiction";
 	predicate:language "English";
+	predicate:runtime "109".
 movie:297
 	predicate:id "297";
 	predicate:title "Meet Joe Black";
@@ -3290,12 +3290,12 @@ movie:297
 	predicate:has_score "7.2";
 	predicate:released "1998-11-12";
 	predicate:poster "/fDPAjvfPMomkKF7cMRmL5Anak61.jpg";
-	predicate:runtime "1998-11-12";
 	predicate:genre "Fantasy";
 	predicate:genre "Drama";
 	predicate:genre "Romance";
 	predicate:language "Nederlands";
 	predicate:language "English";
+	predicate:runtime "178".
 movie:298
 	predicate:id "298";
 	predicate:title "Ocean's Thirteen";
@@ -3304,12 +3304,12 @@ movie:298
 	predicate:has_score "6.7";
 	predicate:released "2007-06-06";
 	predicate:poster "/3so07ghzmtbyhpFfzTucEnlfYRO.jpg";
-	predicate:runtime "2007-06-06";
 	predicate:genre "Crime";
 	predicate:genre "Thriller";
 	predicate:language "Español";
 	predicate:language "English";
 	predicate:language "Français";
+	predicate:runtime "122".
 movie:299
 	predicate:id "299";
 	predicate:title "Ocean's Eleven";
@@ -3318,12 +3318,12 @@ movie:299
 	predicate:has_score "6.6";
 	predicate:released "1960-08-10";
 	predicate:poster "/A4R6u7SidBPVXMVzGSysCiRGTRz.jpg";
-	predicate:runtime "1960-08-10";
 	predicate:genre "Comedy";
 	predicate:genre "Crime";
 	predicate:genre "Music";
 	predicate:genre "Thriller";
 	predicate:language "English";
+	predicate:runtime "127".
 movie:2
 	predicate:id "2";
 	predicate:title "Ariel";
@@ -3332,9 +3332,9 @@ movie:2
 	predicate:has_score "6.8";
 	predicate:released "1988-10-21";
 	predicate:poster "/ojDg0PGvs6R9xYFodRct2kdI6wC.jpg";
-	predicate:runtime "1988-10-21";
 	predicate:genre "Drama";
 	predicate:genre "Crime";
 	predicate:genre "Comedy";
 	predicate:language "Deutsch";
 	predicate:language "suomi";
+	predicate:runtime "73".

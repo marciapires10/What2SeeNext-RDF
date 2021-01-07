@@ -55,12 +55,12 @@ def create_cast():
                         if not cast.find("popularity") is None and not cast.find("popularity").text is None:
                             popularity = cast.find("popularity").text
 
-                        cast_n3.write("person:"+ name + "\n")
+                        cast_n3.write("person:"+ _id + "\n")
                         cast_n3.write('\tpredicate:id "' + _id + '";\n')
                         cast_n3.write('\tpredicate:name "' + name + '";\n')
                         cast_n3.write('\tpredicate:popularity "' + popularity + '";\n')
                         cast_n3.write('\tpredicate:gender "' + gender + '";\n')
-                        cast_n3.write('\tpredicate:is_adult "' + is_adult + '";\n')
+                        cast_n3.write('\tpredicate:is_adult "' + is_adult + '".\n')
                         
                     crew = []
                     crew.append(name)
@@ -101,7 +101,7 @@ def create_cast():
                         cast_n3.write('\tpredicate:name "' + name + '";\n')
                         cast_n3.write('\tpredicate:popularity "' + popularity + '";\n')
                         cast_n3.write('\tpredicate:gender "' + gender + '";\n')
-                        cast_n3.write('\tpredicate:is_adult "' + is_adult + '";\n')
+                        cast_n3.write('\tpredicate:is_adult "' + is_adult + '".\n')
                         
                     _crew = []
                     _crew.append(_id)
@@ -116,7 +116,7 @@ def create_cast():
         if not person[2] is None:
             cast_n3.write('\tpredicate:interpret "' + person[2] + '";\n')
         cast_n3.write('\tpredicate:person person:' + person[0] + ';\n')
-        cast_n3.write('\tpredicate:takes_part movie:' + person[3] + '";\n')
+        cast_n3.write('\tpredicate:takes_part movie:' + person[3] + '".\n')
 
     cast_n3.close()
 
@@ -157,7 +157,7 @@ def create_review():
         #Predicate and object
             reviews_n3.write('\tpredicate:made_by "' + review[1] + '";\n')
             reviews_n3.write('\tpredicate:content_is "' + review[2] + '";\n')
-            reviews_n3.write('\tpredicate:is_from movie:' + movie_id + ';\n')
+            reviews_n3.write('\tpredicate:is_from movie:' + movie_id + '.\n')
     
     reviews_n3.close()
 
@@ -266,13 +266,11 @@ def create_movies():
         movies_n3.write('\tpredicate:has_score "' + vote_average + '";\n')
         movies_n3.write('\tpredicate:released "' + release_date + '";\n')
         movies_n3.write('\tpredicate:poster "' + poster_path + '";\n')
-        movies_n3.write('\tpredicate:runtime "' + release_date + '";\n')
-        
-        print(_title)
         for genre in genres:
             movies_n3.write('\tpredicate:genre "' + genre + '";\n')
         for language in languages:
             movies_n3.write('\tpredicate:language "' + language + '";\n')
+        movies_n3.write('\tpredicate:runtime "' + runtime + '".\n')
 
     movies_n3.close()
 
