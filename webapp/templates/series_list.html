@@ -1,6 +1,7 @@
 {% extends "layout2.html" %}
 
 {% block content %}
+    {% load static %}
 
 <!-- Masthead-->
 <header class="masthead">
@@ -43,14 +44,41 @@
             </div>
             <div class="col-lg-10" style="padding-top: 40px; padding-bottom: 20px; display: flex; justify-content: center;">
                 <form action="" method="post">
-                        {% csrf_token %}
-                <table style="align-self: center;">
-
-                        <tr class="space">
-                            {{ html_series | safe }}
-                        </tr>
-
-                    </table>
+                    {% csrf_token %}
+                        <table style="align-self: center;">
+                            <tr class="space">
+                                 {% for s in series %}
+                                     {% if forloop.counter0|divisibleby:5 == 0 %}
+                                         <td>
+                                            <div class="col-md-2 clearfix d-none d-md-block">
+                                                <div class="card mb-2" id="full-card-all">
+                                                    <img src="{% static 'assets/img/hp.jpg' %}" alt="" title="" id="card-img-all">
+                                                     <div class="overlay" alt="" title=""></div>
+                                                    <button type="submit" name="info-m" class="btn btn-primary" id="more-movie-all"
+                                                            style="margin-top: 150px; margin-top: -50px;" value="id">
+                                                        See more
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                     {% else %}
+                                         <tr class="space"></tr>
+                                             <td>
+                                                <div class="col-md-2 clearfix d-none d-md-block">
+                                                 <div class="card mb-2" id="full-card-all">
+                                                    <img src="{% static 'assets/img/hp.jpg' %}" alt="" title="" id="card-img-all">
+                                                     <div class="overlay" alt="" title=""></div>
+                                                    <button type="submit" name="info-m" class="btn btn-primary" id="more-movie-all"
+                                                            style="margin-top: 150px; margin-top: -50px;" value="id">
+                                                        See more
+                                                    </button>
+                                                </div>
+                                                </div>
+                                             </td>
+                                    {% endif %}
+                                {% endfor %}
+                            </tr>
+                        </table>
                 </form>
             </div>
         </div>

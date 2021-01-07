@@ -19,14 +19,14 @@ def index(request):
     WHERE {
     }
     """
-    payload_query = {"query": query}
+    """payload_query = {"query": query}
     res = accessor.sparql_select(body=payload_query,
                                  repo_name=repo_name)
     res = json.loads(res)
     top_movies = []
     for e in res['results']['bindings']:
         for v in e.values():
-            top_movies.append(v['value'])
+            top_movies.append(v['value'])"""
 
     query = """"
         PREFIX ser:<http://digital-media.com/pred/>
@@ -34,14 +34,14 @@ def index(request):
         WHERE {
         }
         """
-    payload_query = {"query": query}
+    """payload_query = {"query": query}
     res = accessor.sparql_select(body=payload_query,
                                  repo_name=repo_name)
     res = json.loads(res)
     top_series = []
     for e in res['results']['bindings']:
         for v in e.values():
-            top_series.append(v['value'])
+            top_series.append(v['value'])"""
 
     #tparams = {
       #  'movies' : top_movies,
@@ -52,11 +52,58 @@ def index(request):
 
 def movies(request):
 
-    return render(request, 'movies_list.html')
+    movies = [];
+    movies.append(1);
+    movies.append(2);
+    movies.append(3);
+    movies.append(4);
+    movies.append(5);
+    movies.append(6);
+    movies.append(7);
+    movies.append(8);
+    movies.append(9);
+    movies.append(10);
+    movies.append(4);
+    movies.append(5);
+    movies.append(6);
+    movies.append(7);
+    movies.append(8);
+    movies.append(9);
+    movies.append(10);
+
+
+
+    tparams = {
+        'movies': movies,
+    }
+
+    return render(request, 'movies_list.html', tparams)
 
 def series(request):
+    series = [];
+    series.append(1);
+    series.append(2);
+    series.append(3);
+    series.append(4);
+    series.append(5);
+    series.append(6);
+    series.append(7);
+    series.append(8);
+    series.append(9);
+    series.append(10);
+    series.append(4);
+    series.append(5);
+    series.append(6);
+    series.append(7);
+    series.append(8);
+    series.append(9);
+    series.append(10);
 
-    return render(request, 'series_list.html')
+    tparams = {
+        'series': series,
+    }
+
+    return render(request, 'series_list.html', tparams)
 
 def get_search_results(request):
 

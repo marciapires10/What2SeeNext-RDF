@@ -62,7 +62,16 @@
                     <tr>
                         <form role="form" method="POST" id="delete">
                             {% csrf_token %}
-                        {{ html_review | safe }}
+                                {% for r, author, id in reviews %}
+                                    <h3 style="color: white;">{{ author }}</h3>
+                                    <p style="color:white;" id="{{ id }}">{{ r }}</p>
+                                    <button type="submit" name="delete" class="btn btn-primary" value="{{ id }}">
+                                    Delete
+                                    </button>
+                                    <button type="submit" name="edit" class="btn btn-primary" value="{{ id }}">
+                                    Edit
+                                    </button>
+                                {% endfor %}
                         </form>
                     </tr>
                 </table>

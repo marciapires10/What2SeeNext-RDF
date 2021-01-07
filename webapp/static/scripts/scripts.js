@@ -62,6 +62,7 @@
 
 })(jQuery); // End of use strict
 
+// drop genre
 function ShowGenre(){
   document.getElementById("dropgenre").classList.toggle("show");
 }
@@ -75,11 +76,10 @@ window.onclick = function(e) {
   }
 }
 
-
+// review section
 function editReview(id) {
   document.getElementById(id).contentEditable = true;
 }
 function updateReview(id) {
 	document.getElementById(id).contentEditable = false;
 }
-
