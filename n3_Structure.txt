@@ -1,0 +1,26 @@
+
+CREW job "job"
+CREW interpret "char_name"
+CREW person PERSON
+CREW takes_part MOVIE
+
+PERSON is_adult "adult"
+PERSON gender "gender"
+PERSON name "name"
+PERSON popularity "popularity"
+PERSON id "person_id"
+
+REVIEW id "id"
+REVIEW made_by "author"
+REVIEW content_is "content"
+REVIEW is_from MOVIE
+
+MOVIE title "title"
+MOVIE description "overview"
+MOVIE popularity "popularity"
+MOVIE has_score "average_score"
+MOVIE released "release_date"
+MOVIE runtime "runtime"
+MOVIE poster "poster_path"
+MOVIE language "language"
+MOVIE genre "genre"
