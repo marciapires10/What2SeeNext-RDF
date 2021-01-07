@@ -116,7 +116,7 @@ def create_cast():
         if not person[2] is None:
             cast_n3.write('\tpredicate:interpret "' + person[2] + '";\n')
         cast_n3.write('\tpredicate:person person:' + person[0] + ';\n')
-        cast_n3.write('\tpredicate:takes_part movie:' + person[3] + '".\n')
+        cast_n3.write('\tpredicate:takes_part movie:' + person[3] + '.\n')
 
     cast_n3.close()
 
