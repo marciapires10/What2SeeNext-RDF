@@ -1,0 +1,10 @@
+PREFIX pred:<http://moviesProject.org/pred/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?movie ?id ?poster ?title ?has_score
+WHERE {
+    ?movie pred:id_m ?id .
+    ?movie pred:poster ?poster .
+    ?movie pred:title ?title .
+    ?movie pred:has_score ?has_score .
+    ?movie pred:genre "Drama" .
+}

@@ -1,0 +1,10 @@
+PREFIX mov:<http://moviesProject.org/sub/mov/>
+PREFIX pred:<http://moviesProject.org/pred/>
+SELECT ?movie ?id ?poster ?title ?has_score
+WHERE {
+    ?movie pred:id_m ?id .
+    ?movie pred:poster ?poster .
+    ?movie pred:title ?title .
+    ?movie pred:has_score ?has_score .
+}
+ORDER BY DESC(xsd:float(?has_score)) LIMIT 10

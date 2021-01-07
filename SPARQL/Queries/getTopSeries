@@ -1,0 +1,10 @@
+PREFIX pred:<http://moviesProject.org/pred/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?serie ?id ?poster ?title ?has_score
+WHERE {
+    ?serie pred:id_s ?id .
+    ?serie pred:poster ?poster .
+    ?serie pred:title ?title .
+    ?serie pred:has_score ?has_score .
+}
+ORDER BY DESC(xsd:float(?has_score)) LIMIT 10
