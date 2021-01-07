@@ -46,7 +46,7 @@ movie:6
 movie:8
 	predicate:id "8";
 	predicate:title "Life in Loops (A Megacities RMX)";
-	predicate:description "Timo Novotny labels his new project an experimental music documentary film, in a remix of the celebrated film Megacities (1997), a visually refined essay on the hidden faces of several world "megacities" by leading Austrian documentarist Michael Glawogger. Novotny complements 30 % of material taken straight from the film (and re-edited) with 70 % as yet unseen footage in which he blends original shots unused by Glawogger with his own sequences (shot by Megacities cameraman Wolfgang Thaler) from Tokyo. Alongside the Japanese metropolis, Life in Loops takes us right into the atmosphere of Mexico City, New York, Moscow and Bombay. This electrifying combination of fascinating film images and an equally compelling soundtrack from Sofa Surfers sets us off on a stunning audiovisual adventure across the continents. The film also makes an original contribution to the discussion on new trends in documentary filmmaking. Written by KARLOVY VARY IFF 2006";
+	predicate:description "Timo Novotny labels his new project an experimental music documentary film, in a remix of the celebrated film Megacities (1997), a visually refined essay on the hidden faces of several world 'megacities' by leading Austrian documentarist Michael Glawogger. Novotny complements 30 % of material taken straight from the film (and re-edited) with 70 % as yet unseen footage in which he blends original shots unused by Glawogger with his own sequences (shot by Megacities cameraman Wolfgang Thaler) from Tokyo. Alongside the Japanese metropolis, Life in Loops takes us right into the atmosphere of Mexico City, New York, Moscow and Bombay. This electrifying combination of fascinating film images and an equally compelling soundtrack from Sofa Surfers sets us off on a stunning audiovisual adventure across the continents. The film also makes an original contribution to the discussion on new trends in documentary filmmaking. Written by KARLOVY VARY IFF 2006";
 	predicate:popularity "2.939";
 	predicate:has_score "7.5";
 	predicate:released "2006-01-01";
@@ -282,7 +282,7 @@ movie:27
 movie:28
 	predicate:id "28";
 	predicate:title "Apocalypse Now";
-	predicate:description "At the height of the Vietnam war, Captain Benjamin Willard is sent on a dangerous mission that, officially, "does not exist, nor will it ever exist." His goal is to locate - and eliminate - a mysterious Green Beret Colonel named Walter Kurtz, who has been leading his personal army on illegal guerrilla missions into enemy territory.";
+	predicate:description "At the height of the Vietnam war, Captain Benjamin Willard is sent on a dangerous mission that, officially, 'does not exist, nor will it ever exist.' His goal is to locate - and eliminate - a mysterious Green Beret Colonel named Walter Kurtz, who has been leading his personal army on illegal guerrilla missions into enemy territory.";
 	predicate:popularity "27.718";
 	predicate:has_score "8.3";
 	predicate:released "1979-08-15";
@@ -451,7 +451,7 @@ movie:64
 movie:65
 	predicate:id "65";
 	predicate:title "8 Mile";
-	predicate:description "The setting is Detroit in 1995. The city is divided by 8 Mile, a road that splits the town in half along racial lines. A young white rapper, Jimmy "B-Rabbit" Smith Jr. summons strength within himself to cross over these arbitrary boundaries to fulfill his dream of success in hip hop. With his pal Future and the three one third in place, all he has to do is not choke.";
+	predicate:description "The setting is Detroit in 1995. The city is divided by 8 Mile, a road that splits the town in half along racial lines. A young white rapper, Jimmy 'B-Rabbit' Smith Jr. summons strength within himself to cross over these arbitrary boundaries to fulfill his dream of success in hip hop. With his pal Future and the three one third in place, all he has to do is not choke.";
 	predicate:popularity "34.157";
 	predicate:has_score "7.1";
 	predicate:released "2002-11-08";
@@ -901,7 +901,7 @@ movie:100
 movie:101
 	predicate:id "101";
 	predicate:title "Léon: The Professional";
-	predicate:description "Léon, the top hit man in New York, has earned a rep as an effective "cleaner". But when his next-door neighbors are wiped out by a loose-cannon DEA agent, he becomes the unwilling custodian of 12-year-old Mathilda. Before long, Mathilda's thoughts turn to revenge, and she considers following in Léon's footsteps.";
+	predicate:description "Léon, the top hit man in New York, has earned a rep as an effective 'cleaner'. But when his next-door neighbors are wiped out by a loose-cannon DEA agent, he becomes the unwilling custodian of 12-year-old Mathilda. Before long, Mathilda's thoughts turn to revenge, and she considers following in Léon's footsteps.";
 	predicate:popularity "36.671";
 	predicate:has_score "8.3";
 	predicate:released "1994-09-14";
@@ -1634,7 +1634,7 @@ movie:159
 movie:160
 	predicate:id "160";
 	predicate:title "The Arrival of a Train at La Ciotat";
-	predicate:description "A group of people are standing along the platform of a railway station in La Ciotat, waiting for a train. One is seen coming, at some distance, and eventually stops at the platform. Doors of the railway-cars open and attendants help passengers off and on.  Popular legend has it that, when this film was shown, the first-night audience fled the café in terror, fearing being run over by the "approaching" train. This legend has since been identified as promotional embellishment, though there is evidence to suggest that people were astounded at the capabilities of the Lumières' cinématographe.";
+	predicate:description "A group of people are standing along the platform of a railway station in La Ciotat, waiting for a train. One is seen coming, at some distance, and eventually stops at the platform. Doors of the railway-cars open and attendants help passengers off and on.  Popular legend has it that, when this film was shown, the first-night audience fled the café in terror, fearing being run over by the 'approaching' train. This legend has since been identified as promotional embellishment, though there is evidence to suggest that people were astounded at the capabilities of the Lumières' cinématographe.";
 	predicate:popularity "6.317";
 	predicate:has_score "7.0";
 	predicate:released "1896-01-25";
@@ -1933,7 +1933,7 @@ movie:182
 movie:183
 	predicate:id "183";
 	predicate:title "The Wizard";
-	predicate:description "Corey refuses to let his emotionally disturbed younger brother Jimmy be institutionalized, and the two run away together. They soon join forces with a resourceful girl, who notices that Jimmy has a special talent: he is a "wizard" at video games and can achieve the high score on absolutely everything he plays. Evading their parents and a sinister bounty hunter, the trio head for a climactic showdown at the national video game championships in California.";
+	predicate:description "Corey refuses to let his emotionally disturbed younger brother Jimmy be institutionalized, and the two run away together. They soon join forces with a resourceful girl, who notices that Jimmy has a special talent: he is a 'wizard' at video games and can achieve the high score on absolutely everything he plays. Evading their parents and a sinister bounty hunter, the trio head for a climactic showdown at the national video game championships in California.";
 	predicate:popularity "9.797";
 	predicate:has_score "6.1";
 	predicate:released "1989-12-15";
@@ -2146,7 +2146,7 @@ movie:199
 movie:200
 	predicate:id "200";
 	predicate:title "Star Trek: Insurrection";
-	predicate:description "When an alien race and factions within Starfleet attempt to take over a planet that has "regenerative" properties, it falls upon Captain Picard and the crew of the Enterprise to defend the planet's people as well as the very ideals upon which the Federation itself was founded.";
+	predicate:description "When an alien race and factions within Starfleet attempt to take over a planet that has 'regenerative' properties, it falls upon Captain Picard and the crew of the Enterprise to defend the planet's people as well as the very ideals upon which the Federation itself was founded.";
 	predicate:popularity "14.472";
 	predicate:has_score "6.4";
 	predicate:released "1998-12-11";
@@ -2327,7 +2327,7 @@ movie:217
 movie:218
 	predicate:id "218";
 	predicate:title "The Terminator";
-	predicate:description "In the post-apocalyptic future, reigning tyrannical supercomputers teleport a cyborg assassin known as the "Terminator" back to 1984 to kill Sarah Connor, whose unborn son is destined to lead insurgents against 21st century mechanical hegemony. Meanwhile, the human-resistance movement dispatches a lone warrior to safeguard Sarah. Can he stop the virtually indestructible killing machine?";
+	predicate:description "In the post-apocalyptic future, reigning tyrannical supercomputers teleport a cyborg assassin known as the 'Terminator' back to 1984 to kill Sarah Connor, whose unborn son is destined to lead insurgents against 21st century mechanical hegemony. Meanwhile, the human-resistance movement dispatches a lone warrior to safeguard Sarah. Can he stop the virtually indestructible killing machine?";
 	predicate:popularity "40.543";
 	predicate:has_score "7.6";
 	predicate:released "1984-10-26";
@@ -2656,7 +2656,7 @@ movie:243
 movie:244
 	predicate:id "244";
 	predicate:title "King Kong";
-	predicate:description "A film crew discovers the "eighth wonder of the world," a giant prehistoric ape, and brings him back to New York, where he wreaks havoc.";
+	predicate:description "A film crew discovers the 'eighth wonder of the world,' a giant prehistoric ape, and brings him back to New York, where he wreaks havoc.";
 	predicate:popularity "11.932";
 	predicate:has_score "7.6";
 	predicate:released "1933-03-15";
@@ -2858,7 +2858,7 @@ movie:258
 movie:259
 	predicate:id "259";
 	predicate:title "Love on the Run";
-	predicate:description "Beginning with "The 400 Blows," director Francois Truffaut made a series of films about the impetuous Antoine Doinel, in which this is the last. Antoine is now 30, working as a proofreader and getting divorced from his his wife. It being the first "no-fault" divorce in France, a media circus erupts, dredging up Antoine's past. Indecisive about his new love with a store clerk, he impulsively takes off with an old flame.";
+	predicate:description "Beginning with 'The 400 Blows,' director Francois Truffaut made a series of films about the impetuous Antoine Doinel, in which this is the last. Antoine is now 30, working as a proofreader and getting divorced from his his wife. It being the first 'no-fault' divorce in France, a media circus erupts, dredging up Antoine's past. Indecisive about his new love with a store clerk, he impulsively takes off with an old flame.";
 	predicate:popularity "7.32";
 	predicate:has_score "7.0";
 	predicate:released "1979-01-24";
@@ -2907,7 +2907,7 @@ movie:262
 movie:265
 	predicate:id "265";
 	predicate:title "Lili Marleen";
-	predicate:description "The story of a German singer named Willie who while working in Switzerland falls in love with a Jewish composer named Robert whose family is helping people to flee from the Nazis. Robert's family is skeptical of Willie, thinking she could be a Nazi as she becomes famous for singing the song "Lili Marleen."";
+	predicate:description "The story of a German singer named Willie who while working in Switzerland falls in love with a Jewish composer named Robert whose family is helping people to flee from the Nazis. Robert's family is skeptical of Willie, thinking she could be a Nazi as she becomes famous for singing the song 'Lili Marleen.'";
 	predicate:popularity "2.744";
 	predicate:has_score "6.0";
 	predicate:released "1981-01-14";
@@ -2921,7 +2921,7 @@ movie:265
 movie:266
 	predicate:id "266";
 	predicate:title "Contempt";
-	predicate:description "A philistine in the art film business, Jeremy Prokosch is a producer unhappy with the work of his director. Prokosch has hired Fritz Lang (as himself) to direct an adaptation of "The Odyssey," but when it seems that the legendary filmmaker is making a picture destined to bomb at the box office, he brings in a screenwriter to energize the script. The professional intersects with the personal when a rift develops between the writer and his wife.";
+	predicate:description "A philistine in the art film business, Jeremy Prokosch is a producer unhappy with the work of his director. Prokosch has hired Fritz Lang (as himself) to direct an adaptation of 'The Odyssey,' but when it seems that the legendary filmmaker is making a picture destined to bomb at the box office, he brings in a screenwriter to energize the script. The professional intersects with the personal when a rift develops between the writer and his wife.";
 	predicate:popularity "11.715";
 	predicate:has_score "7.3";
 	predicate:released "1963-10-29";
@@ -2948,7 +2948,7 @@ movie:267
 movie:268
 	predicate:id "268";
 	predicate:title "Batman";
-	predicate:description "Having witnessed his parents' brutal murder as a child, millionaire philanthropist Bruce Wayne fights crime in Gotham City disguised as Batman, a costumed hero who strikes fear into the hearts of villains. But when a deformed madman who calls himself "The Joker" seizes control of Gotham's criminal underworld, Batman must face his most ruthless nemesis ever while protecting both his identity and his love interest, reporter Vicki Vale.";
+	predicate:description "Having witnessed his parents' brutal murder as a child, millionaire philanthropist Bruce Wayne fights crime in Gotham City disguised as Batman, a costumed hero who strikes fear into the hearts of villains. But when a deformed madman who calls himself 'The Joker' seizes control of Gotham's criminal underworld, Batman must face his most ruthless nemesis ever while protecting both his identity and his love interest, reporter Vicki Vale.";
 	predicate:popularity "37.717";
 	predicate:has_score "7.2";
 	predicate:released "1989-06-23";
@@ -3172,7 +3172,7 @@ movie:286
 movie:287
 	predicate:id "287";
 	predicate:title "Bull Durham";
-	predicate:description "Veteran catcher Crash Davis is brought to the minor league Durham Bulls to help their up and coming pitching prospect, "Nuke" Laloosh. Their relationship gets off to a rocky start and is further complicated when baseball groupie Annie Savoy sets her sights on the two men.";
+	predicate:description "Veteran catcher Crash Davis is brought to the minor league Durham Bulls to help their up and coming pitching prospect, 'Nuke' Laloosh. Their relationship gets off to a rocky start and is further complicated when baseball groupie Annie Savoy sets her sights on the two men.";
 	predicate:popularity "12.406";
 	predicate:has_score "6.7";
 	predicate:released "1988-06-15";
@@ -3285,7 +3285,7 @@ movie:296
 movie:297
 	predicate:id "297";
 	predicate:title "Meet Joe Black";
-	predicate:description "When the grim reaper comes to collect the soul of megamogul Bill Parrish, he arrives with a proposition: Host him for a "vacation" among the living in trade for a few more days of existence. Parrish agrees, and using the pseudonym Joe Black, Death begins taking part in Parrish's daily agenda and falls in love with the man's daughter. Yet when Black's holiday is over, so is Parrish's life.";
+	predicate:description "When the grim reaper comes to collect the soul of megamogul Bill Parrish, he arrives with a proposition: Host him for a 'vacation' among the living in trade for a few more days of existence. Parrish agrees, and using the pseudonym Joe Black, Death begins taking part in Parrish's daily agenda and falls in love with the man's daughter. Yet when Black's holiday is over, so is Parrish's life.";
 	predicate:popularity "20.354";
 	predicate:has_score "7.2";
 	predicate:released "1998-11-12";

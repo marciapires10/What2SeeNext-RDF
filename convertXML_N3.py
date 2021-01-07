@@ -38,10 +38,11 @@ def create_cast():
 
                 if not cast.find("id") is None and not cast.find("id").text is None:    
                     # Crew
+                    _id = cast.find("id").text
                     if not cast.find("character") is None and not cast.find("character").text is None:
-                        char_name = cast.find("character").text
+                        char_name = cast.find("character").text.replace('"',"'")
                     if not cast.find("name") is None and not cast.find("name").text is None:
-                            name = cast.find("name").text
+                            name = cast.find("name").text.replace('"',"'")
                     if not cast.find("known_for_department") is None and not cast.find("known_for_department").text is None:
                             job = cast.find("known_for_department").text
                     # Person, check if already exists
@@ -63,7 +64,7 @@ def create_cast():
                         cast_n3.write('\tpredicate:is_adult "' + is_adult + '".\n')
                         
                     crew = []
-                    crew.append(name)
+                    crew.append(_id)
                     crew.append(job)
                     crew.append(char_name)
                     crew.append(movie_id)
@@ -80,8 +81,7 @@ def create_cast():
 
                 if not crew.find("id") is None and not crew.find("id").text is None:    
                     # Crew
-                    if not crew.find("id") is None and not crew.find("id").text is None:
-                            _id = crew.find("id").text
+                    _id = crew.find("id").text
                     if not crew.find("known_for_department") is None and not crew.find("known_for_department").text is None:
                             job = crew.find("known_for_department").text
                     # Person, check if already exists
@@ -94,7 +94,7 @@ def create_cast():
                         if not crew.find("popularity") is None and not crew.find("popularity").text is None:
                             popularity = crew.find("popularity").text
                         if not crew.find("name") is None and not crew.find("name").text is None:
-                            name = crew.find("name").text
+                            name = crew.find("name").text.replace('"',"'")
 
                         cast_n3.write("person:"+ _id + "\n")
                         cast_n3.write('\tpredicate:id "' + _id + '";\n')
@@ -145,7 +145,7 @@ def create_review():
                 if not review.find("author") is None and not review.find("content") is None and not review.find("id") is None and not review.find("author").text is None and not review.find("content").text is None and not review.find("id").text is None:
                     _id = review.find("id").text
                     author = review.find("author").text
-                    content = review.find("content").text
+                    content = review.find("content").text.replace('"',"'")
                     review = []
                     review.append(_id) 
                     review.append(author)
@@ -223,7 +223,7 @@ def create_movies():
             is_adult = movie.find("adult").text
             _str += is_adult + ";"
         if not movie.find("overview") is None and not movie.find("overview").text is None:
-            overview = movie.find("overview").text
+            overview = movie.find("overview").text.replace('"',"'")
             _str += overview + ";"
         if not movie.find("popularity") is None and not movie.find("popularity").text is None:
             popularity = movie.find("popularity").text
