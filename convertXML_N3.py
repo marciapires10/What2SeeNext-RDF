@@ -91,7 +91,7 @@ def create_series():
             is_adult = serie.find("adult").text
             _str += is_adult + ";"
         if not serie.find("overview") is None and not serie.find("overview").text is None:
-            overview = serie.find("overview").text.replace('"',"'")
+            overview = serie.find("overview").text.replace('"',"'").replace("\n","")
             _str += overview + ";"
         if not serie.find("popularity") is None and not serie.find("popularity").text is None:
             popularity = serie.find("popularity").text
