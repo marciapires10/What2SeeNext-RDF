@@ -29,15 +29,16 @@
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto my-2 my-lg-0">
-                        <div class="container" id="search-container">
+                        <div class="container" id="search-container" style="width: 670px;">
                             <form method="post">
                                 {% csrf_token %}
-                                <input type="text" placeholder="Search for movies, series..." name="search">
+                                <input type="text" placeholder="Search for movies, series..." name="search" style="width: 510px">
                                 <button type="submit"><i class="fa fa-search"></i></button>
                             </form>
                         </div>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'movies' %}">Movies</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'series' %}">Series</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'playlist' %}">My list</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'full_news' %}">News</a></li>
                     </ul>
                 </div>

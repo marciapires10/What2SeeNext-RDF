@@ -205,6 +205,10 @@ def detail_info(request):
 
     return render(request, 'info.html')
 
+def playlist(request):
+
+    return render(request, 'playlist.html')
+
 def full_news(request):
 
     return render(request, 'news.html')

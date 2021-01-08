@@ -26,5 +26,6 @@ urlpatterns = [
     path('series/', views.series, name='series'),
     path('search_results/<str>/', views.get_search_results, name='search_results'),
     path('info/<id>/', views.detail_info, name='detail_info'),
+    path('my_list/', views.playlist, name='playlist'),
     path('news/', views.full_news, name='full_news'),
 ]
