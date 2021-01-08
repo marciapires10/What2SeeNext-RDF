@@ -87,9 +87,6 @@ def create_series():
         if not serie.find("id") is None and not serie.find("id").text is None:
             _id = serie.find("id").text
             _str += _id + ";"
-        if not serie.find("adult") is None and not serie.find("adult").text is None:
-            is_adult = serie.find("adult").text
-            _str += is_adult + ";"
         if not serie.find("overview") is None and not serie.find("overview").text is None:
             overview = serie.find("overview").text.replace('"',"'").replace("\n","")
             _str += overview + ";"
@@ -117,8 +114,8 @@ def create_series():
         if not serie.find("vote_average") is None and not serie.find("vote_average").text is None:
             vote_average = serie.find("vote_average").text
             _str += vote_average + ";"
-        if not serie.find("title") is None and not serie.find("title").text is None:
-            title = serie.find("title").text
+        if not serie.find("name") is None and not serie.find("name").text is None:
+            title = serie.find("name").text
             _str += title + ";"
         if not serie.find("genres") is None:
             for genre in serie.find("genres"):
@@ -138,7 +135,6 @@ def create_series():
         #Predicate and object
         series_n3.write('\tpredicate:id_s "' + _id + '";\n')
         series_n3.write('\tpredicate:title "' + title + '";\n')
-        series_n3.write('\tpredicate:is_adult "' + is_adult + '";\n')
         series_n3.write('\tpredicate:description "' + overview + '";\n')
         series_n3.write('\tpredicate:popularity "' + popularity + '";\n')
         series_n3.write('\tpredicate:has_score "' + vote_average + '";\n')
