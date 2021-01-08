@@ -56,21 +56,21 @@
                                     {% for id, title, poster, score in top_movies %}
                                         {% if forloop.counter0 > 2 %}
                                             {% if forloop.counter0 <= 5 %}
-                                    <div class="col-md-4">
-                                        <div class="card mb-2" id="full-card">
-                                            <img class="card-img-top" src={{ poster }}>
-                                            <div class="card-body">
-                                                <h4 style="font-size: 1rem;" class="card-title">{{ title }}</h4>
-                                                <p class="card-text" style="font-size: 1.5rem;"><b>{{ score }}   <i class="fas fa-star" style="color: #c69500"></i></b></p>
-                                            </div>
-                                            <form method="post">
-                                                {% csrf_token %}
-                                                <div class="overlay" alt={{ title }} title={{ title }}></div>
-                                                <button style="margin-left: -50px;" type="submit" name="info-m" value="{{ id }}" class="btn btn-primary" id="more-movie">See more</button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                                {% endif %}
+                                                <div class="col-md-4">
+                                                    <div class="card mb-2" id="full-card">
+                                                        <img class="card-img-top" src={{ poster }}>
+                                                        <div class="card-body">
+                                                            <h4 style="font-size: 1rem;" class="card-title">{{ title }}</h4>
+                                                            <p class="card-text" style="font-size: 1.5rem;"><b>{{ score }}   <i class="fas fa-star" style="color: #c69500"></i></b></p>
+                                                        </div>
+                                                        <form method="post">
+                                                            {% csrf_token %}
+                                                            <div class="overlay" alt={{ title }} title={{ title }}></div>
+                                                            <button style="margin-left: -50px;" type="submit" name="info-m" value="{{ id }}" class="btn btn-primary" id="more-movie">See more</button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            {% endif %}
                                         {% endif %}
                                     {% endfor %}
                                 </div>
@@ -104,21 +104,21 @@
                                         {% for id, title, poster, score in top_movies %}
                                             {% if forloop.counter0 > 8 %}
                                                 {% if forloop.counter0 <= 10 %}
-                                        <div class="col-md-4">
-                                            <div class="card mb-2" id="full-card">
-                                                <img class="card-img-top" src={{ poster }}>
-                                                <div class="card-body">
-                                                    <h4 style="font-size: 1rem;" class="card-title">{{ title }}</h4>
-                                                    <p class="card-text" style="font-size: 1.5rem;"><b>{{ score }}   <i class="fas fa-star" style="color: #c69500"></i></b></p>
-                                                </div>
-                                                <form method="post">
-                                                    {% csrf_token %}
-                                                    <div class="overlay" alt={{ title }} title={{ title }}></div>
-                                                    <button style="margin-left: -50px;" type="submit" name="info-m" value="{{ id }}" class="btn btn-primary" id="more-movie">See more</button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                                    {% endif %}
+                                                    <div class="col-md-4">
+                                                        <div class="card mb-2" id="full-card">
+                                                            <img class="card-img-top" src={{ poster }}>
+                                                            <div class="card-body">
+                                                                <h4 style="font-size: 1rem;" class="card-title">{{ title }}</h4>
+                                                                <p class="card-text" style="font-size: 1.5rem;"><b>{{ score }}   <i class="fas fa-star" style="color: #c69500"></i></b></p>
+                                                            </div>
+                                                            <form method="post">
+                                                                {% csrf_token %}
+                                                                <div class="overlay" alt={{ title }} title={{ title }}></div>
+                                                                <button style="margin-left: -50px;" type="submit" name="info-m" value="{{ id }}" class="btn btn-primary" id="more-movie">See more</button>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                {% endif %}
                                             {% endif %}
                                         {% endfor %}
                                     </div>
