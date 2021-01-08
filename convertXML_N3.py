@@ -46,6 +46,7 @@ def create_series_review():
         for review in reviews:
             reviews_n3.write("review:"+ review[0] + "\n")
         #Predicate and object
+            reviews_n3.write('\tpredicate:id_r "' + review[0] + '";\n')
             reviews_n3.write('\tpredicate:made_by "' + review[1] + '";\n')
             reviews_n3.write('\tpredicate:content_is "' + review[2] + '";\n')
             reviews_n3.write('\tpredicate:is_from serie:' + serie_id + '.\n')
@@ -415,6 +416,7 @@ def create_review():
         for review in reviews:
             reviews_n3.write("review:"+ review[0] + "\n")
         #Predicate and object
+            reviews_n3.write('\tpredicate:id_r "' + review[0] + '";\n')
             reviews_n3.write('\tpredicate:made_by "' + review[1] + '";\n')
             reviews_n3.write('\tpredicate:content_is "' + review[2] + '";\n')
             reviews_n3.write('\tpredicate:is_from movie:' + movie_id + '.\n')
