@@ -101,12 +101,13 @@ def index(request):
 
     return render(request, 'index.html', tparams)
 
-def get_genres():
-    #movies and series genres
+def get_movies_genres():
+    #movies genres
     query = """
         PREFIX pred:<http://moviesProject.org/pred/>
         SELECT DISTINCT ?genre_m
         WHERE {
+            ?movie pred:id_m ?id .
             ?movie pred:genre ?genre_m .
         }
         ORDER BY ASC(?genre_m)
@@ -117,12 +118,36 @@ def get_genres():
                                  repo_name=repo_name)
 
     res = json.loads(res)
-    genres = []
+    m_genres = []
     for e in res['results']['bindings']:
         for v in e.values():
-            genres.append(v['value'])
+            m_genres.append(v['value'])
 
-    return genres
+    return m_genres
+    
+def get_series_genres():
+    #series genres
+    query = """
+        PREFIX pred:<http://moviesProject.org/pred/>
+        SELECT DISTINCT ?genre_s
+        WHERE {
+            ?serie pred:id_s ?id .
+            ?serie pred:genre ?genre_s .
+        }
+        ORDER BY ASC(?genre_s)
+        """
+
+    payload_query = {"query": query}
+    res = accessor.sparql_select(body=payload_query,
+                                 repo_name=repo_name)
+
+    res = json.loads(res)
+    s_genres = []
+    for e in res['results']['bindings']:
+        for v in e.values():
+            s_genres.append(v['value'])
+
+    return s_genres
 
 def movies(request, filter = None, order = None):
     query_movies_score = """
@@ -302,7 +327,7 @@ def movies(request, filter = None, order = None):
         movie_tmp.append(poster)
         movies_all.append(movie_tmp)
 
-    mgenres = get_genres()
+    mgenres = get_movies_genres()
 
     if 'info-m' in request.POST:
         id = request.POST.get('info-m')
@@ -495,7 +520,7 @@ def series(request, filter = None, order = None):
 
     print(series_all)
 
-    sgenres = get_genres()
+    sgenres = get_series_genres()
 
     if 'info-m' in request.POST:
         id = request.POST.get('info-m')
@@ -512,10 +537,52 @@ def series(request, filter = None, order = None):
 def get_search_results(request):
 
     return render(request, 'search_result.html')
+    
+def get_reviews(id):
+
+    query = """
+            PREFIX pred:<http://moviesProject.org/pred/>
+            select ?author ?content
+            where{{
+                {{
+                    ?rev pred:is_from ?mov .
+                    ?mov pred:id_m {} .
+                    ?rev pred:content_is ?content .
+                    ?rev pred:made_by ?author .
+                }}
+                union
+                {{
+                    ?rev pred:is_from ?mov .
+                    ?serie pred:id_s {} .
+                    ?rev pred:content_is ?content .
+                    ?rev pred:made_by ?author .
+                }}
+            }}""".format(id, id)
+
+
+
+    payload_query = {"query": query}
+    res = accessor.sparql_select(body=payload_query,
+                                 repo_name=repo_name)
+
+    res = json.loads(res)
+    reviews = []
+    for e in res['results']['bindings']:
+        for v in e.values():
+            reviews.append(v['value'])
+
+    return reviews
 
 def detail_info(request, id):
 
-    return render(request, 'info.html')
+    reviews = get_reviews(id)
+
+    tparams = {
+        'reviews': reviews,
+    }
+
+    return render(request, 'info.html', tparams)
+
 
 def playlist(request):
     fav = get_top_movies()

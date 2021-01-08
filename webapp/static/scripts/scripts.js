@@ -83,3 +83,12 @@ function editReview(id) {
 function updateReview(id) {
 	document.getElementById(id).contentEditable = false;
 }
+
+var add = document.getElementById("add-to-b");
+add.addEventListener('click', hideAndShow, false);
+
+function hideAndShow(){
+  document.getElementById("add-to").style.display = 'hidden';
+  this.style.display = 'none';
+  document.getElementById("check").style.display = 'show';
+}
