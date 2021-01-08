@@ -1,0 +1,6 @@
+PREFIX predicate: <http://moviesProject.org/pred/>
+DELETE {?s ?p ?o}
+WHERE{ 
+    ?s predicate:id_r "SDAFAFAFWFAEGr3243523525" .
+    ?s ?p ?o
+}

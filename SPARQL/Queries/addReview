@@ -1,0 +1,13 @@
+PREFIX pred:<http://moviesProject.org/pred/>
+PREFIX fb: <http://rdf.freebase.com/ns/>
+PREFIX review: <http://moviesProject.org/sub/review/>
+PREFIX predicate: <http://moviesProject.org/pred/>
+PREFIX movie: <http://moviesProject.org/sub/mov/>
+INSERT DATA
+{ 
+    review:SDAFAFAFWFAEGr3243523525
+        predicate:id_r "58a231c5925141179e000674";
+        predicate:made_by "Jonh Lennon";
+        predicate:content_is "Hated the soundtrack. Should have hired me";
+        predicate:is_from movie:11.
+}
