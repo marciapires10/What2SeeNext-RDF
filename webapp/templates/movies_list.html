@@ -45,7 +45,7 @@
                             <tr class="space">
                                  {% for id, title, poster in movies_all %}
                                      {% if forloop.counter0|divisibleby:5 == 0 %}
-                                         <td>
+                                         <td style="padding-bottom: 20px;">
                                             <div class="col-md-2 clearfix d-none d-md-block">
                                                 <div class="card mb-2" id="full-card-all">
                                                     <img src="{{ poster }}" alt="" title="" id="card-img-all">
@@ -59,8 +59,9 @@
                                             </div>
                                         </td>
                                      {% else %}
-                                         <tr class="space"></tr>
-                                             <td>
+                                         <tr class="space">
+                                         </tr>
+                                             <td style="padding-bottom: 20px;">
                                                 <div class="col-md-2 clearfix d-none d-md-block">
                                                  <div class="card mb-2" id="full-card-all">
                                                     <img src="{{ poster }}" alt="" title="" id="card-img-all">
