@@ -16,7 +16,7 @@ REVIEW content_is "content"
 REVIEW is_from MOVIE
 
 MOVIE title "title"
-MOVIE id "id"
+MOVIE id_m "id"
 MOVIE is_adult "is_adult"
 MOVIE description "overview"
 MOVIE popularity "popularity"
@@ -29,7 +29,7 @@ MOVIE genre "genre"
 
 SERIE title "title"
 SERIE description "overview"
-SERIE id "id"
+SERIE id_sS "id"
 SERIE popularity "popularity"
 SERIE has_score "average_score"
 SERIE released "first_air_date"
