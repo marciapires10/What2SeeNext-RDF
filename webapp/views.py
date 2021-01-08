@@ -566,7 +566,6 @@ def get_reviews(id):
                                  repo_name=repo_name)
 
     res = json.loads(res)
-    print(res)
     reviews = []
     for e in res['results']['bindings']:
         for v in e.values():
@@ -576,10 +575,68 @@ def get_reviews(id):
 
 def detail_info(request, id):
 
+
+    query = """
+            PREFIX pred:<http://moviesProject.org/pred/>
+            SELECT distinct ?id ?title ?poster ?pop ?score ?rel ?run ?genre ?des ?job ?char ?name ?ppop
+            WHERE {{
+                ?movie pred:id_m "{}" .
+                ?movie pred:genre ?genre .
+                ?movie pred:poster ?poster .
+                ?movie pred:title ?title .
+                ?movie pred:has_score ?score .
+                ?movie pred:popularity ?pop .
+                ?movie pred:runtime ?run .
+                ?movie pred:released ?rel .
+                ?movie pred:description ?des .
+                optional{{
+                    ?crew pred:takes_part ?movie .
+                    ?crew pred:person ?person .
+                    ?crew pred:job ?job .
+                    ?person pred:name ?name .
+                    ?person pred:popularity ?ppop .
+                }}
+                optional{{
+                    ?crew pred:interpret ?char .
+                }}
+            }}""".format(id)
+
+    payload_query = {"query": query}
+    res = accessor.sparql_select(body=payload_query,
+                                 repo_name=repo_name)
+
+    res = json.loads(res)
+
+    info_all = []
+    info_all.append(res['results']['bindings'][0]['title']['value'])
+    if str(res['results']['bindings'][0]['poster']['value']) is not "":
+        poster = IMAGES_SITE + str(res['results']['bindings'][0]['poster']['value'])
+    else:
+        poster = NO_IMAGE
+    info_all.append(poster)
+    info_all.append(res['results']['bindings'][0]['pop']['value'])
+    info_all.append(res['results']['bindings'][0]['score']['value'])
+    info_all.append(res['results']['bindings'][0]['rel']['value'])
+    info_all.append(res['results']['bindings'][0]['run']['value'])
+    info_all.append(res['results']['bindings'][0]['genre']['value'])
+    info_all.append(res['results']['bindings'][0]['des']['value'])
+    for e in res['results']['bindings']:
+        info_tmp = []
+        #info_tmp.append(e['id']['value'])
+        info_tmp.append(e['job']['value'])
+        if 'char' in e.keys():
+            info_tmp.append(e['char']['value'])
+        info_tmp.append(e['name']['value'])
+        #info_tmp.append(e['ppop']['value'])
+        info_all.append(info_tmp)
+
+    print(info_all)
+
     reviews = get_reviews(id)
-    
+
     tparams = {
         'reviews': reviews,
+        'result': info_all,
     }
 
     return render(request, 'info.html', tparams)
