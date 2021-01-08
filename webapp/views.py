@@ -247,8 +247,13 @@ def detail_info(request, id):
     return render(request, 'info.html')
 
 def playlist(request):
+    fav = get_top_movies()
 
-    return render(request, 'playlist.html')
+    tparams = {
+        'fav': fav,
+    }
+
+    return render(request, 'playlist.html', tparams)
 
 def full_news(request):
 

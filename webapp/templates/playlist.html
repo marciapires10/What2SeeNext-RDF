@@ -10,8 +10,49 @@
                 <h2 class="text-center mt-0" style="padding-top: 40px;">My playlist</h2>
                 <hr class="divider my-4" />
                 <h6 class="text-center">Check my playlist.</h6>
-                <div class="row" style="justify-content: space-around">
-
+                <div class="col-lg-10" style="padding-top: 40px; padding-bottom: 20px; display: flex; justify-content: center;">
+                    <div id="container-all" class="container h-100">
+                        <form action="" method="post">
+                        {% csrf_token %}
+                            <table style="align-self: center;">
+                                <tr class="space">
+                                     {% for id, title, poster, score in fav %}
+                                         {% if forloop.counter0|divisibleby:5 == 0 %}
+                                             <td style="padding-bottom: 20px;">
+                                                <div class="col-md-2 clearfix d-none d-md-block">
+                                                    <div class="card mb-2" id="full-card-all">
+                                                        <img src="{{ poster }}" alt="" title="" id="card-img-all">
+                                                        <div class="overlay" alt="{{ title }}" title="{{ title }}">
+                                                            <button type="submit" name="info-m" class="btn btn-primary" id="more-movie-all"
+                                                                    style="margin-top: 150px;" value="{{ id }}">
+                                                                See more
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                         {% else %}
+                                             <tr class="space">
+                                             </tr>
+                                                 <td style="padding-bottom: 20px;">
+                                                    <div class="col-md-2 clearfix d-none d-md-block">
+                                                     <div class="card mb-2" id="full-card-all">
+                                                        <img src="{{ poster }}" alt="" title="" id="card-img-all">
+                                                         <div class="overlay" alt="{{ title }}" title="{{ title }}">
+                                                            <button type="submit" name="info-m" class="btn btn-primary" id="more-movie-all"
+                                                                    style="margin-top: 150px;" value="{{ id }}">
+                                                                See more
+                                                            </button>
+                                                         </div>
+                                                    </div>
+                                                    </div>
+                                                 </td>
+                                        {% endif %}
+                                    {% endfor %}
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
