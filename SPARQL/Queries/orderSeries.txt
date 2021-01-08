@@ -1,0 +1,85 @@
+# Filmes
+########## Alfabético
+########################## Crescente 
+
+PREFIX mov:<http://moviesProject.org/sub/mov/>
+PREFIX pred:<http://moviesProject.org/pred/>
+SELECT ?movie ?id ?poster ?title ?has_score
+WHERE {
+    ?movie pred:id_s ?id .
+    ?movie pred:poster ?poster .
+    ?movie pred:title ?title .
+    ?movie pred:has_score ?has_score .
+}
+ORDER BY ASC(?title)
+
+
+########################## Decrescente 
+	
+PREFIX mov:<http://moviesProject.org/sub/mov/>
+PREFIX pred:<http://moviesProject.org/pred/>
+SELECT ?movie ?id ?poster ?title ?has_score
+WHERE {
+    ?movie pred:id_s ?id .
+    ?movie pred:poster ?poster .
+    ?movie pred:title ?title .
+    ?movie pred:has_score ?has_score .
+}
+ORDER BY DESC(?title)
+
+
+######### Por Score
+########################## Crescente 
+
+PREFIX mov:<http://moviesProject.org/sub/mov/>
+PREFIX pred:<http://moviesProject.org/pred/>
+SELECT ?movie ?id ?poster ?title ?has_score
+WHERE {
+    ?movie pred:id_s ?id .
+    ?movie pred:poster ?poster .
+    ?movie pred:title ?title .
+    ?movie pred:has_score ?has_score .
+}
+ORDER BY ASC(xsd:float(?has_score))
+
+########################## Decrescente 
+
+PREFIX mov:<http://moviesProject.org/sub/mov/>
+PREFIX pred:<http://moviesProject.org/pred/>
+SELECT ?movie ?id ?poster ?title ?has_score
+WHERE {
+    ?movie pred:id_s ?id .
+    ?movie pred:poster ?poster .
+    ?movie pred:title ?title .
+    ?movie pred:has_score ?has_score .
+}
+ORDER BY DESC(xsd:float(?has_score))
+
+########## Por Popularidade
+########################## Crescente 
+PREFIX mov:<http://moviesProject.org/sub/mov/>
+PREFIX pred:<http://moviesProject.org/pred/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?movie ?id ?poster ?title ?has_score ?popularity
+WHERE {
+    ?movie pred:id_s ?id .
+    ?movie pred:poster ?poster .
+    ?movie pred:title ?title .
+    ?movie pred:has_score ?has_score .
+    ?movie pred:popularity ?popularity .
+}
+ORDER BY ASC(xsd:float(?popularity))
+
+########################## Decrescente 
+PREFIX mov:<http://moviesProject.org/sub/mov/>
+PREFIX pred:<http://moviesProject.org/pred/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?movie ?id ?poster ?title ?has_score ?popularity
+WHERE {
+    ?movie pred:id_s ?id .
+    ?movie pred:poster ?poster .
+    ?movie pred:title ?title .
+    ?movie pred:has_score ?has_score .
+    ?movie pred:popularity ?popularity .
+}
+ORDER BY DESC(xsd:float(?popularity))
