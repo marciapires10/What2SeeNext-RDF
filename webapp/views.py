@@ -124,42 +124,166 @@ def get_genres():
 
     return genres
 
-def movies(request):
+def movies(request, filter = None, order = None):
+    query_movies_score = """
+                    PREFIX mov:<http://moviesProject.org/sub/mov/>
+                    PREFIX pred:<http://moviesProject.org/pred/>
+                    SELECT ?movie ?id ?poster ?title ?has_score
+                    WHERE {
+                        ?movie pred:id_m ?id .
+                        ?movie pred:poster ?poster .
+                        ?movie pred:title ?title .
+                        ?movie pred:has_score ?has_score .
+                    }
+                    ORDER BY DESC(xsd:float(?has_score))
+
+                    """ 
+    query_movies_score_genre = """
+                    PREFIX mov:<http://moviesProject.org/sub/mov/>
+                    PREFIX pred:<http://moviesProject.org/pred/>
+                    SELECT ?movie ?id ?poster ?title ?has_score
+                    WHERE 
+                    {{
+                    {{
+                        ?movie pred:id_m ?id .
+                        ?movie pred:poster ?poster .
+                        ?movie pred:title ?title .
+                        ?movie pred:has_score ?has_score .
+                    }}
+                        {}
+                    }}
+                    ORDER BY DESC(xsd:float(?has_score))
+
+                    """ 
+
+    query_movies_alphabetic_genre = """
+                            PREFIX mov:<http://moviesProject.org/sub/mov/>
+                            PREFIX pred:<http://moviesProject.org/pred/>
+                            SELECT ?movie ?id ?poster ?title ?has_score
+                            WHERE 
+                            {{
+                            {{
+                            ?movie pred:id_m ?id .
+                            ?movie pred:poster ?poster .
+                            ?movie pred:title ?title .
+                            ?movie pred:has_score ?has_score .
+                            }}
+                            {}
+                            }}
+                            ORDER BY DESC(?title)
+                          """
+    query_movies_alphabetic = """
+                            PREFIX mov:<http://moviesProject.org/sub/mov/>
+                            PREFIX pred:<http://moviesProject.org/pred/>
+                            SELECT ?movie ?id ?poster ?title ?has_score
+                            WHERE {
+                            ?movie pred:id_m ?id .
+                            ?movie pred:poster ?poster .
+                            ?movie pred:title ?title .
+                            ?movie pred:has_score ?has_score .
+                            }
+                            ORDER BY DESC(?title)
+                          """
+
+    query_movies_popularity = """
+                        PREFIX mov:<http://moviesProject.org/sub/mov/>
+                        PREFIX pred:<http://moviesProject.org/pred/>
+                        PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+                        SELECT ?movie ?id ?poster ?title ?has_score ?popularity
+                        WHERE {
+                            ?movie pred:id_m ?id .
+                            ?movie pred:poster ?poster .
+                            ?movie pred:title ?title .
+                            ?movie pred:has_score ?has_score .
+                            ?movie pred:popularity ?popularity .
+                        }
+                        ORDER BY DESC(xsd:float(?popularity))
+                        """
+
+    query_movies_popularity_genre = """
+                        PREFIX mov:<http://moviesProject.org/sub/mov/>
+                        PREFIX pred:<http://moviesProject.org/pred/>
+                        PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+                        SELECT ?movie ?id ?poster ?title ?has_score ?popularity
+                        WHERE 
+                        {{
+                        {{
+                            ?movie pred:id_m ?id .
+                            ?movie pred:poster ?poster .
+                            ?movie pred:title ?title .
+                            ?movie pred:has_score ?has_score .
+                            ?movie pred:popularity ?popularity .
+                        }}
+                        {}
+                        }}
+                        ORDER BY DESC(xsd:float(?popularity))
+                        """
 
     if filter is None and request.POST.get('checkbox'):
         myDict = dict(request.POST.lists())
         _filter = myDict['checkbox']
         if 'order' in myDict:
-            print("Oi")
             _order = myDict['order'][0]
         else:
-            print("Ai")
             _order = None
         return movies(request, _filter, _order)
 
     elif request.POST.get('checkbox'):
+        query_genre = """
+                    PREFIX pred:<http://moviesProject.org/pred/> 
+                        SELECT ?movie ?id ?poster ?title ?has_score
+                        WHERE {{
+                            ?movie pred:id_m ?id .
+                            ?movie pred:poster ?poster .
+                            ?movie pred:title ?title .
+                            ?movie pred:has_score ?has_score .
+                            {}
+                        }}
+                        """
+        intersect_query_genre =  """
+                                {{
+                                        ?movie pred:id_m ?id .
+                                        ?movie pred:poster ?poster .
+                                        ?movie pred:title ?title .
+                                        ?movie pred:has_score ?has_score .
+                                        {}
+                                }}
+                                """
         if request.POST.get('order'):
-            if order == "Average":
-                query = queries.movie_by_genre.format(str(filter))
+            add_to_query = ""
+            for filt in filter:
+                add_to_query += '?movie pred:genre "{}" .\n'.format(str(filt))
+            if order == "Average":    
+                query = query_movies_score_genre.format(add_to_query)
             elif order == "Popularity":
-                query = queries.movie_by_genre.format(str(filter))
+                query = query_movies_popularity_genre.format(add_to_query)
             else:
-                query = queries.movie_by_genre.format(str(filter))
-            tree = etree.XML(query)
+                query = query_movies_alphabetic_genre.format(add_to_query)
         else:
-            query = queries.movie_by_genre.format(str(filter[0]))
+            add_to_query = ""
+            for filt in filter:
+                add_to_query += '?movie pred:genre "{}" .\n'.format(str(filt)) 
+            query = query_genre.format(add_to_query)
     else:
         if request.POST.get('order'):
             myDict = dict(request.POST.lists())
             order = myDict['order'][0]
             if order == "Average":
-                query = queries.order_movies_score
+                query = query_movies_score
             elif order == "Popularity":
-                query = queries.order_movies_popularity
+                query = query_movies_popularity
             else:
-                query = queries.order_movies_alphabetic
+                query = query_movies_alphabetic
         else:
-            query = queries.all_movies
+            query = """
+                    PREFIX mov:<http://moviesProject.org/sub/mov/>
+                    PREFIX pred:<http://moviesProject.org/pred/>
+                    SELECT ?movie ?id ?poster ?title
+                    WHERE {
+                        ?movie pred:id_m ?id .
+                        ?movie pred:poster ?poster .
+                        ?movie pred:title ?title .
+                    }"""
             
     payload_query = {"query": query}
     res = accessor.sparql_select(body=payload_query,
