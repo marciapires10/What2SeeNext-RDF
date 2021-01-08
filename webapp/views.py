@@ -1,5 +1,5 @@
 import json
-
+from webapp import queries
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from s4api.graphdb_api import GraphDBApi
@@ -126,16 +126,41 @@ def get_genres():
 
 def movies(request):
 
-    #select all movies
-    query = """
-        PREFIX mov:<http://moviesProject.org/sub/mov/>
-        PREFIX pred:<http://moviesProject.org/pred/>
-        SELECT ?movie ?id ?poster ?title
-        WHERE {
-            ?movie pred:id_m ?id .
-            ?movie pred:poster ?poster .
-            ?movie pred:title ?title .
-        }"""
+    if filter is None and request.POST.get('checkbox'):
+        myDict = dict(request.POST.lists())
+        _filter = myDict['checkbox']
+        if 'order' in myDict:
+            print("Oi")
+            _order = myDict['order'][0]
+        else:
+            print("Ai")
+            _order = None
+        return movies(request, _filter, _order)
+
+    elif request.POST.get('checkbox'):
+        if request.POST.get('order'):
+            if order == "Average":
+                query = queries.movie_by_genre.format(str(filter))
+            elif order == "Popularity":
+                query = queries.movie_by_genre.format(str(filter))
+            else:
+                query = queries.movie_by_genre.format(str(filter))
+            tree = etree.XML(query)
+        else:
+            query = queries.movie_by_genre.format(str(filter[0]))
+    else:
+        if request.POST.get('order'):
+            myDict = dict(request.POST.lists())
+            order = myDict['order'][0]
+            if order == "Average":
+                query = queries.order_movies_score
+            elif order == "Popularity":
+                query = queries.order_movies_popularity
+            else:
+                query = queries.order_movies_alphabetic
+        else:
+            query = queries.all_movies
+            
     payload_query = {"query": query}
     res = accessor.sparql_select(body=payload_query,
                                  repo_name=repo_name)
