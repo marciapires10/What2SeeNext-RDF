@@ -16,7 +16,7 @@
                     {% csrf_token %}
                     <table style="color: white">
                         <tr>
-                            {% for g in serie_genres %}
+                            {% for g in series_genres %}
                                     <td style="color:white;">
                                         <tr>
                                             <input type="checkbox" id={{ g }} name="checkbox" value="{{ g }}" class="chkvalues"><label style="color: white; padding-right: 20px;"> {{ g }}</label>
@@ -52,12 +52,13 @@
                                          <td>
                                             <div class="col-md-2 clearfix d-none d-md-block">
                                                 <div class="card mb-2" id="full-card-all">
-                                                    <img src="{% static 'assets/img/hp.jpg' %}" alt="" title="" id="card-img-all">
-                                                     <div class="overlay" alt="" title=""></div>
-                                                    <button type="submit" name="info-m" class="btn btn-primary" id="more-movie-all"
-                                                            style="margin-top: 150px;" value="id">
-                                                        See more
-                                                    </button>
+                                                    <img src="{{ poster }}" alt="{{ title }}" title="{{ title }}" id="card-img-all">
+                                                     <div class="overlay" alt="{{ title }}" title="{{ title }}">
+                                                        <button type="submit" name="info-m" class="btn btn-primary" id="more-movie-all"
+                                                                style="margin-top: 150px;" value="{{ id }}">
+                                                            See more
+                                                        </button>
+                                                     </div>
                                                 </div>
                                             </div>
                                         </td>
@@ -66,12 +67,13 @@
                                              <td>
                                                 <div class="col-md-2 clearfix d-none d-md-block">
                                                  <div class="card mb-2" id="full-card-all">
-                                                    <img src="{% static 'assets/img/hp.jpg' %}" alt="" title="" id="card-img-all">
-                                                     <div class="overlay" alt="" title=""></div>
-                                                    <button type="submit" name="info-m" class="btn btn-primary" id="more-movie-all"
-                                                            style="margin-top: 150px;" value="id">
-                                                        See more
-                                                    </button>
+                                                    <img src="{{ poster }}" alt="{{ title }}" title="{{ title }}" id="card-img-all">
+                                                     <div class="overlay" alt="{{ title }}" title="{{ title }}">
+                                                        <button type="submit" name="info-m" class="btn btn-primary" id="more-movie-all"
+                                                                style="margin-top: 150px;" value="{{ id }}">
+                                                            See more
+                                                        </button>
+                                                     </div>
                                                 </div>
                                                 </div>
                                              </td>
