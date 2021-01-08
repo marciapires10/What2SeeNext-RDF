@@ -1,5 +1,6 @@
 import json
 
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from s4api.graphdb_api import GraphDBApi
 from s4api.swagger import ApiClient
@@ -88,6 +89,11 @@ def index(request):
     top_movies = get_top_movies()
     top_series = get_top_series()
 
+    if 'info-m' in request.POST:
+        id = request.POST.get('info-m')
+        detail_info(request, id)
+        return HttpResponseRedirect('/info/' + id)
+
     tparams = {
       'top_movies': top_movies,
       'top_series': top_series,
@@ -149,6 +155,11 @@ def movies(request):
 
     mgenres = get_genres()
 
+    if 'info-m' in request.POST:
+        id = request.POST.get('info-m')
+        detail_info(request, id)
+        return HttpResponseRedirect('/info/' + id)
+
     tparams = {
         'movies_all': movies_all,
         'movie_genres': mgenres,
@@ -190,6 +201,11 @@ def series(request):
 
     sgenres = get_genres()
 
+    if 'info-m' in request.POST:
+        id = request.POST.get('info-m')
+        detail_info(request, id)
+        return HttpResponseRedirect('/info/' + id)
+
     tparams = {
         'series_all': series_all,
         'series_genres': sgenres,
@@ -201,7 +217,7 @@ def get_search_results(request):
 
     return render(request, 'search_result.html')
 
-def detail_info(request):
+def detail_info(request, id):
 
     return render(request, 'info.html')
 
