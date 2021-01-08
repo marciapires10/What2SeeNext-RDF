@@ -316,22 +316,169 @@ def movies(request, filter = None, order = None):
 
     return render(request, 'movies_list.html', tparams)
 
-def series(request):
-    # select all series
-    query = """
-            PREFIX pred:<http://moviesProject.org/pred/>
-            SELECT ?id ?poster ?title
-            WHERE {
-                ?serie pred:id_s ?id .
-                ?serie pred:poster ?poster .
-                ?serie pred:title ?title .
-            }"""
+def series(request, filter = None, order = None):
+    query_series_score = """
+                    PREFIX serie:<http://moviesProject.org/sub/serie/>
+                    PREFIX pred:<http://moviesProject.org/pred/>
+                    SELECT ?movie ?id ?poster ?title ?has_score
+                    WHERE {
+                        ?movie pred:id_s ?id .
+                        ?movie pred:poster ?poster .
+                        ?movie pred:title ?title .
+                        ?movie pred:has_score ?has_score .
+                    }
+                    ORDER BY DESC(xsd:float(?has_score))
+
+                    """ 
+    query_series_score_genre = """
+                    PREFIX serie:<http://moviesProject.org/sub/serie/>
+                    PREFIX pred:<http://moviesProject.org/pred/>
+                    SELECT ?serie ?id ?poster ?title ?has_score
+                    WHERE 
+                    {{
+                    {{
+                        ?serie pred:id_s ?id .
+                        ?serie pred:poster ?poster .
+                        ?serie pred:title ?title .
+                        ?serie pred:has_score ?has_score .
+                    }}
+                        {}
+                    }}
+                    ORDER BY DESC(xsd:float(?has_score))
+
+                    """ 
+
+    query_series_alphabetic_genre = """
+                            PREFIX serie:<http://moviesProject.org/sub/serie/>
+                            PREFIX pred:<http://moviesProject.org/pred/>
+                            SELECT ?serie ?id ?poster ?title ?has_score
+                            WHERE 
+                            {{
+                            {{
+                            ?serie pred:id_s ?id .
+                            ?serie pred:poster ?poster .
+                            ?serie pred:title ?title .
+                            ?serie pred:has_score ?has_score .
+                            }}
+                            {}
+                            }}
+                            ORDER BY DESC(?title)
+                          """
+    query_series_alphabetic = """
+                            PREFIX serie:<http://moviesProject.org/sub/serie/>
+                            PREFIX pred:<http://moviesProject.org/pred/>
+                            SELECT ?serie ?id ?poster ?title ?has_score
+                            WHERE {
+                            ?serie pred:id_s ?id .
+                            ?serie pred:poster ?poster .
+                            ?serie pred:title ?title .
+                            ?serie pred:has_score ?has_score .
+                            }
+                            ORDER BY DESC(?title)
+                          """
+
+    query_series_popularity = """
+                        PREFIX serie:<http://moviesProject.org/sub/serie/>
+                        PREFIX pred:<http://moviesProject.org/pred/>
+                        PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+                        SELECT ?serie ?id ?poster ?title ?has_score ?popularity
+                        WHERE {
+                            ?serie pred:id_s ?id .
+                            ?serie pred:poster ?poster .
+                            ?serie pred:title ?title .
+                            ?serie pred:has_score ?has_score .
+                            ?serie pred:popularity ?popularity .
+                        }
+                        ORDER BY DESC(xsd:float(?popularity))
+                        """
+
+    query_series_popularity_genre = """
+                        PREFIX serie:<http://moviesProject.org/sub/serie/>
+                        PREFIX pred:<http://moviesProject.org/pred/>
+                        PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+                        SELECT ?serie ?id ?poster ?title ?has_score ?popularity
+                        WHERE 
+                        {{
+                        {{
+                            ?serie pred:id_s ?id .
+                            ?serie pred:poster ?poster .
+                            ?serie pred:title ?title .
+                            ?serie pred:has_score ?has_score .
+                            ?serie pred:popularity ?popularity .
+                        }}
+                        {}
+                        }}
+                        ORDER BY DESC(xsd:float(?popularity))
+                        """
+
+    if filter is None and request.POST.get('checkbox'):
+        myDict = dict(request.POST.lists())
+        _filter = myDict['checkbox']
+        if 'order' in myDict:
+            _order = myDict['order'][0]
+        else:
+            _order = None
+        return series(request, _filter, _order)
+
+    elif request.POST.get('checkbox'):
+        query_genre = """
+                    PREFIX pred:<http://moviesProject.org/pred/> 
+                        SELECT ?serie ?id ?poster ?title ?has_score
+                        WHERE {{
+                            ?serie pred:id_s ?id .
+                            ?serie pred:poster ?poster .
+                            ?serie pred:title ?title .
+                            ?serie pred:has_score ?has_score .
+                            {}
+                        }}
+                        """
+        intersect_query_genre =  """
+                                {{
+                                        ?serie pred:id_s ?id .
+                                        ?serie pred:poster ?poster .
+                                        ?serie pred:title ?title .
+                                        ?serie pred:has_score ?has_score .
+                                        {}
+                                }}
+                                """
+        if request.POST.get('order'):
+            add_to_query = ""
+            for filt in filter:
+                add_to_query += '?serie pred:genre "{}" .\n'.format(str(filt))
+            if order == "Average":    
+                query = query_series_score_genre.format(add_to_query)
+            elif order == "Popularity":
+                query = query_series_popularity_genre.format(add_to_query)
+            else:
+                query = query_series_alphabetic_genre.format(add_to_query)
+        else:
+            add_to_query = ""
+            for filt in filter:
+                add_to_query += '?serie pred:genre "{}" .\n'.format(str(filt)) 
+            query = query_genre.format(add_to_query)
+    else:
+        if request.POST.get('order'):
+            myDict = dict(request.POST.lists())
+            order = myDict['order'][0]
+            if order == "Average":
+                query = query_series_score
+            elif order == "Popularity":
+                query = query_series_popularity
+            else:
+                query = query_series_alphabetic
+        else:
+            query = """
+                PREFIX pred:<http://moviesProject.org/pred/>
+                SELECT ?id ?poster ?title
+                WHERE {
+                    ?serie pred:id_s ?id .
+                    ?serie pred:poster ?poster .
+                    ?serie pred:title ?title .
+                }"""
+
     payload_query = {"query": query}
     res = accessor.sparql_select(body=payload_query,
                                  repo_name=repo_name)
-
-
-    print(res)
 
     res = json.loads(res)
     series_all = []
