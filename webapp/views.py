@@ -542,30 +542,31 @@ def get_reviews(id):
 
     query = """
             PREFIX pred:<http://moviesProject.org/pred/>
-            select ?author ?content
-            where{{
+            SELECT ?author ?content ?id
+            WHERE{{
                 {{
                     ?rev pred:is_from ?mov .
-                    ?mov pred:id_m {} .
+                    ?mov pred:id_m "{}" .
                     ?rev pred:content_is ?content .
                     ?rev pred:made_by ?author .
+                    ?rev pred:id_r ?id .
                 }}
                 union
                 {{
                     ?rev pred:is_from ?mov .
-                    ?serie pred:id_s {} .
+                    ?serie pred:id_s "{}" .
                     ?rev pred:content_is ?content .
                     ?rev pred:made_by ?author .
+                    ?rev pred:id_r ?id .
                 }}
             }}""".format(id, id)
-
-
 
     payload_query = {"query": query}
     res = accessor.sparql_select(body=payload_query,
                                  repo_name=repo_name)
 
     res = json.loads(res)
+    print(res)
     reviews = []
     for e in res['results']['bindings']:
         for v in e.values():
@@ -576,7 +577,7 @@ def get_reviews(id):
 def detail_info(request, id):
 
     reviews = get_reviews(id)
-
+    
     tparams = {
         'reviews': reviews,
     }

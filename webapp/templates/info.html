@@ -62,7 +62,7 @@
                     <tr>
                         <form role="form" method="POST" id="delete">
                             {% csrf_token %}
-                                {% for r, author, id in reviews %}
+                                {% for author, r, id in reviews %}
                                     <h3 style="color: white;">{{ author }}</h3>
                                     <p style="color:white;" id="{{ id }}">{{ r }}</p>
                                     <button type="submit" name="delete" class="btn btn-primary" value="{{ id }}">
