@@ -873,7 +873,7 @@ def detail_info(request, id, is_movie = "movie"):
 
     # delete review
     if request.POST.get('delete'):
-        query = """"
+        query = """
                 PREFIX predicate: <http://moviesProject.org/pred/>
                 DELETE {{?s ?p ?o}}
                 WHERE{{ 
@@ -893,7 +893,7 @@ def detail_info(request, id, is_movie = "movie"):
         review_id = get_review_id()
         if is_movie == "movie":
             print("MOVIE")
-            query = """"
+            update = """
                     PREFIX pred:<http://moviesProject.org/pred/>
                     PREFIX fb: <http://rdf.freebase.com/ns/>
                     PREFIX review: <http://moviesProject.org/sub/review/>
@@ -908,7 +908,7 @@ def detail_info(request, id, is_movie = "movie"):
                         predicate:is_from movie:{}.
                     }}""".format(review_id, review_id, username, comment, id)
         else:
-            query = """"
+            update = """
                     PREFIX pred:<http://moviesProject.org/pred/>
                     PREFIX fb: <http://rdf.freebase.com/ns/>
                     PREFIX review: <http://moviesProject.org/sub/review/>
@@ -917,15 +917,15 @@ def detail_info(request, id, is_movie = "movie"):
                     INSERT DATA
                     {{ 
                         review:{}
-                        predicate:id_r "{}";
-                        predicate:made_by "{}";
-                        predicate:content_is "{}";
+                        predicate:id_r "{}" .
+                        predicate:made_by "{}" .
+                        predicate:content_is "{}".
                         predicate:is_from serie:{}.
                     }}""".format(review_id, review_id, username, comment, id)
-        print(query)
-        payload_query = {"query": query}
+        payload_query = {"update": update}
         res = accessor.sparql_update(body=payload_query,
                                     repo_name=repo_name)
+        print(res)
         return HttpResponseRedirect('/info/' + id + "/" + is_movie)
 
     info_all_dict = []
