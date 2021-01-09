@@ -84,11 +84,16 @@ function updateReview(id) {
 	document.getElementById(id).contentEditable = false;
 }
 
-var add = document.getElementById("add-to-b");
-add.addEventListener('click', hideAndShow, false);
+function hideAdd(){
+  console.log("oi");
+  var addB = document.getElementById("add-to-b");
+  console.log(addB);
+  addB.style.visibility = "hidden";
 
-function hideAndShow(){
-  document.getElementById("add-to").style.display = 'hidden';
-  this.style.display = 'none';
-  document.getElementById("check").style.display = 'show';
+  if(addB.style.display === "none"){
+    addB.style.display = "block";
+  } else{
+    addB.style.display = "none";
+  }
+
 }

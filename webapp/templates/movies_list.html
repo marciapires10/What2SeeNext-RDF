@@ -55,17 +55,25 @@
                                                 <div class="card mb-2" id="full-card-all">
                                                     <img src="{{ poster }}" alt="" title="" id="card-img-all">
                                                     <div class="overlay" alt="{{ title }}" title="{{ title }}">
-                                                        <div class="add-to">
-                                                            <button type="submit" name="add-to-b" class="btn btn-primary" id="add-to-b"
+                                                        <div class="addP">
+                                                            <script>
+                                                                function hideAdd() {
+                                                                    console.log("oi");
+                                                                    var addB = document.getElementById("add-to-b");
+                                                                    console.log(addB);
+                                                                    addB.style.color = "yellow";
+                                                                }
+                                                            </script>
+                                                            <button onclick="hideAdd()" type="submit" name="add-to-b" class="btn btn-primary" id="add-to-b"
                                                                 style="margin-top: 10px; margin-right: -143px" value="{{ id }}">
                                                             <i class="fas fa-plus"></i>
                                                             </button>
-                                                        <div class="check" style="visibility: hidden">
+                                                        </div>
+                                                        <div class="check" style="display: none">
                                                             <button type="submit" name="check-b" class="btn btn-primary" id="check-b"
                                                                 style="margin-top: 10px; margin-right: -143px" value="{{ id }}">
                                                             <i class="fas fa-check"></i>
                                                             </button>
-                                                        </div>
                                                         </div>
                                                         <button type="submit" name="info-m" class="btn btn-primary" id="more-movie-all"
                                                                 style="margin-top: 100px;" value="{{ id }}">

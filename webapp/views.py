@@ -711,7 +711,6 @@ def get_reviews(id):
 
 def detail_info(request, id):
 
-
     query = """
             PREFIX pred:<http://moviesProject.org/pred/>
             SELECT distinct ?id ?title ?poster ?pop ?score ?rel ?run ?genre ?des ?job ?char ?name ?ppop
@@ -756,7 +755,9 @@ def detail_info(request, id):
     info_all.append(res['results']['bindings'][0]['run']['value'])
     info_all.append(res['results']['bindings'][0]['genre']['value'])
     info_all.append(res['results']['bindings'][0]['des']['value'])
-    for e in res['results']['bindings']:
+    info_all.append(res['results']['bindings'][0]['job']['value'])
+    info_all.append(res['results']['bindings'][0]['name']['value'])
+    """for e in res['results']['bindings']:
         info_tmp = []
         #info_tmp.append(e['id']['value'])
         info_tmp.append(e['job']['value'])
@@ -764,11 +765,49 @@ def detail_info(request, id):
             info_tmp.append(e['char']['value'])
         info_tmp.append(e['name']['value'])
         #info_tmp.append(e['ppop']['value'])
-        info_all.append(info_tmp)
+        info_all.append(info_tmp)"""
 
     print(info_all)
 
     reviews = get_reviews(id)
+
+    # delete review
+    if request.POST.get('delete'):
+        query = """"
+                PREFIX predicate: <http://moviesProject.org/pred/>
+                DELETE {{?s ?p ?o}}
+                WHERE{{ 
+                    ?s predicate:id_r "{}".
+                    ?s ?p ?o
+                }}""".format(id)
+        payload_query = {"query": query}
+        #res = accessor.sparql_select(body=payload_query,
+        #                             repo_name=repo_name)
+
+        return HttpResponseRedirect('/info/' + id)
+
+    # add new review
+    if request.POST.get('username') and request.POST.get('comment'):
+        query = """"
+                PREFIX pred:<http://moviesProject.org/pred/>
+                PREFIX fb: <http://rdf.freebase.com/ns/>
+                PREFIX review: <http://moviesProject.org/sub/review/>
+                PREFIX predicate: <http://moviesProject.org/pred/>
+                PREFIX movie: <http://moviesProject.org/sub/mov/>
+                INSERT DATA
+                { 
+                    review:SDAFAFAFWFAEGr3243523525
+                    predicate:id_r "58a231c5925141179e000674";
+                    predicate:made_by "Jonh Lennon";
+                    predicate:content_is "Hated the soundtrack. Should have hired me";
+                    predicate:is_from movie:11.
+                }"""
+        payload_query = {"query": query}
+        #res = accessor.sparql_select(body=payload_query,
+        #                             repo_name=repo_name)
+
+        return HttpResponseRedirect('/info/' + id)
+
 
     tparams = {
         'reviews': reviews,
