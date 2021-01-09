@@ -93,8 +93,27 @@ def index(request):
 
     if 'info-m' in request.POST:
         id = request.POST.get('info-m')
-        detail_info(request, id)
-        return HttpResponseRedirect('/info/' + id)
+        query = """
+            PREFIX predicate: <http://moviesProject.org/pred/>
+            ASK
+            where 
+            {{
+                ?movie predicate:id_m "{}" .
+            }}
+            """.format(id)
+        payload_query = {"query": query}
+        res = accessor.sparql_select(body=payload_query,
+                                    repo_name=repo_name)
+
+        res = json.loads(res)
+        is_movie = res['boolean']
+        is_movie_str = ""
+        if is_movie:
+            is_movie_str = "movie"
+        else:
+            is_movie_str = "serie"
+        detail_info(request, id, is_movie_str)
+        return HttpResponseRedirect('/info/' + id + "/" + is_movie_str)
 
     tparams = {
       'top_movies': top_movies,
@@ -337,8 +356,8 @@ def movies(request, filter = None, order = None):
 
     if 'info-m' in request.POST:
         id = request.POST.get('info-m')
-        detail_info(request, id)
-        return HttpResponseRedirect('/info/' + id)
+        detail_info(request, id, "movie")
+        return HttpResponseRedirect('/info/' + id + "/" + "movie")
 
     tparams = {
         'movies_all': movies_all,
@@ -532,8 +551,9 @@ def series(request, filter = None, order = None):
 
     if 'info-m' in request.POST:
         id = request.POST.get('info-m')
-        detail_info(request, id)
-        return HttpResponseRedirect('/info/' + id)
+        print("Vim pelas series")
+        detail_info(request, id, "serie")
+        return HttpResponseRedirect('/info/' + id + "/" + "serie")
 
     tparams = {
         'series_all': series_all,
@@ -546,15 +566,7 @@ def get_search_results(request, _str):
     if 'search' in request.POST:
         _str = request.POST.get('search', '')
         return HttpResponseRedirect('/search_results/' + _str)
-    # if 'show_info' in request.POST:
-    #     res = request.POST.get('show_info')
-    #     res_div = res.split(",")
-    #     if res_div[0] == "True":
-    #         id = res_div[1]
-    #     else:
-    #         id = res_div[1] + ".s"
-    #     detail_info(request, id)
-    #     return HttpResponseRedirect('/info/' + id)
+
     query = """
         PREFIX predicate: <http://moviesProject.org/pred/>
         select ?name ?id ?id_m ?id_s ?title ?description ?poster ?score ?genre
@@ -662,6 +674,30 @@ def get_search_results(request, _str):
             genre_str+= "["+str(genre)+"]"
         movie[5] = genre_str
 
+    if 'info-m' in request.POST:
+        id = request.POST.get('info-m')
+        query = """
+            PREFIX predicate: <http://moviesProject.org/pred/>
+            ASK
+            where 
+            {{
+                ?movie predicate:id_m "{}" .
+            }}
+            """.format(id)
+        payload_query = {"query": query}
+        res = accessor.sparql_select(body=payload_query,
+                                    repo_name=repo_name)
+
+        res = json.loads(res)
+        is_movie = res['boolean']
+        is_movie_str = ""
+        if is_movie:
+            is_movie_str = "movie"
+        else:
+            is_movie_str = "serie"
+        detail_info(request, id, is_movie_str)
+        return HttpResponseRedirect('/info/' + id + "/" + is_movie_str)
+
     tparams = {
         'str': _str,
         'result_movies_series': movies_series_list,
@@ -707,39 +743,67 @@ def get_reviews(id):
 
     return reviews
 
-def detail_info(request, id):
-
-    query = """
-            PREFIX pred:<http://moviesProject.org/pred/>
-            SELECT distinct ?id ?title ?poster ?pop ?score ?rel ?run ?genre ?des ?job ?char ?name ?ppop
-            WHERE {{
-                ?movie pred:id_m "{}" .
-                ?movie pred:genre ?genre .
-                ?movie pred:poster ?poster .
-                ?movie pred:title ?title .
-                ?movie pred:has_score ?score .
-                ?movie pred:popularity ?pop .
-                ?movie pred:runtime ?run .
-                ?movie pred:released ?rel .
-                ?movie pred:description ?des .
-                optional{{
-                    ?crew pred:takes_part ?movie .
-                    ?crew pred:person ?person .
-                    ?crew pred:job ?job .
-                    ?person pred:name ?name .
-                    ?person pred:popularity ?ppop .
-                }}
-                optional{{
-                    ?crew pred:interpret ?char .
-                }}
-            }}""".format(id)
+def detail_info(request, id, is_movie = "movie"):
+    if is_movie == "movie":
+        print("Filme")
+        print(id)
+        query = """
+                PREFIX pred:<http://moviesProject.org/pred/>
+                SELECT distinct ?id ?title ?poster ?pop ?score ?rel ?run ?genre ?des ?job ?char ?name ?ppop
+                WHERE {{
+                    ?movie pred:id_m "{}" .
+                    ?movie pred:genre ?genre .
+                    ?movie pred:poster ?poster .
+                    ?movie pred:title ?title .
+                    ?movie pred:has_score ?score .
+                    ?movie pred:popularity ?pop .
+                    ?movie pred:runtime ?run .
+                    ?movie pred:released ?rel .
+                    ?movie pred:description ?des .
+                    optional{{
+                        ?crew pred:takes_part ?movie .
+                        ?crew pred:person ?person .
+                        ?crew pred:job ?job .
+                        ?person pred:name ?name .
+                        ?person pred:popularity ?ppop .
+                    }}
+                    optional{{
+                        ?crew pred:interpret ?char .
+                    }}
+                }}""".format(id)
+    else:
+        print("Série")
+        print(id)
+        query = """
+                PREFIX pred:<http://moviesProject.org/pred/>
+                SELECT distinct ?id ?title ?poster ?pop ?score ?rel ?run ?genre ?des ?job ?char ?name ?ppop
+                WHERE {{
+                    ?serie pred:id_s "{}" .
+                    ?serie pred:genre ?genre .
+                    ?serie pred:poster ?poster .
+                    ?serie pred:title ?title .
+                    ?serie pred:has_score ?score .
+                    ?serie pred:popularity ?pop .
+                    ?serie pred:last_aired ?run .
+                    ?serie pred:released ?rel .
+                    ?serie pred:description ?des .
+                    optional{{
+                        ?crew pred:takes_part ?serie .
+                        ?crew pred:person ?person .
+                        ?crew pred:job ?job .
+                        ?person pred:name ?name .
+                        ?person pred:popularity ?ppop .
+                    }}
+                    optional{{
+                        ?crew pred:interpret ?char .
+                    }}
+                }}""".format(id)
 
     payload_query = {"query": query}
     res = accessor.sparql_select(body=payload_query,
                                  repo_name=repo_name)
 
     res = json.loads(res)
-
     info_all = []
     info_all.append(res['results']['bindings'][0]['title']['value'])
     if str(res['results']['bindings'][0]['poster']['value']) is not "":
@@ -779,7 +843,7 @@ def detail_info(request, id):
         payload_query = {"query": query}
         #res = accessor.sparql_select(body=payload_query,
         #                             repo_name=repo_name)
-
+        print("Ou aqui???")
         return HttpResponseRedirect('/info/' + id)
 
     # add new review
@@ -801,7 +865,7 @@ def detail_info(request, id):
         payload_query = {"query": query}
         #res = accessor.sparql_select(body=payload_query,
         #                             repo_name=repo_name)
-
+        print("Aqui??")
         return HttpResponseRedirect('/info/' + id)
 
     info_all_dict = []
