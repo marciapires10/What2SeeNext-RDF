@@ -17,11 +17,17 @@
                     <table style="color: white">
                         <tr>
                             {% for g in series_genres %}
-                                    <td style="color:white;">
-                                        <tr>
+                                {% if forloop.counter0|divisibleby:8 == 0 %}
+                                    <td style="color:white; float: left">
                                             <input type="checkbox" id={{ g }} name="checkbox" value="{{ g }}" class="chkvalues"><label style="color: white; padding-right: 20px;"> {{ g }}</label>
-                                        </tr>
+
                                     </td>
+                                {% else %}
+                                    <tr></tr>
+                                    <td style="color:white; float:left;">
+                                            <input type="checkbox" id={{ g }} name="checkbox" value="{{ g }}" class="chkvalues"><label style="color: white; padding-right: 20px;"> {{ g }}</label>
+                                    </td>
+                                {% endif %}
                         {% endfor %}
 
                         </tr>
@@ -49,7 +55,7 @@
                             <tr class="space">
                                  {% for id, title, poster in series_all %}
                                      {% if forloop.counter0|divisibleby:5 == 0 %}
-                                         <td>
+                                         <td style="padding-bottom: 20px;">
                                             <div class="col-md-2 clearfix d-none d-md-block">
                                                 <div class="card mb-2" id="full-card-all">
                                                     <img src="{{ poster }}" alt="{{ title }}" title="{{ title }}" id="card-img-all">
@@ -64,7 +70,7 @@
                                         </td>
                                      {% else %}
                                          <tr class="space"></tr>
-                                             <td>
+                                             <td style="padding-bottom: 20px;">
                                                 <div class="col-md-2 clearfix d-none d-md-block">
                                                  <div class="card mb-2" id="full-card-all">
                                                     <img src="{{ poster }}" alt="{{ title }}" title="{{ title }}" id="card-img-all">
