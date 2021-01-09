@@ -826,7 +826,23 @@ def detail_info(request, id, is_movie = "movie"):
 
     res = json.loads(res)
 
+    genres = []
+    people = []
+    for e in res['results']['bindings']:
+        if len(people) == 0 or not e['id_p']['value'] in people[len(people)-1]:
+            person = []
+            person.append(e['id_p']['value'])
+            person.append(e['job']['value'])
+            person.append(e['name']['value'])
+            if 'char' in e.keys():
+                person.append(e['char']['value'])
+            people.append(person)
+        if not e['genre']['value'] in genres:
+            genres.append(e['genre']['value'])
     
+    genre_str = ""
+    for genre in genres:
+        genre_str += "[" + genre + "]"
 
     info_all = []
     info_all.append(res['results']['bindings'][0]['title']['value'])
@@ -839,22 +855,8 @@ def detail_info(request, id, is_movie = "movie"):
     info_all.append(res['results']['bindings'][0]['score']['value'])
     info_all.append(res['results']['bindings'][0]['rel']['value'])
     info_all.append(res['results']['bindings'][0]['run']['value'])
-    info_all.append(res['results']['bindings'][0]['genre']['value'])
+    info_all.append(genre_str)
     info_all.append(res['results']['bindings'][0]['des']['value'])
-
-    people = []
-    for e in res['results']['bindings']:
-        if len(people) == 0 or not e['id_p']['value'] in people[len(people)-1]:
-            person = []
-            person.append(e['id_p']['value'])
-            person.append(e['job']['value'])
-            person.append(e['name']['value'])
-            if 'char' in e.keys():
-                person.append(e['char']['value'])
-            people.append(person)
-    
-            
-        #     print(e.keys)
 
     cast = ""
     crew = ""
@@ -873,23 +875,24 @@ def detail_info(request, id, is_movie = "movie"):
 
     # delete review
     if request.POST.get('delete'):
+        review_id = request.POST.get('delete')
         query = """
                 PREFIX predicate: <http://moviesProject.org/pred/>
                 DELETE {{?s ?p ?o}}
                 WHERE{{ 
                     ?s predicate:id_r "{}".
                     ?s ?p ?o
-                }}""".format(id)
-        payload_query = {"query": query}
-        #res = accessor.sparql_select(body=payload_query,
-        #                             repo_name=repo_name)
-        print("Ou aqui???")
+                }}""".format(review_id)
+
+        payload_query = {"update": query}
+        res = accessor.sparql_update(body=payload_query,
+                                    repo_name=repo_name)
         return HttpResponseRedirect('/info/' + id + "/" + is_movie)
 
     # add new review
     if request.POST.get('username') and request.POST.get('comment'):
         username = request.POST.get('username')
-        comment = request.POST.get('comment')
+        comment = request.POST.get('comment').replace('"',"'")
         review_id = get_review_id()
         if is_movie == "movie":
             print("MOVIE")
