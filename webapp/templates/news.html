@@ -11,17 +11,17 @@
                 <hr class="divider my-4" />
                 <h6 class="text-center">Check the lastest news.</h6>
                 <div class="row" style="justify-content: space-around">
-                    {% for title, descr, url, source, pubDate in full_news %}
+                    {% for mov, title, runtime in year_movies %}
                             <div class="col-lg-4 col-md-6 text-center">
                                 <div class="mt-5">
                                     <img class="img-fluid" src={{ url }} alt="" />
                                     <p></p>
                                     <a href={{ source }}>
-                                    <h3 class="h4 mb-2" style="text-align: left; font-size: 1.2rem;">{{ title }}</h3>
+                                    <h3 class="h4 mb-2" style="text-align: left; font-size: 1.2rem;">{{ mov }}</h3>
                                     </a>
-                                    <p class="text mb-0" style="text-align: left; font-size: 1rem;">{{ descr }}</p>
+                                    <p class="text mb-0" style="text-align: left; font-size: 1rem;">{{ title }}</p>
                                     <p></p>
-                                    <p style="font-size: 0.8rem; text-align: left">[{{ pubDate }}]</p>
+                                    <p style="font-size: 0.8rem; text-align: left">[{{ runtime }}]</p>
                                 </div>
                             </div>
                     {% endfor %}

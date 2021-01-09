@@ -578,6 +578,10 @@ def series(request, filter = None, order = None):
         detail_info(request, id, "serie")
         return HttpResponseRedirect('/info/' + id + "/" + "serie")
 
+    if 'add-to-b-s' in request.POST:
+        id = request.POST.get('add-to-b-s')
+        add_to_favList(id)
+
     tparams = {
         'series_all': series_all,
         'series_genres': sgenres,
@@ -964,22 +968,23 @@ def detail_info(request, id, is_movie = "movie"):
 
     return render(request, 'info.html', tparams)
 
-def film_by_year(request, year):
+def film_by_year(request):
     query = """
-        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-        select ?mov ?name ?runtime
-        where {
-            SERVICE <https://dbpedia.org/sparql>{
-                select ?name ?runtime where{
-                    ?mov dct:subject <http://dbpedia.org/resource/Category:{}_films> .
-                    ?mov foaf:name ?name .
-                    ?mov dbo:Work/runtime ?runtime .
-                }
-            } 
-        }
-    """.format(year)
+            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+            select ?mov ?name ?runtime
+            where {{
+                SERVICE <https://dbpedia.org/sparql>{{
+                    select ?name ?runtime where{{
+                        ?mov dct:subject <http://dbpedia.org/resource/Category:{}_films> .
+                        ?mov foaf:name ?name .
+                        ?mov dbo:Work/runtime ?runtime .
+                    }}
+                }} 
+            }}
+            """.format(1999)
     payload_query = {"query": query}
     res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
+    print(res)
     res = json.loads(res)
     year_movies_list = []
     for e in res['results']['bindings']:
@@ -993,7 +998,7 @@ def film_by_year(request, year):
         'year_movies': year_movies_list,
     }
 
-    return render(request, '', tparams)
+    return render(request, 'news.html', tparams)
 
 def film_from_dbpedia(request, mov_name):
     query = """
@@ -1037,7 +1042,7 @@ def film_from_dbpedia(request, mov_name):
         'mov_info': movie_info,
     }
 
-    return render(request, '', tparams)
+    return render(request, 'news.html', tparams)
 
 def playlist(request):
     if 'search' in request.POST:
