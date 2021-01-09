@@ -362,7 +362,7 @@ def movies(request, filter = None, order = None):
     
     if 'add-to-b' in request.POST:
         id = request.POST.get('add-to-b')
-        add_to_favList(id)
+        add_movie_to_favList(id)
 
     tparams = {
         'movies_all': movies_all,
@@ -371,7 +371,7 @@ def movies(request, filter = None, order = None):
 
     return render(request, 'movies_list.html', tparams)
 
-def add_to_favList(id):
+def add_movie_to_favList(id):
     update = """
             PREFIX predicate: <http://moviesProject.org/pred/>
             PREFIX movie: <http://moviesProject.org/sub/mov/>
@@ -578,9 +578,10 @@ def series(request, filter = None, order = None):
         detail_info(request, id, "serie")
         return HttpResponseRedirect('/info/' + id + "/" + "serie")
 
-    if 'add-to-b-s' in request.POST:
-        id = request.POST.get('add-to-b-s')
-        add_to_favList(id)
+    if 'add-to-b' in request.POST:
+        print("Add Serie")
+        id = request.POST.get('add-to-b')
+        add_serie_to_favList(id)
 
     tparams = {
         'series_all': series_all,
@@ -588,6 +589,23 @@ def series(request, filter = None, order = None):
     }
 
     return render(request, 'series_list.html', tparams)
+
+def add_serie_to_favList(id):
+    update = """
+            PREFIX predicate: <http://moviesProject.org/pred/>
+            PREFIX serie: <http://moviesProject.org/sub/serie/>
+            PREFIX list: <http://moviesProject.org/sub/list/>
+            INSERT DATA
+            {{
+                list:list_1
+                    predicate:has serie:{} ;
+                    predicate:name "list_1" .
+            }}
+            """.format(id)
+    payload_query = {"update": update}
+    res = accessor.sparql_update(body=payload_query,
+                                repo_name=repo_name)
+    return
 
 def get_search_results(request, _str):
     if 'search' in request.POST:
@@ -1048,7 +1066,6 @@ def playlist(request):
     if 'search' in request.POST:
         _str = request.POST.get('search', '')
         return HttpResponseRedirect('/search_results/' + _str)
-    fav = get_top_movies()
 
     query = """
             PREFIX predicate: <http://moviesProject.org/pred/>
@@ -1057,11 +1074,21 @@ def playlist(request):
             SELECT DISTINCT ?id ?title ?poster ?score
             WHERE
             { 
+                {
                 list:list_1 predicate:has ?movie .
                 ?movie predicate:id_m ?id .
                 ?movie predicate:title ?title .
                 ?movie predicate:poster ?poster .
                 ?movie predicate:has_score ?score .
+                }
+                UNION
+                {
+                list:list_1 predicate:has ?serie .
+                ?serie predicate:id_s ?id .
+                ?serie predicate:title ?title .
+                ?serie predicate:poster ?poster .
+                ?serie predicate:has_score ?score .
+                }
             }
             """
 
