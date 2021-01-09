@@ -884,9 +884,9 @@ def film_by_year(request, year):
         where {
             SERVICE <https://dbpedia.org/sparql>{
                 select ?name ?runtime where{
-                    ?mov dct:subject <http://dbpedia.org/page/Category:{}_films> .
-                    ?mov foaf:name ?name
-                    ?mov dbo:Work/runtime ?runtime
+                    ?mov dct:subject <http://dbpedia.org/resource/Category:{}_films> .
+                    ?mov foaf:name ?name .
+                    ?mov dbo:Work/runtime ?runtime .
                 }
             } 
         }
@@ -904,6 +904,50 @@ def film_by_year(request, year):
 
     tparams = {
         'year_movies': year_movies_list,
+    }
+
+    return render(request, '', tparams)
+
+def film_from_dbpedia(request, mov_name):
+    query = """
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        select ?title ?rel ?abs ?runtime ?pname ?dirname ?prodname
+        where {
+            SERVICE <https://dbpedia.org/sparql>{
+                select ?title ?rel ?abs ?runtime ?pname ?dirname ?prodname{
+                    <http://dbpedia.org/resource/{}> dbo:abstract ?abs .
+                    <http://dbpedia.org/resource/{}> dbo:releaseDate ?rel .
+                    <http://dbpedia.org/resource/{}> dbo:Work/runtime ?runtime .
+                    <http://dbpedia.org/resource/{}> dbp:name ?title.
+                }optional{
+                    <http://dbpedia.org/resource/{}> dbo:starring ?starr.
+                    <http://dbpedia.org/resource/{}> dbo:director ?dir .
+                    ?dir dbp:name ?dirname .
+                    <http://dbpedia.org/resource/{}> dbo:producer ?prod .
+                    ?prod dbp:name ?prodname .
+                    ?starr dbp:name ?pname .
+                }
+            } 
+        }
+    """.format(mov_name, mov_name, mov_name, mov_name, mov_name, mov_name, mov_name)
+    payload_query = {"query": query}
+    res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
+    res = json.loads(res)
+    movie_info = []
+    for e in res['results']['bindings']:
+        info = []
+        info.append(e['title']['value'])
+        info.append(e['rel']['value'])
+        info.append(e['abs']['value'])
+        info.append(e['runtime']['value'])
+        if "prodname" and "pname" and "dirname" in e.keys():
+            info.append(e['pname']['value'])
+            info.append(e['dirname']['value'])
+            info.append(e['prodname']['value'])
+        movie_info.append(info)
+
+    tparams = {
+        'mov_info': movie_info,
     }
 
     return render(request, '', tparams)
