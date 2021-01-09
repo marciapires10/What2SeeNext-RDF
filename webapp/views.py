@@ -4,6 +4,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from s4api.graphdb_api import GraphDBApi
 from s4api.swagger import ApiClient
+import random, string
 
 IMAGES_SITE = "http://image.tmdb.org/t/p/w200"
 NO_IMAGE = "../static/assets/img/NoImage.jpg"
@@ -705,7 +706,30 @@ def get_search_results(request, _str):
     }
 
     return render(request, 'search_result.html', tparams)
-    
+
+def get_review_id():
+    id_exists = True
+    id_str = ""
+    while id_exists:        
+        id_str = ''.join(random.choice(string.ascii_uppercase + string.ascii_lowercase + string.digits) for _ in range(24))
+
+        query = """
+                PREFIX predicate: <http://moviesProject.org/pred/>
+                ASK
+                where 
+                {{
+                    ?review predicate:id_r "{}" .
+                }}
+                """.format(id_str)
+        payload_query = {"query": query}
+        res = accessor.sparql_select(body=payload_query,
+                                    repo_name=repo_name)
+
+        res = json.loads(res)
+        id_exists = res['boolean']
+
+    return id_str
+
 def get_reviews(id):
 
     query = """
@@ -745,11 +769,9 @@ def get_reviews(id):
 
 def detail_info(request, id, is_movie = "movie"):
     if is_movie == "movie":
-        print("Filme")
-        print(id)
         query = """
                 PREFIX pred:<http://moviesProject.org/pred/>
-                SELECT distinct ?id ?title ?poster ?pop ?score ?rel ?run ?genre ?des ?job ?char ?name ?ppop
+                SELECT distinct ?id ?title ?poster ?pop ?score ?rel ?run ?genre ?des ?id_p ?job ?char ?name ?ppop
                 WHERE {{
                     ?movie pred:id_m "{}" .
                     ?movie pred:genre ?genre .
@@ -764,6 +786,7 @@ def detail_info(request, id, is_movie = "movie"):
                         ?crew pred:takes_part ?movie .
                         ?crew pred:person ?person .
                         ?crew pred:job ?job .
+                        ?person pred:id ?id_p .
                         ?person pred:name ?name .
                         ?person pred:popularity ?ppop .
                     }}
@@ -772,11 +795,9 @@ def detail_info(request, id, is_movie = "movie"):
                     }}
                 }}""".format(id)
     else:
-        print("Série")
-        print(id)
         query = """
                 PREFIX pred:<http://moviesProject.org/pred/>
-                SELECT distinct ?id ?title ?poster ?pop ?score ?rel ?run ?genre ?des ?job ?char ?name ?ppop
+                SELECT distinct ?id ?title ?poster ?pop ?score ?rel ?run ?genre ?des ?id_p ?job ?char ?name
                 WHERE {{
                     ?serie pred:id_s "{}" .
                     ?serie pred:genre ?genre .
@@ -791,8 +812,8 @@ def detail_info(request, id, is_movie = "movie"):
                         ?crew pred:takes_part ?serie .
                         ?crew pred:person ?person .
                         ?crew pred:job ?job .
+                        ?person pred:id ?id_p .
                         ?person pred:name ?name .
-                        ?person pred:popularity ?ppop .
                     }}
                     optional{{
                         ?crew pred:interpret ?char .
@@ -804,6 +825,9 @@ def detail_info(request, id, is_movie = "movie"):
                                  repo_name=repo_name)
 
     res = json.loads(res)
+
+    
+
     info_all = []
     info_all.append(res['results']['bindings'][0]['title']['value'])
     if str(res['results']['bindings'][0]['poster']['value']) is not "":
@@ -817,18 +841,34 @@ def detail_info(request, id, is_movie = "movie"):
     info_all.append(res['results']['bindings'][0]['run']['value'])
     info_all.append(res['results']['bindings'][0]['genre']['value'])
     info_all.append(res['results']['bindings'][0]['des']['value'])
-    info_all.append(res['results']['bindings'][0]['job']['value'])
-    info_all.append(res['results']['bindings'][0]['name']['value'])
-    """for e in res['results']['bindings']:
-        info_tmp = []
-        #info_tmp.append(e['id']['value'])
-        info_tmp.append(e['job']['value'])
-        if 'char' in e.keys():
-            info_tmp.append(e['char']['value'])
-        info_tmp.append(e['name']['value'])
-        #info_tmp.append(e['ppop']['value'])
-        info_all.append(info_tmp)"""
 
+    people = []
+    for e in res['results']['bindings']:
+        if len(people) == 0 or not e['id_p']['value'] in people[len(people)-1]:
+            person = []
+            person.append(e['id_p']['value'])
+            person.append(e['job']['value'])
+            person.append(e['name']['value'])
+            if 'char' in e.keys():
+                person.append(e['char']['value'])
+            people.append(person)
+    
+            
+        #     print(e.keys)
+
+    cast = ""
+    crew = ""
+    cast_counter= 0
+    for person in people:
+        if len(person) > 3:
+            cast +="[" + str(person[2]) + " as '" + str(person[3]) + "'] "
+        elif cast_counter < 10:
+            crew +="[" + str(person[2]) + " works as '" + str(person[1]) + "'] "
+            cast_counter += 1
+
+    # print(cast)
+    info_all.append(cast)
+    info_all.append(crew)
     reviews = get_reviews(id)
 
     # delete review
@@ -844,29 +884,49 @@ def detail_info(request, id, is_movie = "movie"):
         #res = accessor.sparql_select(body=payload_query,
         #                             repo_name=repo_name)
         print("Ou aqui???")
-        return HttpResponseRedirect('/info/' + id)
+        return HttpResponseRedirect('/info/' + id + "/" + is_movie)
 
     # add new review
     if request.POST.get('username') and request.POST.get('comment'):
-        query = """"
-                PREFIX pred:<http://moviesProject.org/pred/>
-                PREFIX fb: <http://rdf.freebase.com/ns/>
-                PREFIX review: <http://moviesProject.org/sub/review/>
-                PREFIX predicate: <http://moviesProject.org/pred/>
-                PREFIX movie: <http://moviesProject.org/sub/mov/>
-                INSERT DATA
-                { 
-                    review:SDAFAFAFWFAEGr3243523525
-                    predicate:id_r "58a231c5925141179e000674";
-                    predicate:made_by "Jonh Lennon";
-                    predicate:content_is "Hated the soundtrack. Should have hired me";
-                    predicate:is_from movie:11.
-                }"""
+        username = request.POST.get('username')
+        comment = request.POST.get('comment')
+        review_id = get_review_id()
+        if is_movie == "movie":
+            print("MOVIE")
+            query = """"
+                    PREFIX pred:<http://moviesProject.org/pred/>
+                    PREFIX fb: <http://rdf.freebase.com/ns/>
+                    PREFIX review: <http://moviesProject.org/sub/review/>
+                    PREFIX predicate: <http://moviesProject.org/pred/>
+                    PREFIX movie: <http://moviesProject.org/sub/mov/>
+                    INSERT DATA
+                    {{ 
+                        review:{}
+                        predicate:id_r "{}";
+                        predicate:made_by "{}";
+                        predicate:content_is "{}";
+                        predicate:is_from movie:{}.
+                    }}""".format(review_id, review_id, username, comment, id)
+        else:
+            query = """"
+                    PREFIX pred:<http://moviesProject.org/pred/>
+                    PREFIX fb: <http://rdf.freebase.com/ns/>
+                    PREFIX review: <http://moviesProject.org/sub/review/>
+                    PREFIX predicate: <http://moviesProject.org/pred/>
+                    PREFIX serie: <http://moviesProject.org/sub/serie/>
+                    INSERT DATA
+                    {{ 
+                        review:{}
+                        predicate:id_r "{}";
+                        predicate:made_by "{}";
+                        predicate:content_is "{}";
+                        predicate:is_from serie:{}.
+                    }}""".format(review_id, review_id, username, comment, id)
+        print(query)
         payload_query = {"query": query}
-        #res = accessor.sparql_select(body=payload_query,
-        #                             repo_name=repo_name)
-        print("Aqui??")
-        return HttpResponseRedirect('/info/' + id)
+        res = accessor.sparql_update(body=payload_query,
+                                    repo_name=repo_name)
+        return HttpResponseRedirect('/info/' + id + "/" + is_movie)
 
     info_all_dict = []
     info_all_dict.append(info_all)
