@@ -85,6 +85,9 @@ def get_top_series():
     return top_series
 
 def index(request):
+    if 'search' in request.POST:
+        _str = request.POST.get('search', '')
+        return HttpResponseRedirect('/search_results/' + _str)
 
     top_movies = get_top_movies()
     top_series = get_top_series()
@@ -150,6 +153,10 @@ def get_series_genres():
     return s_genres
 
 def movies(request, filter = None, order = None):
+    if 'search' in request.POST:
+        _str = request.POST.get('search', '')
+        return HttpResponseRedirect('/search_results/' + _str)
+
     query_movies_score = """
                     PREFIX mov:<http://moviesProject.org/sub/mov/>
                     PREFIX pred:<http://moviesProject.org/pred/>
@@ -342,6 +349,10 @@ def movies(request, filter = None, order = None):
     return render(request, 'movies_list.html', tparams)
 
 def series(request, filter = None, order = None):
+    if 'search' in request.POST:
+        _str = request.POST.get('search', '')
+        return HttpResponseRedirect('/search_results/' + _str)
+
     query_series_score = """
                     PREFIX serie:<http://moviesProject.org/sub/serie/>
                     PREFIX pred:<http://moviesProject.org/pred/>
@@ -768,6 +779,9 @@ def detail_info(request, id):
 
 
 def playlist(request):
+    if 'search' in request.POST:
+        _str = request.POST.get('search', '')
+        return HttpResponseRedirect('/search_results/' + _str)
     fav = get_top_movies()
 
     tparams = {
@@ -777,5 +791,7 @@ def playlist(request):
     return render(request, 'playlist.html', tparams)
 
 def full_news(request):
-
+    if 'search' in request.POST:
+        _str = request.POST.get('search', '')
+        return HttpResponseRedirect('/search_results/' + _str)
     return render(request, 'news.html')
