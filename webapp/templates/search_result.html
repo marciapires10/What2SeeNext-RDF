@@ -34,19 +34,15 @@
                 {% endfor %}
                 {% for id, name, popularity in result_cast%}
                     <tr>
+                        <td id="poster-search">
+                            
+                        </td>
                         <td id="info-search">
                             <div class="container" style="color: white;">
                                 <h4><b>{{ name }}</b></h4>
                                 <p></p>
-                                <h7>{{ overview }} </h7>
+                                <h7>Popularity: {{ popularity }}</h7>
                                 <p></p>
-                                <h7>IMDb rating: {{ popularity }}</h7>
-                                <p></p>
-                                <form method="post" action="">
-                                    {% csrf_token %}
-                                    <button type="submit" name="show_info" class="btn btn-primary" value="Button">See more</button>
-                                </form>
-                            </div>
                         </td>
                     </tr>
                 {% endfor %}

@@ -647,6 +647,7 @@ def get_search_results(request, _str):
             person.append(e['id']['value'])
             person.append(e['name']['value'])
             person.append(e['score']['value'])
+            cast_list.append(person)
 
     for movie in movies_series_list:
         genre_str = ""
