@@ -359,6 +359,10 @@ def movies(request, filter = None, order = None):
         id = request.POST.get('info-m')
         detail_info(request, id, "movie")
         return HttpResponseRedirect('/info/' + id + "/" + "movie")
+    
+    if 'add-to-b' in request.POST:
+        id = request.POST.get('add-to-b')
+        add_to_favList(id)
 
     tparams = {
         'movies_all': movies_all,
@@ -366,6 +370,24 @@ def movies(request, filter = None, order = None):
     }
 
     return render(request, 'movies_list.html', tparams)
+
+def add_to_favList(id):
+    update = """
+            PREFIX predicate: <http://moviesProject.org/pred/>
+            PREFIX movie: <http://moviesProject.org/sub/mov/>
+            PREFIX list: <http://moviesProject.org/sub/list/>
+            INSERT DATA
+            {{
+                list:list_1
+                    predicate:has movie:{} ;
+                    predicate:name "list_1" .
+            }}
+            """.format(id)
+
+    payload_query = {"update": update}
+    res = accessor.sparql_update(body=payload_query,
+                                repo_name=repo_name)
+    return
 
 def series(request, filter = None, order = None):
     if 'search' in request.POST:
@@ -1020,6 +1042,36 @@ def playlist(request):
         _str = request.POST.get('search', '')
         return HttpResponseRedirect('/search_results/' + _str)
     fav = get_top_movies()
+
+    query = """
+            PREFIX predicate: <http://moviesProject.org/pred/>
+            PREFIX movie: <http://moviesProject.org/sub/mov/>
+            PREFIX list: <http://moviesProject.org/sub/list/>
+            SELECT DISTINCT ?id ?title ?poster ?score
+            WHERE
+            { 
+                list:list_1 predicate:has ?movie .
+                ?movie predicate:id_m ?id .
+                ?movie predicate:title ?title .
+                ?movie predicate:poster ?poster .
+                ?movie predicate:has_score ?score .
+            }
+            """
+
+    payload_query = {"query": query}
+    res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
+    res = json.loads(res)
+    fav = []
+    for e in res['results']['bindings']:
+        movie = []
+        movie.append(e['id']['value'])
+        movie.append(e['title']['value'])
+        if 'poster' in e.keys():
+            movie.append(IMAGES_SITE + str(e['poster']['value']))
+        else:
+            movie.append(NO_IMAGE)
+        movie.append(e['score']['value'])
+        fav.append(movie)
 
     tparams = {
         'fav': fav,
