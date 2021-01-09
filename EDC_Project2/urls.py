@@ -27,5 +27,5 @@ urlpatterns = [
     path('search_results/<_str>/', views.get_search_results, name='search_results'),
     path('info/<id>/<is_movie>', views.detail_info, name='detail_info'),
     path('my_list/', views.playlist, name='playlist'),
-    path('news/', views.full_news, name='full_news'),
+    path('news/', views.film_by_year, name='full_news'),
 ]
