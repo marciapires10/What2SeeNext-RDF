@@ -7,6 +7,7 @@ from s4api.swagger import ApiClient
 
 IMAGES_SITE = "http://image.tmdb.org/t/p/w200"
 NO_IMAGE = "../static/assets/img/NoImage.jpg"
+PERSON_IMAGE = "../static/assets/img/person.jpeg"
 endpoint = "http://localhost:7200"
 repo_name = "movies_db"
 client = ApiClient(endpoint=endpoint)
@@ -65,8 +66,6 @@ def get_top_series():
     payload_query = {"query": query}
     res = accessor.sparql_select(body=payload_query,
                                  repo_name=repo_name)
-
-    print(res)
 
     res = json.loads(res)
     top_series = []
@@ -529,8 +528,6 @@ def series(request, filter = None, order = None):
         serie_tmp.append(poster)
         series_all.append(serie_tmp)
 
-    print(series_all)
-
     sgenres = get_series_genres()
 
     if 'info-m' in request.POST:
@@ -611,7 +608,6 @@ def get_search_results(request, _str):
             }}
         }}
             """.format(_str, _str, _str, _str, _str)
-    # print(query)
     payload_query = {"query": query}
     res = accessor.sparql_select(body=payload_query,
                                  repo_name=repo_name)
@@ -619,7 +615,6 @@ def get_search_results(request, _str):
     res = json.loads(res)
     movies_series_list = []
     cast_list = []
-    # print(res)
     for e in res['results']['bindings']:
         movie_serie = []
         person = []
@@ -658,6 +653,7 @@ def get_search_results(request, _str):
             person.append(e['id']['value'])
             person.append(e['name']['value'])
             person.append(e['score']['value'])
+            person.append(PERSON_IMAGE)
             cast_list.append(person)
 
     for movie in movies_series_list:
@@ -704,8 +700,10 @@ def get_reviews(id):
     res = json.loads(res)
     reviews = []
     for e in res['results']['bindings']:
+        review = []
         for v in e.values():
-            reviews.append(v['value'])
+            review.append(v['value'])
+        reviews.append(review)
 
     return reviews
 
@@ -767,8 +765,6 @@ def detail_info(request, id):
         #info_tmp.append(e['ppop']['value'])
         info_all.append(info_tmp)"""
 
-    print(info_all)
-
     reviews = get_reviews(id)
 
     # delete review
@@ -808,10 +804,11 @@ def detail_info(request, id):
 
         return HttpResponseRedirect('/info/' + id)
 
-
+    info_all_dict = []
+    info_all_dict.append(info_all)
     tparams = {
         'reviews': reviews,
-        'result': info_all,
+        'result': info_all_dict,
     }
 
     return render(request, 'info.html', tparams)
