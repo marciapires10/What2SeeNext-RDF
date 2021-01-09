@@ -793,14 +793,13 @@ def detail_info(request, id, is_movie = "movie"):
     if is_movie == "movie":
         query = """
                 PREFIX pred:<http://moviesProject.org/pred/>
-                SELECT distinct ?id ?title ?poster ?pop ?score ?rel ?run ?genre ?des ?id_p ?job ?char ?name ?ppop
+                SELECT distinct ?movie ?id ?title ?poster ?score ?rel ?run ?genre ?des ?id_p ?job ?char ?name ?ppop
                 WHERE {{
                     ?movie pred:id_m "{}" .
                     ?movie pred:genre ?genre .
                     ?movie pred:poster ?poster .
                     ?movie pred:title ?title .
                     ?movie pred:has_score ?score .
-                    ?movie pred:popularity ?pop .
                     ?movie pred:runtime ?run .
                     ?movie pred:released ?rel .
                     ?movie pred:description ?des .
@@ -819,14 +818,13 @@ def detail_info(request, id, is_movie = "movie"):
     else:
         query = """
                 PREFIX pred:<http://moviesProject.org/pred/>
-                SELECT distinct ?id ?title ?poster ?pop ?score ?rel ?run ?genre ?des ?id_p ?job ?char ?name
+                SELECT distinct ?serie ?id ?title ?poster ?score ?rel ?run ?genre ?des ?id_p ?job ?char ?name
                 WHERE {{
                     ?serie pred:id_s "{}" .
                     ?serie pred:genre ?genre .
                     ?serie pred:poster ?poster .
                     ?serie pred:title ?title .
                     ?serie pred:has_score ?score .
-                    ?serie pred:popularity ?pop .
                     ?serie pred:last_aired ?run .
                     ?serie pred:released ?rel .
                     ?serie pred:description ?des .
@@ -867,13 +865,16 @@ def detail_info(request, id, is_movie = "movie"):
         genre_str += "[" + genre + "]"
 
     info_all = []
+    if is_movie == "movie":
+        info_all.append(res['results']['bindings'][0]['movie']['value'])
+    else:
+        info_all.append(res['results']['bindings'][0]['serie']['value'])
     info_all.append(res['results']['bindings'][0]['title']['value'])
     if str(res['results']['bindings'][0]['poster']['value']) is not "":
         poster = IMAGES_SITE + str(res['results']['bindings'][0]['poster']['value'])
     else:
         poster = NO_IMAGE
     info_all.append(poster)
-    info_all.append(res['results']['bindings'][0]['pop']['value'])
     info_all.append(res['results']['bindings'][0]['score']['value'])
     info_all.append(res['results']['bindings'][0]['rel']['value'])
     info_all.append(res['results']['bindings'][0]['run']['value'])
@@ -894,6 +895,7 @@ def detail_info(request, id, is_movie = "movie"):
     info_all.append(cast)
     info_all.append(crew)
     reviews = get_reviews(id)
+    print(info_all)
 
     # delete review
     if request.POST.get('delete'):

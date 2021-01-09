@@ -81,19 +81,6 @@ function editReview(id) {
   document.getElementById(id).contentEditable = true;
 }
 function updateReview(id) {
-	document.getElementById(id).contentEditable = false;
+  document.getElementById(id).contentEditable = false;
 }
 
-function hideAdd(){
-  console.log("oi");
-  var addB = document.getElementById("add-to-b");
-  console.log(addB);
-  addB.style.visibility = "hidden";
-
-  if(addB.style.display === "none"){
-    addB.style.display = "block";
-  } else{
-    addB.style.display = "none";
-  }
-
-}
