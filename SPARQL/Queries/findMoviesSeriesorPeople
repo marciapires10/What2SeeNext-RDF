@@ -1,24 +1,29 @@
 PREFIX predicate: <http://moviesProject.org/pred/>
-select ?name ?id ?id_m ?id_s ?title ?description 
-where 
-{
-    {
-        ?movie predicate:id_m ?id_m .
-        ?movie predicate:title ?title . 
-        ?movie predicate:description ?overview .
-        FILTER regex(?title, "Lord")
-    }
-    UNION
-    {
-        ?serie predicate:id_m ?id_s .
-        ?serie predicate:title ?title .
-        ?serie predicate:description ?overview .
-        FILTER regex(?title, "rings")
-    }
-    UNION
-    {
-        ?person predicate:id ?id .
-     	?person predicate:name ?name . 
-        FILTER regex(?name, "rings")
-    }
-}
+        select ?name ?id ?id_m ?id_s ?title ?description ?poster ?score
+        where 
+        {
+            {
+                ?movie predicate:id_m ?id_m .
+                ?movie predicate:title ?title . 
+                ?movie predicate:description ?overview .
+                ?movie predicate:poster ?poster .
+                ?movie predicate:has_score ?score .
+                FILTER regex(?title, "{}")
+            }
+            UNION
+            {
+                ?serie predicate:id_m ?id_s .
+                ?serie predicate:title ?title .
+                ?serie predicate:description ?overview .
+                ?movie predicate:poster ?poster .
+                ?movie predicate:has_score ?score .
+                FILTER regex(?title, "{}")
+            }
+            UNION
+            {
+                ?person predicate:id ?id .
+                ?person predicate:name ?name .
+                ?person predicate:popularity ?score 
+                FILTER regex(?name, "{}")
+            }
+        }

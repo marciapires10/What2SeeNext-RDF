@@ -534,9 +534,133 @@ def series(request, filter = None, order = None):
 
     return render(request, 'series_list.html', tparams)
 
-def get_search_results(request):
+def get_search_results(request, _str):
+    if 'search' in request.POST:
+        _str = request.POST.get('search', '')
+        return HttpResponseRedirect('/search_results/' + _str)
+    # if 'show_info' in request.POST:
+    #     res = request.POST.get('show_info')
+    #     res_div = res.split(",")
+    #     if res_div[0] == "True":
+    #         id = res_div[1]
+    #     else:
+    #         id = res_div[1] + ".s"
+    #     detail_info(request, id)
+    #     return HttpResponseRedirect('/info/' + id)
+    query = """
+        PREFIX predicate: <http://moviesProject.org/pred/>
+        select ?name ?id ?id_m ?id_s ?title ?description ?poster ?score ?genre
+        where 
+        {{
+            {{
+                ?movie predicate:id_m ?id_m .
+                ?movie predicate:title ?title . 
+                ?movie predicate:description ?description .
+                ?movie predicate:poster ?poster .
+                ?movie predicate:has_score ?score .
+                ?movie predicate:genre ?genre
+                FILTER regex(?title, "{}")
+            }}
+            UNION
+            {{
+                ?movie predicate:id_m ?id_m .
+                ?movie predicate:title ?title . 
+                ?movie predicate:description ?description .
+                ?movie predicate:poster ?poster .
+                ?movie predicate:has_score ?score .
+                ?movie predicate:genre ?genre
+                FILTER regex(?description, "{}")
+            }}
+            UNION
+            {{
+                ?serie predicate:id_s ?id_s .
+                ?serie predicate:title ?title .
+                ?serie predicate:description ?description .
+                ?serie predicate:poster ?poster .
+                ?serie predicate:has_score ?score .
+                ?serie predicate:genre ?genre
+                FILTER regex(?title, "{}")
+            }}
+            UNION
+            {{
+                ?serie predicate:id_s ?id_s .
+                ?serie predicate:title ?title .
+                ?serie predicate:description ?description .
+                ?serie predicate:poster ?poster .
+                ?serie predicate:has_score ?score .
+                ?serie predicate:genre ?genre
+                FILTER regex(?description, "{}")
+            }}
+            UNION
+            {{
+                ?person predicate:id ?id .
+                ?person predicate:name ?name .
+                ?person predicate:popularity ?score 
+                FILTER regex(?name, "{}")
+            }}
+        }}
+            """.format(_str, _str, _str, _str, _str)
+    # print(query)
+    payload_query = {"query": query}
+    res = accessor.sparql_select(body=payload_query,
+                                 repo_name=repo_name)
 
-    return render(request, 'search_result.html')
+    res = json.loads(res)
+    movies_series_list = []
+    cast_list = []
+    # print(res)
+    for e in res['results']['bindings']:
+        movie_serie = []
+        person = []
+        genres = []
+        if 'id_m' in e.keys():
+            movie_serie.append(e['id_m']['value'])
+            movie_serie.append(e['title']['value'])
+            movie_serie.append(e['description']['value'])
+            movie_serie.append(e['score']['value'])
+            if 'poster' in e.keys():
+                movie_serie.append(IMAGES_SITE + str(e['poster']['value']))
+            else:
+                movie_serie.append("None")
+            if len(movies_series_list) == 0 or not movie_serie[0] in movies_series_list[len(movies_series_list)-1]:                    
+                genres.append(e['genre']['value'])
+                movie_serie.append(genres)
+                movies_series_list.append(movie_serie)
+            else:
+                movies_series_list[len(movies_series_list)-1][5].append(e['genre']['value'])
+        elif 'id_s' in e.keys():
+            movie_serie.append(e['id_s']['value'])
+            movie_serie.append(e['title']['value'])
+            movie_serie.append(e['description']['value'])
+            movie_serie.append(e['score']['value'])
+            if 'poster' in e.keys():
+                movie_serie.append(IMAGES_SITE + str(e['poster']['value']))
+            else:
+                movie_serie.append("None")
+            if len(movies_series_list) == 0 or not movie_serie[0] in movies_series_list[len(movies_series_list)-1]:                    
+                genres.append(e['genre']['value'])
+                movie_serie.append(genres)
+                movies_series_list.append(movie_serie)
+            else:
+                movies_series_list[len(movies_series_list)-1][5].append(e['genre']['value'])
+        else:
+            person.append(e['id']['value'])
+            person.append(e['name']['value'])
+            person.append(e['score']['value'])
+
+    for movie in movies_series_list:
+        genre_str = ""
+        for genre in movie[5]:
+            genre_str+= "["+str(genre)+"]"
+        movie[5] = genre_str
+
+    tparams = {
+        'str': _str,
+        'result_movies_series': movies_series_list,
+        'result_cast': cast_list,
+    }
+
+    return render(request, 'search_result.html', tparams)
     
 def get_reviews(id):
 
