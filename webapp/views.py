@@ -1067,6 +1067,30 @@ def playlist(request):
         _str = request.POST.get('search', '')
         return HttpResponseRedirect('/search_results/' + _str)
 
+    if 'info-m' in request.POST:
+        id = request.POST.get('info-m')
+        query = """
+            PREFIX predicate: <http://moviesProject.org/pred/>
+            ASK
+            where 
+            {{
+                ?movie predicate:id_m "{}" .
+            }}
+            """.format(id)
+        payload_query = {"query": query}
+        res = accessor.sparql_select(body=payload_query,
+                                    repo_name=repo_name)
+
+        res = json.loads(res)
+        is_movie = res['boolean']
+        is_movie_str = ""
+        if is_movie:
+            is_movie_str = "movie"
+        else:
+            is_movie_str = "serie"
+        detail_info(request, id, is_movie_str)
+        return HttpResponseRedirect('/info/' + id + "/" + is_movie_str)
+
     query = """
             PREFIX predicate: <http://moviesProject.org/pred/>
             PREFIX movie: <http://moviesProject.org/sub/mov/>
