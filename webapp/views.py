@@ -789,7 +789,7 @@ def get_reviews(id):
                 }}
                 union
                 {{
-                    ?rev pred:is_from ?mov .
+                    ?rev pred:is_from ?serie .
                     ?serie pred:id_s "{}" .
                     ?rev pred:content_is ?content .
                     ?rev pred:made_by ?author .
