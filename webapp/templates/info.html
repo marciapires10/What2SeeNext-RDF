@@ -5,7 +5,7 @@
 <!-- Masthead-->
 <header class="masthead">
     {% for uri, title, poster, score, date, runtime, genres, overv, cast, crew in result %}
-  <div id="container-all" class="container h-100" about="" typeof="">
+  <div id="container-all" class="container h-100" about="{{ uri }}" typeof="">
         <div class="row h-100 align-items-center justify-content-center text-center bg-dark" id="index-container">
             <div class="col-lg-10">
               <h2 style="color: white; padding-top: 40px;" property="pred:title">{{ title }}</h2>
