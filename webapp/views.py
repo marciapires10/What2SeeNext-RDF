@@ -818,6 +818,11 @@ def get_reviews(id):
     return reviews
 
 def detail_info(request, id, is_movie = "movie"):
+
+    if 'search' in request.POST:
+        _str = request.POST.get('search', '')
+        return HttpResponseRedirect('/search_results/' + _str)
+    
     if is_movie == "movie":
         query = """
                 PREFIX pred:<http://moviesProject.org/pred/>
