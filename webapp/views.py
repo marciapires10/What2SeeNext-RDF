@@ -1032,13 +1032,14 @@ def detail_info(request, id, is_movie = "movie"):
     return render(request, 'info.html', tparams)
 
 def film_by_year(request):
+    print("print")
     sparql = SPARQLWrapper("https://dbpedia.org/sparql")
     sparql.setQuery("""
             PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
             select ?mov ?name ?runtime
             where {{
                 select ?name ?runtime where{{
-                    ?mov dct:subject <http://dbpedia.org/resource/Category:%s_films> .
+                    ?mov dct:subject <http://dbpedia.org/resource/%s_films> .
                     ?mov foaf:name ?name .
                     ?mov dbo:Work ?runtime .
                 }}
