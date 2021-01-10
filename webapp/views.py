@@ -43,7 +43,7 @@ def get_top_movies():
         movie_tmp = []
         movie_tmp.append(e['id']['value'])
         movie_tmp.append(e['title']['value'])
-        if str(e['poster']['value']) is not "":
+        if not str(e['poster']['value']) is "":
             poster = IMAGES_SITE + str(e['poster']['value'])
         else:
             poster = NO_IMAGE
@@ -77,7 +77,7 @@ def get_top_series():
         serie_tmp = []
         serie_tmp.append(e['id']['value'])
         serie_tmp.append(e['title']['value'])
-        if str(e['poster']['value']) is not "":
+        if not str(e['poster']['value']) is "":
             poster = IMAGES_SITE + str(e['poster']['value'])
         else:
             poster = NO_IMAGE
@@ -349,7 +349,7 @@ def movies(request, filter = None, order = None):
         movie_tmp = []
         movie_tmp.append(e['id']['value'])
         movie_tmp.append(e['title']['value'])
-        if str(e['poster']['value']) is not "":
+        if not str(e['poster']['value']) is "":
             poster = IMAGES_SITE + str(e['poster']['value'])
         else:
             poster = NO_IMAGE
@@ -600,7 +600,7 @@ def series(request, filter = None, order = None):
         serie_tmp = []
         serie_tmp.append(e['id']['value'])
         serie_tmp.append(e['title']['value'])
-        if str(e['poster']['value']) is not "":
+        if not str(e['poster']['value']) is "":
             poster = IMAGES_SITE + str(e['poster']['value'])
         else:
             poster = NO_IMAGE
@@ -937,7 +937,7 @@ def detail_info(request, id, is_movie = "movie"):
     else:
         info_all.append(res['results']['bindings'][0]['serie']['value'])
     info_all.append(res['results']['bindings'][0]['title']['value'])
-    if str(res['results']['bindings'][0]['poster']['value']) is not "":
+    if not str(res['results']['bindings'][0]['poster']['value']) is "":
         poster = IMAGES_SITE + str(res['results']['bindings'][0]['poster']['value'])
     else:
         poster = NO_IMAGE
@@ -1032,19 +1032,20 @@ def detail_info(request, id, is_movie = "movie"):
     return render(request, 'info.html', tparams)
 
 def film_by_year(request):
-    print("print")
+    s_year = "http://dbpedia.org/resource/Category:"+str(1999)+"_films"
+    print(s_year)
     sparql = SPARQLWrapper("https://dbpedia.org/sparql")
     sparql.setQuery("""
             PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
             select ?mov ?name ?runtime
-            where {{
-                select ?name ?runtime where{{
-                    ?mov dct:subject <http://dbpedia.org/resource/%s_films> .
+            where {
+                select ?mov ?name ?runtime where{
+                    ?mov dct:subject <%s> .
                     ?mov foaf:name ?name .
-                    ?mov dbo:Work ?runtime .
-                }}
-            }}
-            """% (1999))
+                    ?mov dbo:runtime ?runtime
+                }
+            }
+            """% (s_year))
     sparql.setReturnFormat(JSON)
     res = sparql.query().convert()
     print(res)
@@ -1053,7 +1054,7 @@ def film_by_year(request):
         movie = []
         movie.append(e['mov']['value'])
         movie.append(e['name']['value'])
-        movie.append(e['runtime']['value'])
+        movie.append(float(e['runtime']['value'])/60)
         year_movies_list.append(movie)
 
     tparams = {
@@ -1063,26 +1064,29 @@ def film_by_year(request):
     return render(request, 'news.html', tparams)
 
 def film_from_dbpedia(request, mov_name):
+    print("\n\n")
+    print("mov name:"+mov_name)
+    movie = "http://dbpedia.org/resource/"+mov_name
     sparql = SPARQLWrapper("https://dbpedia.org/sparql")
     sparql.setQuery("""
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         select ?title ?rel ?abs ?runtime ?pname ?dirname ?prodname
         where {
             select ?title ?rel ?abs ?runtime ?pname ?dirname ?prodname{
-                <http://dbpedia.org/resource/%s> dbo:abstract ?abs .
-                <http://dbpedia.org/resource/%s> dbo:releaseDate ?rel .
-                <http://dbpedia.org/resource/%s> dbo:Work/runtime ?runtime .
-                <http://dbpedia.org/resource/%s> dbp:name ?title.
+                <%s> dbo:abstract ?abs .
+                <%s> dbo:releaseDate ?rel .
+                <%s> dbo:Work/runtime ?runtime .
+                <%s> dbp:name ?title.
             }optional{
-                <http://dbpedia.org/resource/%s> dbo:starring ?starr.
-                <http://dbpedia.org/resource/%s> dbo:director ?dir .
+                <%s> dbo:starring ?starr.
+                <%s> dbo:director ?dir .
                 ?dir dbp:name ?dirname .
-                <http://dbpedia.org/resource/%s> dbo:producer ?prod .
+                <%s> dbo:producer ?prod .
                 ?prod dbp:name ?prodname .
                 ?starr dbp:name ?pname .
             }
         }
-    """ % (mov_name, mov_name, mov_name, mov_name, mov_name, mov_name, mov_name))
+    """ % (movie, movie, movie, movie, movie, movie, movie))
     sparql.setReturnFormat(JSON)
     res = sparql.query().convert()
     movie_info = []
