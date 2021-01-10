@@ -617,7 +617,7 @@ def get_search_results(request, _str):
 
     query = """
         PREFIX predicate: <http://moviesProject.org/pred/>
-        select ?name ?id ?id_m ?id_s ?title ?description ?poster ?score ?genre
+        select ?movie ?serie ?person ?name ?id ?id_m ?id_s ?title ?description ?poster ?score ?genre
         where 
         {{
             {{
@@ -691,6 +691,7 @@ def get_search_results(request, _str):
             if len(movies_series_list) == 0 or not movie_serie[0] in movies_series_list[len(movies_series_list)-1]:                    
                 genres.append(e['genre']['value'])
                 movie_serie.append(genres)
+                movie_serie.append(e['movie']['value'])
                 movies_series_list.append(movie_serie)
             else:
                 movies_series_list[len(movies_series_list)-1][5].append(e['genre']['value'])
@@ -706,6 +707,7 @@ def get_search_results(request, _str):
             if len(movies_series_list) == 0 or not movie_serie[0] in movies_series_list[len(movies_series_list)-1]:                    
                 genres.append(e['genre']['value'])
                 movie_serie.append(genres)
+                movie_serie.append(e['serie']['value'])
                 movies_series_list.append(movie_serie)
             else:
                 movies_series_list[len(movies_series_list)-1][5].append(e['genre']['value'])
@@ -714,6 +716,7 @@ def get_search_results(request, _str):
             person.append(e['name']['value'])
             person.append(e['score']['value'])
             person.append(PERSON_IMAGE)
+            person.append(e['person']['value'])
             cast_list.append(person)
 
     for movie in movies_series_list:

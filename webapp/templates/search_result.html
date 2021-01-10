@@ -6,24 +6,24 @@
     <div id="container-all" class="container h-100">
         <div class="row h-100 align-items-center justify-content-center text-center bg-dark" id="index-container" style="overflow: auto; min-height: 0; flex-grow: 1;">
             <h2 style="color: white;">Results for '{{ str }}'</h2>
-            <div class="container" id="movie-search-container" xmlns:pred="http://moviesProject.org/pred/" about="">
+            <div class="container" id="movie-search-container" xmlns:pred="http://moviesProject.org/pred/">
                 <table id="movies-search">
-                    {% for id, title, overview, rating, poster, genre in result_movies_series %}
-                    <tr>
+                    {% for id, title, overview, rating, poster, genre, uri in result_movies_series %}
+                    <tr about="{{ uri }}">
                         <td id="poster-search">
                             <div class="container">
-                                <img class="img-fluid" src={{ poster }} alt="" id="poster-search-img"/>
+                                <img property="pred:poster" class="img-fluid" src={{ poster }} alt="" id="poster-search-img"/>
                             </div>
                         </td>
                         <td id="info-search">
                             <div class="container" style="color: white;">
-                                <h4><b>{{ title }}</b></h4>
+                                <h4><b><span property="pred:title">{{ title }}</span></b></h4>
                                 <p></p>
-                                <h6>{{ genre }}</h6>
+                                <h6><span property="pred:genre">{{ genre }}</span></h6>
                                 <p></p>
-                                <h7>{{ overview }} </h7>
+                                <h7><span property="pred:description">{{ overview }}</span></h7>
                                 <p></p>
-                                <h7>IMDb rating: {{ rating }}</h7>
+                                <h7>IMDb rating: <span property="pred:has_score">{{ rating }}</span></h7>
                                 <p></p>
                                 <form method="post" action="">
                                     {% csrf_token %}
@@ -32,8 +32,8 @@
                         </td>
                     </tr>
                 {% endfor %}
-                {% for id, name, popularity, poster in result_cast%}
-                    <tr>
+                {% for id, name, popularity, poster, uri in result_cast%}
+                    <tr about="{{ uri }}">
                         <td id="poster-search">
                             <div class="container">
                                 <img class="img-fluid" src={{ poster }} alt="" id="poster-search-img"/>
@@ -41,9 +41,9 @@
                         </td>
                         <td id="info-search">
                             <div class="container" style="color: white;">
-                                <h4><b>{{ name }}</b></h4>
+                                <h4><b><span property="pred:name">{{ name }}</span></b></h4>
                                 <p></p>
-                                <h7>Popularity: {{ popularity }}</h7>
+                                <h7>Popularity: <span property="pred:popularity">{{ popularity }}</span></h7>
                                 <p></p>
                         </td>
                     </tr>
