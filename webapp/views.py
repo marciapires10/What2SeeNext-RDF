@@ -778,7 +778,7 @@ def get_reviews(id):
 
     query = """
             PREFIX pred:<http://moviesProject.org/pred/>
-            SELECT ?author ?content ?id
+            SELECT ?rev ?author ?content ?id
             WHERE{{
                 {{
                     ?rev pred:is_from ?mov .
