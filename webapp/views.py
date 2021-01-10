@@ -1,4 +1,7 @@
 import json
+
+from SPARQLWrapper import SPARQLWrapper, JSON
+
 from webapp import queries
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
@@ -987,23 +990,21 @@ def detail_info(request, id, is_movie = "movie"):
     return render(request, 'info.html', tparams)
 
 def film_by_year(request):
-    query = """
+    sparql = SPARQLWrapper("https://dbpedia.org/sparql")
+    sparql.setQuery("""
             PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
             select ?mov ?name ?runtime
             where {{
-                SERVICE <https://dbpedia.org/sparql>{{
-                    select ?name ?runtime where{{
-                        ?mov dct:subject <http://dbpedia.org/resource/Category:{}_films> .
-                        ?mov foaf:name ?name .
-                        ?mov dbo:Work/runtime ?runtime .
-                    }}
-                }} 
+                select ?name ?runtime where{{
+                    ?mov dct:subject <http://dbpedia.org/resource/Category:%s_films> .
+                    ?mov foaf:name ?name .
+                    ?mov dbo:Work ?runtime .
+                }}
             }}
-            """.format(1999)
-    payload_query = {"query": query}
-    res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
+            """% (1999))
+    sparql.setReturnFormat(JSON)
+    res = sparql.query().convert()
     print(res)
-    res = json.loads(res)
     year_movies_list = []
     for e in res['results']['bindings']:
         movie = []
@@ -1019,30 +1020,28 @@ def film_by_year(request):
     return render(request, 'news.html', tparams)
 
 def film_from_dbpedia(request, mov_name):
-    query = """
+    sparql = SPARQLWrapper("https://dbpedia.org/sparql")
+    sparql.setQuery("""
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         select ?title ?rel ?abs ?runtime ?pname ?dirname ?prodname
         where {
-            SERVICE <https://dbpedia.org/sparql>{
-                select ?title ?rel ?abs ?runtime ?pname ?dirname ?prodname{
-                    <http://dbpedia.org/resource/{}> dbo:abstract ?abs .
-                    <http://dbpedia.org/resource/{}> dbo:releaseDate ?rel .
-                    <http://dbpedia.org/resource/{}> dbo:Work/runtime ?runtime .
-                    <http://dbpedia.org/resource/{}> dbp:name ?title.
-                }optional{
-                    <http://dbpedia.org/resource/{}> dbo:starring ?starr.
-                    <http://dbpedia.org/resource/{}> dbo:director ?dir .
-                    ?dir dbp:name ?dirname .
-                    <http://dbpedia.org/resource/{}> dbo:producer ?prod .
-                    ?prod dbp:name ?prodname .
-                    ?starr dbp:name ?pname .
-                }
-            } 
+            select ?title ?rel ?abs ?runtime ?pname ?dirname ?prodname{
+                <http://dbpedia.org/resource/%s> dbo:abstract ?abs .
+                <http://dbpedia.org/resource/%s> dbo:releaseDate ?rel .
+                <http://dbpedia.org/resource/%s> dbo:Work/runtime ?runtime .
+                <http://dbpedia.org/resource/%s> dbp:name ?title.
+            }optional{
+                <http://dbpedia.org/resource/%s> dbo:starring ?starr.
+                <http://dbpedia.org/resource/%s> dbo:director ?dir .
+                ?dir dbp:name ?dirname .
+                <http://dbpedia.org/resource/%s> dbo:producer ?prod .
+                ?prod dbp:name ?prodname .
+                ?starr dbp:name ?pname .
+            }
         }
-    """.format(mov_name, mov_name, mov_name, mov_name, mov_name, mov_name, mov_name)
-    payload_query = {"query": query}
-    res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
-    res = json.loads(res)
+    """ % (mov_name, mov_name, mov_name, mov_name, mov_name, mov_name, mov_name))
+    sparql.setReturnFormat(JSON)
+    res = sparql.query().convert()
     movie_info = []
     for e in res['results']['bindings']:
         info = []
