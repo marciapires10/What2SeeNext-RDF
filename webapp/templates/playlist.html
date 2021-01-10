@@ -64,7 +64,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8 text-center">
-                <h2 class="text-white mt-0">If you liked {{ id_random }} you may also like...</h2>
+                <h2 class="text-white mt-0">If you liked {{chosen_movie}} you may also like...</h2>
                 <hr class="divider light my-4" />
             </div>
             <div id="news_list" class="carousel align-items-center">
@@ -86,11 +86,11 @@
             <div class="carousel-content" role="listbox">
                 <div class="carousel-item active">
                     <div class="row">
-                        {% for id, title, poster, score in fav %}
+                        {% for id, title, poster, score in recommended %}
                             {% if forloop.counter0 <= 3 %}
                                 <div class="col-lg-3 col-md-6 text-center">
                                     <div class="mt-5">
-                                        <img class="img-fluid" src="{% static 'assets/img/hp.jpg' %}" alt="" />
+                                        <img class="img-fluid" src="{{ poster }}" alt="" />
                                         <p></p>
                                         <a href={{ title }}>
                                         <h3 class="h4 mb-2" style="text-align: left;">{{ title }}</h3>

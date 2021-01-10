@@ -390,6 +390,40 @@ def add_movie_to_favList(id):
     payload_query = {"update": update}
     res = accessor.sparql_update(body=payload_query,
                                 repo_name=repo_name)
+
+    update = """
+                        PREFIX predicate: <http://moviesProject.org/pred/>
+                        PREFIX movie: <http://moviesProject.org/sub/mov/>
+                        PREFIX list: <http://moviesProject.org/sub/list/>
+                        PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+                        INSERT
+                        {{
+                        ?movie_1 predicate:recomends ?movie_2
+                        }}
+                        WHERE
+                        {{ 
+                            ?movie_1 predicate:id_m "{}" .
+                            ?movie_1 predicate:genre ?genre .
+                            ?movie_1 predicate:has_score ?score_1 .
+                            ?movie_2 predicate:genre ?genre .
+                            ?movie_2 predicate:id_m ?id.
+                            ?movie_2 predicate:title ?title .
+                            ?movie_2 predicate:has_score ?score .
+                            ?movie_2 predicate:popularity ?popularity .
+                            
+                            FILTER(xsd:float(?score) < xsd:float(?score_1) + 1.0)
+                            FILTER(xsd:float(?score) > xsd:float(?score_1) - 1.0)
+                            FILTER(?id != "{}")
+                            FILTER NOT EXISTS
+                            {{
+                                list:list_1 predicate:has ?movie_2
+                            }}
+                        }}
+                        """.format(id, id)
+    payload_query = {"update": update}
+    res = accessor.sparql_update(body=payload_query,
+                                repo_name=repo_name)
+    print(res)
     return
 
 def series(request, filter = None, order = None):
@@ -1127,6 +1161,8 @@ def playlist(request):
     res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
     res = json.loads(res)
     fav = []
+    chosen_movie_title = ""
+    recomended_movies = []
     for e in res['results']['bindings']:
         movie = []
         movie.append(e['id']['value'])
@@ -1138,8 +1174,48 @@ def playlist(request):
         movie.append(e['score']['value'])
         fav.append(movie)
 
+    if len(fav) > 0:
+        chosen_movie = random.randint(0, len(fav) - 1)
+        chosen_fav_id = fav[chosen_movie][0]
+        chosen_movie_title = fav[chosen_movie][1]
+        print(chosen_fav_id)
+        query = """
+                PREFIX predicate: <http://moviesProject.org/pred/>
+                PREFIX movie: <http://moviesProject.org/sub/mov/>
+                PREFIX list: <http://moviesProject.org/sub/list/>
+                PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+                SELECT DISTINCT ?id ?title ?poster ?score
+                WHERE
+                {{
+                    ?movie_1 predicate:id_m "{}" .
+                    ?movie_1 predicate:recomends ?movie_2 .
+                    ?movie_2 predicate:id_m ?id .
+                    ?movie_2 predicate:title ?title .
+                    ?movie_2 predicate:poster ?poster .
+                    ?movie_2 predicate:has_score ?score .
+                }} ORDER BY DESC(xsd:float(?popularity)) LIMIT 5
+                """.format(chosen_fav_id)
+        payload_query = {"query": query}
+        res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
+        res = json.loads(res)
+
+        
+        for e in res['results']['bindings']:
+            movie = []
+            movie.append(e['id']['value'])
+            movie.append(e['title']['value'])
+            if 'poster' in e.keys():
+                movie.append(IMAGES_SITE + str(e['poster']['value']))
+            else:
+                movie.append(NO_IMAGE)
+            movie.append(e['score']['value'])
+            recomended_movies.append(movie)
+
+    print(chosen_movie_title)
     tparams = {
         'fav': fav,
+        'recommended': recomended_movies,
+        'chosen_movie': chosen_movie_title
     }
 
     return render(request, 'playlist.html', tparams)
