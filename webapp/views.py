@@ -1031,7 +1031,7 @@ def detail_info(request, id, is_movie = "movie"):
     return render(request, 'info.html', tparams)
 
 def film_by_year(request, year=datetime.date.today().year):
-    s_year = "http://dbpedia.org/resource/Category:"+year+"_films"
+    s_year = "http://dbpedia.org/resource/Category:"+str(year)+"_films"
     print(s_year)
     sparql = SPARQLWrapper("https://dbpedia.org/sparql")
     sparql.setQuery("""
@@ -1051,7 +1051,7 @@ def film_by_year(request, year=datetime.date.today().year):
     year_movies_list = []
     for e in res['results']['bindings']:
         movie = []
-        movie.append(e['mov']['value'].spli(":")[2])
+        movie.append(e['mov']['value'].split(":")[1])
         movie.append(e['name']['value'])
         movie.append(float(e['runtime']['value'])/60)
         year_movies_list.append(movie)
