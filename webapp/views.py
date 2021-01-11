@@ -10,7 +10,9 @@ import random, string
 
 IMAGES_SITE = "http://image.tmdb.org/t/p/w200"
 NO_IMAGE = "../static/assets/img/NoImage.jpg"
-PERSON_IMAGE = "../static/assets/img/person.jpeg"
+PERSON_IMAGE = "/static/assets/img/person.jpg"
+MALE_IMAGE = "/static/assets/img/male.png"
+FEMALE_IMAGE = "/static/assets/img/female.jpg"
 endpoint = "http://localhost:7200"
 repo_name = "movies_db"
 client = ApiClient(endpoint=endpoint)
@@ -42,7 +44,7 @@ def get_top_movies():
         movie_tmp = []
         movie_tmp.append(e['id']['value'])
         movie_tmp.append(e['title']['value'])
-        if not str(e['poster']['value']) is "":
+        if str(e['poster']['value']) != "":
             poster = IMAGES_SITE + str(e['poster']['value'])
         else:
             poster = NO_IMAGE
@@ -76,7 +78,7 @@ def get_top_series():
         serie_tmp = []
         serie_tmp.append(e['id']['value'])
         serie_tmp.append(e['title']['value'])
-        if not str(e['poster']['value']) is "":
+        if str(e['poster']['value']) != "":
             poster = IMAGES_SITE + str(e['poster']['value'])
         else:
             poster = NO_IMAGE
@@ -348,7 +350,7 @@ def movies(request, filter = None, order = None):
         movie_tmp = []
         movie_tmp.append(e['id']['value'])
         movie_tmp.append(e['title']['value'])
-        if not str(e['poster']['value']) is "":
+        if str(e['poster']['value']) != "":
             poster = IMAGES_SITE + str(e['poster']['value'])
         else:
             poster = NO_IMAGE
@@ -599,7 +601,7 @@ def series(request, filter = None, order = None):
         serie_tmp = []
         serie_tmp.append(e['id']['value'])
         serie_tmp.append(e['title']['value'])
-        if not str(e['poster']['value']) is "":
+        if str(e['poster']['value']) != "":
             poster = IMAGES_SITE + str(e['poster']['value'])
         else:
             poster = NO_IMAGE
@@ -684,7 +686,7 @@ def get_search_results(request, _str):
 
     query = """
         PREFIX predicate: <http://moviesProject.org/pred/>
-        select ?movie ?serie ?person ?name ?id ?id_m ?id_s ?title ?description ?poster ?score ?genre
+        select ?movie ?serie ?person ?name ?id ?id_m ?id_s ?title ?description ?poster ?score ?genre ?gender
         where 
         {{
             {{
@@ -730,7 +732,8 @@ def get_search_results(request, _str):
             {{
                 ?person predicate:id ?id .
                 ?person predicate:name ?name .
-                ?person predicate:popularity ?score 
+                ?person predicate:popularity ?score .
+                ?person predicate:gender ?gender .
                 FILTER regex(?name, "{}")
             }}
         }}
@@ -782,8 +785,11 @@ def get_search_results(request, _str):
             person.append(e['id']['value'])
             person.append(e['name']['value'])
             person.append(e['score']['value'])
-            person.append(PERSON_IMAGE)
             person.append(e['person']['value'])
+            if e['gender']['value'] == "1":
+                person.append(FEMALE_IMAGE)
+            else:
+                person.append(MALE_IMAGE)
             cast_list.append(person)
 
     for movie in movies_series_list:
@@ -970,7 +976,7 @@ def detail_info(request, id, is_movie = "movie"):
     else:
         info_all.append(res['results']['bindings'][0]['serie']['value'])
     info_all.append(res['results']['bindings'][0]['title']['value'])
-    if not str(res['results']['bindings'][0]['poster']['value']) is "":
+    if str(res['results']['bindings'][0]['poster']['value']) != "":
         poster = IMAGES_SITE + str(res['results']['bindings'][0]['poster']['value'])
     else:
         poster = NO_IMAGE
