@@ -641,6 +641,40 @@ def add_serie_to_favList(id):
     payload_query = {"update": update}
     res = accessor.sparql_update(body=payload_query,
                                 repo_name=repo_name)
+
+    update = """
+                        PREFIX predicate: <http://moviesProject.org/pred/>
+                        PREFIX serie: <http://moviesProject.org/sub/serie/>
+                        PREFIX list: <http://moviesProject.org/sub/list/>
+                        PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+                        INSERT
+                        {{
+                        ?serie_1 predicate:recomends ?serie_2
+                        }}
+                        WHERE
+                        {{ 
+                            ?serie_1 predicate:id_s "{}" .
+                            ?serie_1 predicate:genre ?genre .
+                            ?serie_1 predicate:has_score ?score_1 .
+                            ?serie_2 predicate:genre ?genre .
+                            ?serie_2 predicate:id_s ?id.
+                            ?serie_2 predicate:title ?title .
+                            ?serie_2 predicate:has_score ?score .
+                            ?serie_2 predicate:popularity ?popularity .
+                            
+                            FILTER(xsd:float(?score) < xsd:float(?score_1) + 1.0)
+                            FILTER(xsd:float(?score) > xsd:float(?score_1) - 1.0)
+                            FILTER(?id != "{}")
+                            FILTER NOT EXISTS
+                            {{
+                                list:list_1 predicate:has ?serie_2
+                            }}
+                        }}
+                        """.format(id, id)
+    payload_query = {"update": update}
+    res = accessor.sparql_update(body=payload_query,
+                                repo_name=repo_name)
+    print(res)
     return
 
 def get_search_results(request, _str):
@@ -1191,14 +1225,25 @@ def playlist(request):
                 SELECT DISTINCT ?id ?title ?poster ?score
                 WHERE
                 {{
+                {{
                     ?movie_1 predicate:id_m "{}" .
                     ?movie_1 predicate:recomends ?movie_2 .
                     ?movie_2 predicate:id_m ?id .
                     ?movie_2 predicate:title ?title .
                     ?movie_2 predicate:poster ?poster .
                     ?movie_2 predicate:has_score ?score .
+                }}
+                UNION
+                {{
+                    ?serie_1 predicate:id_s "{}" .
+                    ?serie_1 predicate:recomends ?serie_2 .
+                    ?serie_2 predicate:id_s ?id .
+                    ?serie_2 predicate:title ?title .
+                    ?serie_2 predicate:poster ?poster .
+                    ?serie_2 predicate:has_score ?score .
+                }}
                 }} ORDER BY DESC(xsd:float(?popularity)) LIMIT 5
-                """.format(chosen_fav_id)
+                """.format(chosen_fav_id, chosen_fav_id)
         payload_query = {"query": query}
         res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
         res = json.loads(res)
