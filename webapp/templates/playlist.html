@@ -66,22 +66,35 @@
             <div class="col-lg-8 text-center">
                 <h2 class="text-white mt-0">If you liked {{chosen_movie}} you may also like...</h2>
                 <hr class="divider light my-4" />
+                <p></p>
             </div>
             <div id="news_list" >
-            {% load static %}
             <div role="listbox">
                     <div class="row">
                         {% for id, title, poster, score in recommended %}
                             {% if forloop.counter0 <= 3 %}
                                 <div class="col-lg-3 col-md-6 text-center">
-                                    <div class="mt-5">
-                                        <img class="img-fluid" src="{{ poster }}" alt="" />
-                                        <p></p>
-                                        <a href={{ title }}></a>
-                                        <h3 class="h4 mb-2" style="text-align: left;"> {{ title }}</h3>
-                                        <p></p>
-                                        <p style="font-size: 0.8rem; text-align: left">[{{ score }}]</p>
-                                    </div>
+                                    <form action="" method="post">
+                                        {% csrf_token %}
+                                        <div class="card mb-2" id="full-card-all" style="margin-right: 50px; margin-top: 20px">
+                                            <img class="img-fluid" src="{{ poster }}" alt="{{ title }}" title="{{ title }}" />
+                                            <div class="overlay" alt="{{ title }}" title="{{ title }}">
+                                                <div class="addP">
+                                                    <button type="submit" name="add-to-b" class="btn btn-primary" id="add-to-b"
+                                                        style="margin-top: 10px; margin-right: -143px" value="{{ id }}">
+                                                    <i class="fas fa-plus"></i>
+                                                    </button>
+                                                </div>
+                                                <button type="submit" name="info-m" class="btn btn-primary" id="more-movie-all"
+                                                        style="margin-top: 100px;" value="{{ id }}">
+                                                    See more
+                                                </button>
+                                            </div>
+                                            <p></p>
+                                            <h3 class="h4 mb-2" style="text-align: left; color: white; "> {{ title }}</h3>
+                                            <p style="font-size: 1rem; text-align: left; color: white">{{ score }} <i class="fas fa-star" style="color:#c69500;"></i></p>
+                                        </div>
+                                    </form>
                                 </div>
                             {% endif %}
                         {% endfor %}

@@ -1170,6 +1170,30 @@ def playlist(request):
         detail_info(request, id, is_movie_str)
         return HttpResponseRedirect('/info/' + id + "/" + is_movie_str)
 
+    if 'add-to-b' in request.POST:
+        id = request.POST.get('add-to-b')
+        query = """
+                    PREFIX predicate: <http://moviesProject.org/pred/>
+                    ASK
+                    where 
+                    {{
+                        ?movie predicate:id_m "{}" .
+                    }}
+                    """.format(id)
+        payload_query = {"query": query}
+        res = accessor.sparql_select(body=payload_query,
+                                     repo_name=repo_name)
+
+        res = json.loads(res)
+        is_movie = res['boolean']
+
+        if is_movie:
+            id = request.POST.get('add-to-b')
+            add_movie_to_favList(id)
+        else:
+            id = request.POST.get('add-to-b')
+            add_serie_to_favList(id)
+
     query = """
             PREFIX predicate: <http://moviesProject.org/pred/>
             PREFIX movie: <http://moviesProject.org/sub/mov/>
