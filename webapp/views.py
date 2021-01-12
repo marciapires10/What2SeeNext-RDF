@@ -1076,7 +1076,7 @@ def film_by_year(request, year = datetime.date.today().year):
         year = request.POST.get('m_year')
 
     s_year = "http://dbpedia.org/resource/Category:"+str(year)+"_films"
-    print(s_year)
+    #print(s_year)
     sparql = SPARQLWrapper("https://dbpedia.org/sparql")
     sparql.setQuery("""
             PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -1100,11 +1100,13 @@ def film_by_year(request, year = datetime.date.today().year):
         movie.append(float(e['runtime']['value'])/60)
         year_movies_list.append(movie)
 
+        #print(e['mov']['value'].split(":")[1])
+
     if 'info-m-dbpedia' in request.POST:
         mov = request.POST.get('info-m-dbpedia')
-        print(mov)
-        film_from_dbpedia(request, mov)
-        return HttpResponseRedirect('/film_years/' + mov)
+        movie = mov.replace("//dbpedia.org/resource/", "")
+        #film_from_dbpedia(request, mov)
+        return HttpResponseRedirect('/film_years/' + movie)
 
     tparams = {
         'year': year,
@@ -1115,20 +1117,21 @@ def film_by_year(request, year = datetime.date.today().year):
 
 def film_from_dbpedia(request, mov_name):
     print("\n\n")
-    print(mov_name)
-    movie = "http://dbpedia.org/resource/"+mov_name
+    #print(mov_name)
+    #movie = "http://dbpedia.org/resource/"+mov_name
+    movie = "http://dbpedia.org/page/"+mov_name
+    print(movie)
     sparql = SPARQLWrapper("https://dbpedia.org/sparql")
     sparql.setQuery("""
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         select ?title ?rel ?abs ?runtime ?pname ?dirname ?prodname
         where {
-            select ?title ?rel ?abs ?runtime ?pname ?dirname ?prodname{
-                <%s> dbo:abstract ?abs .
-                <%s> dbo:releaseDate ?rel .
-                <%s> dbo:Work/runtime ?runtime .
-                <%s> dbp:name ?title.
-            }optional{
-                <%s> dbo:starring ?starr.
+            <%s> dbo:abstract ?abs .
+            <%s> dbo:releaseDate ?rel .
+            <%s> dbo:runtime ?runtime .
+            <%s> dbp:name ?title .
+            optional{
+                <%s> dbo:starring ?starr .
                 <%s> dbo:director ?dir .
                 ?dir dbp:name ?dirname .
                 <%s> dbo:producer ?prod .
@@ -1152,6 +1155,7 @@ def film_from_dbpedia(request, mov_name):
             info.append(e['prodname']['value'])
         movie_info.append(info)
 
+    print(movie_info)
     tparams = {
         'mov_info': movie_info,
     }

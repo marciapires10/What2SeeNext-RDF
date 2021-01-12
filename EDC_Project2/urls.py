@@ -28,5 +28,5 @@ urlpatterns = [
     path('info/<id>/<is_movie>', views.detail_info, name='detail_info'),
     path('my_list/', views.playlist, name='playlist'),
     path('film_years/', views.film_by_year, name='film_years'),
-    path('film_years/<mov>/', views.film_from_dbpedia, name='film_years_info'),
+    path('film_years/<mov_name>/', views.film_from_dbpedia, name='film_years_info'),
 ]
