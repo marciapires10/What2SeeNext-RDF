@@ -18,6 +18,71 @@ repo_name = "movies_db"
 client = ApiClient(endpoint=endpoint)
 accessor = GraphDBApi(client)
 
+# create list with top 10 movies
+query_m = """
+            PREFIX pred:<http://moviesProject.org/pred/>
+            PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+            SELECT ?id
+            WHERE {
+                ?movie pred:id_m ?id .
+                ?movie pred:has_score ?has_score .
+            }
+            ORDER BY DESC(xsd:float(?has_score)) LIMIT 10
+            """
+payload_query_m = {"query": query_m}
+res_m = accessor.sparql_select(body=payload_query_m,
+                             repo_name=repo_name)
+
+res_m = json.loads(res_m)
+for e in res_m['results']['bindings']:
+    movie_id = e['id']['value']
+    update_m = """
+                PREFIX pred:<http://moviesProject.org/pred/>
+                PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+                PREFIX top_list:<http://moviesProject.org/sub/top_list/>
+                PREFIX movie:<http://moviesProject.org/sub/mov/>
+                INSERT DATA {{
+                    top_list:topmovies pred:contains movie:{} .
+                }}
+                """.format(movie_id)
+    payload_query_list = {"update": update_m}
+    res_list = accessor.sparql_update(body=payload_query_list,
+                                 repo_name=repo_name)
+
+
+# create list with top 10 series
+query_s = """
+            PREFIX pred:<http://moviesProject.org/pred/>
+            PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+            SELECT ?id
+            WHERE {
+                ?serie pred:id_s ?id .
+                ?serie pred:has_score ?has_score .
+            }
+            ORDER BY DESC(xsd:float(?has_score)) LIMIT 10
+            """
+payload_query_s = {"query": query_s}
+res_s = accessor.sparql_select(body=payload_query_s,
+                             repo_name=repo_name)
+
+res_s = json.loads(res_s)
+for e in res_s['results']['bindings']:
+    serie_id = e['id']['value']
+    update_s = """
+                PREFIX pred:<http://moviesProject.org/pred/>
+                PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+                PREFIX top_list:<http://moviesProject.org/sub/top_list/>
+                PREFIX serie:<http://moviesProject.org/sub/serie/>
+                INSERT DATA {{
+                    top_list:topseries pred:contains serie:{} .
+                }}
+                """.format(serie_id)
+    payload_query_list = {"update": update_s}
+    res_list = accessor.sparql_update(body=payload_query_list,
+                                 repo_name=repo_name)
+
+
+
 # Create your views here.
 
 def get_top_movies():
@@ -25,8 +90,10 @@ def get_top_movies():
     query = """
                 PREFIX pred:<http://moviesProject.org/pred/>
                 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+                PREFIX top_list:<http://moviesProject.org/sub/top_list/>
                 SELECT ?id ?poster ?title ?has_score
                 WHERE {
+                    top_list:topmovies pred:contains ?movie .
                     ?movie pred:id_m ?id .
                     ?movie pred:poster ?poster .
                     ?movie pred:title ?title .
@@ -37,6 +104,8 @@ def get_top_movies():
     payload_query = {"query": query}
     res = accessor.sparql_select(body=payload_query,
                                  repo_name=repo_name)
+
+    print(res)
 
     res = json.loads(res)
     top_movies = []
@@ -58,8 +127,10 @@ def get_top_series():
     query = """
                 PREFIX pred:<http://moviesProject.org/pred/>
                 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+                PREFIX top_list:<http://moviesProject.org/sub/top_list/>
                 SELECT ?id ?poster ?title ?has_score
                 WHERE {
+                    top_list:topseries pred:contains ?serie .
                     ?serie pred:id_s ?id .
                     ?serie pred:poster ?poster .
                     ?serie pred:title ?title .
