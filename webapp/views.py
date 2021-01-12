@@ -1070,7 +1070,11 @@ def detail_info(request, id, is_movie = "movie"):
 
     return render(request, 'info.html', tparams)
 
-def film_by_year(request, year=datetime.date.today().year):
+def film_by_year(request, year = datetime.date.today().year):
+
+    if 'm_year' in request.POST:
+        year = request.POST.get('m_year')
+
     s_year = "http://dbpedia.org/resource/Category:"+str(year)+"_films"
     print(s_year)
     sparql = SPARQLWrapper("https://dbpedia.org/sparql")
@@ -1087,7 +1091,7 @@ def film_by_year(request, year=datetime.date.today().year):
             """% (s_year))
     sparql.setReturnFormat(JSON)
     res = sparql.query().convert()
-    print(res)
+
     year_movies_list = []
     for e in res['results']['bindings']:
         movie = []
@@ -1096,7 +1100,14 @@ def film_by_year(request, year=datetime.date.today().year):
         movie.append(float(e['runtime']['value'])/60)
         year_movies_list.append(movie)
 
+    if 'info-m-dbpedia' in request.POST:
+        mov = request.POST.get('info-m-dbpedia')
+        print(mov)
+        film_from_dbpedia(request, mov)
+        return HttpResponseRedirect('/film_years/' + mov)
+
     tparams = {
+        'year': year,
         'year_movies': year_movies_list,
     }
 
@@ -1104,7 +1115,7 @@ def film_by_year(request, year=datetime.date.today().year):
 
 def film_from_dbpedia(request, mov_name):
     print("\n\n")
-    print("mov name:"+mov_name)
+    print(mov_name)
     movie = "http://dbpedia.org/resource/"+mov_name
     sparql = SPARQLWrapper("https://dbpedia.org/sparql")
     sparql.setQuery("""
@@ -1145,7 +1156,7 @@ def film_from_dbpedia(request, mov_name):
         'mov_info': movie_info,
     }
 
-    return render(request, 'news.html', tparams)
+    return render(request, 'info_dbpedia.html', tparams)
 
 def playlist(request):
     if 'search' in request.POST:
@@ -1298,9 +1309,3 @@ def playlist(request):
     }
 
     return render(request, 'playlist.html', tparams)
-
-def full_news(request):
-    if 'search' in request.POST:
-        _str = request.POST.get('search', '')
-        return HttpResponseRedirect('/search_results/' + _str)
-    return render(request, 'news.html')

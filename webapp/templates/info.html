@@ -44,41 +44,39 @@
                 <h2 class="text-white mt-0">Reviews</h2>
                 <hr class="divider light my-4" />
             </div>
-            {% for uri in reviews %}
-                <div class="col-lg-10" style="padding-top: 40px;" xmlns:pred="http://moviesProject.org/pred/" about="{{ uri }}">
-            {% endfor %}
-                <form role="form" method="POST" id="new-review">
-                <h3 style="color: white">Review this title</h3>
-                    {% csrf_token %}
-                    <input style="width: 200px;" class="form-control" type="text" id="review-area-author" placeholder="Insert your username" required="required" name="username">
+                <div class="col-lg-10" style="padding-top: 40px;">
+                    <form role="form" method="POST" id="new-review">
+                    <h3 style="color: white">Review this title</h3>
+                        {% csrf_token %}
+                        <input style="width: 200px;" class="form-control" type="text" id="review-area-author" placeholder="Insert your username" required="required" name="username">
+                        <p></p>
+                        <textarea style="height: 250px;" class="form-control" type="textarea" id="review-area-content" placeholder="Insert your review!" required="required" name="comment"></textarea>
+                        <p></p>
+                        <button type="submit" class="btn btn-primary" style="background-color: #1b1d1f">Post review</button>
+                        <p></p>
+                    </form>
+                    <hr class="divider light my-4" />
                     <p></p>
-                    <textarea style="height: 250px;" class="form-control" type="textarea" id="review-area-content" placeholder="Insert your review!" required="required" name="comment"></textarea>
+                    <h3 style="color: white">See other reviews</h3>
                     <p></p>
-                    <button type="submit" class="btn btn-primary" style="background-color: #1b1d1f">Post review</button>
-                    <p></p>
-                </form>
-                <hr class="divider light my-4" />
-                <p></p>
-                <h3 style="color: white">See other reviews</h3>
-                <p></p>
-                <table>
-                    <tr>
-                        <form role="form" method="POST" id="delete">
-                            {% csrf_token %}
-                                {% for uri, author, id, review in reviews %}
-                                    <h3 style="color: white;"><span property="pred:made_by">{{ author }}</span></h3>
-                                    <p style="color:white;" id="{{ id }}"><span property="pred:content_is">{{ review }}</span></p>
-                                    <button type="submit" name="delete" class="btn btn-primary" value="{{ id }}">
-                                    Delete
-                                    </button>
-                                    <button type="submit" name="edit" class="btn btn-primary" value="{{ id }}">
-                                    Edit
-                                    </button>
-                                {% endfor %}
-                        </form>
-                    </tr>
-                </table>
-            </div>
+                {% for uri, author, id, review in reviews %}
+                    <table xmlns:pred="http://moviesProject.org/pred/" about="{{ uri }}">
+                        <tr>
+                            <form role="form" method="POST" id="delete">
+                                {% csrf_token %}
+                                        <h3 style="color: white;"><span property="pred:made_by">{{ author }}</span></h3>
+                                        <p style="color:white;" id="{{ id }}"><span property="pred:content_is">{{ review }}</span></p>
+                                        <button type="submit" name="delete" class="btn btn-primary" value="{{ id }}">
+                                        Delete
+                                        </button>
+                                        <button type="submit" name="edit" class="btn btn-primary" value="{{ id }}">
+                                        Edit
+                                        </button>
+                            </form>
+                        </tr>
+                    </table>
+                {% endfor %}
+                </div>
         </div>
     </div>
 </section>
