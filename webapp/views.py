@@ -421,7 +421,6 @@ def movies(request, filter = None, order = None):
                                  repo_name=repo_name)
 
     res = json.loads(res)
-    print(res)
     movies_all = []
     for e in res['results']['bindings']:
         movie_tmp = []
@@ -1176,7 +1175,7 @@ def film_by_year(request, year = datetime.date.today().year):
             """% (s_year))
     sparql.setReturnFormat(JSON)
     res = sparql.query().convert()
-
+    print(res)
     year_movies_list = []
     for e in res['results']['bindings']:
         movie = []
@@ -1203,41 +1202,93 @@ def film_by_year(request, year = datetime.date.today().year):
 def film_from_dbpedia(request, mov_name):
     print("\n\n")
     #print(mov_name)
-    #movie = "http://dbpedia.org/resource/"+mov_name
-    movie = "http://dbpedia.org/page/"+mov_name
+    movie = "http://dbpedia.org/resource/"+mov_name
+    #movie = "http://dbpedia.org/page/"+mov_name
     print(movie)
     sparql = SPARQLWrapper("https://dbpedia.org/sparql")
     sparql.setQuery("""
-        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-        select ?title ?rel ?abs ?runtime ?pname ?dirname ?prodname
-        where {
-            <%s> dbo:abstract ?abs .
-            <%s> dbo:releaseDate ?rel .
-            <%s> dbo:runtime ?runtime .
-            <%s> dbp:name ?title .
-            optional{
-                <%s> dbo:starring ?starr .
-                <%s> dbo:director ?dir .
-                ?dir dbp:name ?dirname .
-                <%s> dbo:producer ?prod .
-                ?prod dbp:name ?prodname .
-                ?starr dbp:name ?pname .
+        PREFIX  dbo:  <http://dbpedia.org/ontology/>
+        PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX  dbp:  <http://dbpedia.org/property/>
+        PREFIX  foaf: <http://xmlns.com/foaf/0.1/>
+        SELECT  ?title ?abs ?runtime ?dirname ?dirlit
+        WHERE
+        {   
+            {
+                OPTIONAL
+                { <%s>  foaf:name     ?title }
+                OPTIONAL
+                {
+                    <%s>  dbo:abstract  ?abs
+                    FILTER(langMatches(lang(?abs), "EN"))
+                }
+                OPTIONAL
+                { <%s>  dbo:runtime  ?runtime }
+                OPTIONAL
+                { <%s>  dbp:name  ?title }
+                OPTIONAL
+                {
+                    <%s>  dbo:director  ?dir .
+                    ?dir  foaf:name     ?dirname
+                }
+                OPTIONAL
+                {
+                    <%s>  dbp:director ?dirlit
+                    FILTER(isLiteral(?dirlit))
+                }
             }
         }
-    """ % (movie, movie, movie, movie, movie, movie, movie))
+    """ % (movie, movie, movie, movie, movie, movie))
     sparql.setReturnFormat(JSON)
     res = sparql.query().convert()
+    sparql.setQuery("""
+        PREFIX  dbo:  <http://dbpedia.org/ontology/>
+        PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX  dbp:  <http://dbpedia.org/property/>
+        PREFIX  foaf: <http://xmlns.com/foaf/0.1/>
+        SELECT  ?sname
+        WHERE
+        {   
+            OPTIONAL
+            {
+                <%s>    dbo:starring  ?starr .
+                ?starr  foaf:name     ?sname
+            }
+        }
+    """ % (movie))
+    sparql.setReturnFormat(JSON)
+    res2 = sparql.query().convert()
+    # print(json.dumps(res, indent=4))
+    print(json.dumps(res2, indent=4))
+
     movie_info = []
     for e in res['results']['bindings']:
         info = []
-        info.append(e['title']['value'])
-        info.append(e['rel']['value'])
-        info.append(e['abs']['value'])
-        info.append(e['runtime']['value'])
-        if "prodname" and "pname" and "dirname" in e.keys():
-            info.append(e['pname']['value'])
+        if 'title' not in e.keys():
+            info.append("no info")
+        else:
+            info.append(e['title']['value'])
+        if 'runtime' not in e.keys():
+            info.append("no info")
+        else:
+            info.append(float(e['runtime']['value']) / 60)
+        if 'abs' not in e.keys():
+            info.append("no info")
+        else:
+            info.append(e['abs']['value'])
+        if e['title']['value'] not in info:
+            info.append(e['title']['value'])
+        if 'dirname' in e.keys():
             info.append(e['dirname']['value'])
-            info.append(e['prodname']['value'])
+        elif 'dirlit' in e.keys():
+            info.append(e['dirlit']['value'])
+        else:
+            info.append("no info")
+        starr = []
+        for c in res2['results']['bindings']:
+            if 'sname' in c.keys():
+                starr.append(c['sname']['value'])
+        info.append(starr)
         movie_info.append(info)
 
     print(movie_info)

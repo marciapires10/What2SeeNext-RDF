@@ -5,7 +5,7 @@
 <!-- Masthead-->
 <header class="masthead">
       <div id="container-all" class="container h-100">
-          {% for title, rel, abs, runtime, pname, dirname, prodname in mov_info %}
+          {% for title, abs, runtime, dirname, starring in mov_info %}
                 <div class="row h-100 align-items-center justify-content-center text-center bg-dark" id="index-container">
                     <div class="col-lg-10">
                       <h2 style="color: white; padding-top: 40px;">{{ title }}</h2>
@@ -17,9 +17,11 @@
                           <h5><b>Runtime: </b>{{ runtime }}</h5>
                             <p style="padding-bottom: 10px"></p>
                             <p style="padding-bottom: 30px"></p>
-                            <h5><b>Main Stars: </b><h5 style="overflow: auto; height: 130px;">{{ pname }} and more</h5></h5>
+                            <h5><b>Director: </b><h5 style="overflow: auto; height: 130px;">{{ dirname }} and more</h5></h5>
                             <p></p>
-                            <h5><b>Staff: </b><h5>{{ pname }}</h5></h5>
+                            {% for star in starring %}
+                                <h5><b>Star: </b><h5>{{ star }}</h5></h5>
+                            {% endfor %}
                             <p></p>
                             <p style="padding-bottom: 20px"></p>
                           <h5 style="overflow: auto; height: 130px;"><b>Overview: </b>{{ abs }}</h5>
