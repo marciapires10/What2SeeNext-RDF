@@ -48,7 +48,7 @@
                     {% csrf_token %}
                         <table style="align-self: center;">
                             <tr class="space">
-                                 {% for id, title, poster in movies_all %}
+                                 {% for id, title, poster, check in movies_all %}
                                      {% if forloop.counter0|divisibleby:5 == 0 %}
                                          <td style="padding-bottom: 20px;">
                                             <div class="col-md-2 clearfix d-none d-md-block">
