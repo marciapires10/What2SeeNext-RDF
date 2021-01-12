@@ -183,7 +183,7 @@ def movies(request, filter = None, order = None):
     query_movies_score = """
                     PREFIX mov:<http://moviesProject.org/sub/mov/>
                     PREFIX pred:<http://moviesProject.org/pred/>
-                    SELECT ?movie ?id ?poster ?title ?has_score
+                    SELECT ?movie ?id ?poster ?title ?has_score ?has
                     WHERE {
                         ?movie pred:id_m ?id .
                         ?movie pred:poster ?poster .
@@ -333,18 +333,24 @@ def movies(request, filter = None, order = None):
             query = """
                     PREFIX mov:<http://moviesProject.org/sub/mov/>
                     PREFIX pred:<http://moviesProject.org/pred/>
-                    SELECT ?movie ?id ?poster ?title
+                    PREFIX list: <http://moviesProject.org/sub/list/>
+                    SELECT ?movie ?id ?poster ?title ?has
                     WHERE {
                         ?movie pred:id_m ?id .
                         ?movie pred:poster ?poster .
                         ?movie pred:title ?title .
+                        OPTIONAL{
+                            list:list_1 pred:has ?movie .
+                            ?movie pred:id_m ?has .
+                        }
                     }"""
-            
+    print(query)
     payload_query = {"query": query}
     res = accessor.sparql_select(body=payload_query,
                                  repo_name=repo_name)
 
     res = json.loads(res)
+    print(res)
     movies_all = []
     for e in res['results']['bindings']:
         movie_tmp = []
@@ -354,6 +360,14 @@ def movies(request, filter = None, order = None):
             poster = IMAGES_SITE + str(e['poster']['value'])
         else:
             poster = NO_IMAGE
+        if 'has' in e.keys():
+            if e['has']['value'] == e['id']['value']:
+                check = "true"
+            else:
+                check = "false"
+        else:
+            check = "false"
+        movie_tmp.append(check)
         movie_tmp.append(poster)
         movies_all.append(movie_tmp)
 
