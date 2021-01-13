@@ -10,9 +10,9 @@ import random, string
 
 IMAGES_SITE = "http://image.tmdb.org/t/p/w200"
 NO_IMAGE = "../static/assets/img/NoImage.jpg"
-PERSON_IMAGE = "/static/assets/img/person.jpg"
+PERSON_IMAGE = "/static/assets/img/male.png"
 MALE_IMAGE = "/static/assets/img/male.png"
-FEMALE_IMAGE = "/static/assets/img/female.jpg"
+FEMALE_IMAGE = "/static/assets/img/female.png"
 endpoint = "http://localhost:7200"
 repo_name = "movies_db"
 client = ApiClient(endpoint=endpoint)
