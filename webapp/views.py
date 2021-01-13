@@ -18,69 +18,161 @@ repo_name = "movies_db"
 client = ApiClient(endpoint=endpoint)
 accessor = GraphDBApi(client)
 
-# create list with top 10 movies
-query_m = """
-            PREFIX pred:<http://moviesProject.org/pred/>
-            PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-            SELECT ?id
-            WHERE {
-                ?movie pred:id_m ?id .
-                ?movie pred:has_score ?has_score .
-            }
-            ORDER BY DESC(xsd:float(?has_score)) LIMIT 10
+def get_top_rated_movies():
+    query = """
+            PREFIX predicate: <http://moviesProject.org/pred/>
+            PREFIX movie: <http://moviesProject.org/sub/mov/>
+			PREFIX top_rated_list: <http://moviesProject.org/sub/top_rated/>
+            SELECT DISTINCT ?title ?id
+            WHERE
+            { 	
+    			{
+        			top_rated_list:top_list predicate:top_rated ?movie .
+                    ?movie predicate:id_m ?id .
+                    ?movie predicate:title ?title .
+    			}
+			}
             """
-payload_query_m = {"query": query_m}
-res_m = accessor.sparql_select(body=payload_query_m,
-                             repo_name=repo_name)
 
-res_m = json.loads(res_m)
-for e in res_m['results']['bindings']:
-    movie_id = e['id']['value']
-    update_m = """
-                PREFIX pred:<http://moviesProject.org/pred/>
-                PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-                PREFIX top_list:<http://moviesProject.org/sub/top_list/>
-                PREFIX movie:<http://moviesProject.org/sub/mov/>
-                INSERT DATA {{
-                    top_list:topmovies pred:contains movie:{} .
-                }}
-                """.format(movie_id)
-    payload_query_list = {"update": update_m}
-    res_list = accessor.sparql_update(body=payload_query_list,
+    payload_query = {"query": query}
+    res = accessor.sparql_select(body=payload_query,
                                  repo_name=repo_name)
 
+    return res
 
-# create list with top 10 series
-query_s = """
-            PREFIX pred:<http://moviesProject.org/pred/>
-            PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-            SELECT ?id
-            WHERE {
-                ?serie pred:id_s ?id .
-                ?serie pred:has_score ?has_score .
-            }
-            ORDER BY DESC(xsd:float(?has_score)) LIMIT 10
+def get_top_rated_series():
+    query = """
+            PREFIX predicate: <http://moviesProject.org/pred/>
+            PREFIX serie: <http://moviesProject.org/sub/serie/>
+			PREFIX top_rated_list: <http://moviesProject.org/sub/top_rated/>
+            SELECT DISTINCT ?title ?id
+            WHERE
+            { 	
+    			{
+        			top_rated_list:top_list predicate:top_rated ?serie .
+                    ?serie predicate:id_s ?id .
+                    ?serie predicate:title ?title .
+    			}
+			}
             """
-payload_query_s = {"query": query_s}
-res_s = accessor.sparql_select(body=payload_query_s,
-                             repo_name=repo_name)
 
-res_s = json.loads(res_s)
-for e in res_s['results']['bindings']:
-    serie_id = e['id']['value']
-    update_s = """
-                PREFIX pred:<http://moviesProject.org/pred/>
-                PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-                PREFIX top_list:<http://moviesProject.org/sub/top_list/>
-                PREFIX serie:<http://moviesProject.org/sub/serie/>
-                INSERT DATA {{
-                    top_list:topseries pred:contains serie:{} .
-                }}
-                """.format(serie_id)
-    payload_query_list = {"update": update_s}
-    res_list = accessor.sparql_update(body=payload_query_list,
+    payload_query = {"query": query}
+    res = accessor.sparql_select(body=payload_query,
                                  repo_name=repo_name)
 
+    return res
+    
+def add_top_movies():
+    # create list with top 10 movies
+    query = """
+                PREFIX pred:<http://moviesProject.org/pred/>
+                PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+                SELECT ?id
+                WHERE {
+                    ?movie pred:id_m ?id .
+                    ?movie pred:has_score ?has_score .
+                }
+                ORDER BY DESC(xsd:float(?has_score)) LIMIT 10
+                """
+    payload_query = {"query": query}
+    res = accessor.sparql_select(body=payload_query,
+                                repo_name=repo_name)
+
+    res = json.loads(res)
+    for e in res['results']['bindings']:
+        movie_id = e['id']['value']
+        update = """
+                    PREFIX pred:<http://moviesProject.org/pred/>
+                    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+                    PREFIX top_list:<http://moviesProject.org/sub/top_list/>
+                    PREFIX movie:<http://moviesProject.org/sub/mov/>
+                    INSERT DATA {{
+                        top_list:topmovies pred:contains movie:{} .
+                    }}
+                    """.format(movie_id)
+        payload_query = {"update": update}
+        res = accessor.sparql_update(body=payload_query,
+                                    repo_name=repo_name)
+
+    return
+
+def add_top_series():
+    # create list with top 10 series
+    query = """
+                PREFIX pred:<http://moviesProject.org/pred/>
+                PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+                SELECT ?id
+                WHERE {
+                    ?serie pred:id_s ?id .
+                    ?serie pred:has_score ?has_score .
+                }
+                ORDER BY DESC(xsd:float(?has_score)) LIMIT 10
+                """
+    payload_query = {"query": query}
+    res = accessor.sparql_select(body=payload_query,
+                                repo_name=repo_name)
+
+    res = json.loads(res)
+    for e in res['results']['bindings']:
+        serie_id = e['id']['value']
+        update = """
+                    PREFIX pred:<http://moviesProject.org/pred/>
+                    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+                    PREFIX top_list:<http://moviesProject.org/sub/top_list/>
+                    PREFIX serie:<http://moviesProject.org/sub/serie/>
+                    INSERT DATA {{
+                        top_list:topseries pred:contains serie:{} .
+                    }}
+                    """.format(serie_id)
+        payload_query = {"update": update}
+        res = accessor.sparql_update(body=payload_query,
+                                    repo_name=repo_name)
+        
+    return
+def add_top_rated():
+    update = """
+            PREFIX movie: <http://data.linkedmdb.org/resource/sub/mov/> 
+            PREFIX predicate: <http://moviesProject.org/pred/>
+            PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+            PREFIX top_rated_list: <http://moviesProject.org/sub/top_rated/>
+
+
+            INSERT
+            {
+                top_rated_list:top_list predicate:top_rated ?movie .
+                top_rated_list:top_list predicate:top_rated ?serie .
+            }
+            WHERE { 
+                    {
+                SELECT DISTINCT ?movie ?serie (xsd:integer(COUNT(?title)) as ?total)
+                {
+                    {
+                        ?review predicate:id_r ?id .
+                        ?review predicate:is_from ?movie .
+                        ?movie predicate:id_m ?id_m . 
+                        ?movie predicate:title ?title .
+                    }UNION
+                    {
+                        ?review predicate:id_r ?id .
+                        ?review predicate:is_from ?serie .
+                        ?serie predicate:id_s ?id_s . 
+                        ?serie predicate:title ?title .
+                    }
+                }
+                    GROUP BY ?movie ?serie ?title
+                    HAVING (COUNT(?title) > 3)
+                }
+            } 
+            """
+    payload_query = {"update": update}
+    res = accessor.sparql_update(body=payload_query,
+                                 repo_name=repo_name)
+
+    return
+
+add_top_movies()
+add_top_series()
+add_top_rated()
 
 
 # Create your views here.
@@ -1101,6 +1193,7 @@ def detail_info(request, id, is_movie = "movie"):
         payload_query = {"update": query}
         res = accessor.sparql_update(body=payload_query,
                                     repo_name=repo_name)
+        add_top_rated()
         return HttpResponseRedirect('/info/' + id + "/" + is_movie)
 
     # add new review
@@ -1142,6 +1235,7 @@ def detail_info(request, id, is_movie = "movie"):
         payload_query = {"update": update}
         res = accessor.sparql_update(body=payload_query,
                                     repo_name=repo_name)
+        add_top_rated()
         print(res)
         return HttpResponseRedirect('/info/' + id + "/" + is_movie)
 
@@ -1449,3 +1543,5 @@ def playlist(request):
     }
 
     return render(request, 'playlist.html', tparams)
+
+
