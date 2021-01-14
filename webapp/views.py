@@ -209,8 +209,6 @@ def get_top_movies():
     res = accessor.sparql_select(body=payload_query,
                                  repo_name=repo_name)
 
-    print(res)
-
     res = json.loads(res)
     top_movies = []
     for e in res['results']['bindings']:
@@ -524,7 +522,6 @@ def movies(request, filter = None, order = None):
                             ?movie pred:id_m ?has .
                         }
                     }"""
-    print(query)
     payload_query = {"query": query}
     res = accessor.sparql_select(body=payload_query,
                                  repo_name=repo_name)
@@ -562,7 +559,6 @@ def movies(request, filter = None, order = None):
         add_movie_to_favList(id)
 
     rated_m = get_top_rated_movies()
-
     tparams = {
         'top_rated_m': rated_m,
         'movies_all': movies_all,
@@ -620,7 +616,6 @@ def add_movie_to_favList(id):
     payload_query = {"update": update}
     res = accessor.sparql_update(body=payload_query,
                                 repo_name=repo_name)
-    print(res)
     return
 
 def series(request, filter = None, order = None):
@@ -808,12 +803,10 @@ def series(request, filter = None, order = None):
 
     if 'info-m' in request.POST:
         id = request.POST.get('info-m')
-        print("Vim pelas series")
         detail_info(request, id, "serie")
         return HttpResponseRedirect('/info/' + id + "/" + "serie")
 
     if 'add-to-b' in request.POST:
-        print("Add Serie")
         id = request.POST.get('add-to-b')
         add_serie_to_favList(id)
 
@@ -875,7 +868,6 @@ def add_serie_to_favList(id):
     payload_query = {"update": update}
     res = accessor.sparql_update(body=payload_query,
                                 repo_name=repo_name)
-    print(res)
     return
 
 def get_search_results(request, _str):
@@ -1188,19 +1180,20 @@ def detail_info(request, id, is_movie = "movie"):
 
     cast = ""
     crew = ""
-    cast_counter= 0
+    cast_counter = 0
+    crew_counter = 0
     for person in people:
         if len(person) > 3:
-            cast +="[" + str(person[2]) + " as '" + str(person[3]) + "'] "
-        elif cast_counter < 10:
+            if cast_counter < 5:
+                cast +="[" + str(person[2]) + " as '" + str(person[3]) + "'] "
+                cast_counter += 1
+        elif crew_counter < 5:
             crew +="[" + str(person[2]) + " works as '" + str(person[1]) + "'] "
-            cast_counter += 1
+            crew_counter += 1
 
-    # print(cast)
     info_all.append(cast)
     info_all.append(crew)
     reviews = get_reviews(id)
-    print(info_all)
 
     # delete review
     if request.POST.get('delete'):
@@ -1225,7 +1218,6 @@ def detail_info(request, id, is_movie = "movie"):
         comment = request.POST.get('comment').replace('"',"'")
         review_id = get_review_id()
         if is_movie == "movie":
-            print("MOVIE")
             update = """
                     PREFIX pred:<http://moviesProject.org/pred/>
                     PREFIX fb: <http://rdf.freebase.com/ns/>
@@ -1250,16 +1242,15 @@ def detail_info(request, id, is_movie = "movie"):
                     INSERT DATA
                     {{ 
                         review:{}
-                        predicate:id_r "{}" .
-                        predicate:made_by "{}" .
-                        predicate:content_is "{}".
+                        predicate:id_r "{}" ;
+                        predicate:made_by "{}" ;
+                        predicate:content_is "{}";
                         predicate:is_from serie:{}.
                     }}""".format(review_id, review_id, username, comment, id)
         payload_query = {"update": update}
         res = accessor.sparql_update(body=payload_query,
                                     repo_name=repo_name)
         add_top_rated()
-        print(res)
         return HttpResponseRedirect('/info/' + id + "/" + is_movie)
 
     info_all_dict = []
@@ -1277,7 +1268,6 @@ def film_by_year(request, year = datetime.date.today().year):
         year = request.POST.get('m_year')
 
     s_year = "http://dbpedia.org/resource/Category:"+str(year)+"_films"
-    #print(s_year)
     sparql = SPARQLWrapper("https://dbpedia.org/sparql")
     sparql.setQuery("""
             PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -1292,7 +1282,6 @@ def film_by_year(request, year = datetime.date.today().year):
             """% (s_year))
     sparql.setReturnFormat(JSON)
     res = sparql.query().convert()
-    print(res)
     year_movies_list = []
     for e in res['results']['bindings']:
         movie = []
@@ -1301,7 +1290,6 @@ def film_by_year(request, year = datetime.date.today().year):
         movie.append(float(e['runtime']['value'])/60)
         year_movies_list.append(movie)
 
-        #print(e['mov']['value'].split(":")[1])
 
     if 'info-m-dbpedia' in request.POST:
         mov = request.POST.get('info-m-dbpedia')
@@ -1317,11 +1305,8 @@ def film_by_year(request, year = datetime.date.today().year):
     return render(request, 'news.html', tparams)
 
 def film_from_dbpedia(request, mov_name):
-    print("\n\n")
-    #print(mov_name)
     movie = "http://dbpedia.org/resource/"+mov_name
     #movie = "http://dbpedia.org/page/"+mov_name
-    print(movie)
     sparql = SPARQLWrapper("https://dbpedia.org/sparql")
     sparql.setQuery("""
         PREFIX  dbo:  <http://dbpedia.org/ontology/>
@@ -1375,8 +1360,6 @@ def film_from_dbpedia(request, mov_name):
     """ % (movie))
     sparql.setReturnFormat(JSON)
     res2 = sparql.query().convert()
-    # print(json.dumps(res, indent=4))
-    print(json.dumps(res2, indent=4))
 
     movie_info = []
     for e in res['results']['bindings']:
@@ -1408,7 +1391,6 @@ def film_from_dbpedia(request, mov_name):
         info.append(starr)
         movie_info.append(info)
 
-    print(movie_info)
     tparams = {
         'mov_info': movie_info,
     }
@@ -1514,7 +1496,6 @@ def playlist(request):
         chosen_movie = random.randint(0, len(fav) - 1)
         chosen_fav_id = fav[chosen_movie][0]
         chosen_movie_title = fav[chosen_movie][1]
-        print(chosen_fav_id)
         query = """
                 PREFIX predicate: <http://moviesProject.org/pred/>
                 PREFIX movie: <http://moviesProject.org/sub/mov/>
@@ -1558,7 +1539,6 @@ def playlist(request):
             movie.append(e['score']['value'])
             recomended_movies.append(movie)
 
-    print(chosen_movie_title)
     tparams = {
         'fav': fav,
         'recommended': recomended_movies,
