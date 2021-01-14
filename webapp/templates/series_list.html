@@ -61,17 +61,13 @@
                                                     <img src="{{ poster }}" alt="{{ title }}" title="{{ title }}" id="card-img-all">
                                                      <div class="overlay" alt="{{ title }}" title="{{ title }}">
                                                          <div class="addP">
-<<<<<<< Updated upstream
                                                              {% if id in top_rated_s %}
                                                                 <button class="btn btn-primary"
                                                                 style="margin-top: 10px; background-color: orangered; border: orangered">
                                                                     <i class="fas fa-fire"></i>
                                                                 </button>
                                                             {% endif %}
-                                                            <button type="submit" name="add-to-b" class="btn btn-primary" id="add-to-b-s"
-=======
-                                                             <button type="submit" name="add-to-b" class="btn btn-primary" id="add-to-b"
->>>>>>> Stashed changes
+                                                            <button type="submit" name="add-to-b" class="btn btn-primary" id="add-to-b"
                                                                 style="margin-top: 10px; margin-right: -143px" value="{{ id }}">
                                                             {% if check == "true" %}
                                                                 <i class="fas fa-check"></i>
@@ -79,7 +75,7 @@
                                                             {% if check == "false" %}
                                                                 <i class="fas fa-plus"></i>
                                                             {% endif %}
-                                                            </button>
+                                                            </>
                                                         </div>
                                                         <button type="submit" name="info-m" class="btn btn-primary" id="more-movie-all"
                                                                 style="margin-top: 100px;" value="{{ id }}">

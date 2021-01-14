@@ -671,8 +671,8 @@ def series(request, filter = None, order = None):
                         ?movie pred:title ?title .
                         ?movie pred:has_score ?has_score .
                         OPTIONAL{
-                            list:list_1 pred:has ?movie .
-                            ?movie pred:id_s ?has .
+                            list:list_1 pred:has ?serie .
+                            ?serie pred:id_s ?has .
                         }
                     }
                     ORDER BY DESC(xsd:float(?has_score))
@@ -691,8 +691,8 @@ def series(request, filter = None, order = None):
                         ?serie pred:title ?title .
                         ?serie pred:has_score ?has_score .
                         OPTIONAL{{
-                            list:list_1 pred:has ?movie .
-                            ?movie pred:id_s ?has .
+                            list:list_1 pred:has ?serie .
+                            ?serie pred:id_s ?has .
                         }}
                     }}
                         {}
@@ -714,8 +714,8 @@ def series(request, filter = None, order = None):
                             ?serie pred:title ?title .
                             ?serie pred:has_score ?has_score .
                             OPTIONAL{{
-                            list:list_1 pred:has ?movie .
-                            ?movie pred:id_s ?has .
+                            list:list_1 pred:has ?serie .
+                            ?serie pred:id_s ?has .
                             }}
                             }}
                             {}
@@ -733,8 +733,8 @@ def series(request, filter = None, order = None):
                             ?serie pred:title ?title .
                             ?serie pred:has_score ?has_score .
                             OPTIONAL{
-                            list:list_1 pred:has ?movie .
-                            ?movie pred:id_s ?has .
+                            list:list_1 pred:has ?serie .
+                            ?serie pred:id_s ?has .
                             }
                             }
                             ORDER BY DESC(?title)
@@ -753,8 +753,8 @@ def series(request, filter = None, order = None):
                             ?serie pred:has_score ?has_score .
                             ?serie pred:popularity ?popularity .
                             OPTIONAL{
-                            list:list_1 pred:has ?movie .
-                            ?movie pred:id_s ?has .
+                            list:list_1 pred:has ?serie .
+                            ?serie pred:id_s ?has .
                             }
                         }
                         ORDER BY DESC(xsd:float(?popularity))
@@ -775,8 +775,8 @@ def series(request, filter = None, order = None):
                             ?serie pred:has_score ?has_score .
                             ?serie pred:popularity ?popularity .
                             OPTIONAL{{
-                            list:list_1 pred:has ?movie .
-                            ?movie pred:id_s ?has .
+                            list:list_1 pred:has ?serie .
+                            ?serie pred:id_s ?has .
                             }}
                         }}
                         {}
@@ -804,8 +804,8 @@ def series(request, filter = None, order = None):
                             ?serie pred:title ?title .
                             ?serie pred:has_score ?has_score .
                             OPTIONAL{{
-                            list:list_1 pred:has ?movie .
-                            ?movie pred:id_s ?has .
+                            list:list_1 pred:has ?serie .
+                            ?serie pred:id_s ?has .
                             }}
                             {}
                         }}
@@ -854,8 +854,8 @@ def series(request, filter = None, order = None):
                     ?serie pred:poster ?poster .
                     ?serie pred:title ?title .
                     OPTIONAL{
-                            list:list_1 pred:has ?movie .
-                            ?movie pred:id_s ?has .
+                            list:list_1 pred:has ?serie .
+                            ?serie pred:id_s ?has .
                     }
                 }"""
 
