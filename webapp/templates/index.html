@@ -43,6 +43,12 @@
                                             <form method="post">
                                                 {% csrf_token %}
                                                 <div class="overlay" alt={{ title }} title={{ title }}></div>
+                                                {% if id in top_rated_m %}
+                                                    <button class="btn btn-primary"
+                                                    style="margin-top: 10px; background-color: orangered; border: orangered">
+                                                        <i class="fas fa-fire"></i>
+                                                    </button>
+                                                {% endif %}
                                                 <button style="margin-left: -50px;" type="submit" name="info-m" value="{{ id }}" class="btn btn-primary" id="more-movie">See more</button>
                                             </form>
                                         </div>
@@ -61,7 +67,14 @@
                                                         <img class="card-img-top" src={{ poster }}>
                                                         <div class="card-body">
                                                             <h4 style="font-size: 1rem;" class="card-title">{{ title }}</h4>
-                                                            <p class="card-text" style="font-size: 1.5rem;"><b>{{ score }}   <i class="fas fa-star" style="color: #c69500"></i></b></p>
+                                                            <p class="card-text" style="font-size: 1.5rem;"><b>{{ score }}   <i class="fas fa-star" style="color: #c69500"></i></b>
+                                                            {% if id in top_rated_m %}
+                                                                <button class="btn btn-primary"
+                                                                style="margin-left: 150px; background-color: orangered; border: orangered;">
+                                                                    <i class="fas fa-fire"></i>
+                                                                </button>
+                                                            {% endif %}
+                                                            </p>
                                                         </div>
                                                         <form method="post">
                                                             {% csrf_token %}
@@ -90,6 +103,12 @@
                                                 <form method="post">
                                                     {% csrf_token %}
                                                     <div class="overlay" alt={{ title }} title={{ title }}></div>
+                                                    {% if id in top_rated_m %}
+                                                        <button class="btn btn-primary"
+                                                        style="margin-top: 10px; background-color: orangered; border: orangered">
+                                                            <i class="fas fa-fire"></i>
+                                                        </button>
+                                                    {% endif %}
                                                     <button style="margin-left: -50px;" type="submit" name="info-m" value="{{ id }}" class="btn btn-primary" id="more-movie">See more</button>
                                                 </form>
                                             </div>
@@ -114,6 +133,12 @@
                                                             <form method="post">
                                                                 {% csrf_token %}
                                                                 <div class="overlay" alt={{ title }} title={{ title }}></div>
+                                                                {% if id in top_rated_m %}
+                                                                    <button class="btn btn-primary"
+                                                                    style="margin-top: 10px; background-color: orangered; border: orangered">
+                                                                        <i class="fas fa-fire"></i>
+                                                                    </button>
+                                                                {% endif %}
                                                                 <button style="margin-left: -50px;" type="submit" name="info-m" value="{{ id }}" class="btn btn-primary" id="more-movie">See more</button>
                                                             </form>
                                                         </div>
@@ -173,6 +198,12 @@
                                             <form method="post">
                                                 {% csrf_token %}
                                                 <div class="overlay" alt={{ title }} title={{ title }}></div>
+                                                {% if id in top_rated_s %}
+                                                    <button class="btn btn-primary"
+                                                    style="margin-top: 10px; background-color: orangered; border: orangered">
+                                                        <i class="fas fa-fire"></i>
+                                                    </button>
+                                                {% endif %}
                                                 <button style="margin-left: -50px;" type="submit" name="info-m" value="{{ id }}" class="btn btn-primary" id="more-movie">See more</button>
                                             </form>
                                         </div>
@@ -196,6 +227,12 @@
                                             <form method="post">
                                                 {% csrf_token %}
                                                 <div class="overlay" alt={{ title }} title={{ title }}></div>
+                                                {% if id in top_rated_s %}
+                                                    <button class="btn btn-primary"
+                                                    style="margin-top: 10px; background-color: orangered; border: orangered">
+                                                        <i class="fas fa-fire"></i>
+                                                    </button>
+                                                {% endif %}
                                                 <button style="margin-left: -50px;" type="submit" name="info-m" value="{{ id }}" class="btn btn-primary" id="more-movie">See more</button>
                                             </form>
                                         </div>
@@ -220,6 +257,12 @@
                                                 <form method="post">
                                                     {% csrf_token %}
                                                     <div class="overlay" alt={{ title }} title={{ title }}></div>
+                                                    {% if id in top_rated_s %}
+                                                        <button class="btn btn-primary"
+                                                        style="margin-top: 10px; background-color: orangered; border: orangered">
+                                                            <i class="fas fa-fire"></i>
+                                                        </button>
+                                                    {% endif %}
                                                     <button style="margin-left: -50px;" type="submit" name="info-m" value="{{ id }}" class="btn btn-primary" id="more-movie">See more</button>
                                                 </form>
                                             </div>
@@ -244,6 +287,12 @@
                                                 <form method="post">
                                                     {% csrf_token %}
                                                     <div class="overlay" alt={{ title }} title={{ title }}></div>
+                                                    {% if id in top_rated_s %}
+                                                        <button class="btn btn-primary"
+                                                        style="margin-top: 10px; background-color: orangered; border: orangered">
+                                                            <i class="fas fa-fire"></i>
+                                                        </button>
+                                                    {% endif %}
                                                     <button style="margin-left: -50px;" type="submit" name="info-m" value="{{ id }}" class="btn btn-primary" id="more-movie">See more</button>
                                                 </form>
                                             </div>

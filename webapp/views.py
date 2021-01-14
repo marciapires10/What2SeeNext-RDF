@@ -38,7 +38,12 @@ def get_top_rated_movies():
     res = accessor.sparql_select(body=payload_query,
                                  repo_name=repo_name)
 
-    return res
+    res = json.loads(res)
+    top_rated_m = []
+    for e in res['results']['bindings']:
+        top_rated_m.append(e['id']['value'])
+
+    return top_rated_m
 
 def get_top_rated_series():
     query = """
@@ -60,7 +65,12 @@ def get_top_rated_series():
     res = accessor.sparql_select(body=payload_query,
                                  repo_name=repo_name)
 
-    return res
+    res = json.loads(res)
+    top_rated_s = []
+    for e in res['results']['bindings']:
+        top_rated_s.append(e['id']['value'])
+
+    return top_rated_s
     
 def add_top_movies():
     # create list with top 10 movies
@@ -129,6 +139,8 @@ def add_top_series():
                                     repo_name=repo_name)
         
     return
+
+
 def add_top_rated():
     update = """
             PREFIX movie: <http://data.linkedmdb.org/resource/sub/mov/> 
@@ -283,7 +295,12 @@ def index(request):
         detail_info(request, id, is_movie_str)
         return HttpResponseRedirect('/info/' + id + "/" + is_movie_str)
 
+    rated_m = get_top_rated_movies()
+    rated_s = get_top_rated_series()
+
     tparams = {
+      'top_rated_m': rated_m,
+      'top_rated_s': rated_s,
       'top_movies': top_movies,
       'top_series': top_series,
     }
@@ -544,7 +561,10 @@ def movies(request, filter = None, order = None):
         id = request.POST.get('add-to-b')
         add_movie_to_favList(id)
 
+    rated_m = get_top_rated_movies()
+
     tparams = {
+        'top_rated_m': rated_m,
         'movies_all': movies_all,
         'movie_genres': mgenres,
     }
@@ -797,7 +817,10 @@ def series(request, filter = None, order = None):
         id = request.POST.get('add-to-b')
         add_serie_to_favList(id)
 
+    top_rated_s = get_top_rated_series()
+
     tparams = {
+        'top_rated_s': top_rated_s,
         'series_all': series_all,
         'series_genres': sgenres,
     }

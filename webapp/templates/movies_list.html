@@ -56,9 +56,15 @@
                                                     <img src="{{ poster }}" alt="" title="" id="card-img-all">
                                                     <div class="overlay" alt="{{ title }}" title="{{ title }}">
                                                         <div class="addP">
+                                                            {% if id in top_rated_m %}
+                                                                <button class="btn btn-primary"
+                                                                style="margin-top: 10px; background-color: orangered; border: orangered">
+                                                                    <i class="fas fa-fire"></i>
+                                                                </button>
+                                                            {% endif %}
                                                             <input type="checkbox" id="addtob" name="checkbox" value="{{ id }}" class="chkvalues">
                                                             <button type="submit" name="add-to-b" class="btn btn-primary" id="add-to-b"
-                                                                style="margin-top: 10px; margin-right: -143px" value="{{ id }}">
+                                                                style="margin-top: 10px; margin-right: -95px" value="{{ id }}">
                                                             <i class="fas fa-plus"></i>
                                                             </button>
                                                         </div>
