@@ -53,7 +53,7 @@
                     {% csrf_token %}
                         <table style="align-self: center;">
                             <tr class="space">
-                                 {% for id, title, poster in series_all %}
+                                 {% for id, title, poster, check in series_all %}
                                      {% if forloop.counter0|divisibleby:5 == 0 %}
                                          <td style="padding-bottom: 20px;">
                                             <div class="col-md-2 clearfix d-none d-md-block">
@@ -61,6 +61,7 @@
                                                     <img src="{{ poster }}" alt="{{ title }}" title="{{ title }}" id="card-img-all">
                                                      <div class="overlay" alt="{{ title }}" title="{{ title }}">
                                                          <div class="addP">
+<<<<<<< Updated upstream
                                                              {% if id in top_rated_s %}
                                                                 <button class="btn btn-primary"
                                                                 style="margin-top: 10px; background-color: orangered; border: orangered">
@@ -68,8 +69,16 @@
                                                                 </button>
                                                             {% endif %}
                                                             <button type="submit" name="add-to-b" class="btn btn-primary" id="add-to-b-s"
+=======
+                                                             <button type="submit" name="add-to-b" class="btn btn-primary" id="add-to-b"
+>>>>>>> Stashed changes
                                                                 style="margin-top: 10px; margin-right: -143px" value="{{ id }}">
-                                                            <i class="fas fa-plus"></i>
+                                                            {% if check == "true" %}
+                                                                <i class="fas fa-check"></i>
+                                                            {% endif %}
+                                                            {% if check == "false" %}
+                                                                <i class="fas fa-plus"></i>
+                                                            {% endif %}
                                                             </button>
                                                         </div>
                                                         <button type="submit" name="info-m" class="btn btn-primary" id="more-movie-all"
@@ -88,9 +97,14 @@
                                                     <img src="{{ poster }}" alt="{{ title }}" title="{{ title }}" id="card-img-all">
                                                      <div class="overlay" alt="{{ title }}" title="{{ title }}">
                                                          <div class="addP">
-                                                            <button type="submit" name="add-to-b" class="btn btn-primary" id="add-to-b-s"
+                                                            <button type="submit" name="add-to-b" class="btn btn-primary" id="add-to-b"
                                                                 style="margin-top: 10px; margin-right: -143px" value="{{ id }}">
-                                                            <i class="fas fa-plus"></i>
+                                                            {% if check == "true" %}
+                                                                <i class="fas fa-check"></i>
+                                                            {% endif %}
+                                                            {% if check == "false" %}
+                                                                <i class="fas fa-plus"></i>
+                                                            {% endif %}
                                                             </button>
                                                         </div>
                                                         <button type="submit" name="info-m" class="btn btn-primary" id="more-movie-all"

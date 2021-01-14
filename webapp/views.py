@@ -209,6 +209,7 @@ def get_top_movies():
     res = accessor.sparql_select(body=payload_query,
                                  repo_name=repo_name)
 
+
     res = json.loads(res)
     top_movies = []
     for e in res['results']['bindings']:
@@ -361,12 +362,17 @@ def movies(request, filter = None, order = None):
     query_movies_score = """
                     PREFIX mov:<http://moviesProject.org/sub/mov/>
                     PREFIX pred:<http://moviesProject.org/pred/>
-                    SELECT ?movie ?id ?poster ?title ?has_score ?has
+                    PREFIX list: <http://moviesProject.org/sub/list/>
+                    SELECT ?movie ?id ?poster ?title ?has
                     WHERE {
                         ?movie pred:id_m ?id .
                         ?movie pred:poster ?poster .
                         ?movie pred:title ?title .
                         ?movie pred:has_score ?has_score .
+                        OPTIONAL{
+                            list:list_1 pred:has ?movie .
+                            ?movie pred:id_m ?has .
+                        }
                     }
                     ORDER BY DESC(xsd:float(?has_score))
 
@@ -374,7 +380,8 @@ def movies(request, filter = None, order = None):
     query_movies_score_genre = """
                     PREFIX mov:<http://moviesProject.org/sub/mov/>
                     PREFIX pred:<http://moviesProject.org/pred/>
-                    SELECT ?movie ?id ?poster ?title ?has_score
+                    PREFIX list: <http://moviesProject.org/sub/list/>
+                    SELECT ?movie ?id ?poster ?title ?has
                     WHERE 
                     {{
                     {{
@@ -382,6 +389,10 @@ def movies(request, filter = None, order = None):
                         ?movie pred:poster ?poster .
                         ?movie pred:title ?title .
                         ?movie pred:has_score ?has_score .
+                        OPTIONAL{{
+                            list:list_1 pred:has ?movie .
+                            ?movie pred:id_m ?has .
+                        }}
                     }}
                         {}
                     }}
@@ -392,7 +403,8 @@ def movies(request, filter = None, order = None):
     query_movies_alphabetic_genre = """
                             PREFIX mov:<http://moviesProject.org/sub/mov/>
                             PREFIX pred:<http://moviesProject.org/pred/>
-                            SELECT ?movie ?id ?poster ?title ?has_score
+                            PREFIX list: <http://moviesProject.org/sub/list/>
+                            SELECT ?movie ?id ?poster ?title ?has
                             WHERE 
                             {{
                             {{
@@ -400,6 +412,10 @@ def movies(request, filter = None, order = None):
                             ?movie pred:poster ?poster .
                             ?movie pred:title ?title .
                             ?movie pred:has_score ?has_score .
+                            OPTIONAL{{
+                            list:list_1 pred:has ?movie .
+                            ?movie pred:id_m ?has .
+                            }}
                             }}
                             {}
                             }}
@@ -408,12 +424,17 @@ def movies(request, filter = None, order = None):
     query_movies_alphabetic = """
                             PREFIX mov:<http://moviesProject.org/sub/mov/>
                             PREFIX pred:<http://moviesProject.org/pred/>
-                            SELECT ?movie ?id ?poster ?title ?has_score
+                            PREFIX list: <http://moviesProject.org/sub/list/>
+                            SELECT ?movie ?id ?poster ?title ?has
                             WHERE {
                             ?movie pred:id_m ?id .
                             ?movie pred:poster ?poster .
                             ?movie pred:title ?title .
                             ?movie pred:has_score ?has_score .
+                            OPTIONAL{
+                            list:list_1 pred:has ?movie .
+                            ?movie pred:id_m ?has .
+                            }
                             }
                             ORDER BY DESC(?title)
                           """
@@ -422,13 +443,18 @@ def movies(request, filter = None, order = None):
                         PREFIX mov:<http://moviesProject.org/sub/mov/>
                         PREFIX pred:<http://moviesProject.org/pred/>
                         PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-                        SELECT ?movie ?id ?poster ?title ?has_score ?popularity
+                        PREFIX list: <http://moviesProject.org/sub/list/>
+                        SELECT ?movie ?id ?poster ?title ?has
                         WHERE {
                             ?movie pred:id_m ?id .
                             ?movie pred:poster ?poster .
                             ?movie pred:title ?title .
                             ?movie pred:has_score ?has_score .
                             ?movie pred:popularity ?popularity .
+                            OPTIONAL{
+                            list:list_1 pred:has ?movie .
+                            ?movie pred:id_m ?has .
+                            }
                         }
                         ORDER BY DESC(xsd:float(?popularity))
                         """
@@ -437,7 +463,8 @@ def movies(request, filter = None, order = None):
                         PREFIX mov:<http://moviesProject.org/sub/mov/>
                         PREFIX pred:<http://moviesProject.org/pred/>
                         PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-                        SELECT ?movie ?id ?poster ?title ?has_score ?popularity
+                        PREFIX list: <http://moviesProject.org/sub/list/>
+                        SELECT ?movie ?id ?poster ?title ?has
                         WHERE 
                         {{
                         {{
@@ -446,6 +473,10 @@ def movies(request, filter = None, order = None):
                             ?movie pred:title ?title .
                             ?movie pred:has_score ?has_score .
                             ?movie pred:popularity ?popularity .
+                            OPTIONAL{{
+                            list:list_1 pred:has ?movie .
+                            ?movie pred:id_m ?has .
+                            }}
                         }}
                         {}
                         }}
@@ -464,13 +495,17 @@ def movies(request, filter = None, order = None):
     elif request.POST.get('checkbox'):
         query_genre = """
                     PREFIX pred:<http://moviesProject.org/pred/> 
-                        SELECT ?movie ?id ?poster ?title ?has_score
+                    PREFIX list: <http://moviesProject.org/sub/list/>
+                        SELECT ?movie ?id ?poster ?title ?has
                         WHERE {{
                             ?movie pred:id_m ?id .
                             ?movie pred:poster ?poster .
                             ?movie pred:title ?title .
-                            ?movie pred:has_score ?has_score .
                             {}
+                            OPTIONAL{{
+                            list:list_1 pred:has ?movie .
+                            ?movie pred:id_m ?has .
+                            }}
                         }}
                         """
         intersect_query_genre =  """
@@ -494,6 +529,7 @@ def movies(request, filter = None, order = None):
                 query = query_movies_alphabetic_genre.format(add_to_query)
         else:
             add_to_query = ""
+            print(filter)
             for filt in filter:
                 add_to_query += '?movie pred:genre "{}" .\n'.format(str(filt)) 
             query = query_genre.format(add_to_query)
@@ -536,6 +572,7 @@ def movies(request, filter = None, order = None):
             poster = IMAGES_SITE + str(e['poster']['value'])
         else:
             poster = NO_IMAGE
+        movie_tmp.append(poster)
         if 'has' in e.keys():
             if e['has']['value'] == e['id']['value']:
                 check = "true"
@@ -544,7 +581,6 @@ def movies(request, filter = None, order = None):
         else:
             check = "false"
         movie_tmp.append(check)
-        movie_tmp.append(poster)
         movies_all.append(movie_tmp)
 
     mgenres = get_movies_genres()
@@ -557,6 +593,7 @@ def movies(request, filter = None, order = None):
     if 'add-to-b' in request.POST:
         id = request.POST.get('add-to-b')
         add_movie_to_favList(id)
+        return HttpResponseRedirect("/movies")
 
     rated_m = get_top_rated_movies()
     tparams = {
@@ -626,12 +663,17 @@ def series(request, filter = None, order = None):
     query_series_score = """
                     PREFIX serie:<http://moviesProject.org/sub/serie/>
                     PREFIX pred:<http://moviesProject.org/pred/>
-                    SELECT ?movie ?id ?poster ?title ?has_score
+                    PREFIX list: <http://moviesProject.org/sub/list/>
+                    SELECT ?movie ?id ?poster ?title ?has
                     WHERE {
                         ?movie pred:id_s ?id .
                         ?movie pred:poster ?poster .
                         ?movie pred:title ?title .
                         ?movie pred:has_score ?has_score .
+                        OPTIONAL{
+                            list:list_1 pred:has ?movie .
+                            ?movie pred:id_s ?has .
+                        }
                     }
                     ORDER BY DESC(xsd:float(?has_score))
 
@@ -639,7 +681,8 @@ def series(request, filter = None, order = None):
     query_series_score_genre = """
                     PREFIX serie:<http://moviesProject.org/sub/serie/>
                     PREFIX pred:<http://moviesProject.org/pred/>
-                    SELECT ?serie ?id ?poster ?title ?has_score
+                    PREFIX list: <http://moviesProject.org/sub/list/>
+                    SELECT ?serie ?id ?poster ?title ?has
                     WHERE 
                     {{
                     {{
@@ -647,6 +690,10 @@ def series(request, filter = None, order = None):
                         ?serie pred:poster ?poster .
                         ?serie pred:title ?title .
                         ?serie pred:has_score ?has_score .
+                        OPTIONAL{{
+                            list:list_1 pred:has ?movie .
+                            ?movie pred:id_s ?has .
+                        }}
                     }}
                         {}
                     }}
@@ -657,7 +704,8 @@ def series(request, filter = None, order = None):
     query_series_alphabetic_genre = """
                             PREFIX serie:<http://moviesProject.org/sub/serie/>
                             PREFIX pred:<http://moviesProject.org/pred/>
-                            SELECT ?serie ?id ?poster ?title ?has_score
+                            PREFIX list: <http://moviesProject.org/sub/list/>
+                            SELECT ?serie ?id ?poster ?title ?has
                             WHERE 
                             {{
                             {{
@@ -665,6 +713,10 @@ def series(request, filter = None, order = None):
                             ?serie pred:poster ?poster .
                             ?serie pred:title ?title .
                             ?serie pred:has_score ?has_score .
+                            OPTIONAL{{
+                            list:list_1 pred:has ?movie .
+                            ?movie pred:id_s ?has .
+                            }}
                             }}
                             {}
                             }}
@@ -673,12 +725,17 @@ def series(request, filter = None, order = None):
     query_series_alphabetic = """
                             PREFIX serie:<http://moviesProject.org/sub/serie/>
                             PREFIX pred:<http://moviesProject.org/pred/>
-                            SELECT ?serie ?id ?poster ?title ?has_score
+                            PREFIX list: <http://moviesProject.org/sub/list/>
+                            SELECT ?serie ?id ?poster ?title ?has
                             WHERE {
                             ?serie pred:id_s ?id .
                             ?serie pred:poster ?poster .
                             ?serie pred:title ?title .
                             ?serie pred:has_score ?has_score .
+                            OPTIONAL{
+                            list:list_1 pred:has ?movie .
+                            ?movie pred:id_s ?has .
+                            }
                             }
                             ORDER BY DESC(?title)
                           """
@@ -687,13 +744,18 @@ def series(request, filter = None, order = None):
                         PREFIX serie:<http://moviesProject.org/sub/serie/>
                         PREFIX pred:<http://moviesProject.org/pred/>
                         PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-                        SELECT ?serie ?id ?poster ?title ?has_score ?popularity
+                        PREFIX list: <http://moviesProject.org/sub/list/>
+                        SELECT ?serie ?id ?poster ?title ?has
                         WHERE {
                             ?serie pred:id_s ?id .
                             ?serie pred:poster ?poster .
                             ?serie pred:title ?title .
                             ?serie pred:has_score ?has_score .
                             ?serie pred:popularity ?popularity .
+                            OPTIONAL{
+                            list:list_1 pred:has ?movie .
+                            ?movie pred:id_s ?has .
+                            }
                         }
                         ORDER BY DESC(xsd:float(?popularity))
                         """
@@ -702,7 +764,8 @@ def series(request, filter = None, order = None):
                         PREFIX serie:<http://moviesProject.org/sub/serie/>
                         PREFIX pred:<http://moviesProject.org/pred/>
                         PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-                        SELECT ?serie ?id ?poster ?title ?has_score ?popularity
+                        PREFIX list: <http://moviesProject.org/sub/list/>
+                        SELECT ?serie ?id ?poster ?title ?has
                         WHERE 
                         {{
                         {{
@@ -711,6 +774,10 @@ def series(request, filter = None, order = None):
                             ?serie pred:title ?title .
                             ?serie pred:has_score ?has_score .
                             ?serie pred:popularity ?popularity .
+                            OPTIONAL{{
+                            list:list_1 pred:has ?movie .
+                            ?movie pred:id_s ?has .
+                            }}
                         }}
                         {}
                         }}
@@ -729,12 +796,17 @@ def series(request, filter = None, order = None):
     elif request.POST.get('checkbox'):
         query_genre = """
                     PREFIX pred:<http://moviesProject.org/pred/> 
-                        SELECT ?serie ?id ?poster ?title ?has_score
+                    PREFIX list: <http://moviesProject.org/sub/list/>
+                        SELECT ?serie ?id ?poster ?title ?has
                         WHERE {{
                             ?serie pred:id_s ?id .
                             ?serie pred:poster ?poster .
                             ?serie pred:title ?title .
                             ?serie pred:has_score ?has_score .
+                            OPTIONAL{{
+                            list:list_1 pred:has ?movie .
+                            ?movie pred:id_s ?has .
+                            }}
                             {}
                         }}
                         """
@@ -775,11 +847,16 @@ def series(request, filter = None, order = None):
         else:
             query = """
                 PREFIX pred:<http://moviesProject.org/pred/>
-                SELECT ?id ?poster ?title
+                PREFIX list: <http://moviesProject.org/sub/list/>
+                SELECT ?id ?poster ?title ?has
                 WHERE {
                     ?serie pred:id_s ?id .
                     ?serie pred:poster ?poster .
                     ?serie pred:title ?title .
+                    OPTIONAL{
+                            list:list_1 pred:has ?movie .
+                            ?movie pred:id_s ?has .
+                    }
                 }"""
 
     payload_query = {"query": query}
@@ -797,6 +874,14 @@ def series(request, filter = None, order = None):
         else:
             poster = NO_IMAGE
         serie_tmp.append(poster)
+        if 'has' in e.keys():
+            if e['has']['value'] == e['id']['value']:
+                check = "true"
+            else:
+                check = "false"
+        else:
+            check = "false"
+        serie_tmp.append(check)
         series_all.append(serie_tmp)
 
     sgenres = get_series_genres()
@@ -809,6 +894,7 @@ def series(request, filter = None, order = None):
     if 'add-to-b' in request.POST:
         id = request.POST.get('add-to-b')
         add_serie_to_favList(id)
+        return HttpResponseRedirect("/series")
 
     top_rated_s = get_top_rated_series()
 
@@ -1388,6 +1474,8 @@ def film_from_dbpedia(request, mov_name):
         for c in res2['results']['bindings']:
             if 'sname' in c.keys():
                 starr.append(c['sname']['value'])
+        if starr == []:
+            starr.append("no info")
         info.append(starr)
         movie_info.append(info)
 
