@@ -8,7 +8,20 @@
   <div id="container-all" class="container h-100" xmlns:pred="http://moviesProject.org/pred/"  about="{{ uri }}">
         <div class="row h-100 align-items-center justify-content-center text-center bg-dark" id="index-container">
             <div class="col-lg-10">
-              <h2 style="color: white; padding-top: 40px;" property="pred:title">{{ title }}</h2>
+              <h2 style="color: white; padding-top: 40px;" property="pred:title">{{ title }}
+                {% if title in top_rated_m %}
+                    <button class="btn btn-primary" title="Trending now"
+                    style="margin-bottom: 10px; margin-left: 10px; background-color: orangered; border: orangered;">
+                        <i class="fas fa-fire"></i> Trending now
+                    </button>
+                {% endif %}
+              {% if title in top_rated_s %}
+                    <button class="btn btn-primary" title="Trending now"
+                    style="margin-bottom: 10px; margin-left: 10px; background-color: orangered; border: orangered;">
+                        <i class="fas fa-fire"></i> Trending now
+                    </button>
+                {% endif %}
+              </h2>
                 <hr class="divider my-4" />
             </div>
             <div class="container" id="movie-info-container">
@@ -21,13 +34,13 @@
                   <h5><b>Runtime: </b><span property="pred:runtime">{{ runtime }}</span></h5>
                     <p style="padding-bottom: 10px"></p>
                   <h5><b>Genres: </b><span  property="pred:genre">{{ genres }}</span></h5>
-                    <p style="padding-bottom: 30px"></p>
-                    <h5><b>Main Stars: </b><h5 style="overflow: auto; height: 130px;">{{ cast }} and more</h5></h5>
+                    <p style="padding-bottom: 15px"></p>
+                    <h5><b>Main Stars: </b><h5 style="overflow: auto; height: 100px;">{{ cast }} and more</h5></h5>
                     <p></p>
                     <h5><b>Staff: </b><h5>{{ crew }}</h5></h5>
                     <p></p>
                     <p style="padding-bottom: 20px"></p>
-                  <h5 style="overflow: auto; height: 130px;"><b>Overview: </b><span property="pred:description">{{ overv }}</span></h5>
+                  <h5 style="overflow: auto; height: 100px;"><b>Overview: </b><span property="pred:description">{{ overv }}</span></h5>
                 </div>
             </div>
         </div>

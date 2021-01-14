@@ -42,6 +42,7 @@ def get_top_rated_movies():
     top_rated_m = []
     for e in res['results']['bindings']:
         top_rated_m.append(e['id']['value'])
+        top_rated_m.append(e['title']['value'])
 
     return top_rated_m
 
@@ -69,6 +70,7 @@ def get_top_rated_series():
     top_rated_s = []
     for e in res['results']['bindings']:
         top_rated_s.append(e['id']['value'])
+        top_rated_s.append(e['title']['value'])
 
     return top_rated_s
     
@@ -1341,7 +1343,13 @@ def detail_info(request, id, is_movie = "movie"):
 
     info_all_dict = []
     info_all_dict.append(info_all)
+
+    rated_m = get_top_rated_movies()
+    rated_s = get_top_rated_series()
+
     tparams = {
+        'top_rated_m': rated_m,
+        'top_rated_s': rated_s,
         'reviews': reviews,
         'result': info_all_dict,
     }
@@ -1349,6 +1357,10 @@ def detail_info(request, id, is_movie = "movie"):
     return render(request, 'info.html', tparams)
 
 def film_by_year(request, year = datetime.date.today().year):
+
+    if 'search' in request.POST:
+        _str = request.POST.get('search', '')
+        return HttpResponseRedirect('/search_results/' + _str)
 
     if 'm_year' in request.POST:
         year = request.POST.get('m_year')
@@ -1388,9 +1400,14 @@ def film_by_year(request, year = datetime.date.today().year):
         'year_movies': year_movies_list,
     }
 
-    return render(request, 'news.html', tparams)
+    return render(request, 'filmbyyear.html', tparams)
 
 def film_from_dbpedia(request, mov_name):
+
+    if 'search' in request.POST:
+        _str = request.POST.get('search', '')
+        return HttpResponseRedirect('/search_results/' + _str)
+
     movie = "http://dbpedia.org/resource/"+mov_name
     #movie = "http://dbpedia.org/page/"+mov_name
     sparql = SPARQLWrapper("https://dbpedia.org/sparql")
