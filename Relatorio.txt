@@ -1,0 +1,67 @@
+Projeto 2 da cadeira de Engenharia de Dados e Conhecimento
+Grupo 11
+Jacinto Lufilakio (89162)
+Márcia Pires (88747)
+Tomás Martins (89286)
+
+--- Instruções necessárias ---
+
+Dependências a ser instaladas:
+apt-get install python3-pip
+pip3 install Django==3.1
+pip3 install sparql-client
+pip3 install s4api
+
+Como executar a aplicação:
+1) Instalar as dependências mencionadas.
+2) Abrir a aplicação GraphDB.
+3) Criar um novo repositório com o id: "movies_db".
+4) Na secção "Import > RDF > Upload RDF Files", selecionar o ficheiro "all_data.n3" e importar esse mesmo ficheiro para o repositório anterior.
+5) Por fim, executar o comando: "> python3 manage.py runserver" no diretório do projeto.
+
+--- Informações relevantes ---
+
+- Em todas as páginas, à exceção da "Página Inicial", existe uma barra de pesquisas em que se pode pesquisar por uma palavra ou conjunto de palavras, sendo que o resultado será qualquer filme ou série que contenha essa palavra/conjunto de palavras no seu título ou sinopse e ainda todas as pessoas (sejam atores, diretores, etc.) cuja palavra esteja no seu nome.
+
+- Sempre que existir um botão azul no canto superior direito do poster de um filme/série, significa que este pode ser adicionado a uma lista filmes já vistos. O resultado dessa lista pode ser observado na página "Seen".
+
+- Da mesma forma, sempre que aparecer também um símbolo laranja, significa que o filme/série tem uma boa quantidade de "reviews" e por isso está "trending". Para isto é feita uma inferência, que verifica constantemente que filmes e séries têm um bom número de "reviews" e se for o caso, cria um triplo com os mesmos. Esta inferência vai ser executada sempre que um utilizador adicionar uma review.
+
+Para este projeto, foi utilizado SPARQL, através de queries do tipo INSERT (direto e indireto), SELECT, REMOVE(direto) e do tipo ASK.
+Para validar os RDFa, foi utilizado o parser online RDFa Play (https://rdfa.info/play/).
+
+--> Página inicial (index.html): 
+Nesta página temos o "top" filmes/séries. Para cada "top" é feita uma inferência, que adiciona triplos de filmes/séries com maior avaliação. Estas inferências são executadas ao iniciar a aplicação.
+	
+	
+--> Movies (movies_list.html): 
+Esta página apresenta-nos uma lista de todos os filmes existentes na base de dados. Estes filmes podem ser ordenados por diferentes categorias e filtrados por diferentes géneros. É possivel ainda carregar em "See more" para obtermos mais informações sobre os filmes, que nos leva para a página "Info". 
+	
+	
+--> Series (series.html): 
+Segue a mesma estrutura que a página 'Movies' mas agora aplicado a séries.
+
+
+--> Search (search_results.html): 
+Aqui aparece uma pequena apresentação de cada filme/série/pessoa contida no resultado da pesquisa feita na barra de pesquisas, tal como referido anteriomente. Também clicando no botão "See more", somos remetidos para a página "Info".
+Como esta página já apresenta um grau maior de informação, foi utilizado RDFa.
+	
+	
+--> Info (info.html):
+Nesta página temos acesso a uma informação mais detalhada sobre o filme/série em questão, como os melhores artistas e alguns membros do staff.
+Noutra secção desta mesma página é ainda possivel inserir uma review para este filme/série, ou eliminar uma já existente, inserindo um novo triplo ou eliminando-o da base de dados.
+Dado o elevado grau de informação presente nesta página, foi também utilizado RDFa para ambas as secções.
+
+	
+--> Playlist (playlist.html):
+Esta página contém uma lista de filmes adicionados como já vistos pelo utilizador. Esta lista é guardada através de um triplo que relaciona a lista com o filme já visto. 
+Ainda na mesma página, existe uma secção, que dado um dos filmes/séries presentes na lista acima, sugere filmes/séries semelhantes. Isto é feito através de uma inferência, que,é executada no momento em que adicionamos um filme/série à lista de vistos,e vão ser então criados triplos que contenham filmes/séries semelhantes ao mesmo (movie_1 recommends movie_2).
+
+--> FilmByYear(filmbyyear.html): 
+Nesta página é apresentada uma lista com todos os filmes relativamente a um ano em específico, presentes na dbpedia, obtidos em runtime. Por default, o ano é o atual, 2021, mas o utilizador tem a opção de pesquisar pelo ano que pretender.
+Clicando no botão "See more", o utilizador será remetido para a página Info_dbpedia, que apresentará dados mais detalhados acerca do filme em questão.
+
+
+--> Info_dbpedia (info_dbpedia.html):
+Por fim, nesta página, serão apresentadas informações mais detalhadas acerca do filme selecionado, sendo que todas essas informações são provenientes também da dbpedia, em runtime.
+
