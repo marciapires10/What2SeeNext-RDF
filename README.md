@@ -1,1 +1,1 @@
-# EDC_Project2
+# WhatToSeeNext - RDF
